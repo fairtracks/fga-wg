@@ -1,43 +1,42 @@
-$schema:
-$id: https://raw.githubusercontent.com/fairtracks/fga-wg/schema/annotation.yaml
-title: Annotation
-type: object
-properties:
-  - global_id:
-      type: string
-      format: string
-  #        format: curie
-      description: A globally unique and persistent identifier for the annotation.
-  - local_id:
-      type: string
-    #        unique: true  # Not supported. See e.g. https://github.com/json-schema-org/json-schema-vocabularies/issues/22
-      description: An identifier for the annotation that is unique within the namespace.
-  - desc_short_label:
-      type: string
-      description: A short label of the annotation. Suggested maximum length is 25 characters
-  - desc_long_label:
-      type: string
-      description: A long label of the annotation. Suggested maximum length is 80 characters
-  - desc_full:
-      type: string
-      description: A full description of the annotation, or the URL to a full description.
-  - genome_assembly_alias:
-      type: string
-      description: Genome assembly (human-readable alias)
-      example: GRCh38
-  - genome_assembly_accession:
-      type: string
-      example: GCF_000001405.40
-      description: Genome assembly (Accession)
-  - ga4gh_seqcol_digest:
-      type: string
-      description: GA4GH sequence collection digest (see https://ga4gh.github.io/refget/seqcol/)
-  - ga4gh_data_repository_service_id:
-      type: string
-      description: A machine-readable reference to a GA4GH DRS-compliant JSON object
-  - ga4gh_data_repository_service_object:
-      type: string
-      description: A harvested JSON object that conforms to GA4GH DRS standard (contains unique identifiers and access methods)
-  - file_name:
-      type: string
-      description: (human readable)
+id: http://example.org/schema/annotation
+name: Annotation
+description: A schema representing an annotation
+class: Annotation
+slots:
+  global_id:
+    description: A globally unique and persistent identifier for the annotation.
+    range: string
+  local_id:
+    description: An identifier for the annotation that is unique within the namespace.
+    range: string
+  desc_short_label:
+    description: A short label of the annotation. Suggested maximum length is 25 characters.
+    range: string
+  desc_long_label:
+    description: A long label of the annotation. Suggested maximum length is 80 characters.
+    range: string
+  desc_full:
+    description: A full description of the annotation, or the URL to a full description.
+    range: string
+  genome_assembly_alias:
+    description: Genome assembly (human-readable alias)
+    range: string
+    examples: 
+      - GRCh38
+  genome_assembly_accession:
+    description: Genome assembly (Accession)
+    range: string
+    examples:
+      - GCF_000001405.40
+  ga4gh_seqcol_digest:
+    description: GA4GH sequence collection digest
+    range: string
+  ga4gh_data_repository_service_id:
+    description: A machine-readable reference to a GA4GH DRS-compliant JSON object
+    range: string
+  ga4gh_data_repository_service_object:
+    description: A harvested JSON object that conforms to GA4GH DRS standard
+    range: string
+  file_name:
+    description: Human-readable file name
+    range: string
