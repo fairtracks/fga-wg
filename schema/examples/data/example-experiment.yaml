@@ -1,7 +1,66 @@
-# Example Experiment Instance
-id: "encode:ENCSR000DQO"
-experiment_global_id: "encode:ENCSR000DQO"
-experiment_id: "encode:ENCSR000DQO"
-library_id: "encode:ENCLB045ZZZ"
-sample_id: "encode:ENCBS001ENC"
-study_id: "encode:
+---
+# Updated experiment_01.yaml based on LinkML schema
+id: "experiment_01"
+name: "ChIP-seq of H3K4me3 in human B cells"
+description: "Genome-wide profiling of H3K4me3 histone modification in primary human B cells using ChIP-seq"
+fga_type: "Experiment"
+topics:
+  - id: "EDAM:topic_3173"
+    name: "Gene regulation"
+  - id: "EDAM:topic_3308"
+    name: "Epigenetics"
+keywords:
+  - "ChIP-seq"
+  - "histone modification"
+  - "H3K4me3"
+  - "B cells"
+  - "epigenomics"
+pmc_id: "PMC1234567"
+date_created: "2023-04-15"
+date_updated: "2023-08-01"
+version: "1.1"
+species:
+  taxonomy_id: "9606"
+  scientific_name: "Homo sapiens"
+  common_name: "human"
+samples:
+  - id: "sample_01"
+    name: "Primary human B cells"
+    description: "CD19+ B cells isolated from peripheral blood of healthy donor"
+    biospecimen_type: "cell"
+    cell_type: "CL:0000236"  # B cell
+    tissue: "blood"
+    disease_state: "healthy"
+    sample_preparation: "CD19+ B cells were isolated from peripheral blood using magnetic cell sorting"
+protocols:
+  - id: "proto_chip"
+    name: "ChIP-seq protocol for histone modifications"
+    description: "Standard ChIP-seq protocol optimized for histone modifications"
+    url: "https://protocols.io/view/chip-seq-protocol-for-histone-modifications-bvv6n69e"
+    protocol_type: "chromatin immunoprecipitation"
+experimental_factors:
+  - id: "factor_antibody"
+    name: "antibody"
+    value: "anti-H3K4me3"
+datasets:
+  - id: "dataset_01"
+    name: "H3K4me3 ChIP-seq raw data"
+    description: "Raw FASTQ files from H3K4me3 ChIP-seq experiment"
+    data_type: "raw sequence reads"
+    file_format: "FASTQ"
+    access_url: "https://www.ebi.ac.uk/ena/browser/view/SRR12345678"
+  - id: "dataset_02"
+    name: "H3K4me3 ChIP-seq processed data"
+    description: "Processed peak files from H3K4me3 ChIP-seq experiment"
+    data_type: "processed peaks"
+    file_format: "narrowPeak"
+    access_url: "https://www.encodeproject.org/files/ENCFF123ABC/"
+contact:
+  name: "Jane Smith"
+  email: "jane.smith@example.org"
+  organization: "University of Science"
+  role: "Principal Investigator"
+license: "CC-BY-4.0"
+funding:
+  - grant_id: "R01-HG012345"
+    funder: "National Institutes of Health"

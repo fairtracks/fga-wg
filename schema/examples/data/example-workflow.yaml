@@ -1,0 +1,169 @@
+---
+# New workflow_01.yaml based on LinkML schema
+id: "workflow_chipseq"
+name: "ChIP-seq data processing workflow"
+description: "Standard pipeline for processing ChIP-seq data from raw reads to peaks"
+fga_type: "Workflow"
+version: "2.0.0"
+creation_date: "2023-01-15"
+last_updated: "2023-04-20"
+authors:
+  - name: "Robert Johnson"
+    email: "r.johnson@example.org"
+    organization: "University of Science"
+    orcid: "0000-0002-3456-7890"
+repository: "https://github.com/nf-core/chipseq"
+documentation: "https://nf-co.re/chipseq"
+workflow_language: "Nextflow"
+workflow_type: "ChIP-seq analysis"
+inputs:
+  - name: "raw_reads"
+    description: "Raw sequencing reads in FASTQ format"
+    format: "FASTQ"
+    required: true
+  - name: "reference_genome"
+    description: "Reference genome for alignment"
+    format: "FASTA"
+    required: true
+  - name: "genome_index"
+    description: "Pre-built genome index for aligner"
+    format: "BWA index"
+    required: false
+  - name: "blacklist"
+    description: "Genomic regions to exclude from analysis"
+    format: "BED"
+    required: false
+outputs:
+  - name: "aligned_reads"
+    description: "Aligned reads in BAM format"
+    format: "BAM"
+  - name: "filtered_reads"
+    description: "Quality filtered and deduplicated reads"
+    format: "BAM"
+  - name: "peaks"
+    description: "Called peaks in BED format"
+    format: "narrowPeak"
+  - name: "bigwig"
+    description: "Signal tracks for visualization"
+    format: "bigWig"
+  - name: "qc_report"
+    description: "Quality control metrics"
+    format: "HTML"
+steps:
+  - id: "step_01"
+    name: "Quality control"
+    description: "Read quality assessment and trimming"
+    tool:
+      name: "FastQC"
+      version: "0.11.9"
+      url: "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/"
+    inputs:
+      - "raw_reads"
+    outputs:
+      - "qc_report"
+      - "trimmed_reads"
+  - id: "step_02"
+    name: "Alignment"
+    description: "Map reads to reference genome"
+    tool:
+      name: "BWA-MEM"
+      version: "0.7.17"
+      url: "https://github.com/lh3/bwa"
+    inputs:
+      - "trimmed_reads"
+      - "reference_genome"
+      - "genome_index"
+    outputs:
+      - "aligned_reads"
+    parameters:
+      - name: "threads"
+        default_value: "8"
+      - name: "minimum_seed_length"
+        default_value: "19"
+  - id: "step_03"
+    name: "Filtering and deduplication"
+    description: "Remove duplicate reads and low quality alignments"
+    tool:
+      name: "Samtools"
+      version: "1.13"
+      url: "https://github.com/samtools/samtools"
+    inputs:
+      - "aligned_reads"
+    outputs:
+      - "filtered_reads"
+    parameters:
+      - name: "mapping_quality"
+        default_value: "30"
+  - id: "step_04"
+    name: "Peak calling"
+    description: "Identify regions of enrichment"
+    tool:
+      name: "MACS2"
+      version: "2.2.7.1"
+      url: "https://github.com/macs3-project/MACS"
+    inputs:
+      - "filtered_reads"
+    outputs:
+      - "peaks"
+    parameters:
+      - name: "qvalue_threshold"
+        default_value: "0.05"
+      - name: "genome_size"
+        default_value: "hs"
+      - name: "narrow_peaks"
+        default_value: "true"
+  - id: "step_05"
+    name: "Signal track generation"
+    description: "Create coverage tracks for visualization"
+    tool:
+      name: "deepTools"
+      version: "3.5.1"
+      url: "https://deeptools.readthedocs.io/"
+    inputs:
+      - "filtered_reads"
+    outputs:
+      - "bigwig"
+    parameters:
+      - name: "binSize"
+        default_value: "10"
+      - name: "normalizeUsing"
+        default_value: "RPKM"
+dependencies:
+  - name: "Python"
+    version: ">=3.8"
+  - name: "Nextflow"
+    version: ">=21.10.3"
+  - name: "Docker"
+    version: ">=20.10.0"
+compute_requirements:
+  memory: "32 GB"
+  cpu_cores: "8"
+  storage: "100 GB"
+  runtime: "8 hours"
+usage_examples:
+  - command: "nextflow run nf-core/chipseq -profile docker --input 'data/*_R{1,2}.fastq.gz' --genome 'GRCh38'"
+    description: "Run workflow on paired-end data with Docker"
+  - command: "nextflow run nf-core/chipseq -profile singularity --input 'data/*_R{1,2}.fastq.gz' --genome 'GRCh38' --single_end"
+    description: "Run workflow on single-end data with Singularity"
+quality_control:
+  - metric: "Mapping rate"
+    threshold: ">80%"
+    description: "Percentage of reads that align to the reference genome"
+  - metric: "Duplication rate"
+    threshold: "<20%"
+    description: "Percentage of duplicate reads"
+  - metric: "FRiP score"
+    threshold: ">0.3"
+    description: "Fraction of reads in peaks"
+license: "MIT"
+citations:
+  - doi: "10.1038/s41587-020-0439-x"
+    title: "The nf-core framework for community-curated bioinformatics pipelines"
+    journal: "Nature Biotechnology"
+    year: 2020
+    authors: "Ewels PA, Peltzer A, Fillinger S, et al."
+datasets_processed:
+  - "dataset_01"
+  - "dataset_02"
+  - "dataset_03"
+  - "dataset_04"

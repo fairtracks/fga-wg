@@ -1,0 +1,64 @@
+---
+# Updated sample_01.yaml based on LinkML schema
+id: "sample_01"
+name: "Primary human B cells"
+description: "CD19+ B cells isolated from peripheral blood of healthy donor"
+fga_type: "Sample"
+biospecimen_type: "cell"
+species:
+  taxonomy_id: "9606"
+  scientific_name: "Homo sapiens"
+  common_name: "human"
+cell_type:
+  id: "CL:0000236"
+  name: "B cell"
+  ontology: "Cell Ontology"
+tissue:
+  id: "UBERON:0000178"
+  name: "blood"
+  ontology: "Uberon"
+disease_state: "healthy"
+developmental_stage: "adult"
+age: "34"
+age_unit: "years"
+sex: "female"
+donor_id: "DONOR123"
+biological_replicates: 3
+technical_replicates: 2
+sample_preparation:
+  protocol_id: "proto_sample_prep"
+  description: "CD19+ B cells were isolated from peripheral blood using magnetic cell sorting"
+  date: "2023-03-01"
+  experimenter: "Maria Garcia"
+storage_conditions:
+  temperature: "-80"
+  temperature_unit: "celsius"
+  storage_medium: "RNAlater"
+quality_control:
+  - method: "flow cytometry"
+    result: "95% CD19+"
+    date: "2023-03-02"
+  - method: "viability assay"
+    result: "92% viable"
+    date: "2023-03-02"
+treatments:
+  - agent: "none"
+    duration: "0"
+    concentration: "0"
+batch_information:
+  batch_id: "BATCH20230301"
+  collection_date: "2023-03-01"
+  processing_date: "2023-03-01"
+experiments:
+  - "experiment_01"
+  - "experiment_02"
+contact:
+  name: "Maria Garcia"
+  email: "m.garcia@example.org"
+  organization: "University of Science"
+  role: "Laboratory Technician"
+attributes:
+  - name: "isolation_method"
+    value: "MACS"
+  - name: "donor_ethnicity"
+    value: "Caucasian"

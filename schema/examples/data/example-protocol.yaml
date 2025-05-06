@@ -1,0 +1,123 @@
+---
+# New protocol_01.yaml based on LinkML schema
+id: "proto_chip"
+name: "ChIP-seq protocol for histone modifications"
+description: "Standard ChIP-seq protocol optimized for histone modifications in primary cells"
+fga_type: "Protocol"
+protocol_type: "chromatin immunoprecipitation"
+version: "2.1"
+creation_date: "2022-02-15"
+last_updated: "2023-01-10"
+authors:
+  - name: "Robert Johnson"
+    email: "r.johnson@example.org"
+    organization: "University of Science"
+    orcid: "0000-0002-3456-7890"
+steps:
+  - step_number: 1
+    name: "Cell fixation"
+    description: "Crosslink proteins to DNA with formaldehyde"
+    duration: "10 minutes"
+    temperature: "room temperature"
+    reagents:
+      - name: "Formaldehyde"
+        concentration: "1%"
+        catalog_number: "F8775"
+        vendor: "Sigma-Aldrich"
+    equipment:
+      - name: "Rotating mixer"
+        model: "RM-2L"
+        vendor: "SciLogex"
+  - step_number: 2
+    name: "Quenching"
+    description: "Stop crosslinking reaction with glycine"
+    duration: "5 minutes"
+    temperature: "room temperature"
+    reagents:
+      - name: "Glycine"
+        concentration: "125 mM"
+        catalog_number: "G8898"
+        vendor: "Sigma-Aldrich"
+  - step_number: 3
+    name: "Cell lysis"
+    description: "Lyse cells to release nuclei"
+    duration: "10 minutes"
+    temperature: "4C"
+    reagents:
+      - name: "Cell lysis buffer"
+        composition: "10 mM Tris-HCl pH 8.0, 10 mM NaCl, 0.2% NP-40"
+  - step_number: 4
+    name: "Chromatin fragmentation"
+    description: "Sonicate chromatin to 200-500 bp fragments"
+    equipment:
+      - name: "Bioruptor"
+        model: "Pico"
+        vendor: "Diagenode"
+    parameters:
+      - name: "Sonication cycles"
+        value: "30 cycles of 30s ON/30s OFF"
+  - step_number: 5
+    name: "Immunoprecipitation"
+    description: "Capture target protein-DNA complexes with antibody"
+    duration: "overnight"
+    temperature: "4C"
+    reagents:
+      - name: "Anti-H3K4me3 antibody"
+        catalog_number: "ab8580"
+        vendor: "Abcam"
+        dilution: "1:100"
+      - name: "Protein A/G magnetic beads"
+        catalog_number: "88803"
+        vendor: "Thermo Fisher"
+  - step_number: 6
+    name: "Washing"
+    description: "Remove non-specific binding"
+    reagents:
+      - name: "Low salt wash buffer"
+        composition: "20 mM Tris-HCl pH 8.0, 150 mM NaCl, 2 mM EDTA, 0.1% SDS, 1% Triton X-100"
+      - name: "High salt wash buffer"
+        composition: "20 mM Tris-HCl pH 8.0, 500 mM NaCl, 2 mM EDTA, 0.1% SDS, 1% Triton X-100"
+  - step_number: 7
+    name: "Elution and crosslink reversal"
+    description: "Elute DNA-protein complexes and reverse crosslinks"
+    temperature: "65C"
+    duration: "4 hours"
+  - step_number: 8
+    name: "DNA purification"
+    description: "Isolate and purify ChIP DNA"
+    reagents:
+      - name: "DNA purification kit"
+        catalog_number: "D4014"
+        vendor: "Zymo Research"
+url: "https://protocols.io/view/chip-seq-protocol-for-histone-modifications-bvv6n69e"
+doi: "10.17504/protocols.io.bvv6n69e"
+references:
+  - doi: "10.1038/nprot.2008.213"
+    title: "Genome-wide mapping of in vivo protein-DNA interactions"
+    authors: "Johnson DS, Mortazavi A, Myers RM, Wold B"
+    journal: "Nature Protocols"
+    year: 2007
+    pmid: "PMID:17967090"
+applications:
+  - "ChIP-seq"
+  - "CUT&RUN"
+limitations:
+  - "Requires at least 1 million cells for optimal results"
+  - "Antibody quality is critical for success"
+safety_information:
+  - "Formaldehyde is toxic by inhalation and skin contact; use in fume hood"
+  - "SDS is an irritant; wear appropriate PPE"
+troubleshooting:
+  - problem: "Low yield"
+    solution: "Increase cell number or optimize sonication conditions"
+  - problem: "High background"
+    solution: "Use more stringent washing conditions or validate antibody specificity"
+related_protocols:
+  - id: "proto_library_prep"
+    name: "Library preparation for NGS"
+    relation_type: "downstream_protocol"
+experiments_using:
+  - "experiment_01"
+  - "experiment_02"
+  - "experiment_03"
+  - "experiment_04"
