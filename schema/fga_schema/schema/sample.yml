@@ -1,83 +1,64 @@
-# sample.yaml
-id: https://w3id.org/fair-genomics/schema/sample
-name: fair-genomic-sample
-description: Schema for biological samples used in genomic annotations
+id: https://w3id.org/fga-wg/schema/sample
+name: fga-sample
+description: >-
+  Sample and donor schema for FAIRification of Genomic Annotations (FGA) Working Group Schema for RDA.
+  Includes biological samples and donor/organism information.
+license: MIT
+version: 0.1.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  fga: https://w3id.org/fga-wg/schema/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  shex: http://www.w3.org/ns/shex#
+  UBERON: http://purl.obolibrary.org/obo/UBERON_
+  FMA: http://purl.obolibrary.org/obo/FMA_
+  CL: http://purl.obolibrary.org/obo/CL_
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  CLO: http://purl.obolibrary.org/obo/CLO_
+  EFO: http://www.ebi.ac.uk/efo/
+  HPO: http://purl.obolibrary.org/obo/HP_
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
+  
+default_prefix: fga
+default_range: string
 
 imports:
   - linkml:types
+  - types
   - enums
 
 classes:
   Sample:
-    description: A biological sample used for genomic analysis
+    description: Information about a biological sample
     slots:
-      - global_id
-      - local_id
+      - sample_global_id
+      - sample_id
       - biospecimen_classification
       - organism_tissue
-      - primary_normal_cell
-      - primary_abnormal_cell
+      - primary_cell
       - cell_line
       - other_biospecimen
       - details
-      - summary
       - phenotype
       - donor
-      - replicates_collection
-    id_prefixes:
-      - fga.sample
-
-  OrganismTissue:
-    description: Information about tissue from which the sample was taken
-    slots:
-      - term_name
-      - term_id
-      - is_cancer_sample
-    id_prefixes:
-      - fga.tissue
-
-  PrimaryNormalCell:
-    description: Cell type of isolated normal cells in the sample
-    slots:
-      - term_name
-      - term_id
-    id_prefixes:
-      - fga.normal_cell
-
-  PrimaryAbnormalCell:
-    description: Cell type of isolated abnormal cells in the sample
-    slots:
-      - term_name
-      - term_id
-    id_prefixes:
-      - fga.abnormal_cell
-
-  CellLine:
-    description: Cultured cell line used in the sample
-    slots:
-      - term_name
-      - term_id
-    id_prefixes:
-      - fga.cell_line
-
-  OtherBiospecimen:
-    description: Other biospecimen types not covered by more specific classes
-    slots:
-      - term_name
-      - term_id
-    id_prefixes:
-      - fga.biospecimen
-
-  Phenotype:
-    description: Main phenotype connected to the sample
-    slots:
-      - term_name
-      - term_id
-    id_prefixes:
-      - fga.phenotype
+    slot_usage:
+      sample_global_id:
+        required: true
+      sample_id:
+        required: true
+      biospecimen_classification:
+        required: true
+      organism_tissue:
+        required_if: "biospecimen_classification = 'organism_tissue'"
+      primary_cell:
+        required_if: "biospecimen_classification = 'primary_normal_cells' or biospecimen_classification = 'primary_abnormal_cells'"
+      cell_line:
+        required_if: "biospecimen_classification = 'cell_line'"
 
   Donor:
-    description: Information about the donor organism
+    description: Information about a donor or organism
     slots:
       - species_taxon_id
       - species_taxon_name
@@ -86,93 +67,65 @@ classes:
       - clinical_information
       - sampling_location
       - sample_collection_date
-    id_prefixes:
-      - fga.donor
-
-  ReplicatesCollection:
-    description: Collection of replicates
-    multivalued: true
-    slots:
-      - replicates
-    id_prefixes:
-      - fga.replicate_collection
-
-  Replicate:
-    description: Information about a replicate
-    slots:
-      - replicate_type
-      - replicate_id
-    id_prefixes:
-      - fga.replicate
+    slot_usage:
+      species_taxon_id:
+        required: true
+      species_taxon_name:
+        required: true
 
 slots:
+  sample_global_id:
+    description: Global sample identifier, resolvable by identifiers.org
+    range: CURIE
+    
+  sample_id:
+    description: Submitter-local identifier for sample
+    range: CURIE
+    
   biospecimen_classification:
-    description: Main type of structural unit to be used for classification of the sample
-    range: BiospecimenClassEnum
-    required: true
+    description: Main type of structural unit for classification of the sample
+    range: BiospecimenClassificationEnum
     
   organism_tissue:
     description: Part of organism from which the sample was taken
-    range: OrganismTissue
+    range: term
     
-  primary_normal_cell:
+  primary_cell:
     description: Cell type of isolated normal cells in the sample
-    range: PrimaryNormalCell
-    
-  primary_abnormal_cell:
-    description: Cell type of isolated abnormal cells in the sample
-    range: PrimaryAbnormalCell
+    range: term
     
   cell_line:
     description: Cultured cell line used in the sample
-    range: CellLine
+    range: term
     
   other_biospecimen:
-    description: Other biospecimen information
-    range: OtherBiospecimen
+    description: Additional biospecimen information
+    range: term
+    multivalued: true
     
   details:
-    description: Optional details provided by the user
-    
-  summary:
-    description: Derived summary of the sample
+    description: Additional details about the sample
     
   phenotype:
     description: Main phenotype connected to the sample
-    range: Phenotype
+    range: term
     
   donor:
-    description: Information about the donor organism
+    description: Reference to the donor of the sample
     range: Donor
     
-  replicates_collection:
-    description: Collection of replicates
-    range: ReplicatesCollection
-    
-  term_name:
-    description: Name of the term from an ontology
-    
-  term_id:
-    description: Identifier of the term from an ontology
-    
-  is_cancer_sample:
-    description: Whether the sample is from cancer tissue
-    range: boolean
-    
   species_taxon_id:
-    description: Species identifier from NCBITaxonomy, resolvable by identifiers.org
-    required: true
+    description: Species identifier, resolvable by identifiers.org
+    range: CURIE
     
   species_taxon_name:
     description: Species name according to NCBITaxonomy
-    required: true
     
   sex:
-    description: Sex of the donor organism
-    range: SexEnum
+    description: Sex of the donor
     
   age:
-    description: Age of the donor organism
+    description: Age of the donor
     
   clinical_information:
     description: Clinical information about the donor
@@ -182,20 +135,4 @@ slots:
     
   sample_collection_date:
     description: Date when the sample was collected (ISO-8601 format)
-    
-  replicates:
-    description: Replicates associated with this sample
-    range: Replicate
-    multivalued: true
-    
-  replicate_type:
-    description: Type of replicate
-    range: ReplicateTypeEnum
-    
-  replicate_id:
-    description: Identifier for the replicate
-
-  # Link to include Sample in GenomicAnnotation
-  sample:
-    description: Reference to the sample used for this annotation
-    range: Sample
+    range: datetime

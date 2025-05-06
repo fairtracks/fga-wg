@@ -1,32 +1,415 @@
-# core.yaml
-id: https://w3id.org/fair-genomics/schema
-name: fair-genomic-annotation-schema
-description: LinkML schema for FAIR genomic annotations
+id: https://w3id.org/fga-wg/schema/core
+name: fga-core
+description: >-
+  Core schema for FAIRification of Genomic Annotations (FGA) Working Group Schema for RDA.
+  Includes experiments, analyses, data files, and basic data structures.
 license: MIT
 version: 0.1.0
 
-# Import LinkML types
-imports:
-  - linkml:types
-  - enums
-  - annotation
-  - sample
-
-# Default namespace and range
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  fga: https://w3id.org/fga-wg/schema/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  shex: http://www.w3.org/ns/shex#
+  GA4GH: http://example.org/GA4GH/
+  EDAM: http://edamontology.org/
+  
 default_prefix: fga
 default_range: string
 
-# Prefixes used across the schema
-prefixes:
-  linkml: https://w3id.org/linkml/
-  fga: https://w3id.org/fair-genomics/schema/
-  uberon: http://purl.obolibrary.org/obo/UBERON_
-  fma: http://purl.org/sig/ont/fma/
-  cl: http://purl.obolibrary.org/obo/CL_
-  ncit: http://purl.obolibrary.org/obo/NCIT_
-  clo: http://purl.obolibrary.org/obo/CLO_
-  efo: http://www.ebi.ac.uk/efo/
-  hpo: http://purl.obolibrary.org/obo/HP_
-  mondo: http://purl.obolibrary.org/obo/MONDO_
-  ncbitaxon: http://purl.obolibrary.org/obo/NCBITaxon_
-  xsd: http://www.w3.org/2001/XMLSchema#
+imports:
+  - linkml:types
+  - types
+  - enums
+
+classes:
+  Experiment:
+    description: >-
+      Represents a sequencing experiment that has been carried out within a study, 
+      based on biological samples, and providing data files as output. 
+    slots:
+      - experiment_global_id
+      - experiment_id
+      - library_id
+      - sample_id
+      - study_id
+      - experiment_type
+      - molecule_type
+      - assay_type
+      - design_description
+      - instrument
+      - sequencing_protocol
+      - antibody_target
+      - biological_processes
+      - quality_assessments
+    slot_usage:
+      experiment_id:
+        required: true
+      sample_id:
+        required: true
+      study_id:
+        required: true
+      experiment_type:
+        required: true
+      molecule_type:
+        required: true
+      assay_type:
+        required: true
+      antibody_target:
+        required_if: "experiment_type = 'Chromatin-related'"
+
+  Analysis:
+    description: >-
+      Represents the computational processing applied to data from a sequencing 
+      experiment, or from another analysis
+    slots:
+      - analysis_global_id
+      - analysis_id
+      - data_sources
+      - analysis_type
+      - analysis_main_tool
+      - analysis_main_tool_version
+      - analysis_protocol
+      - analysis_run_provenance
+      - quality_assessments
+    slot_usage:
+      analysis_id:
+        required: true
+      data_sources:
+        required: true
+      analysis_type:
+        required: true
+
+  DataSource:
+    description: >-
+      Information about the origins of a particular data file or input data to an analysis, 
+      referring either to an experiment, analysis, data file or database record
+    slots:
+      - data_source_type
+      - data_source_id
+      - database_id
+      - database_accession
+    slot_usage:
+      data_source_type:
+        required: true
+      data_source_id:
+        required_if: "data_source_type = 'analysis' or data_source_type = 'experiment' or data_source_type = 'file'"
+      database_id:
+        required_if: "data_source_type = 'database'"
+
+  QualityAssessment:
+    description: Assessment of quality metrics for an experiment, analysis or file
+    slots:
+      - assessment_method
+      - assessment_value
+      - assessment_details_url
+    slot_usage:
+      assessment_method:
+        required: true
+      assessment_value:
+        required: true
+
+  File:
+    description: >-
+      General information about a particular data file. Most fields are copied from 
+      the GA4GH DRS DrsObject model.
+    slots:
+      - file_id
+      - name
+      - self_uri
+      - size
+      - created_time
+      - updated_time
+      - version
+      - mime_type
+      - checksums
+      - access_methods
+      - contents
+      - description
+      - aliases
+      - produced_by
+      - label_short
+      - label_long
+      - file_type
+    slot_usage:
+      file_id:
+        required: true
+      size:
+        required: true
+      created_time:
+        required: true
+      checksums:
+        required: true
+      access_methods:
+        required: true
+      label_short:
+        required: true
+      label_long:
+        required: true
+      file_type:
+        required: true
+      produced_by:
+        required: true
+
+  Checksum:
+    description: >-
+      A checksum of a File object. Exact copy of the Checksum object of the GA4GH DRS data model.
+    slots:
+      - checksum
+      - type
+    slot_usage:
+      checksum:
+        required: true
+      type:
+        required: true
+
+  AccessMethod:
+    description: >-
+      Description of an access method that can be used to fetch a File object. 
+      Exact copy of the AccessMethod object of the GA4GH DRS data model.
+    slots:
+      - type
+      - access_url
+      - access_id
+      - region
+    slot_usage:
+      type:
+        required: true
+      access_url:
+        required: true
+
+  AccessURL:
+    description: >-
+      The URL and associated HTTP headers to access the File object. 
+      Exact copy of AccessURL object of the GA4GH DRS data model.
+    slots:
+      - url
+      - headers
+    slot_usage:
+      url:
+        required: true
+
+  ContentsObject:
+    description: Reference to content inside a bundle
+    # Note: This would need to be defined based on GA4GH DRS
+
+  ReplicatesCollection:
+    description: Collection of replicates
+    slots:
+      - replicate_type
+      - replicate_id
+
+slots:
+  experiment_global_id:
+    description: A unique identifier for the experiment across all systems
+    range: CURIE
+    
+  experiment_id:
+    description: Unique identifier of the experiment within the metadata context
+    range: CURIE
+    
+  library_id:
+    description: Unique accession number of the nucleotide sequencing library
+    range: CURIE
+    
+  sample_id:
+    description: Internal reference to Sample entity
+    range: CURIE
+    
+  study_id:
+    description: A unique identifier linking the experiment to a research study
+    range: CURIE
+    
+  experiment_type:
+    description: The broad type of sequencing experiment performed
+    range: term
+    
+  molecule_type:
+    description: Specifies the type of source material that is being sequenced
+    range: term
+    
+  assay_type:
+    description: Sequencing technique intended for this library
+    range: term
+    
+  design_description:
+    description: The high-level experiment design including layout, protocol
+    
+  instrument:
+    description: Technology platform used to perform nucleic acid sequencing
+    range: term
+    
+  sequencing_protocol:
+    description: Set of rules which guides how the sequencing protocol was followed
+    range: URI
+    
+  antibody_target:
+    description: The target of the antibody used in the experiment
+    range: term
+    
+  biological_processes:
+    description: The biological processes illuminated by the experiment
+    range: term
+    multivalued: true
+    
+  quality_assessments:
+    description: Quality scores from assessment techniques applied to the experimental data outputs
+    range: QualityAssessment
+    multivalued: true
+    
+  analysis_global_id:
+    description: A unique identifier for the analysis across all systems
+    range: CURIE
+    
+  analysis_id:
+    description: An identifier specific to the analysis, unique within the metadata context
+    range: CURIE
+    
+  data_sources:
+    description: Origins of the input data analyzed
+    range: DataSource
+    multivalued: true
+    
+  analysis_type:
+    description: The type of analysis
+    range: term
+    
+  analysis_main_tool:
+    description: Main tool used in the analysis
+    range: CURIE
+    
+  analysis_main_tool_version:
+    description: Version of the main tool used in the analysis
+    
+  analysis_protocol:
+    description: Protocol used for the analysis
+    range: URI
+    
+  analysis_run_provenance:
+    description: Provenance information for the analysis run
+    range: URI
+    
+  data_source_type:
+    description: Type of data source
+    range: DataSourceTypeEnum
+    
+  data_source_id:
+    description: Identifier for the data source
+    range: CURIE
+    
+  database_id:
+    description: Identifier for the database
+    range: CURIE
+    
+  database_accession:
+    description: Accession number in the database
+    
+  assessment_method:
+    description: Method used for quality assessment
+    range: term
+    
+  assessment_value:
+    description: Value from the quality assessment
+    
+  assessment_details_url:
+    description: URL to detailed statistics of the quality assessment
+    range: URL
+    
+  file_id:
+    description: An identifier unique to this File object
+    range: CURIE
+    
+  name:
+    description: A string that can be used to name a File object
+    
+  self_uri:
+    description: A URI that tells clients how to access this object
+    range: URI
+    
+  size:
+    description: For blobs, the blob size in bytes. For bundles, the cumulative size in bytes.
+    range: integer
+    
+  created_time:
+    description: Timestamp of content creation in RFC3339
+    range: datetime
+    
+  updated_time:
+    description: Timestamp of content update in RFC3339
+    range: datetime
+    
+  version:
+    description: A string representing a version
+    
+  mime_type:
+    description: A string providing the mime-type of the File object
+    
+  checksums:
+    description: The checksum of the File object
+    range: Checksum
+    multivalued: true
+    
+  access_methods:
+    description: The list of access methods that can be used to fetch the File object
+    range: AccessMethod
+    multivalued: true
+    
+  contents:
+    description: If set, this DrsObject is a bundle containing the listed ContentsObjects
+    range: ContentsObject
+    multivalued: true
+    
+  description:
+    description: A human readable description of the File object
+    
+  aliases:
+    description: A list of strings that can be used to find other metadata about this object
+    multivalued: true
+    
+  produced_by:
+    description: An array of DataSource objects specifying the origin(s) of the data file
+    range: DataSource
+    multivalued: true
+    alias: data_source
+    
+  label_short:
+    description: Short label for the file (less than 25 characters)
+    
+  label_long:
+    description: Long label for the file (less than 80 characters)
+    
+  file_type:
+    description: Type of file format
+    range: term
+    
+  checksum:
+    description: The hex-string encoded checksum for the data
+    
+  type:
+    description: The digest method used to create the checksum
+    
+  access_url:
+    description: AccessURL object providing URL and associated HTTP headers
+    range: AccessURL
+    
+  access_id:
+    description: An arbitrary string to be passed to the /access method to get an AccessURL
+    
+  region:
+    description: Name of the region in the cloud service provider that the object belongs to
+    
+  url:
+    description: A fully resolvable URL that can be used to fetch the actual object bytes
+    range: URL
+    
+  headers:
+    description: An optional list of headers to include in the HTTP request to url
+    multivalued: true
+    
+  replicate_type:
+    description: Type of replicate
+    range: ReplicateTypeEnum
+    
+  replicate_id:
+    description: Identifier for the replicate

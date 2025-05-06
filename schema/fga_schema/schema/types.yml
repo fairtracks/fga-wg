@@ -1,0 +1,49 @@
+id: https://w3id.org/fga-wg/schema/types
+name: fga-types
+description: >-
+  Type definitions for FAIRification of Genomic Annotations (FGA) Working Group Schema for RDA.
+license: MIT
+version: 0.1.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  fga: https://w3id.org/fga-wg/schema/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  
+default_prefix: fga
+default_range: string
+
+imports:
+  - linkml:types
+
+types:
+  CURIE:
+    description: Compact URI
+    uri: xsd:string
+    pattern: "^\\S+:\\S+$"
+    examples:
+      - "encode:ENCFF001HAV"
+      
+  datetime:
+    description: A date-time in RFC3339 format
+    uri: xsd:dateTime
+    pattern: "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})$"
+    examples:
+      - "2019-08-24T14:15:22Z"
+      
+  URL:
+    description: A Uniform Resource Locator
+    uri: xsd:anyURI
+    examples:
+      - "https://www.encodeproject.org/files/ENCFF001HAV/@@download/ENCFF001HAV.fastq.gz"
+      
+  URI:
+    description: A Uniform Resource Identifier
+    uri: xsd:anyURI
+    examples:
+      - "drs://drs.example.org/ENCFF001HAV"
+      
+  term:
+    description: An ontology term reference
+    uri: xsd:string

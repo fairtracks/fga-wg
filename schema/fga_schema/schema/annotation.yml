@@ -1,90 +1,212 @@
-# annotation.yaml
-id: https://w3id.org/fair-genomics/schema/annotation
-name: fair-genomic-annotation
-description: Schema for genomic annotation tracks
+id: https://w3id.org/fga-wg/schema/annotation
+name: fga-annotation
+description: >-
+  Genomic annotation schema for FAIRification of Genomic Annotations (FGA) Working Group Schema for RDA.
+  Includes genomic annotation files, genome assemblies, and track geometries.
+license: MIT
+version: 0.1.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  fga: https://w3id.org/fga-wg/schema/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  shex: http://www.w3.org/ns/shex#
+  EDAM: http://edamontology.org/
+  SO: http://purl.obolibrary.org/obo/SO_
+  
+default_prefix: fga
+default_range: string
 
 imports:
   - linkml:types
+  - types
   - enums
-  - sample
+  - core
 
 classes:
-  GenomicAnnotation:
-    description: >-
-      A genomic annotation or track representing genomic features or measurements
-      aligned to a reference genome assembly.
+  GenomicAnnotationFile:
+    description: A file containing genomic annotations
     slots:
-      - global_id
-      - local_id
-      - desc_short_label
-      - desc_long_label
-      - desc_full
-      - genome_assembly_alias
-      - genome_assembly_accession
-      - ga4gh_seqcol_digest
-      - ga4gh_data_repository_service_id
-      - ga4gh_data_repository_service_object
-      - file_name
+      - genomic_annotation_digest
+      - file
+      - genome_assembly
       - track_geometry
-      - condensed_data_type
-      - file_format
-      - checksum
-      - sample
-    id_prefixes:
-      - fga.annotation
+      - annotation_data_type
+      - sequence_features
+    slot_usage:
+      file:
+        required: true
+      genome_assembly:
+        required: true
+      track_geometry:
+        required: true
+      annotation_data_type:
+        required: true
+      sequence_features:
+        required: true
+
+  GenomeAssembly:
+    description: Information about a reference genome assembly
+    slots:
+      - refget_seqcol_digest
+      - refget_ordered_coordinate_system_digest
+      - refget_unordered_coordinate_system_digest
+      - accessions
+      - aliases
+    slot_usage:
+      refget_seqcol_digest:
+        required: true
+      refget_ordered_coordinate_system_digest:
+        required: true
+      refget_unordered_coordinate_system_digest:
+        required: true
+      accessions:
+        required: true
+      aliases:
+        required: true
+
+  TrackGeometry:
+    description: Geometric properties of a genomic annotation track
+    slots:
+      - has_gaps
+      - has_lenghts
+      - has_strands
+      - has_values
+      - has_edges
+      - has_names
+      - elements_overlapping
+      - elements_circular
+      - lengths_constant
+      - value_type
+      - edges_have_weights
+      - edge_weight_type
+      - edges_are_directed
+      - edges_denote_parents
+    slot_usage:
+      has_gaps:
+        required: true
+      has_lenghts:
+        required: true
+      has_strands:
+        required: true
+      has_values:
+        required: true
+      has_edges:
+        required: true
+      has_names:
+        required: true
+      elements_overlapping:
+        required: true
+      elements_circular:
+        required: true
+      lengths_constant:
+        required_if: "has_lenghts = true"
+      value_type:
+        required_if: "has_values = true"
+      edges_have_weights:
+        required_if: "has_edges = true"
+      edge_weight_type:
+        required_if: "has_edges = true"
+      edges_are_directed:
+        required_if: "has_edges = true"
+      edges_denote_parents:
+        required_if: "has_edges = true"
 
 slots:
-  global_id:
-    description: A globally unique and persistent identifier for the annotation, resolvable by identifiers.org
-    required: true
+  genomic_annotation_digest:
+    description: Content-derived using variant of refget
+    range: CURIE
     
-  local_id:
-    description: An identifier for the annotation that is unique within the namespace
-    required: true
+  file:
+    description: Reference to the file containing the genomic annotation
+    range: File
     
-  desc_short_label:
-    description: A short label of the annotation. Suggested maximum length is 25 characters.
-    
-  desc_long_label:
-    description: A long label of the annotation. Suggested maximum length is 80 characters.
-    
-  desc_full:
-    description: A full description of the annotation, or the URL to a full description.
-    
-  genome_assembly_alias:
-    description: Genome assembly (human-readable alias)
-    examples:
-      - GRCh38
-      
-  genome_assembly_accession:
-    description: Genome assembly accession
-    examples:
-      - GCF_000001405.40
-      
-  ga4gh_seqcol_digest:
-    description: GA4GH sequence collection digest, https://ga4gh.github.io/refget/seqcol/
-    
-  ga4gh_data_repository_service_id:
-    description: A machine-readable reference to a GA4GH DRS-compliant JSON object
-    
-  ga4gh_data_repository_service_object:
-    description: A harvested JSON object that conforms to GA4GH DRS standard
-    
-  file_name:
-    description: Human-readable file name
+  genome_assembly:
+    description: Reference to the genome assembly used for the annotation
+    range: GenomeAssembly
     
   track_geometry:
-    description: Geometric track type
-    range: GeometricTrackTypeEnum
+    description: Geometric properties of the genomic annotation track
+    range: TrackGeometry
     
-  condensed_data_type:
-    description: Type of condensed data
-    examples:
-      - Peaks
-      - Signal
-      
-  file_format:
-    description: Format of the data file
+  annotation_data_type:
+    description: The type of data in the annotation
+    range: term
     
-  checksum:
-    description: Checksum of the data file
+  sequence_features:
+    description: The sequence features represented in the annotation
+    range: term
+    multivalued: true
+    
+  refget_seqcol_digest:
+    description: Seqcol digest for the reference genome
+    range: CURIE
+    
+  refget_ordered_coordinate_system_digest:
+    description: Ordered coordinate system digest for the reference genome
+    range: CURIE
+    
+  refget_unordered_coordinate_system_digest:
+    description: Unordered coordinate system digest for the reference genome
+    range: CURIE
+    
+  accessions:
+    description: Accession numbers for the genome assembly
+    multivalued: true
+    
+  has_gaps:
+    description: Whether the track has gaps
+    range: boolean
+    
+  has_lenghts:
+    description: Whether the track elements have lengths
+    range: boolean
+    
+  has_strands:
+    description: Whether the track elements have strand information
+    range: boolean
+    
+  has_values:
+    description: Whether the track elements have associated values
+    range: boolean
+    
+  has_edges:
+    description: Whether the track elements have edges connecting them
+    range: boolean
+    
+  has_names:
+    description: Whether the track elements have names
+    range: boolean
+    
+  elements_overlapping:
+    description: Whether track elements can overlap
+    range: boolean
+    
+  elements_circular:
+    description: Whether track elements can be circular
+    range: boolean
+    
+  lengths_constant:
+    description: Whether all track elements have the same length
+    range: boolean
+    
+  value_type:
+    description: The data type of track element values
+    range: ValueTypeEnum
+    
+  edges_have_weights:
+    description: Whether edges between track elements have weights
+    range: boolean
+    
+  edge_weight_type:
+    description: The data type of edge weights
+    range: ValueTypeEnum
+    
+  edges_are_directed:
+    description: Whether edges between track elements are directed
+    range: boolean
+    
+  edges_denote_parents:
+    description: Whether edges between track elements denote parent-child relationships
+    range: boolean

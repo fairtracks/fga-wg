@@ -1,50 +1,97 @@
-# enums.yaml
-id: https://w3id.org/fair-genomics/schema/enums
-name: fair-genomic-annotation-enums
-description: Enumerated types for FAIR genomic annotations
+id: https://w3id.org/fga-wg/schema/enums
+name: fga-enums
+description: >-
+  Enumeration definitions for FAIRification of Genomic Annotations (FGA) Working Group Schema for RDA.
+license: MIT
+version: 0.1.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  fga: https://w3id.org/fga-wg/schema/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  
+default_prefix: fga
+default_range: string
 
 imports:
   - linkml:types
 
 enums:
-  BiospecimenClassEnum:
-    description: Main type of structural unit to be used for classification of the sample
+  DataSourceTypeEnum:
+    description: Types of data sources
+    permissible_values:
+      analysis:
+        description: Data source is an analysis
+      experiment:
+        description: Data source is an experiment
+      file:
+        description: Data source is a file
+      database:
+        description: Data source is a database
+        
+  BiospecimenClassificationEnum:
+    description: Classification of biospecimen types
     permissible_values:
       whole_organism:
-        description: Complete organism specimen
+        description: Whole organism
       organism_tissue:
-        description: Part of organism (tissue or organ)
+        description: Organism tissue
       primary_normal_cells:
-        description: Isolated normal cells
+        description: Primary normal cells
       primary_abnormal_cells:
-        description: Isolated abnormal cells
+        description: Primary abnormal cells
       cell_line:
-        description: Cultured cell line
+        description: Cell line
       single_cell:
-        description: Individual cell
+        description: Single cell
       in_vitro_differentiated_cells:
-        description: Cells differentiated in vitro
+        description: In vitro differentiated cells
       cell_free_sample:
-        description: Sample without intact cells
+        description: Cell-free sample
       cloning_host:
-        description: Host organism used for cloning
+        description: Cloning host
       organoid:
-        description: In vitro grown organ model
+        description: Organoid
       technical_sample:
-        description: Sample used for technical purposes
-
-  GeometricTrackTypeEnum:
-    description: Type of geometric representation used in the genomic track
+        description: Technical sample
+        
+  AccessMethodTypeEnum:
+    description: Types of access methods for files
     permissible_values:
-      points:
-        description: Point data
-      regions:
-        description: Region/interval data
-      segmentation:
-        description: Segmented data
-
+      s3:
+        description: Amazon S3 access method
+      gs:
+        description: Google Storage access method
+      ftp:
+        description: FTP access method
+      gsiftp:
+        description: GSIFTP access method
+      globus:
+        description: Globus access method
+      htsget:
+        description: htsget access method
+      https:
+        description: HTTPS access method
+      file:
+        description: File access method
+        
+  ValueTypeEnum:
+    description: Types of values for data fields
+    permissible_values:
+      integer:
+        description: Integer value
+      number:
+        description: Numeric value
+      boolean:
+        description: Boolean value
+      string:
+        description: String value
+      multiple:
+        description: Multiple value types
+        
   ReplicateTypeEnum:
-    description: Type of replicate in scientific experiments
+    description: Types of replicates in experimental design
     permissible_values:
       biological:
         description: Biological replicate
@@ -57,16 +104,4 @@ enums:
       sequencing:
         description: Sequencing replicate
       pseudo:
-        description: Pseudo-replicate
-
-  SexEnum:
-    description: Sex of the donor organism
-    permissible_values:
-      female:
-        description: Female
-      male:
-        description: Male
-      other:
-        description: Other
-      unknown:
-        description: Unknown/not specified
+        description: Pseudo replicate
