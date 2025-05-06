@@ -1,0 +1,90 @@
+# annotation.yaml
+id: https://w3id.org/fair-genomics/schema/annotation
+name: fair-genomic-annotation
+description: Schema for genomic annotation tracks
+
+imports:
+  - linkml:types
+  - enums
+  - sample
+
+classes:
+  GenomicAnnotation:
+    description: >-
+      A genomic annotation or track representing genomic features or measurements
+      aligned to a reference genome assembly.
+    slots:
+      - global_id
+      - local_id
+      - desc_short_label
+      - desc_long_label
+      - desc_full
+      - genome_assembly_alias
+      - genome_assembly_accession
+      - ga4gh_seqcol_digest
+      - ga4gh_data_repository_service_id
+      - ga4gh_data_repository_service_object
+      - file_name
+      - track_geometry
+      - condensed_data_type
+      - file_format
+      - checksum
+      - sample
+    id_prefixes:
+      - fga.annotation
+
+slots:
+  global_id:
+    description: A globally unique and persistent identifier for the annotation, resolvable by identifiers.org
+    required: true
+    
+  local_id:
+    description: An identifier for the annotation that is unique within the namespace
+    required: true
+    
+  desc_short_label:
+    description: A short label of the annotation. Suggested maximum length is 25 characters.
+    
+  desc_long_label:
+    description: A long label of the annotation. Suggested maximum length is 80 characters.
+    
+  desc_full:
+    description: A full description of the annotation, or the URL to a full description.
+    
+  genome_assembly_alias:
+    description: Genome assembly (human-readable alias)
+    examples:
+      - GRCh38
+      
+  genome_assembly_accession:
+    description: Genome assembly accession
+    examples:
+      - GCF_000001405.40
+      
+  ga4gh_seqcol_digest:
+    description: GA4GH sequence collection digest, https://ga4gh.github.io/refget/seqcol/
+    
+  ga4gh_data_repository_service_id:
+    description: A machine-readable reference to a GA4GH DRS-compliant JSON object
+    
+  ga4gh_data_repository_service_object:
+    description: A harvested JSON object that conforms to GA4GH DRS standard
+    
+  file_name:
+    description: Human-readable file name
+    
+  track_geometry:
+    description: Geometric track type
+    range: GeometricTrackTypeEnum
+    
+  condensed_data_type:
+    description: Type of condensed data
+    examples:
+      - Peaks
+      - Signal
+      
+  file_format:
+    description: Format of the data file
+    
+  checksum:
+    description: Checksum of the data file

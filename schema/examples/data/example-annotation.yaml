@@ -1,0 +1,41 @@
+# example-annotation.yaml
+# A complete example of a genomic annotation with its associated sample
+id: fga.annotation:ENCSR123ABC
+global_id: https://identifiers.org/geo:GSM1234567
+local_id: ENCSR123ABC
+desc_short_label: H3K4me3 ChIP-seq K562
+desc_long_label: H3K4me3 ChIP-seq on K562 cells from Encode Project
+desc_full: "Histone H3 lysine 4 trimethylation (H3K4me3) ChIP-seq experiment performed on K562 human chronic myelogenous leukemia cell line as part of the ENCODE project."
+genome_assembly_alias: GRCh38
+genome_assembly_accession: GCF_000001405.39
+ga4gh_seqcol_digest: SQ.aF2YrnOfK6EcLIozmQ_KMQKERNg
+ga4gh_data_repository_service_id: drs://drs.example.org/00112233-aabb-ccdd-eeff-0011223344ee
+file_name: ENCSR123ABC_H3K4me3_K562_peaks.bed.gz
+track_geometry: regions
+condensed_data_type: Peaks
+file_format: BED
+checksum: md5:a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6
+sample:
+  id: fga.sample:ENCBS456DEF
+  global_id: https://identifiers.org/biosample:SAMN12345678
+  local_id: ENCBS456DEF
+  biospecimen_classification: cell_line
+  cell_line:
+    term_name: K562
+    term_id: clo:CLO_0007600
+  details: "Growth protocol: Grown in RPMI 1640 + 10% FBS"
+  summary: "K562 cells from human chronic myelogenous leukemia"
+  phenotype:
+    term_name: chronic myelogenous leukemia
+    term_id: mondo:MONDO_0011996
+  donor:
+    species_taxon_id: ncbitaxon:9606
+    species_taxon_name: Homo sapiens
+    sex: female
+    age: 53
+  replicates_collection:
+    replicates:
+      - replicate_type: biological
+        replicate_id: rep1
+      - replicate_type: biological
+        replicate_id: rep2

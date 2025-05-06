@@ -1,0 +1,72 @@
+# enums.yaml
+id: https://w3id.org/fair-genomics/schema/enums
+name: fair-genomic-annotation-enums
+description: Enumerated types for FAIR genomic annotations
+
+imports:
+  - linkml:types
+
+enums:
+  BiospecimenClassEnum:
+    description: Main type of structural unit to be used for classification of the sample
+    permissible_values:
+      whole_organism:
+        description: Complete organism specimen
+      organism_tissue:
+        description: Part of organism (tissue or organ)
+      primary_normal_cells:
+        description: Isolated normal cells
+      primary_abnormal_cells:
+        description: Isolated abnormal cells
+      cell_line:
+        description: Cultured cell line
+      single_cell:
+        description: Individual cell
+      in_vitro_differentiated_cells:
+        description: Cells differentiated in vitro
+      cell_free_sample:
+        description: Sample without intact cells
+      cloning_host:
+        description: Host organism used for cloning
+      organoid:
+        description: In vitro grown organ model
+      technical_sample:
+        description: Sample used for technical purposes
+
+  GeometricTrackTypeEnum:
+    description: Type of geometric representation used in the genomic track
+    permissible_values:
+      points:
+        description: Point data
+      regions:
+        description: Region/interval data
+      segmentation:
+        description: Segmented data
+
+  ReplicateTypeEnum:
+    description: Type of replicate in scientific experiments
+    permissible_values:
+      biological:
+        description: Biological replicate
+      isogenic:
+        description: Isogenic replicate
+      anisogenic:
+        description: Anisogenic replicate
+      technical:
+        description: Technical replicate
+      sequencing:
+        description: Sequencing replicate
+      pseudo:
+        description: Pseudo-replicate
+
+  SexEnum:
+    description: Sex of the donor organism
+    permissible_values:
+      female:
+        description: Female
+      male:
+        description: Male
+      other:
+        description: Other
+      unknown:
+        description: Unknown/not specified

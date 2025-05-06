@@ -1,0 +1,32 @@
+# core.yaml
+id: https://w3id.org/fair-genomics/schema
+name: fair-genomic-annotation-schema
+description: LinkML schema for FAIR genomic annotations
+license: MIT
+version: 0.1.0
+
+# Import LinkML types
+imports:
+  - linkml:types
+  - enums
+  - annotation
+  - sample
+
+# Default namespace and range
+default_prefix: fga
+default_range: string
+
+# Prefixes used across the schema
+prefixes:
+  linkml: https://w3id.org/linkml/
+  fga: https://w3id.org/fair-genomics/schema/
+  uberon: http://purl.obolibrary.org/obo/UBERON_
+  fma: http://purl.org/sig/ont/fma/
+  cl: http://purl.obolibrary.org/obo/CL_
+  ncit: http://purl.obolibrary.org/obo/NCIT_
+  clo: http://purl.obolibrary.org/obo/CLO_
+  efo: http://www.ebi.ac.uk/efo/
+  hpo: http://purl.obolibrary.org/obo/HP_
+  mondo: http://purl.obolibrary.org/obo/MONDO_
+  ncbitaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  xsd: http://www.w3.org/2001/XMLSchema#

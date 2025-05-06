@@ -1,0 +1,50 @@
+# example-collection.yaml
+# Example showing a collection of multiple annotations
+annotations:
+  - id: fga.annotation:ENCSR123ABC
+    global_id: https://identifiers.org/geo:GSM1234567
+    local_id: ENCSR123ABC
+    desc_short_label: H3K4me3 ChIP-seq K562
+    genome_assembly_alias: GRCh38
+    track_geometry: regions
+    sample:
+      id: fga.sample:ENCBS456DEF
+      global_id: https://identifiers.org/biosample:SAMN12345678
+      local_id: ENCBS456DEF
+      biospecimen_classification: cell_line
+      donor:
+        species_taxon_id: ncbitaxon:9606
+        species_taxon_name: Homo sapiens
+        
+  - id: fga.annotation:ENCSR234BCD
+    global_id: https://identifiers.org/geo:GSM2345678
+    local_id: ENCSR234BCD
+    desc_short_label: ATAC-seq K562
+    genome_assembly_alias: GRCh38
+    track_geometry: regions
+    sample:
+      id: fga.sample:ENCBS456DEF  # Same sample as above
+      global_id: https://identifiers.org/biosample:SAMN12345678
+      local_id: ENCBS456DEF
+      biospecimen_classification: cell_line
+      donor:
+        species_taxon_id: ncbitaxon:9606
+        species_taxon_name: Homo sapiens
+        
+  - id: fga.annotation:ENCSR345CDE
+    global_id: https://identifiers.org/geo:GSM3456789
+    local_id: ENCSR345CDE
+    desc_short_label: RNA-seq HepG2
+    genome_assembly_alias: GRCh38
+    track_geometry: segmentation
+    sample:
+      id: fga.sample:ENCBS567EFG
+      global_id: https://identifiers.org/biosample:SAMN23456789
+      local_id: ENCBS567EFG
+      biospecimen_classification: cell_line
+      cell_line:
+        term_name: HepG2
+        term_id: clo:CLO_0003704
+      donor:
+        species_taxon_id: ncbitaxon:9606
+        species_taxon_name: Homo sapiens

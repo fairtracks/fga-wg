@@ -1,0 +1,201 @@
+# sample.yaml
+id: https://w3id.org/fair-genomics/schema/sample
+name: fair-genomic-sample
+description: Schema for biological samples used in genomic annotations
+
+imports:
+  - linkml:types
+  - enums
+
+classes:
+  Sample:
+    description: A biological sample used for genomic analysis
+    slots:
+      - global_id
+      - local_id
+      - biospecimen_classification
+      - organism_tissue
+      - primary_normal_cell
+      - primary_abnormal_cell
+      - cell_line
+      - other_biospecimen
+      - details
+      - summary
+      - phenotype
+      - donor
+      - replicates_collection
+    id_prefixes:
+      - fga.sample
+
+  OrganismTissue:
+    description: Information about tissue from which the sample was taken
+    slots:
+      - term_name
+      - term_id
+      - is_cancer_sample
+    id_prefixes:
+      - fga.tissue
+
+  PrimaryNormalCell:
+    description: Cell type of isolated normal cells in the sample
+    slots:
+      - term_name
+      - term_id
+    id_prefixes:
+      - fga.normal_cell
+
+  PrimaryAbnormalCell:
+    description: Cell type of isolated abnormal cells in the sample
+    slots:
+      - term_name
+      - term_id
+    id_prefixes:
+      - fga.abnormal_cell
+
+  CellLine:
+    description: Cultured cell line used in the sample
+    slots:
+      - term_name
+      - term_id
+    id_prefixes:
+      - fga.cell_line
+
+  OtherBiospecimen:
+    description: Other biospecimen types not covered by more specific classes
+    slots:
+      - term_name
+      - term_id
+    id_prefixes:
+      - fga.biospecimen
+
+  Phenotype:
+    description: Main phenotype connected to the sample
+    slots:
+      - term_name
+      - term_id
+    id_prefixes:
+      - fga.phenotype
+
+  Donor:
+    description: Information about the donor organism
+    slots:
+      - species_taxon_id
+      - species_taxon_name
+      - sex
+      - age
+      - clinical_information
+      - sampling_location
+      - sample_collection_date
+    id_prefixes:
+      - fga.donor
+
+  ReplicatesCollection:
+    description: Collection of replicates
+    multivalued: true
+    slots:
+      - replicates
+    id_prefixes:
+      - fga.replicate_collection
+
+  Replicate:
+    description: Information about a replicate
+    slots:
+      - replicate_type
+      - replicate_id
+    id_prefixes:
+      - fga.replicate
+
+slots:
+  biospecimen_classification:
+    description: Main type of structural unit to be used for classification of the sample
+    range: BiospecimenClassEnum
+    required: true
+    
+  organism_tissue:
+    description: Part of organism from which the sample was taken
+    range: OrganismTissue
+    
+  primary_normal_cell:
+    description: Cell type of isolated normal cells in the sample
+    range: PrimaryNormalCell
+    
+  primary_abnormal_cell:
+    description: Cell type of isolated abnormal cells in the sample
+    range: PrimaryAbnormalCell
+    
+  cell_line:
+    description: Cultured cell line used in the sample
+    range: CellLine
+    
+  other_biospecimen:
+    description: Other biospecimen information
+    range: OtherBiospecimen
+    
+  details:
+    description: Optional details provided by the user
+    
+  summary:
+    description: Derived summary of the sample
+    
+  phenotype:
+    description: Main phenotype connected to the sample
+    range: Phenotype
+    
+  donor:
+    description: Information about the donor organism
+    range: Donor
+    
+  replicates_collection:
+    description: Collection of replicates
+    range: ReplicatesCollection
+    
+  term_name:
+    description: Name of the term from an ontology
+    
+  term_id:
+    description: Identifier of the term from an ontology
+    
+  is_cancer_sample:
+    description: Whether the sample is from cancer tissue
+    range: boolean
+    
+  species_taxon_id:
+    description: Species identifier from NCBITaxonomy, resolvable by identifiers.org
+    required: true
+    
+  species_taxon_name:
+    description: Species name according to NCBITaxonomy
+    required: true
+    
+  sex:
+    description: Sex of the donor organism
+    range: SexEnum
+    
+  age:
+    description: Age of the donor organism
+    
+  clinical_information:
+    description: Clinical information about the donor
+    
+  sampling_location:
+    description: Location where the sample was collected (ISO format)
+    
+  sample_collection_date:
+    description: Date when the sample was collected (ISO-8601 format)
+    
+  replicates:
+    description: Replicates associated with this sample
+    range: Replicate
+    multivalued: true
+    
+  replicate_type:
+    description: Type of replicate
+    range: ReplicateTypeEnum
+    
+  replicate_id:
+    description: Identifier for the replicate
+
+  # Link to include Sample in GenomicAnnotation
+  sample:
+    description: Reference to the sample used for this annotation
+    range: Sample

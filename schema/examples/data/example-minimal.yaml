@@ -1,0 +1,19 @@
+# example-minimal.yaml
+# A minimal example with only required fields
+id: fga.annotation:ENCSR999XYZ
+global_id: https://identifiers.org/geo:GSM9999999
+local_id: ENCSR999XYZ
+genome_assembly_alias: GRCh38
+track_geometry: points
+sample:
+  id: fga.sample:ENCBS999ZYX
+  global_id: https://identifiers.org/biosample:SAMN99999999
+  local_id: ENCBS999ZYX
+  biospecimen_classification: organism_tissue
+  organism_tissue:
+    term_name: liver
+    term_id: uberon:UBERON_0002107
+    is_cancer_sample: false
+  donor:
+    species_taxon_id: ncbitaxon:9606
+    species_taxon_name: Homo sapiens
