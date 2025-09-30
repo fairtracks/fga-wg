@@ -1,0 +1,25 @@
+id: https://w3id.org/fga-wg/schema/accessurl
+name: accessurl
+imports:
+  - linkml:types
+  
+classes:
+  QualityAssessment:
+    description: Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis.
+    slots:
+      - assessment_method
+      - assessment_value
+      - assessment_details_url
+
+slots:
+  assessment_method:
+    description: Quality assessment method that has been carried out (e.g. BUSCO, OMArk, peak calling statistics, etc.)
+    required: true
+    range: string
+  assessment_value:
+    description: Main values produced by the quality assessment.
+    required: true
+    range: string 
+  assessment_details_url:
+    description: URL to a report containing the detailed output from the quality assessment.
+    range: URL

@@ -1,0 +1,24 @@
+id: https://w3id.org/fga-wg/schema/contact
+name: contact
+imports:
+  - linkml:types
+
+classes:
+  Contact:
+    description: Contact information for a person or an organisation.
+    slots:
+      - name
+      - contact_id
+      - email
+
+slots:
+  name: 
+    description: Name of the person or organisation.
+    requird: true
+    range: string
+  contact_id:
+    description: Globally unique identifier for a person (e.g. ORCID ID) or organisation (e.g. BioProject accession).
+    range: CURIE
+  email:
+    description: E-mail address of the person or organisation.
+    range: CURIE

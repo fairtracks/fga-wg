@@ -1,0 +1,45 @@
+id: https://w3id.org/fga-wg/schema/filecollection
+name: filecollection
+imports:
+  - linkml:types
+
+classes:
+  FileCollection:
+    description: A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files.
+    slots:
+      - filecollection_external_id
+      - filecollection_id
+      - label
+      - description
+      - input_sources
+      - deposition_versioned_ref
+      - contact
+
+slots:
+  filecollection_external_id:
+    description: External, globally unique identifier for the file collection (in most cases, this will not exist).
+    requierd: false
+    range: CURIE
+  filecollection_id:
+    description: Internal identifier for the file collection (unique within the metadata deposition). 
+    required: true
+    identifier: true
+    range: CURIE
+  label:
+    description: A human-readable description of the file collection, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
+    required: true
+    range: string
+  description:
+    description: Human-readable description of the file collection.
+    range: string
+  input_sources:
+    description: References to other input sources from which this file collection was derived.
+    range: InputSource
+    multivalued: true
+  deposition_versioned_ref:
+    description: Reference to versioned id of deposition containing this file collection.
+    required: true
+    range: CURIE
+  contact:
+    description: Contact point to the creator and/or maintainer of the file collection.
+    range: Contact

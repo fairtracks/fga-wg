@@ -1,0 +1,61 @@
+id: https://w3id.org/fga-wg/schema/analysis
+name: analysis
+imports:
+  - linkml:types
+
+classes:
+  Analysis:
+    description: Represents the computational processing applied to data from a sequencing experiment, or from another analysis. This can be described at the level of individual analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline as a whole.
+    slots:
+      - analysis_external_id
+      - analysis_id
+      - label
+      - description
+      - study_ref
+      - input_sources
+      - analysis_type
+      - analysis_main_tool
+      - analysis_main_tool_version
+      - analysis_protocol
+      - analysis_workflow
+
+slots:
+  analysis_external_id:
+    description: External, globally unique identifier for the experiment.
+    range: CURIE
+  analysis_id:  
+    description: Internal identifier for the experiment (unique within the metadata deposition). 
+    required: true
+    identifier: true
+    range: CURIE
+  label:
+    description: A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
+    required: true
+    range: string
+  description:
+    description: Human-readable description of the analysis.
+    range: string
+  study_ref:
+    description: Internal reference to the study within which the analysis has been carried out.
+    range: CURIE
+  input_sources:
+    description: Internal reference to the study within which the analysis has been carried out.
+    required: true
+    range: InputSource
+    multivalued: true
+  analysis_type:
+    description: The type of analysis carried out.
+    required: true
+    range: Term
+  analysis_main_tool:
+    description: Main software tool used for the analysis.
+    range: string
+  analysis_main_tool_version:
+    description: Version of the main software tool used for the analysis.
+    range: string
+  analysis_protocol:
+    description: Document describing the analysis protocol that was followed.
+    range: string
+  analysis_workflow:
+    description: External reference to the analysis workflow, with availability in at least one machine-operable form (e.g. CWL, Nextflow, ...).
+    range: string

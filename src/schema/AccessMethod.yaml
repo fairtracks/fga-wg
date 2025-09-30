@@ -1,0 +1,25 @@
+id: https://w3id.org/fga-wg/schema/accessmethod
+name: accessmethod
+imports:
+  - linkml:types
+
+classes:
+  AccessMethod:
+    description: Description of an access method that can be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.2.0/docs/#tag/AccessMethodModel)
+    slots:
+      - type
+      - access_url
+      - region
+
+slots:
+  type:
+    description: Type of the access method.
+    required: true
+    range: enum
+  access_url: 
+    description: AccessURL object providing URL and associated HTTP headers to access the File object (orig: DrsObject).
+    required: true
+    range: AccessURL
+  region:
+    description: Name of the region in the cloud service provider that the object belongs to.
+    range: string

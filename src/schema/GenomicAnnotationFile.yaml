@@ -1,0 +1,31 @@
+id: https://w3id.org/fga-wg/schema/accessurl
+name: accessurl
+imports:
+  - linkml:types
+  
+classes:
+  GenomicAnnotationFile:
+    description: Information about a genomic annotation / track file. GenomicAnnotationFile is a specification of the File entity and inherits all the fields defined in File, in addition to the fields that are specific to GenomicAnnotationFile, as detailed here.
+    slots:
+      - genomic_annotation_digest
+      - genome_assembly
+      - track_geometry
+      - sequence_features
+
+slots:
+  genomic_annotation_digest:
+    description: Content-derived digest for distributed identification of genomic annotation files. (This field is currently a placeholder, as an algorithm for generating such a digest is yet to be specified.).
+    range: CURIE
+  genome_assembly:
+    description: Information about the genome assembly used to generate the genomic annotation file, consequently defining the genomic coordinate system for the annotation.
+    required: true
+    range: GenomeAssembly
+  track_geometry:
+    description: Geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track (also relevant for non-visual analyses).
+    required: true
+    range: TrackGeometry
+  sequence_features:
+    description: List of sequence features described by the genomic annotation file.
+    required: true
+    range: Term
+    multivalued: true

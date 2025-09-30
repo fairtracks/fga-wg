@@ -1,0 +1,46 @@
+id: https://w3id.org/fga-wg/schema/study
+name: study
+imports:
+  - linkml:types
+
+classes:
+  Study:
+    description: A scientific study, i.e. a unit of research, within which experiments and/or analyses have been carried out.
+    slots:
+      - study_external_id
+      - study_id
+      - title
+      - abstract
+      - project_external_ref
+      - project_name
+      - publications
+      - contact
+
+slots:
+  study_external_id:
+    description: External, globally unique identifier for the study (preferably a BioStudies CURIE).
+    range: CURIE
+  study_id:
+    description: Internal identifier for the study (unique within the metadata deposition). Namespace: "study"
+    required: true
+    range: CURIE
+  title:
+    description: Title of the study.
+    required: true
+    range: string
+  abstract:
+    description: Abstract of the study.
+    range: string
+  project_external_ref:
+    description: Reference to a project within which the study was carried out (preferably a BioProject CURIE).
+    range: string
+  project_name:
+    description: Name of the project within which the study was carried out.
+    range: string
+  publications:
+    description: List of (relevant) publications containing the results of the study (in the form of DOI CURIEs).
+    range: CURIE
+    multivalued: true
+  contact: 
+    description: Contact point for the study.
+    range: Contact
