@@ -21,4 +21,4 @@ slots:
     range: CURIE
   email:
     description: E-mail address of the person or organisation.
-    range: CURIE
+    pattern: "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"

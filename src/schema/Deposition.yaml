@@ -28,18 +28,18 @@ slots:
   label:
     description: A human-readable description of the metadata deposition, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
     required: true
-    range: string
+    pattern: "^.{0,60}$"
   description:
     description: Human-readable description of the metadata deposition.
     range: string
   first_created:
     description: The date and time of the creation of the first version of the metadata deposition.
     required: true
-    range: string
+    range: datetime
   last_changed:
     description: The date and time of the last change of the current metadata deposition (corresponding to "deposition_versioned_id").
     required: true
-    range: string
+    range: datetime
   input_sources:
     description: References to other input sources from which this entire metadata deposition was derived, or possibly including DOIs of other metadata depositions used as source.
     range: InputSource

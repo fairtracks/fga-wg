@@ -23,6 +23,7 @@ slots:
   study_id:
     description: Internal identifier for the study (unique within the metadata deposition). Namespace: "study"
     required: true
+    identifier: true 
     range: CURIE
   title:
     description: Title of the study.

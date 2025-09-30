@@ -11,11 +11,23 @@ classes:
       - access_url
       - region
 
+enums:
+  AccessMethodTypes:
+    permissible_values:
+      S3:
+      GS:
+      FTP:
+      GSIFTP:
+      GLOBUS:
+      HTSGET:
+      HTTPS:
+      FILE:
+
 slots:
   type:
     description: Type of the access method.
     required: true
-    range: enum
+    range: AccessMethodTypes
   access_url: 
     description: AccessURL object providing URL and associated HTTP headers to access the File object (orig: DrsObject).
     required: true

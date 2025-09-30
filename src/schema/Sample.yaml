@@ -1,0 +1,89 @@
+id: https://w3id.org/fga-wg/schema/sample
+name: sample
+imports:
+  - linkml:types
+  
+classes:
+  Sample:
+    description: Information about a biospecimen/sample used as raw material for lab experiments.
+    slots:
+      - sample_external_id
+      - sample_id
+      - label
+      - description
+      - donor_organism_ref
+      - biospecimen_classification
+      - organism_tissue
+      - primary_cell
+      - cell_line
+      - other_biospecimen
+      - sampling_protocol
+      - description
+      - sample_collection_location
+      - sample_collection_date
+      - phenotype
+      - donor_age
+      - donor_development_stage
+      - donor_clinical_information
+
+slots:
+  sample_external_id:
+    description: External, globally unique identifier for the biospecimen/sample.
+    required: true
+    range: CURIE
+  sample_id:
+    description: Internal identifier for the biospecimen/sample (unique within the metadata deposition).
+    required: true
+    identifier: true
+    range: CURIE
+  label:
+    description: A human-readable description of the sample, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
+    required: true
+    pattern: "^.{0,60}$"
+  description:
+    description: Human-readable description of the sample and the sampling process.
+    range: string
+  donor_organism_ref:
+    description: Internal reference to the donor/organism from which the biospecimen/sample was taken.
+    required: true
+    range: CURIE
+  biospecimen_classification:
+    description: Main type of structural unit to be used for classification of the biospecimen/sample.
+    required: true
+    range: string
+  organism_tissue: 
+    description: Part of organism (typically tissue or organ) from which the biospecimen/sample was taken, or cell line was derived from.
+    range: Term
+  primary_cell:
+    description: Cell type of isolated normal cells in the biospecimen/sample.
+    range: Term
+  cell_line:
+    description: Cultured cell line used in the biospecimen/sample.
+    range: Term
+  other_biospecimen:
+    description: Other biospecimen-related terms that can be used to further classify the biospecimen/sample.
+    range: Term
+    multivalued: true
+  sampling_protocol:
+    description: Protocol detailing the collection and treatment of the biospecimen/sample.
+    range: uri
+  description:
+    description: Human-readable description of the biospecimen/sample.
+    range: string
+  sample_collection_location:
+    description: Geographical location where the sample was collected.
+  sample_collection_date:
+    description: Date of sample collection.
+    range: datetime
+  phenotype:
+    description: Main phenotype (e.g. disease) connected to the biospecimen/sample.
+    range: Term
+  donor_age:
+    description: Age of the donor/organism at the time of sampling
+    range: string
+  donor_development_stage: 
+    description: Development stage of the donor at the time of sampling.
+    range: Term
+  donor_clinical_information: 
+    description: Clinical information of the donor/organism at the time of sampling.
+    range: string

@@ -1,0 +1,84 @@
+id: https://w3id.org/fga-wg/schema/trackgeometry
+name: trackgeometry
+imports:
+  - linkml:types
+  
+classes:
+  TrackGeometry:
+    description: Overall geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track, in line with the track type delineations from Gundersen et. al, 2011. While conceptually based on visual characteristics, these properties are also useful to e.g. select relevant annotation files for non-visual analyses.
+    slots:
+      - has_gaps
+      - has_lengths
+      - has_strands
+      - has_values
+      - has_edges
+      - has_names
+      - elements_overlapping
+      - elements_circular
+      - lengths_constant
+      - value_type
+      - edges_have_weights
+      - edge_weight_type
+      - edges_are_directed
+      - edges_denote_parents
+
+enums:
+  DataTypes:
+    permissible_values:
+      INTEGER:
+      NUMBER:
+      BOOLEAN:
+      STRING:
+      MULTIPLE:
+
+slots:
+  has_gaps:
+    description: Whether there are gaps between the sequence features (there exists at least one gap between two features on the same sequence).
+    required: true
+    range: boolean
+  has_lengths:
+    description: Whether the sequence features have lengths (at least one feature spans more than 1 base pair).
+    required: true
+    range: boolean
+  has_strands:
+    description: Whether the sequence features are stranded (at least one feature has strand information).
+    required: true
+    range: boolean
+  has_values:
+    description: Whether the sequence features have associated values (at least one feature has an associated value).
+    required: true
+    range: boolean
+  has_edges:
+    description: Whether the sequence features are linked across positions (at least one edge between features exists).
+    required: true
+    range: boolean
+  has_names:
+    description: Whether the sequence features are named (at least one feature has a name).
+    required: true
+    range: boolean
+  elements_overlapping: 
+    description: Whether the sequence features are overlapping (at least one base pair is simultaneously covered by two sequence features).
+    required: true
+    range: boolean
+  elements_circular:
+    description: Whether the sequence features have circular coordinates (at least one feature that cross a sequence border).
+    required: true
+    range: boolean
+  lengths_constant:
+    description: Whether the sequence lengths are constant (all sequence features have the same length, excluding features at the very end of a sequence).
+    range: boolean
+  value_type:
+    description: The type of value associated with the sequence features, if any.
+    range: DataTypes
+  edges_have_weights:
+    description: Whether the edges linking sequence features are weighted (at least one edge between sequence features has an associated weight).
+    range: boolean
+  edge_weight_type:
+    description: The main type of value associated with the edges.
+    range: DataTypes
+  edges_are_directed:
+    description: Whether the edges linking sequence features are directed (at least one edge between sequence features is defined with a direction).
+    range: boolean
+  edges_denote_parents:
+    description: Whether the edges linking sequence features denote a parent-child relationship (all edges between sequence features denote parent-child relationships such as genes to exons, i.e. where the child is fully covered by the parent).
+    range: boolean

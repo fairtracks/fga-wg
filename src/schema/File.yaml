@@ -42,7 +42,7 @@ slots:
   label:
     description: A human-readable description of the data file, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
     required: true
-    range: string
+    pattern: "^.{0,60}$"
   filecollection_refs:
     description: Internal references to the FileCollection objects (within the deposition) that contains the data file, if any.
     required: true
@@ -89,10 +89,10 @@ slots:
   created_time:
     description: Timestamp of content creation in RFC3339. (This is the creation time of the underlying content, not of the JSON object.).
     required: true
-    range: string
+    range: datetime
   updated_time:
     description: Timestamp of content update in RFC3339, identical to created_time in systems that do not support updates. (This is the update time of the underlying content, not of the JSON object.).
-    range: string
+    range: datetime
   version:
     description: A string representing a version. (Some systems may use checksum, a RFC3339 timestamp, or an incrementing version number.).
     range: string

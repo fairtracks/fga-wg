@@ -28,11 +28,12 @@ slots:
   experiment_id:
     description: Internal identifier for the experiment (unique within the metadata deposition).
     required: true
+    identifier: true
     range: CURIE
   label:
     description: A human-readable description of the experiment, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
     required: true
-    range: string
+    pattern: "^.{0,60}$"
   study_ref:
     description: Internal reference to the study within which the experiment has been carried out.
     required: true

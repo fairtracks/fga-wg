@@ -22,4 +22,4 @@ slots:
     range: string 
   assessment_details_url:
     description: URL to a report containing the detailed output from the quality assessment.
-    range: URL
+    range: uri

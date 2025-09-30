@@ -31,7 +31,7 @@ slots:
   label:
     description: A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
     required: true
-    range: string
+    pattern: "^.{0,60}$"
   description:
     description: Human-readable description of the analysis.
     range: string
