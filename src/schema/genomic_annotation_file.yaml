@@ -2,12 +2,14 @@ id: https://w3id.org/fga-wg/schema/genomic-annotation-file
 name: genomic_annotation_file
 imports:
   - linkml:types
+  - file
   - genome_assembly
   - term
   - track_geometry
 
 classes:
   GenomicAnnotationFile:
+    is_a: File
     description: 'Information about a genomic annotation / track file. GenomicAnnotationFile is a specification of the File entity and inherits all the fields defined in File, in addition to the fields that are specific to GenomicAnnotationFile, as detailed here.'
     slots:
       - genomic_annotation_digest
