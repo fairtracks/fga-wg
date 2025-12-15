@@ -1,5 +1,5 @@
-id: https://w3id.org/fga-wg/schema/trackgeometry
-name: trackgeometry
+id: https://w3id.org/fga-wg/schema/track-geometry
+name: track_geometry
 imports:
   - linkml:types
   

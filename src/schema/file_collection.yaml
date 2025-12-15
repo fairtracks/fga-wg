@@ -1,9 +1,9 @@
-id: https://w3id.org/fga-wg/schema/filecollection
-name: filecollection
+id: https://w3id.org/fga-wg/schema/file-collection
+name: file_collection
 imports:
   - linkml:types
-  - Contact
-  - InputSource
+  - contact
+  - input_source
 
 classes:
   FileCollection:

@@ -2,8 +2,8 @@ id: https://w3id.org/fga-wg/schema/analysis
 name: analysis
 imports:
   - linkml:types
-  - InputSource
-  - Term
+  - input_source
+  - term
 
 classes:
   Analysis:

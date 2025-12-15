@@ -2,7 +2,7 @@ id: https://w3id.org/fga-wg/schema/study
 name: study
 imports:
   - linkml:types
-  - Contact
+  - contact
 
 classes:
   Study:

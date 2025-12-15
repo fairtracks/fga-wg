@@ -1,8 +1,8 @@
-id: https://w3id.org/fga-wg/schema/inputsource
-name: inputsource
+id: https://w3id.org/fga-wg/schema/input-source
+name: input_source
 imports:
   - linkml:types
-  - Term
+  - term
 
 classes:
   InputSource:

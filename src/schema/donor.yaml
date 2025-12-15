@@ -2,7 +2,7 @@ id: https://w3id.org/fga-wg/schema/donor
 name: donor
 imports:
   - linkml:types
-  - Term
+  - term
   
 classes:
   Donor:

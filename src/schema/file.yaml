@@ -2,11 +2,11 @@ id: https://w3id.org/fga-wg/schema/file
 name: file
 imports:
   - linkml:types
-  - AccessMethod
-  - Checksum
-  - InputSource
-  - QualityAssessment
-  - Term
+  - access_method
+  - checksum
+  - input_source
+  - quality_assessment
+  - term
 
 classes:
   File:

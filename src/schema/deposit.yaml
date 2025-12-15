@@ -2,7 +2,7 @@ id: https://w3id.org/fga-wg/schema/deposit
 name: deposit
 imports:
   - linkml:types
-  - InputSource
+  - input_source
 
 classes:
   Deposit:
@@ -54,7 +54,7 @@ slots:
     range: InputSource
     multivalued: true
   ontology_versions:
-    description: 'Map from the version-agnostic URL to a versioned URL (e.g. "versionIRI" in owl) of each ontology used in the current metadata deposit (corresponding to "deposit_versioned_id").'
+    description: 'Map from the version-agnostic URL to a versioned URL (e.g. "versionIRI" in owl) of each ontology used in the current metadata deposit (corresponding to deposit_versioned_id").'
     required: true
     range: OntologyVersions
     multivalued: true

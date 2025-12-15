@@ -1,10 +1,10 @@
-id: https://w3id.org/fga-wg/schema/accessurl
-name: accessurl
+id: https://w3id.org/fga-wg/schema/genomic-annotation-file
+name: genomic_annotation_file
 imports:
   - linkml:types
-  - GenomeAssembly
-  - Term
-  - TrackGeometry
+  - genome_assembly
+  - term
+  - track_geometry
 
 classes:
   GenomicAnnotationFile:

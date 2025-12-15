@@ -1,5 +1,5 @@
-id: https://w3id.org/fga-wg/schema/genomeassembly
-name: genomeassembly
+id: https://w3id.org/fga-wg/schema/genome-assembly
+name: genome_assembly
 imports:
   - linkml:types
   

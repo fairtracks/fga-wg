@@ -2,8 +2,8 @@ id: https://w3id.org/fga-wg/schema/experiment
 name: experiment
 imports:
   - linkml:types
-  - InputSource
-  - Term
+  - input_source
+  - term
 
 classes:
   Experiment:
