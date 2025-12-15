@@ -7,7 +7,7 @@ imports:
 
 classes:
   Analysis:
-    description: Represents the computational processing applied to data from a sequencing experiment, or from another analysis. This can be described at the level of individual analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline as a whole.
+    description: 'Represents the computational processing applied to data from a sequencing experiment, or from another analysis. This can be described at the level of individual analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline as a whole.'
     slots:
       - analysis_external_id
       - analysis_id
@@ -23,42 +23,42 @@ classes:
 
 slots:
   analysis_external_id:
-    description: External, globally unique identifier for the experiment.
+    description: 'External, globally unique identifier for the experiment.'
     range: curie
   analysis_id:  
-    description: Internal identifier for the experiment (unique within the metadata deposit). 
+    description: 'Internal identifier for the experiment (unique within the metadata deposit). '
     required: true
     identifier: true
     range: curie
   label:
-    description: A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
+    description: 'A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
     pattern: "^.{0,60}$"
   description:
-    description: Human-readable description of the analysis.
+    description: 'Human-readable description of the analysis.'
     range: string
   study_ref:
-    description: Internal reference to the study within which the analysis has been carried out.
+    description: 'Internal reference to the study within which the analysis has been carried out.'
     range: curie
   input_sources:
-    description: Internal reference to the study within which the analysis has been carried out.
+    description: 'Internal reference to the study within which the analysis has been carried out.'
     required: true
     range: InputSource
     multivalued: true
   analysis_type:
-    description: The type of analysis carried out.
+    description: 'The type of analysis carried out.'
     required: true
     range: Term
   analysis_main_tool:
-    description: Main software tool used for the analysis.
+    description: 'Main software tool used for the analysis.'
     range: string
   analysis_main_tool_version:
-    description: Version of the main software tool used for the analysis.
+    description: 'Version of the main software tool used for the analysis.'
     range: string
   analysis_protocol:
-    description: Document describing the analysis protocol that was followed.
+    description: 'Document describing the analysis protocol that was followed.'
     range: string
   analysis_workflow:
-    description: External reference to the analysis workflow, with availability in at least one machine-operable form (e.g. CWL, Nextflow, ...).
+    description: 'External reference to the analysis workflow, with availability in at least one machine-operable form (e.g. CWL, Nextflow, ...).'
     range: string

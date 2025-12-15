@@ -6,7 +6,7 @@ imports:
   
 classes:
   Donor:
-    description: Information about the donor or complete organism from which the sample was taken.
+    description: 'Information about the donor or complete organism from which the sample was taken.'
     slots:
       - donor_external_id
       - donor_id
@@ -15,17 +15,17 @@ classes:
 
 slots:
   donor_external_id:
-    description: External, globally unique identifier for the donor/organism.
+    description: 'External, globally unique identifier for the donor/organism.'
     range: curie
   donor_id:
-    description: Internal identifier for the donor/organism (unique within the metadata deposit). 
+    description: 'Internal identifier for the donor/organism (unique within the metadata deposit). '
     required: true
     identifier: true
     range: curie
   species_taxon:
-    description: Taxonomical classification of the species of the donor/organism.
+    description: 'Taxonomical classification of the species of the donor/organism.'
     required: true
     range: Term
   sex:
-    description: Biological sex of the donor/organism.
+    description: 'Biological sex of the donor/organism.'
     range: Term

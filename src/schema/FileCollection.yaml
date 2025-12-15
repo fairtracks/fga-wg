@@ -7,7 +7,7 @@ imports:
 
 classes:
   FileCollection:
-    description: A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files.
+    description: 'A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files.'
     slots:
       - filecollection_external_id
       - filecollection_id
@@ -19,30 +19,30 @@ classes:
 
 slots:
   filecollection_external_id:
-    description: External, globally unique identifier for the file collection (in most cases, this will not exist).
+    description: 'External, globally unique identifier for the file collection (in most cases, this will not exist).'
     required: false
     range: curie
   filecollection_id:
-    description: Internal identifier for the file collection (unique within the metadata deposit). 
+    description: 'Internal identifier for the file collection (unique within the metadata deposit). '
     required: true
     identifier: true
     range: curie
   label:
-    description: A human-readable description of the file collection, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
+    description: 'A human-readable description of the file collection, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
     pattern: "^.{0,60}$"
   description:
-    description: Human-readable description of the file collection.
+    description: 'Human-readable description of the file collection.'
     range: string
   input_sources:
-    description: References to other input sources from which this file collection was derived.
+    description: 'References to other input sources from which this file collection was derived.'
     range: InputSource
     multivalued: true
   deposit_versioned_ref:
-    description: Reference to versioned id of deposit containing this file collection.
+    description: 'Reference to versioned id of deposit containing this file collection.'
     required: true
     range: curie
   contact:
-    description: Contact point to the creator and/or maintainer of the file collection.
+    description: 'Contact point to the creator and/or maintainer of the file collection.'
     range: Contact
