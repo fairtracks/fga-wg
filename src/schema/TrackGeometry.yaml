@@ -24,12 +24,18 @@ classes:
 
 enums:
   DataTypes:
+    description: Types of data values associated with sequence features or edges.
     permissible_values:
-      INTEGER:
-      NUMBER:
-      BOOLEAN:
-      STRING:
-      MULTIPLE:
+      integer:
+        description: Integer numeric values.
+      float:
+        description: Floating point numeric values.
+      boolean:
+        description: Boolean values (true/false).
+      string:
+        description: Text string values.
+      multiple:
+        description: Multiple types of values are associated (e.g. both integer and string).
 
 slots:
   has_gaps:
@@ -68,13 +74,13 @@ slots:
     description: Whether the sequence lengths are constant (all sequence features have the same length, excluding features at the very end of a sequence).
     range: boolean
   value_type:
-    description: The type of value associated with the sequence features, if any.
+    description: The type of values associated with the sequence features, if any.
     range: DataTypes
   edges_have_weights:
     description: Whether the edges linking sequence features are weighted (at least one edge between sequence features has an associated weight).
     range: boolean
   edge_weight_type:
-    description: The main type of value associated with the edges.
+    description: The type of values associated with the edges.
     range: DataTypes
   edges_are_directed:
     description: Whether the edges linking sequence features are directed (at least one edge between sequence features is defined with a direction).

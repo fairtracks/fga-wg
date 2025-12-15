@@ -6,7 +6,7 @@ imports:
 
 classes:
   AccessMethod:
-    description: "Description of an access method that can be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.2.0/docs/#tag/AccessMethodModel)"
+    description: "Description of an access method (i.e. communication protocol) that can be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel)"
     slots:
       - type
       - access_url
@@ -14,19 +14,28 @@ classes:
 
 enums:
   AccessMethodTypes:
+    description: "Type of access methods (i.e. communication protocols), following the vocabulary defined in the GA4GH DRS specification (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel/operation/getAccessMethod)."
     permissible_values:
-      S3:
-      GS:
-      FTP:
-      GSIFTP:
-      GLOBUS:
-      HTSGET:
-      HTTPS:
-      FILE:
+      s3:
+        description: "Amazon S3 and other S3-compatible bucket."
+      gs:
+        description: "Google Cloud Storage (and compatible) bucket."
+      ftp:
+        description: "File Transfer Protocol."
+      gsiftp:
+        description: "GridFTP protocol (an extension of the File Transfer Protocol (FTP) for grid computing)."
+      globus:
+        description: "Data transfer via the Globus research cyberinfrastructure (https://www.globus.org/.)"
+      htsget:
+        description: "GA4GH HTSget standard for retrieving subsections of genomic data (https://www.ga4gh.org/product/htsget/)."
+      https:
+        description: "Hypertext Transfer Protocol Secure, the standard encrypted protocol used on the web."
+      file:
+        description: "For local files accessible via a file URI (e.g., file://path/to/file)."
 
 slots:
   type:
-    description: Type of the access method.
+    description: "Type of the access method."
     required: true
     range: AccessMethodTypes
   access_url: 
@@ -34,5 +43,5 @@ slots:
     required: true
     range: AccessURL
   region:
-    description: Name of the region in the cloud service provider that the object belongs to.
+    description: "Name of the region in the cloud service provider that the object belongs to."
     range: string
