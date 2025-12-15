@@ -33,5 +33,5 @@ slots:
   aliases:
     description: Human-readable aliases of the genome assembly. Can be imprecise, as preciseness is enforced in the other fields.
     required: true
-    range: CURIE
+    range: curie
     multivalued: true

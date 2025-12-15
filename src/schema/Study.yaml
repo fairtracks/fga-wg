@@ -2,6 +2,7 @@ id: https://w3id.org/fga-wg/schema/study
 name: study
 imports:
   - linkml:types
+  - Contact
 
 classes:
   Study:
@@ -19,12 +20,12 @@ classes:
 slots:
   study_external_id:
     description: External, globally unique identifier for the study (preferably a BioStudies CURIE).
-    range: CURIE
+    range: curie
   study_id:
-    description: Internal identifier for the study (unique within the metadata deposition). Namespace: "study"
+    description: 'Internal identifier for the study (unique within the metadata deposit). Namespace: "study"'
     required: true
     identifier: true 
-    range: CURIE
+    range: curie
   title:
     description: Title of the study.
     required: true
@@ -40,7 +41,7 @@ slots:
     range: string
   publications:
     description: List of (relevant) publications containing the results of the study (in the form of DOI CURIEs).
-    range: CURIE
+    range: curie
     multivalued: true
   contact: 
     description: Contact point for the study.

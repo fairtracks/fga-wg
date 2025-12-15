@@ -2,6 +2,8 @@ id: https://w3id.org/fga-wg/schema/experiment
 name: experiment
 imports:
   - linkml:types
+  - InputSource
+  - Term
 
 classes:
   Experiment:
@@ -24,20 +26,21 @@ classes:
 slots:
   experiment_external_id:
     description: External, globally unique identifier for the experiment.
-    range: CURIE
+    range: curie
   experiment_id:
-    description: Internal identifier for the experiment (unique within the metadata deposition).
+    description: Internal identifier for the experiment (unique within the metadata deposit).
     required: true
     identifier: true
-    range: CURIE
+    range: curie
   label:
     description: A human-readable description of the experiment, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
     required: true
+    range: string
     pattern: "^.{0,60}$"
   study_ref:
     description: Internal reference to the study within which the experiment has been carried out.
     required: true
-    range: CURIE
+    range: curie
   samples:
     description: External or internal references to samples used in the experiment. Internal references should refer to Sample objects.
     required: true
@@ -65,7 +68,7 @@ slots:
     range: string
   antibody_target:
     description: The target of the antibody used in the experiment.
-    required_if: ???
+#    required_if: ???
     range: Term
   biological_processes:
     description: Biological processes illuminated by the experiment.

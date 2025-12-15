@@ -5,7 +5,7 @@ imports:
 
 classes:
   AccessURL:
-    description: The URL and associated HTTP headers to access the File object (orig: DrsObject). Exact copy of AccessURL object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.2.0/docs/#tag/AccessURLModel).
+    description: "The URL and associated HTTP headers to access the File object (orig: DrsObject). Exact copy of AccessURL object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.2.0/docs/#tag/AccessURLModel)."
     slots: 
       - url
       - headers

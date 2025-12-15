@@ -14,7 +14,7 @@ slots:
   id: 
     description: External, globally unique identifier for the ontology term (in CURIE form).
     required: true
-    range: CURIE
+    range: curie
   label:
-    description: Human-readable label associated to the term id in the current version of the ontology (as listed in the "ontology_versions" field of the Deposition object).
+    description: Human-readable label associated to the term id in the current version of the ontology (as listed in the "ontology_versions" field of the Deposit object).
     range: string

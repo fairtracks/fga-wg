@@ -2,6 +2,8 @@ id: https://w3id.org/fga-wg/schema/analysis
 name: analysis
 imports:
   - linkml:types
+  - InputSource
+  - Term
 
 classes:
   Analysis:
@@ -22,22 +24,23 @@ classes:
 slots:
   analysis_external_id:
     description: External, globally unique identifier for the experiment.
-    range: CURIE
+    range: curie
   analysis_id:  
-    description: Internal identifier for the experiment (unique within the metadata deposition). 
+    description: Internal identifier for the experiment (unique within the metadata deposit). 
     required: true
     identifier: true
-    range: CURIE
+    range: curie
   label:
     description: A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
     required: true
+    range: string
     pattern: "^.{0,60}$"
   description:
     description: Human-readable description of the analysis.
     range: string
   study_ref:
     description: Internal reference to the study within which the analysis has been carried out.
-    range: CURIE
+    range: curie
   input_sources:
     description: Internal reference to the study within which the analysis has been carried out.
     required: true

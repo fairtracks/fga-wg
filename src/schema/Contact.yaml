@@ -14,11 +14,12 @@ classes:
 slots:
   name: 
     description: Name of the person or organisation.
-    requird: true
+    required: true
     range: string
   contact_id:
     description: Globally unique identifier for a person (e.g. ORCID ID) or organisation (e.g. BioProject accession).
-    range: CURIE
+    range: curie
   email:
     description: E-mail address of the person or organisation.
-    pattern: "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+    range: string
+    pattern: "^\\S+@\\S+\\.\\S+$"

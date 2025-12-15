@@ -2,6 +2,8 @@ id: https://w3id.org/fga-wg/schema/filecollection
 name: filecollection
 imports:
   - linkml:types
+  - Contact
+  - InputSource
 
 classes:
   FileCollection:
@@ -12,22 +14,23 @@ classes:
       - label
       - description
       - input_sources
-      - deposition_versioned_ref
+      - deposit_versioned_ref
       - contact
 
 slots:
   filecollection_external_id:
     description: External, globally unique identifier for the file collection (in most cases, this will not exist).
-    requierd: false
-    range: CURIE
+    required: false
+    range: curie
   filecollection_id:
-    description: Internal identifier for the file collection (unique within the metadata deposition). 
+    description: Internal identifier for the file collection (unique within the metadata deposit). 
     required: true
     identifier: true
-    range: CURIE
+    range: curie
   label:
     description: A human-readable description of the file collection, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
     required: true
+    range: string
     pattern: "^.{0,60}$"
   description:
     description: Human-readable description of the file collection.
@@ -36,10 +39,10 @@ slots:
     description: References to other input sources from which this file collection was derived.
     range: InputSource
     multivalued: true
-  deposition_versioned_ref:
-    description: Reference to versioned id of deposition containing this file collection.
+  deposit_versioned_ref:
+    description: Reference to versioned id of deposit containing this file collection.
     required: true
-    range: CURIE
+    range: curie
   contact:
     description: Contact point to the creator and/or maintainer of the file collection.
     range: Contact

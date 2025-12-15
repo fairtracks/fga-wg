@@ -30,12 +30,12 @@ slots:
   sample_external_id:
     description: External, globally unique identifier for the biospecimen/sample.
     required: true
-    range: CURIE
+    range: curie
   sample_id:
-    description: Internal identifier for the biospecimen/sample (unique within the metadata deposition).
+    description: Internal identifier for the biospecimen/sample (unique within the metadata deposit).
     required: true
     identifier: true
-    range: CURIE
+    range: curie
   label:
     description: A human-readable description of the sample, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.
     required: true
@@ -46,7 +46,7 @@ slots:
   donor_organism_ref:
     description: Internal reference to the donor/organism from which the biospecimen/sample was taken.
     required: true
-    range: CURIE
+    range: curie
   biospecimen_classification:
     description: Main type of structural unit to be used for classification of the biospecimen/sample.
     required: true
