@@ -1,0 +1,9 @@
+id: https://w3id.org/fga-wg/schema/util
+name: util
+imports:
+  - linkml:types
+
+classes:
+  Any:
+    description: 'The linkml:Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).'
+    class_uri: linkml:Any

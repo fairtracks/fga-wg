@@ -2,24 +2,47 @@ id: https://w3id.org/fga-wg/schema/quality-assessment
 name: quality_assessment
 imports:
   - linkml:types
+  - term
+  - util
   
 classes:
   QualityAssessment:
     description: 'Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis.'
     slots:
       - assessment_method
-      - assessment_value
+      - assessment_values
       - assessment_details_url
+
+  AssessmentValue:
+    description: 'Key-value pair representing a specific value produced by a quality assessment.'
+    slots:
+      - key
+      - value
 
 slots:
   assessment_method:
     description: 'Quality assessment method that has been carried out (e.g. BUSCO, OMArk, peak calling statistics, etc.)'
     required: true
-    range: string
-  assessment_value:
+    range: Any
+    any_of:
+      - range: string
+      - range: Term
+  assessment_values:
     description: 'Main values produced by the quality assessment.'
     required: true
-    range: string 
+    range: Any
+    any_of:
+      - range: string
+      - range: AssessmentValue
+        multivalued: true
   assessment_details_url:
     description: 'URL to a report containing the detailed output from the quality assessment.'
     range: uri
+  key:
+    description: 'Key/name of the assessment value.'
+    required: true
+    range: string
+  value:
+    description: 'Value corresponding to the assessment key.'
+    required: true
+    range: string

@@ -4,6 +4,7 @@ imports:
   - linkml:types
   - contact
   - input_source
+  - util
 
 classes:
   FileCollection:
@@ -31,10 +32,13 @@ slots:
     description: 'A human-readable description of the file collection, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
-    pattern: "^.{0,60}$"
+    pattern: "^.{1,60}$"
   description:
     description: 'Human-readable description of the file collection.'
-    range: string
+    range: Any
+    any_of:
+      - range: string
+      - range: uri
   input_sources:
     description: 'References to other input sources from which this file collection was derived.'
     range: InputSource

@@ -26,6 +26,54 @@ classes:
       - donor_development_stage
       - donor_clinical_information
 
+    rules:
+      - preconditions:
+          slot_conditions:
+            biospecimen_classification:
+              equals_string: "cell line"
+        postconditions:
+          slot_conditions:
+            cell_line:
+              required: true
+      - preconditions:
+          any_of:
+            - slot_conditions:
+                biospecimen_classification:
+                  equals_string: "in vitro differentiated cells"
+            - slot_conditions:
+                biospecimen_classification:
+                  equals_string: "primary cell"
+        postconditions:
+          slot_conditions:
+            cell_type:
+              required: true
+      - preconditions:
+          any_of:
+            - slot_conditions:
+                biospecimen_classification:
+                  equals_string: "tissue"
+            - slot_conditions:
+                biospecimen_classification:
+                  equals_string: "organoid"
+        postconditions:
+          slot_conditions:
+            organism_tissue:
+              required: true
+
+enums:
+  BiospecimenClassification:
+    description: 'Vocabulary from the ENCODE model describing the general category of boispecimen (see "Properties->classification" in https://www.encodeproject.org/profiles/biosample_type).'
+    permissible_values:
+      "cell line":
+      "in vitro differentiated cells":
+      "primary cell":
+      "cell-free sample":
+      "cloning host":
+      "tissue":
+      "whole organisms":
+      "organoid":
+      "technical sample":
+
 slots:
   sample_external_id:
     description: 'External, globally unique identifier for the biospecimen/sample.'
@@ -39,7 +87,7 @@ slots:
   label:
     description: 'A human-readable description of the sample, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
-    pattern: "^.{0,60}$"
+    pattern: "^.{1,60}$"
   description:
     description: 'Human-readable description of the sample and the sampling process.'
     range: string
@@ -50,11 +98,11 @@ slots:
   biospecimen_classification:
     description: 'Main type of structural unit to be used for classification of the biospecimen/sample.'
     required: true
-    range: string
+    range: BiospecimenClassification
   organism_tissue: 
     description: 'Part of organism (typically tissue or organ) from which the biospecimen/sample was taken, or cell line was derived from.'
     range: Term
-  primary_cell:
+  cell_type:
     description: 'Cell type of isolated normal cells in the biospecimen/sample.'
     range: Term
   cell_line:
@@ -72,6 +120,8 @@ slots:
     range: string
   sample_collection_location:
     description: 'Geographical location where the sample was collected.'
+    # TODO: change to a more specific type for geographical locations
+    range: string
   sample_collection_date:
     description: 'Date of sample collection.'
     range: datetime
@@ -81,6 +131,7 @@ slots:
   donor_age:
     description: 'Age of the donor/organism at the time of sampling'
     range: string
+    # TODO: ISO 8601 duration format not supported in linkml
   donor_development_stage: 
     description: 'Development stage of the donor at the time of sampling.'
     range: Term

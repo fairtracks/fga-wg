@@ -36,7 +36,7 @@ slots:
     description: 'A human-readable description of the experiment, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
-    pattern: "^.{0,60}$"
+    pattern: "^.{1,60}$"
   study_ref:
     description: 'Internal reference to the study within which the experiment has been carried out.'
     required: true
@@ -65,10 +65,11 @@ slots:
     range: Term
   sequencing_protocol:
     description: 'Set of rules which guides how the sequencing protocol was followed. Change-tracking services such as Protocol.io or GitHub are encouraged instead of dumping free text in this field.'
-    range: string
+    range: uriorcurie
   antibody_target:
     description: 'The target of the antibody used in the experiment.'
-#    required_if: ???
+# TODO: Implement conditional requirement for "antibody_target"
+#    required_if: Required if assay_type is e.g. ChIP-seq.
     range: Term
   biological_processes:
     description: 'Biological processes illuminated by the experiment.'

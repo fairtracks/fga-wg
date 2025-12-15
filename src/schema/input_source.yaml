@@ -3,6 +3,7 @@ name: input_source
 imports:
   - linkml:types
   - term
+  - util
 
 classes:
   InputSource:
@@ -36,13 +37,16 @@ classes:
 slots:
   inputsource_external_ref: 
     description: 'Reference to an external entity as the input source, using a globally unique identifier or an URL. External references will in most cases refer to a database, data record, data file, website or other data source. One of "inputsource_external_ref" or "inputsource_ref" must be specified.'
-    range: string
+    range: uriorcurie
   inputsource_ref:
     description: 'Reference to an internal object as the input source using a local identifier. Entities to be used as an internal input source includes FileCollection, Sample, Experiment, Analysis or File as restricted by the description of the field where the input source is used. One of "inputsource_external_ref" or "inputsource_ref" must be specified.'
     range: curie
   database_accessions:
     description: 'Accession numbers for database records used as input source. Used in connection with "inputsource_external_ref".'
-    range: string
+    range: Any
+    any_of:
+      - range: string
+      - range: curie
     multivalued: true
   qualified_relation: 
     description: 'A description of the relationship with the input source.'

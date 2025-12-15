@@ -32,12 +32,286 @@ classes:
       - version
       - checksums
 
+enums:
+  OutputType:
+    description: 'Vocabulary from the ENCODE model describing the purpose or content of a file (see "Properties->output_type" in https://www.encodeproject.org/profiles/file).'
+    permissible_values:
+      "3D structure":
+      "alignments":
+      "alignments with modifications":
+      "allele-specific contact matrix":
+      "allele-specific variants":
+      "archr project":
+      "bias models":
+      "bias-corrected predicted signal profile":
+      "bidirectional peaks":
+      "candidate Cis-Regulatory Elements":
+      "candidate enhancers":
+      "candidate promoters":
+      "capture targets":
+      "cell coordinates":
+      "cell topic participation":
+      "cell type data":
+      "cell type annotations":
+      "chromatin stripes":
+      "chromosomes reference":
+      "chromosome sizes":
+      "contact domains":
+      "contact matrix":
+      "consensus DNase hypersensitivity sites":
+      "curated binding sites":
+      "curated SNVs":
+      "mapping quality thresholded contact matrix":
+      "conservative IDR thresholded peaks":
+      "control normalized signal":
+      "counts sequence contribution scores":
+      "CpG sites coverage":
+      "depth normalized signals matrix":
+      "fold over change matrix":
+      "DHS peaks":
+      "DHS regions reference":
+      "nuclease cleavage frequency":
+      "differential expression quantifications":
+      "differential splicing quantifications":
+      "diploid personal genome alignments":
+      "divergent peaks":
+      "DNN-MPRA contribution scores":
+      "DNN-MPRA predicted signal":
+      "dsQTLs":
+      "element barcode mapping":
+      "elements reference":
+      "element gene interactions p-value":
+      "element gene interactions signal":
+      "element gene links":
+      "enhancer-gene links":
+      "thresholded links":
+      "element quantifications":
+      "enhancer prediction model":
+      "enhancer validation":
+      "enrichment":
+      "enhancers reference":
+      "eQTLs":
+      "exon quantifications":
+      "exclusion list regions":
+      "FDR cut rate":
+      "female genome index":
+      "female genome reference":
+      "filtered indels":
+      "filtered peaks":
+      "filtered reads":
+      "filtered regions":
+      "filtered SNPs":
+      "fine-mapped variants":
+      "fold change over control":
+      "footprints":
+      "functional conservation mapping":
+      "functional conservation quantifications":
+      "fragments":
+      "gene alignments":
+      "gene quantifications":
+      "gene stabilities":
+      "genic features quantifications":
+      "genic regions quantifications":
+      "genome compartments":
+      "genome index":
+      "genome reference":
+      "genome subcompartments":
+      "gRNAs":
+      "guide locations":
+      "guide quantifications":
+      "haplotype-specific alignments":
+      "haplotype-specific contact matrix":
+      "haplotype-specific nuclease cleavage frequency":
+      "haplotype-specific nuclease cleavage corrected frequency":
+      "hotspots":
+      "hotspots1 reference":
+      "hotspots2 reference":
+      "idat green channel":
+      "idat red channel":
+      "inclusion list":
+      "index reads":
+      "intensity values":
+      "IDR ranked peaks":
+      "IDR thresholded peaks":
+      "kmer weights":
+      "library fraction":
+      "loops":
+      "male genome index":
+      "male genome reference":
+      "maternal haplotype mapping":
+      "maternal variant calls":
+      "merged transcription segment quantifications":
+      "methylated reads":
+      "methylation state at CHG":
+      "methylation state at CHH":
+      "methylation state at CpG":
+      "microRNA quantifications":
+      "miRNA annotations":
+      "minus strand end position signal":
+      "minus strand inosine methylation state":
+      "minus strand m5C methylation state":
+      "minus strand m6A methylation state":
+      "minus strand methylation state at CpG":
+      "minus strand Nm methylation state":
+      "minus strand normalized end position signal":
+      "minus strand pseudouridine methylation state":
+      "minus strand signal of all reads":
+      "minus strand signal of unique reads":
+      "mitochondrial exclusion list regions":
+      "mitochondrial genome index":
+      "mitochondrial genome reference":
+      "model performance metrics":
+      "models":
+      "motif clusters reference":
+      "motif model":
+      "mRNA stabilities":
+      "nanopore signal":
+      "negative control regions":
+      "nested contact domains":
+      "non-targeting gRNAs":
+      "normalized bias-corrected predicted signal profile":
+      "normalized signal of all reads":
+      "normalized observed signal profile":
+      "normalized observed signal profile (minus strand)":
+      "normalized observed signal profile (plus strand)":
+      "normalized predicted bias profile":
+      "normalized predicted signal profile":
+      "normalized predicted signal profile (minus strand)":
+      "normalized predicted signal profile (plus strand)":
+      "novel peptides":
+      "observed bias profile":
+      "observed control profile (minus strand)":
+      "observed control profile (plus strand)":
+      "observed signal profile":
+      "observed signal profile (minus strand)":
+      "observed signal profile (plus strand)":
+      "open chromatin regions":
+      "optimal IDR thresholded peaks":
+      "pairs":
+      "paternal haplotype mapping":
+      "paternal variant calls":
+      "peaks":
+      "peaks and background as input for IDR":
+      "peptide quantifications":
+      "personalized genome assembly":
+      "perturbation signal":
+      "phastcons score reference":
+      "phased mapping":
+      "phased variant calls":
+      "plus strand end position signal":
+      "plus strand inosine methylation state":
+      "plus strand m5C methylation state":
+      "plus strand m6A methylation state":
+      "plus strand methylation state at CpG":
+      "plus strand Nm methylation state":
+      "plus strand normalized end position signal":
+      "plus strand pseudouridine methylation state":
+      "plus strand signal of all reads":
+      "plus strand signal of unique reads":
+      "polyA sites":
+      "positive control regions":
+      "predicted bias profile":
+      "predicted enhancers":
+      "predicted signal profile":
+      "predicted signal profile (minus strand)":
+      "predicted signal profile (plus strand)":
+      "predicted 3D structural ensembles":
+      "preprocessed alignments":
+      "profile sequence contribution scores":
+      "promoter prediction model":
+      "promoters reference":
+      "protein expression quantifications":
+      "pseudoreplicated peaks":
+      "pseudoreplicated IDR thresholded peaks":
+      "PWMs":
+      "R2C2 subreads":
+      "raw imaging signal":
+      "raw minus strand signal":
+      "raw normalized signal":
+      "raw plus strand signal":
+      "raw signal":
+      "ranked gRNAs":
+      "read-depth normalized signal":
+      "read annotations":
+      "reads":
+      "repeat elements annotation":
+      "repeats reference":
+      "reference variants":
+      "regulatory elements":
+      "relative replication signal":
+      "replicated peaks":
+      "replication timing profile":
+      "reporter code counts":
+      "representative DNase hypersensitivity sites":
+      "representative IDR thresholded peaks":
+      "restriction enzyme site locations":
+      "RNA-binding protein associated mRNAs":
+      "rRNA reference":
+      "safe-targeting gRNAs":
+      "scaled RNA stability":
+      "selected regions for bias-corrected predicted signal profile":
+      "selected regions for count sequence contribution scores":
+      "selected regions for predicted bias profile":
+      "selected regions for predicted signal and sequence contribution scores":
+      "selected regions for predicted signal profile":
+      "selected regions for predicted signal profile (minus strand)":
+      "selected regions for predicted signal profile (plus strand)":
+      "selected regions for profile sequence contribution scores":
+      "semi-automated genome annotation":
+      "sequence adapters":
+      "sequence barcodes":
+      "sequence motifs report":
+      "sequence motifs":
+      "sequence motifs instances":
+      "signal of all reads":
+      "signal of unique reads":
+      "signal p-value":
+      "spike-ins":
+      "smoothed methylation state at CpG":
+      "sparse gene count matrix":
+      "sparse gene count matrix of all reads":
+      "sparse gene count matrix of unique reads":
+      "sparse gRNA count matrix":
+      "sparse peak count matrix":
+      "sparse transcript count matrix":
+      "splice junctions":
+      "subreads":
+      "TF binding prediction model":
+      "TF peaks matrix":
+      "thresholded element gene links":
+      "topic gene weights":
+      "training and test regions":
+      "training set":
+      "transcribed region quantifications":
+      "transcript quantifications":
+      "transcription start sites":
+      "transcription segment quantifications":
+      "transcriptome alignments":
+      "transcriptome annotations":
+      "transcriptome index":
+      "transcriptome reference":
+      "transposable element TF ancestral origin percent by motif":
+      "transposable element TF ancestral origin percent by subfamily":
+      "TSS reference":
+      "unfiltered alignments":
+      "unfiltered sparse gene count matrix of all reads":
+      "unfiltered sparse gene count matrix of unique reads":
+      "unfiltered sparse splice junction count matrix of unique reads":
+      "unidirectional peaks":
+      "UV enriched segment quantifications":
+      "variant calls":
+      "variant effect quantifications":
+      "variant reference":
+      "variants contact matrix":
+      "variant functional prediction":
+      "z scores matrix":
+
 slots:
   file_external_id:
     description: 'External, globally unique identifier for the data file.'
     range: curie
   file_id:
-    description: 'Internal identifier for the data file (unique within the metadata deposit).  '
+    description: 'Internal identifier for the data file (unique within the metadata deposit). '
     required: true
     identifier: true
     range: curie
@@ -48,7 +322,7 @@ slots:
     description: 'A human-readable description of the data file, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
-    pattern: "^.{0,60}$"
+    pattern: "^.{1,60}$"
   filecollection_refs:
     description: 'Internal references to the FileCollection objects (within the deposit) that contains the data file, if any.'
     required: true
@@ -72,7 +346,7 @@ slots:
     multivalued: true
   run_provenance:
     description: 'Document detailing the provenance of the experiment or analysis run which produced the file as one of its outputs. The provenance info should include software versions, parameter settings, etc.'
-    range: string
+    range: uriorcurie
   quality_assessments:
     description: 'An array of QualityAssessment objects containing the main quality scores from assessment techniques applied to the data file.'
     range: QualityAssessment
@@ -87,7 +361,7 @@ slots:
   data_content:
     description: "Classification describing the file's purpose or contents."
     required: true
-    range: string  # from a restricted vocabulary
+    range: OutputType
   size:
     description: 'For blobs, the blob size in bytes. '
     required: true

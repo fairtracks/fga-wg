@@ -3,6 +3,7 @@ name: deposit
 imports:
   - linkml:types
   - input_source
+  - util
 
 classes:
   Deposit:
@@ -37,10 +38,13 @@ slots:
     description: 'A human-readable description of the metadata deposit, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
-    pattern: "^.{0,60}$"
+    pattern: "^.{1,60}$"
   description:
     description: 'Human-readable description of the metadata deposit.'
-    range: string
+    range: Any
+    any_of:
+      - range: string
+      - range: uri
   first_created:
     description: 'The date and time of the creation of the first version of the metadata deposit.'
     required: true

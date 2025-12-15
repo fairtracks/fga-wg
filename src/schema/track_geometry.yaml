@@ -22,6 +22,50 @@ classes:
       - edges_are_directed
       - edges_denote_parents
 
+    rules:
+      - preconditions:
+          slot_conditions:
+            has_lengths:
+              # equals_number: true will fail in  linting (True is not of type 'integer', 'null')
+              # However, it is currently the only syntax that works to check for boolean true in linkml
+              # (until https://github.com/linkml/linkml/issues/1136 is fixed).
+              equals_number: true
+        postconditions:
+          slot_conditions:
+            lengths_constant:
+              required: true
+      - preconditions:
+          slot_conditions:
+            has_values:
+              equals_number: true
+        postconditions:
+          slot_conditions:
+            value_type:
+              required: true
+      - preconditions:
+          slot_conditions:
+            has_edges:
+              equals_number: true
+        postconditions:
+          all_of:
+            - slot_conditions:
+                edges_have_weights:
+                  required: true
+            - slot_conditions:
+                edges_are_directed:
+                  required: true
+            - slot_conditions:
+                edges_denote_parents:
+                  required: true
+      - preconditions:
+          slot_conditions:
+            edges_have_weights:
+              equals_number: true
+        postconditions:
+          slot_conditions:
+            edge_weight_type:
+              required: true
+
 enums:
   DataTypes:
     description: 'Types of data values associated with sequence features or edges.'

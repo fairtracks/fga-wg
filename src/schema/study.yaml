@@ -35,7 +35,7 @@ slots:
     range: string
   project_external_ref:
     description: 'Reference to a project within which the study was carried out (preferably a BioProject CURIE).'
-    range: string
+    range: uriorcurie
   project_name:
     description: 'Name of the project within which the study was carried out.'
     range: string
