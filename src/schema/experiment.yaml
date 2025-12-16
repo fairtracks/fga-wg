@@ -15,9 +15,9 @@ classes:
     slots:
       - experiment_external_id
       - experiment_id
-      - label
-      - study_ref
-      - samples
+      - experiment_label
+      - experiment_study_ref
+      - experiment_samples
       - molecule_type
       - assay_type
       - design_description
@@ -40,20 +40,20 @@ slots:
     range: curie
     examples:
       - value: 'experiment:ENCSR000DPJ'
-  label:
+  experiment_label:
     description: 'A human-readable description of the experiment, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
     pattern: "^.{1,60}$"
     examples:
       - value: 'H3K9me3 ChIP-seq on human AG04450'
-  study_ref:
+  experiment_study_ref:
     description: 'Internal reference to the study within which the experiment has been carried out.'
     required: true
     range: curie
     examples:
       - value: 'study:E-GEOD-35583'
-  samples:
+  experiment_samples:
     description: 'External or internal references to samples used in the experiment. Internal references should refer to Sample objects.'
     required: true
     range: InputSource

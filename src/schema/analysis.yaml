@@ -15,10 +15,10 @@ classes:
     slots:
       - analysis_external_id
       - analysis_id
-      - label
-      - description
-      - study_ref
-      - input_sources
+      - analysis_label
+      - analysis_description
+      - analysis_study_ref
+      - analysis_input_sources
       - analysis_type
       - analysis_main_tool
       - analysis_main_tool_version
@@ -38,24 +38,24 @@ slots:
     range: curie
     examples:
       - value: 'analysis:ENCAN718KHT'
-  label:
+  analysis_label:
     description: 'A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
     pattern: "^.{1,60}$"
     examples:
       - value: 'ENCODE3 ChIP-seq pipeline, GRCH38, replicated peak calling'
-  description:
+  analysis_description:
     description: 'Human-readable description of the analysis.'
     range: string
     examples:
       - value: 'ENCODE3 ChIP-seq pipeline on GRCH38 with replicated peak calling using MACS.'
-  study_ref:
+  analysis_study_ref:
     description: 'Internal reference to the study within which the analysis has been carried out.'
     range: curie
     examples:
       - value: 'study:S-EPMC7391744'
-  input_sources:
+  analysis_input_sources:
     description: 'Internal reference to the study within which the analysis has been carried out.'
     required: true
     range: InputSource

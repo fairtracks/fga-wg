@@ -11,15 +11,15 @@ imports:
 
 classes:
   Deposit:
-    description: 'Top-level information about an entire metadata deposit following the "FAIRification of Genomic Annotations" data model. '
+    description: 'Information about an entire metadata deposit following the "FAIRification of Genomic Annotations" data model.'
     slots:
       - deposit_id
       - deposit_versioned_id
-      - label
-      - description
+      - deposit_label
+      - deposit_description
       - first_created
       - last_changed
-      - input_sources
+      - deposit_input_sources
       - ontology_versions
 
   OntologyVersions:
@@ -42,14 +42,14 @@ slots:
     range: curie
     examples:
       - value: 'doi:10.1234/zenodo.12345679'
-  label:
+  deposit_label:
     description: 'A human-readable description of the metadata deposit, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
     pattern: "^.{1,60}$"
     examples:
       - value: 'IHEC data portal metadata, harmonised to the FGA-WG model.'
-  description:
+  deposit_description:
     description: 'Human-readable description of the metadata deposit.'
     range: Any
     any_of:
@@ -69,7 +69,7 @@ slots:
     range: datetime
     examples:
       - value: '2025-07-01T12:36:00Z'
-  input_sources:
+  deposit_input_sources:
     description: 'References to other input sources from which this entire metadata deposit was derived, or possibly including DOIs of other metadata deposits used as source.'
     range: InputSource
     multivalued: true

@@ -16,9 +16,9 @@ classes:
     slots:
       - filecollection_external_id
       - filecollection_id
-      - label
-      - description
-      - input_sources
+      - filecollection_label
+      - filecollection_description
+      - filecollection_input_sources
       - deposit_versioned_ref
       - contact
 
@@ -34,14 +34,14 @@ slots:
     range: curie
     examples:
       - value: 'filecollection:ihec_encode'
-  label:
+  filecollection_label:
     description: 'A human-readable description of the file collection, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
     pattern: "^.{1,60}$"
     examples:
       - value: 'IHEC data portal: ENCODE dataset'
-  description:
+  filecollection_description:
     description: 'Human-readable description of the file collection.'
     range: Any
     any_of:
@@ -49,7 +49,7 @@ slots:
       - range: uri
     examples:
       - value: 'ENCODE dataset in the International Human Epigenome Consortium (IHEC) data portal, enhanced with metadata from the ENCODE data portal.'
-  input_sources:
+  filecollection_input_sources:
     description: 'References to other input sources from which this file collection was derived.'
     range: InputSource
     multivalued: true

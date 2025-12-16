@@ -12,13 +12,13 @@ classes:
   AccessMethod:
     description: 'Description of an access method (i.e. communication protocol) that can be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel)'
     slots:
-      - type
+      - access_method
       - access_url
       - region
 
 enums:
-  AccessMethodTypes:
-    description: 'Type of access methods (i.e. communication protocols), following the vocabulary defined in the GA4GH DRS specification (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel/operation/getAccessMethod).'
+  AccessMethods:
+    description: 'Access methods (i.e. communication protocols), following the vocabulary defined in the GA4GH DRS specification (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel/operation/getAccessMethod).'
     permissible_values:
       s3:
         description: 'Amazon S3 and other S3-compatible bucket.'
@@ -38,10 +38,10 @@ enums:
         description: 'For local files accessible via a file URI (e.g., file://path/to/file).'
 
 slots:
-  type:
-    description: 'Type of the access method.'
+  access_method:
+    description: 'Access method used to access the File object (orig: DrsObject).'
     required: true
-    range: AccessMethodTypes
+    range: AccessMethod
     examples:
       - value: https
   access_url: 

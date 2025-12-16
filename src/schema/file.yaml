@@ -18,22 +18,22 @@ classes:
     slots: 
       - file_external_id
       - file_id
-      - name
-      - label
+      - file_name
+      - file_label
+      - file_description
       - filecollection_refs
-      - input_sources
-      - description
-      - self_uri
+      - file_input_sources
+      - drs_uri
       - access_methods
       - run_provenance
       - quality_assessments
       - file_type
       - mime_type
       - data_content
-      - size
+      - file_size
       - created_time
       - updated_time
-      - version
+      - file_version
       - checksums
 
 enums:
@@ -323,18 +323,23 @@ slots:
     range: curie
     examples:
       - value: 'file:ENCFF323LCS'
-  name:
+  file_name:
     description: 'A string that can be used to name a data file. This string is made up of uppercase and lowercase letters, decimal digits, hypen, period, and underscore [A-Za-z0-9.-_]. See http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_282 [portable filenames].'
     range: string
     examples:
       - value: '87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed'
-  label:
+  file_label:
     description: 'A human-readable description of the data file, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
     pattern: "^.{1,60}$"
     examples:
       - value: 'H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450'
+  file_description:
+    description: 'A human readable description of the data file.'
+    range: string
+    examples:
+      - value: 'H3K9me3 ChIP-seq replicated peaks on human (hg38) AG04450 (Fibroblast derived cell line).'
   filecollection_refs:
     description: 'Internal references to the FileCollection objects (within the deposit) that contains the data file, if any.'
     required: true
@@ -342,7 +347,7 @@ slots:
     multivalued: true
     examples:
       - value: 'collection:ihec_encode'
-  input_sources:
+  file_input_sources:
     description: 'External or internal references to data sources for the file, typically a data collection or a process that has generated the file. Internal references should lead to FileCollection, File, Experiment, or Analysis objects.'
     required: true
     range: InputSource
@@ -353,12 +358,7 @@ slots:
           qualified_relation: 'prov:wasGeneratedBy'
           biological_replicate_labels: [ "1", "2" ]
           technical_replicate_labels: [ "1_1", "2_1" ]
-  description:
-    description: 'A human readable description of the data file.'
-    range: string
-    examples:
-      - value: 'H3K9me3 ChIP-seq replicated peaks on human (hg38) AG04450 (Fibroblast derived cell line).'
-  self_uri:
+  drs_uri:
     description: 'A drs:// hostname-based URI, as defined in the DRS documentation, that tells clients how to access this object. The intent of this field is to make DRS objects self-contained, and therefore easier for clients to store and pass around. For example, if you arrive at this DRS JSON by resolving a compact identifier-based DRS URI, the self_uri presents you with a hostname and properly encoded DRS ID for use in subsequent access endpoint calls.'
     range: uri
     examples:
@@ -370,23 +370,23 @@ slots:
     multivalued: true
     examples:
       - object:
-          type: https
+          access_method: https
           access_url:
             url: 'https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed'
       - object:
-          type: https
+          access_method: https
           access_url:
             url: 'https://www.encodeproject.org/files/ENCFF323LCS/@@download/ENCFF323LCS.bigBed'
       - object:
-          type: s3
+          access_method: s3
           access_url:
             url: 's3://encode-public/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed'
       - object:
-          type: https
+          access_method: https
           access_url:
             url: 'https://encode-public.s3.amazonaws.com/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed'
       - object:
-          type: https
+          access_method: https
           access_url:
             url: 'https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D'
 
@@ -426,7 +426,7 @@ slots:
     range: OutputType
     examples:
       - value: 'replicated peaks'
-  size:
+  file_size:
     description: 'For blobs, the blob size in bytes. '
     required: true
     range: integer
@@ -443,7 +443,7 @@ slots:
     range: datetime
     examples:
       - value: '2016-11-13T17:42:04.385801+00:00'
-  version:
+  file_version:
     description: 'A string representing a version. (Some systems may use checksum, a RFC3339 timestamp, or an incrementing version number.).'
     range: string
     examples:

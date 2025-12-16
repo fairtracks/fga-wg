@@ -14,8 +14,8 @@ classes:
     slots:
       - sample_external_id
       - sample_id
-      - label
-      - description
+      - sample_label
+      - sample_description
       - donor_organism_ref
       - biospecimen_classification
       - organism_tissue
@@ -92,14 +92,14 @@ slots:
     range: curie
     examples:
       - value: 'sample:ENCBS004ENC'
-  label:
+  sample_label:
     description: 'A human-readable description of the sample, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
     range: string
     pattern: "^.{1,60}$"
     examples:
       - value: 'Homo sapiens AG04450 cell line'
-  description:
+  sample_description:
     description: 'Human-readable description of the biospecimen/sample and the sampling process.'
     range: string
     examples:

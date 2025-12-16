@@ -14,8 +14,8 @@ classes:
     slots:
       - study_external_id
       - study_id
-      - title
-      - abstract
+      - study_title
+      - study_abstract
       - project_external_ref
       - project_name
       - publications
@@ -34,13 +34,13 @@ slots:
     range: curie
     examples:
       - value: 'study:S-EPMC7391744'
-  title:
+  study_title:
     description: 'Title of the study.'
     required: true
     range: string
     examples:
       - value: 'An integrative ENCODE resource for cancer genomics'
-  abstract:
+  study_abstract:
     description: 'Abstract of the study.'
     range: string
     examples:
