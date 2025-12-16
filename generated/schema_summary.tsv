@@ -1,0 +1,136 @@
+Class Name	Parent Class	YAML Class Name	Description	Flags	Slot Name	YAML Slot Name	Range	Card	Slot Description	URI
+AccessMethod		AccessMethod	Description of an access method (i.e. communication protocol) that can be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel)							
+					access_method		AccessMethod	1..1	Access method used to access the File object (orig: DrsObject).	https://w3id.org/fga-wg/schema/access-method/access_method
+					access_url		AccessURL	1..1	AccessURL object providing URL and associated HTTP headers to access the File object (orig: DrsObject).	https://w3id.org/fga-wg/schema/access-method/access_url
+					region		str	0..1	Name of the region in the cloud service provider that the object belongs to.	https://w3id.org/fga-wg/schema/access-method/region
+AccessURL		AccessURL	The URL and associated HTTP headers to access the File object (orig: DrsObject). Exact copy of AccessURL object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessURLModel).							
+					url		URI	1..1	A fully resolvable URL that can be used to fetch the actual object bytes.	https://w3id.org/fga-wg/schema/access-url/url
+					headers		str	0..*	An optional list of headers to include in the HTTP request to `url`. These headers can be used to provide auth tokens required to fetch the object bytes.	https://w3id.org/fga-wg/schema/access-url/headers
+Analysis		Analysis	Represents the computational processing applied to data from a sequencing experiment, or from another analysis. This can be described at the level of individual analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline as a whole.							
+					analysis_external_id		Curie	0..1	External, globally unique identifier for the experiment.	https://w3id.org/fga-wg/schema/analysis/analysis_external_id
+				I	analysis_id		Curie	1..1	Internal identifier for the experiment (unique within the metadata deposit). 	https://w3id.org/fga-wg/schema/analysis/analysis_id
+					analysis_label		str	1..1	A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.	https://w3id.org/fga-wg/schema/analysis/analysis_label
+					analysis_description		str	0..1	Human-readable description of the analysis.	https://w3id.org/fga-wg/schema/analysis/analysis_description
+					analysis_study_ref		Curie	0..1	Internal reference to the study within which the analysis has been carried out.	https://w3id.org/fga-wg/schema/analysis/analysis_study_ref
+					analysis_input_sources		InputSource	1..*	Internal reference to the study within which the analysis has been carried out.	https://w3id.org/fga-wg/schema/analysis/analysis_input_sources
+					analysis_type		Term	1..1	The type of analysis carried out.	https://w3id.org/fga-wg/schema/analysis/analysis_type
+					analysis_main_tool		Any	0..1	Main software tool used for the analysis.	https://w3id.org/fga-wg/schema/analysis/analysis_main_tool
+					analysis_main_tool_version		str	0..1	Version of the main software tool used for the analysis.	https://w3id.org/fga-wg/schema/analysis/analysis_main_tool_version
+					analysis_protocol		URIorCURIE	0..1	Document describing the analysis protocol that was followed.	https://w3id.org/fga-wg/schema/analysis/analysis_protocol
+					analysis_workflow		URIorCURIE	0..1	External reference to the analysis workflow, with availability in at least one machine-operable form (e.g. CWL, Nextflow, ...).	https://w3id.org/fga-wg/schema/analysis/analysis_workflow
+Any		Any	The linkml:Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).							
+AssessmentValue		AssessmentValue	Key-value pair representing a specific value produced by a quality assessment.							
+					key		str	1..1	Key/name of the assessment value.	https://w3id.org/fga-wg/schema/quality-assessment/key
+					value		Any	1..1	Value corresponding to the assessment key.	https://w3id.org/fga-wg/schema/quality-assessment/value
+Checksum		Checksum	A checksum of a File object (orig: DrsObject). Exact copy of the Checksum object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/ChecksumModel).							
+					checksum		str	0..1	The hex-string encoded checksum for the data.	https://w3id.org/fga-wg/schema/checksum/checksum
+					checksum_type		str	1..1	The digest method used to create the checksum. The value (e.g. `sha-256`) SHOULD be listed as `Hash Name String` in the https://www.iana.org/assignments/named-information/named-information.xhtml#hash-alg [IANA Named Information Hash Algorithm Registry]. Other values MAY be used, as long as implementors are aware of the issues discussed in https://tools.ietf.org/html/rfc6920#section-9.4 [RFC6920]. GA4GH may provide more explicit guidance for use of non-IANA-registered algorithms in the future. Until then, if implementors do choose such an algorithm (e.g. because it's implemented by their storage provider), they SHOULD use an existing standard `type` value such as `md5`, `etag`, `crc32c`, `trunc512`, or `sha1`.	https://w3id.org/fga-wg/schema/checksum/checksum_type
+Contact		Contact	Contact information for a person or an organisation.							
+					name		str	1..1	Name of the person or organisation.	https://w3id.org/fga-wg/schema/contact/name
+					contact_id		Curie	0..1	Globally unique identifier for a person (e.g. ORCID ID) or organisation (e.g. BioProject accession).	https://w3id.org/fga-wg/schema/contact/contact_id
+					email		str	0..1	E-mail address of the person or organisation.	https://w3id.org/fga-wg/schema/contact/email
+Deposit		Deposit	Information about a public deposit of a document containing metadata about a set of genome annotation files.							
+					deposit_id		Curie	0..1	A globally unique and persistent identifier for the public deposit of the metadata document. A DOI or other persistent identifier is recommended.	https://w3id.org/fga-wg/schema/deposit/deposit_id
+				I	deposit_versioned_id		Curie	1..1	A globally unique, persistent and versioned identifier for the public deposit of the metadata document. A versioned DOI to a deposited document is recommended.	https://w3id.org/fga-wg/schema/deposit/deposit_versioned_id
+					deposit_first_created		XSDDateTime	1..1	The date and time of the creation of the first deposited version of the metadata document.	https://w3id.org/fga-wg/schema/deposit/deposit_first_created
+					deposit_last_changed		XSDDateTime	1..1	"The date and time of the last deposited change of the current metadata document (corresponding to ""deposit_versioned_id"")."	https://w3id.org/fga-wg/schema/deposit/deposit_last_changed
+Document		Document	"Information about a document containing metadata about a set of genome annotation files, harmonised according to the ""FAIRification of Genomic Annotations"" data model.  This includes self-referential identifiers and versioning of public deposits of the document."							
+					document_label		str	1..1	A human-readable description of the metadata document, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.	https://w3id.org/fga-wg/schema/document/document_label
+					document_description		Any	0..1	Human-readable description of the metadata document.	https://w3id.org/fga-wg/schema/document/document_description
+					document_deposit		Deposit	0..1	Information about the public deposit of the metadata document.	https://w3id.org/fga-wg/schema/document/document_deposit
+					document_input_sources		InputSource	0..*	References to other input sources from which this entire metadata document was derived, or possibly including DOIs of other metadata documents used as source.	https://w3id.org/fga-wg/schema/document/document_input_sources
+					document_ontology_versions		OntologyVersions	1..*	"Map from the version-agnostic URL to a versioned URL (e.g. ""versionIRI"" in owl) of each ontology used in the current metadata deposit (corresponding to deposit_versioned_id"")."	https://w3id.org/fga-wg/schema/document/document_ontology_versions
+Donor		Donor	Information about the donor or complete organism from which the sample was taken.							
+					donor_external_id		Curie	0..1	External, globally unique identifier for the donor/organism.	https://w3id.org/fga-wg/schema/donor/donor_external_id
+				I	donor_id		Curie	1..1	Internal identifier for the donor/organism (unique within the metadata deposit). 	https://w3id.org/fga-wg/schema/donor/donor_id
+					species_taxon		Term	1..1	Taxonomical classification of the species of the donor/organism.	https://w3id.org/fga-wg/schema/donor/species_taxon
+					sex		Term	0..1	Biological sex of the donor/organism.	https://w3id.org/fga-wg/schema/donor/sex
+Experiment		Experiment	Represents a sequencing experiment that has been carried out within a study, based on biological samples, and providing data files as output. Subsequent analysis of output data is described by the Analysis entity.							
+					experiment_external_id		Curie	0..1	External, globally unique identifier for the experiment.	https://w3id.org/fga-wg/schema/experiment/experiment_external_id
+				I	experiment_id		Curie	1..1	Internal identifier for the experiment (unique within the metadata deposit).	https://w3id.org/fga-wg/schema/experiment/experiment_id
+					experiment_label		str	1..1	A human-readable description of the experiment, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.	https://w3id.org/fga-wg/schema/experiment/experiment_label
+					experiment_study_ref		Curie	1..1	Internal reference to the study within which the experiment has been carried out.	https://w3id.org/fga-wg/schema/experiment/experiment_study_ref
+					experiment_samples		InputSource	1..*	External or internal references to samples used in the experiment. Internal references should refer to Sample objects.	https://w3id.org/fga-wg/schema/experiment/experiment_samples
+					molecule_type		Term	1..1	Specifies the type of source material that is being sequenced.	https://w3id.org/fga-wg/schema/experiment/molecule_type
+					assay_type		Term	1..1	Sequencing technique intended for this library.	https://w3id.org/fga-wg/schema/experiment/assay_type
+					design_description		str	0..1	The high-level experiment design including layout, protocol.	https://w3id.org/fga-wg/schema/experiment/design_description
+					library_layout		Term	0..1	Whether the library was built as paired-end, or single-end.	https://w3id.org/fga-wg/schema/experiment/library_layout
+					instrument		Term	0..1	Technology platform used to perform nucleic acid sequencing, including name and/or number associated with a specific sequencing instrument model. It is recommended to be as specific as possible for this property (e.g. if the model/revision are available, providing that instead of just the instrument maker).	https://w3id.org/fga-wg/schema/experiment/instrument
+					sequencing_protocol		URIorCURIE	0..1	Set of rules which guides how the sequencing protocol was followed. Change-tracking services such as Protocol.io or GitHub are encouraged instead of dumping free text in this field.	https://w3id.org/fga-wg/schema/experiment/sequencing_protocol
+					antibody_target		Term	0..1	The target of the antibody used in the experiment.	https://w3id.org/fga-wg/schema/experiment/antibody_target
+					biological_processes		Term	0..*	Biological processes illuminated by the experiment.	https://w3id.org/fga-wg/schema/experiment/biological_processes
+File		File	General information about a particular data file. Most fields (marked with an asterix*) are copied from the GA4GH DRS DrsObject model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/DrsObjectModel), which is the top-level object returned from a DRS server in response to a successful lookup call (i.e. https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/Objects).							
+					file_external_id		Curie	0..1	External, globally unique identifier for the data file.	https://w3id.org/fga-wg/schema/file/file_external_id
+				I	file_id		Curie	1..1	Internal identifier for the data file (unique within the metadata deposit). 	https://w3id.org/fga-wg/schema/file/file_id
+					file_name		str	0..1	A string that can be used to name a data file. This string is made up of uppercase and lowercase letters, decimal digits, hypen, period, and underscore [A-Za-z0-9.-_]. See http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_282 [portable filenames].	https://w3id.org/fga-wg/schema/file/file_name
+					file_label		str	1..1	A human-readable description of the data file, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.	https://w3id.org/fga-wg/schema/file/file_label
+					file_description		str	0..1	A human readable description of the data file.	https://w3id.org/fga-wg/schema/file/file_description
+					filecollection_refs		Curie	1..*	Internal references to the FileCollection objects (within the deposit) that contains the data file, if any.	https://w3id.org/fga-wg/schema/file/filecollection_refs
+					file_input_sources		InputSource	1..*	External or internal references to data sources for the file, typically a data collection or a process that has generated the file. Internal references should lead to FileCollection, File, Experiment, or Analysis objects.	https://w3id.org/fga-wg/schema/file/file_input_sources
+					drs_uri		URI	0..1	A drs:// hostname-based URI, as defined in the DRS documentation, that tells clients how to access this object. The intent of this field is to make DRS objects self-contained, and therefore easier for clients to store and pass around. For example, if you arrive at this DRS JSON by resolving a compact identifier-based DRS URI, the self_uri presents you with a hostname and properly encoded DRS ID for use in subsequent access endpoint calls.	https://w3id.org/fga-wg/schema/file/drs_uri
+					access_methods		AccessMethod	1..*	The list of access methods that can be used to fetch the data file. 	https://w3id.org/fga-wg/schema/file/access_methods
+					run_provenance		URIorCURIE	0..1	Document detailing the provenance of the experiment or analysis run which produced the file as one of its outputs. The provenance info should include software versions, parameter settings, etc.	https://w3id.org/fga-wg/schema/file/run_provenance
+					quality_assessments		QualityAssessment	0..*	An array of QualityAssessment objects containing the main quality scores from assessment techniques applied to the data file.	https://w3id.org/fga-wg/schema/file/quality_assessments
+					file_type		Term	1..1	The file format of the data file.	https://w3id.org/fga-wg/schema/file/file_type
+					mime_type		str	0..1	A string providing the mime-type of the data file.	https://w3id.org/fga-wg/schema/file/mime_type
+					data_content		Unknown_OutputType	1..1	Classification describing the file's purpose or contents.	https://w3id.org/fga-wg/schema/file/data_content
+					file_size		int	1..1	For blobs, the blob size in bytes. 	https://w3id.org/fga-wg/schema/file/file_size
+					created_time		XSDDateTime	1..1	Timestamp of content creation in RFC3339. (This is the creation time of the underlying content, not of the JSON object.).	https://w3id.org/fga-wg/schema/file/created_time
+					updated_time		XSDDateTime	0..1	Timestamp of content update in RFC3339, identical to created_time in systems that do not support updates. (This is the update time of the underlying content, not of the JSON object.).	https://w3id.org/fga-wg/schema/file/updated_time
+					file_version		str	0..1	A string representing a version. (Some systems may use checksum, a RFC3339 timestamp, or an incrementing version number.).	https://w3id.org/fga-wg/schema/file/file_version
+					checksums		Checksum	1..*	A list of checksums of the data file. At least one checksum must be provided. For blobs, the checksum is computed over the bytes in the blob.	https://w3id.org/fga-wg/schema/file/checksums
+FileCollection		FileCollection	"A collection of files, according to some selection criteria. In the context of the ""FAIRification of Genomic Annotations"" data model, we are mainly interested in ""GenomicAnnotationFile"" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files."							
+					filecollection_external_id		Curie	0..1	External, globally unique identifier for the file collection (in most cases, this will not exist).	https://w3id.org/fga-wg/schema/file-collection/filecollection_external_id
+				I	filecollection_id		Curie	1..1	Internal identifier for the file collection (unique within the metadata deposit). 	https://w3id.org/fga-wg/schema/file-collection/filecollection_id
+					filecollection_label		str	1..1	A human-readable description of the file collection, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.	https://w3id.org/fga-wg/schema/file-collection/filecollection_label
+					filecollection_description		Any	0..1	Human-readable description of the file collection.	https://w3id.org/fga-wg/schema/file-collection/filecollection_description
+					filecollection_input_sources		InputSource	0..*	References to other input sources from which this file collection was derived.	https://w3id.org/fga-wg/schema/file-collection/filecollection_input_sources
+					deposit_versioned_ref		Curie	1..1	Reference to versioned id of deposit containing this file collection.	https://w3id.org/fga-wg/schema/file-collection/deposit_versioned_ref
+					contact		Contact	0..1	Contact point to the creator and/or maintainer of the file collection.	https://w3id.org/fga-wg/schema/file-collection/contact
+InputSource		InputSource	General object representing the source of data files, samples, or other entities used as input to a process or a result. An input source refering to a single file or sample object will represent that item only, while an input source referring to a container or process may represent a number of disctinct input items. InputSource also contains information about the type of relationship, replication labelling, versioning and retrieval date.							
+					inputsource_external_ref		URIorCURIE	0..1	"Reference to an external entity as the input source, using a globally unique identifier or an URL. External references will in most cases refer to a database, data record, data file, website or other data source. One of ""inputsource_external_ref"" or ""inputsource_ref"" must be specified."	https://w3id.org/fga-wg/schema/input-source/inputsource_external_ref
+					inputsource_ref		Curie	0..1	"Reference to an internal object as the input source using a local identifier. Entities to be used as an internal input source includes FileCollection, Sample, Experiment, Analysis or File as restricted by the description of the field where the input source is used. One of ""inputsource_external_ref"" or ""inputsource_ref"" must be specified."	https://w3id.org/fga-wg/schema/input-source/inputsource_ref
+					database_accessions		Any	0..*	"Accession numbers for database records used as input source. Used in connection with ""inputsource_external_ref""."	https://w3id.org/fga-wg/schema/input-source/database_accessions
+					qualified_relation		Term	1..1	A description of the relationship with the input source.	https://w3id.org/fga-wg/schema/input-source/qualified_relation
+					biological_replicate_labels		str	0..*	Labels denoting the biological replicates within which the relation is defined, if any.	https://w3id.org/fga-wg/schema/input-source/biological_replicate_labels
+					technical_replicate_labels		str	0..*	Labels denoting the technical replicates within which the relation is defined, if any.	https://w3id.org/fga-wg/schema/input-source/technical_replicate_labels
+					version		str	0..1	Version information for the retrieval from the input source.	https://w3id.org/fga-wg/schema/input-source/version
+					date_of_retrieval		XSDDateTime	0..1	Date of retrieval from the input source, typically used to timestamp downloading data from a database or URL.	https://w3id.org/fga-wg/schema/input-source/date_of_retrieval
+OntologyVersions		OntologyVersions	Information about an ontology used in the metadata.							
+					namespace		str	1..1	"The CURIE namespace (prefix) an ontology (e.g. ""GO"" for Gene Ontology)."	https://w3id.org/fga-wg/schema/document/namespace
+					ontology_url		URI	1..1	The version-agnostic URL of the ontology (e.g. the IRI of the ontology in OWL).	https://w3id.org/fga-wg/schema/document/ontology_url
+					versioned_ontology_url		URI	1..1	"The versioned URL of the ontology (e.g. the ""versionIRI"" in OWL)."	https://w3id.org/fga-wg/schema/document/versioned_ontology_url
+QualityAssessment		QualityAssessment	Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis.							
+					assessment_method		Any	1..1	Quality assessment method that has been carried out (e.g. BUSCO, OMArk, peak calling statistics, etc.)	https://w3id.org/fga-wg/schema/quality-assessment/assessment_method
+					assessment_values		Any	1..1	Main values produced by the quality assessment.	https://w3id.org/fga-wg/schema/quality-assessment/assessment_values
+					assessment_details_url		URI	0..1	URL to a report containing the detailed output from the quality assessment.	https://w3id.org/fga-wg/schema/quality-assessment/assessment_details_url
+Sample		Sample	Information about a biospecimen/sample used as raw material for lab experiments.							
+					sample_external_id		Curie	1..1	External, globally unique identifier for the biospecimen/sample.	https://w3id.org/fga-wg/schema/sample/sample_external_id
+				I	sample_id		Curie	1..1	Internal identifier for the biospecimen/sample (unique within the metadata deposit).	https://w3id.org/fga-wg/schema/sample/sample_id
+					sample_label		str	1..1	A human-readable description of the sample, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.	https://w3id.org/fga-wg/schema/sample/sample_label
+					sample_description		str	0..1	Human-readable description of the biospecimen/sample and the sampling process.	https://w3id.org/fga-wg/schema/sample/sample_description
+					donor_organism_ref		Curie	1..1	Internal reference to the donor/organism from which the biospecimen/sample was taken.	https://w3id.org/fga-wg/schema/sample/donor_organism_ref
+					biospecimen_classification		Unknown_BiospecimenClassification	1..1	Main type of structural unit to be used for classification of the biospecimen/sample.	https://w3id.org/fga-wg/schema/sample/biospecimen_classification
+					organism_tissue		Term	0..1	Part of organism (typically tissue or organ) from which the biospecimen/sample was taken, or cell line was derived from.	https://w3id.org/fga-wg/schema/sample/organism_tissue
+					cell_type		Term	0..1	Cell type of isolated normal cells in the biospecimen/sample.	https://w3id.org/fga-wg/schema/sample/cell_type
+					cell_line		Term	0..1	Cultured cell line used in the biospecimen/sample.	https://w3id.org/fga-wg/schema/sample/cell_line
+					other_biospecimen		Term	0..*	Other biospecimen-related terms that can be used to further classify the biospecimen/sample.	https://w3id.org/fga-wg/schema/sample/other_biospecimen
+					sampling_protocol		URI	0..1	Protocol detailing the collection and treatment of the biospecimen/sample.	https://w3id.org/fga-wg/schema/sample/sampling_protocol
+					sample_collection_location		str	0..1	Geographical location where the sample was collected.	https://w3id.org/fga-wg/schema/sample/sample_collection_location
+					sample_collection_date		XSDDateTime	0..1	Date of sample collection.	https://w3id.org/fga-wg/schema/sample/sample_collection_date
+					phenotype		Term	0..1	Main phenotype (e.g. disease) connected to the biospecimen/sample.	https://w3id.org/fga-wg/schema/sample/phenotype
+					donor_age		str	0..1	Age of the donor/organism at the time of sampling	https://w3id.org/fga-wg/schema/sample/donor_age
+					donor_development_stage		Term	0..1	Development stage of the donor at the time of sampling.	https://w3id.org/fga-wg/schema/sample/donor_development_stage
+					donor_clinical_information		str	0..1	Clinical information of the donor/organism at the time of sampling.	https://w3id.org/fga-wg/schema/sample/donor_clinical_information
+Term		Term	Helper entity to represent an ontology term as a data value. 							
+					id		Curie	1..1	External, globally unique identifier for the ontology term (in CURIE form).	https://w3id.org/fga-wg/schema/term/id
+					label		str	0..1	"Human-readable label associated to the term id in the current version of the ontology (as listed in the ""ontology_versions"" field of the Deposit object)."	https://w3id.org/fga-wg/schema/term/label
+TopLevel		TopLevel	"A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the ""FAIRification of Genomic Annotations"" data model. This is the top-level class to be used as root for the metadata document."							
+					document		Document	1..1	Information about this document containing harmonised metadata about a set of genome annotation files. This includes self-referential identifiers and versioning of public deposits of the document.	https://w3id.org/fga-wg/schema/top_level/document
+					file_collections		FileCollection	0..*	Information about collections of files contained in this dataset, each collection defined according to some selection criteria.	https://w3id.org/fga-wg/schema/top_level/file_collections
+					files		File	0..*	Information about particular genome annotation (and other relevant) files.	https://w3id.org/fga-wg/schema/top_level/files
+					experiments		Experiment	0..*	Information about sequencing experiments that have been carried out to generate the files.	https://w3id.org/fga-wg/schema/top_level/experiments
+					analyses		Analysis	0..*	Information about computational processing and analyses that have been carried out to generate the files.	https://w3id.org/fga-wg/schema/top_level/analyses
+					samples		Sample	0..*	Information about the biospecimens/samples used as raw material for lab experiments.	https://w3id.org/fga-wg/schema/top_level/samples
+					donors		Donor	0..*	Information about the donors or complete organisms from which the samples were taken.	https://w3id.org/fga-wg/schema/top_level/donors
+
