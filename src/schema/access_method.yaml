@@ -38,10 +38,16 @@ slots:
     description: 'Type of the access method.'
     required: true
     range: AccessMethodTypes
+    examples:
+      - value: https
   access_url: 
     description: 'AccessURL object providing URL and associated HTTP headers to access the File object (orig: DrsObject).'
     required: true
     range: AccessURL
+    examples:
+      - object:
+          url: 'https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed'
   region:
     description: 'Name of the region in the cloud service provider that the object belongs to.'
     range: string
+    examples: []

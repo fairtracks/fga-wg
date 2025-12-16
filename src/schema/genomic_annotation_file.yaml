@@ -25,6 +25,8 @@ slots:
     description: 'Information about the genome assembly used to generate the genomic annotation file, consequently defining the genomic coordinate system for the annotation.'
     required: true
     range: GenomeAssembly
+    examples:
+      - value: 'ga4gh:SC.EiFob05aCWgVU_B_Ae0cypnQut3cxUP1'
   track_geometry:
     description: 'Geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track (also relevant for non-visual analyses).'
     required: true

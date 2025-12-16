@@ -38,6 +38,8 @@ slots:
   inputsource_external_ref: 
     description: 'Reference to an external entity as the input source, using a globally unique identifier or an URL. External references will in most cases refer to a database, data record, data file, website or other data source. One of "inputsource_external_ref" or "inputsource_ref" must be specified.'
     range: uriorcurie
+    examples:
+      - value: 'https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15'
   inputsource_ref:
     description: 'Reference to an internal object as the input source using a local identifier. Entities to be used as an internal input source includes FileCollection, Sample, Experiment, Analysis or File as restricted by the description of the field where the input source is used. One of "inputsource_external_ref" or "inputsource_ref" must be specified.'
     range: curie
@@ -52,17 +54,27 @@ slots:
     description: 'A description of the relationship with the input source.'
     required: true
     range: Term
+    examples:
+      - value: 'bioschemas:FormalParameter'
   biological_replicate_labels:
     description: 'Labels denoting the biological replicates within which the relation is defined, if any.'
     range: string
     multivalued: true
+    examples:
+      - value: '1'
+      - value: '2'
   technical_replicate_labels:
     description: 'Labels denoting the technical replicates within which the relation is defined, if any.'
     range: string
     multivalued: true
+    examples:
+      - value: '1_1'
+      - value: '1_2'
   version:
     description: 'Version information for the retrieval from the input source.'
     range: string
   date_of_retrieval:
     description: 'Date of retrieval from the input source, typically used to timestamp downloading data from a database or URL.'
     range: datetime
+    examples:
+      - value: '2016-04-19'

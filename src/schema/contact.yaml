@@ -16,10 +16,16 @@ slots:
     description: 'Name of the person or organisation.'
     required: true
     range: string
+    examples:
+      - value: 'John Doe'
   contact_id:
     description: 'Globally unique identifier for a person (e.g. ORCID ID) or organisation (e.g. BioProject accession).'
     range: curie
+    examples:
+      - value: 'orcid:0000-0001-2345-6789'
   email:
     description: 'E-mail address of the person or organisation.'
     range: string
     pattern: "^\\S+@\\S+\\.\\S+$"
+    examples:
+      - value: 'john@doe.com'

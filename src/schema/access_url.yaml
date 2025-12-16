@@ -15,7 +15,10 @@ slots:
     description: 'A fully resolvable URL that can be used to fetch the actual object bytes.'
     required: true
     range: uri
+    examples:
+      - value: 'https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed'
   headers:
     description: 'An optional list of headers to include in the HTTP request to `url`. These headers can be used to provide auth tokens required to fetch the object bytes.'
     range: string
     multivalued: true
+    examples: []

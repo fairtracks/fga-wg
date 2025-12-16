@@ -72,8 +72,8 @@ enums:
     permissible_values:
       integer:
         description: 'Integer numeric values.'
-      float:
-        description: 'Floating point numeric values.'
+      decimal:
+        description: 'Decimal numeric values.'
       boolean:
         description: 'Boolean values (true/false).'
       string:
@@ -86,40 +86,60 @@ slots:
     description: 'Whether there are gaps between the sequence features (there exists at least one gap between two features on the same sequence).'
     required: true
     range: boolean
+    examples:
+      - object: true
   has_lengths:
     description: 'Whether the sequence features have lengths (at least one feature spans more than 1 base pair).'
     required: true
     range: boolean
+    examples:
+      - object: true
   has_strands:
     description: 'Whether the sequence features are stranded (at least one feature has strand information).'
     required: true
     range: boolean
+    examples:
+      - object: false
   has_values:
     description: 'Whether the sequence features have associated values (at least one feature has an associated value).'
     required: true
     range: boolean
+    examples:
+      - object: true
   has_edges:
     description: 'Whether the sequence features are linked across positions (at least one edge between features exists).'
     required: true
     range: boolean
+    examples:
+      - object: false
   has_names:
     description: 'Whether the sequence features are named (at least one feature has a name).'
     required: true
     range: boolean
+    examples:
+      - object: true
   elements_overlapping: 
     description: 'Whether the sequence features are overlapping (at least one base pair is simultaneously covered by two sequence features).'
     required: true
     range: boolean
+    examples:
+      - object: false
   elements_circular:
     description: 'Whether the sequence features have circular coordinates (at least one feature that cross a sequence border).'
     required: true
     range: boolean
+    examples:
+      - object: false
   lengths_constant:
     description: 'Whether the sequence lengths are constant (all sequence features have the same length, excluding features at the very end of a sequence).'
     range: boolean
+    examples:
+      - object: false
   value_type:
     description: 'The type of values associated with the sequence features, if any.'
     range: DataTypes
+    examples:
+      - value: multiple
   edges_have_weights:
     description: 'Whether the edges linking sequence features are weighted (at least one edge between sequence features has an associated weight).'
     range: boolean
