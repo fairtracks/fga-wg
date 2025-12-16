@@ -6,6 +6,7 @@ prefixes:
 
 imports:
   - linkml:types
+  - term
   
 classes:
   Sample:
@@ -18,11 +19,10 @@ classes:
       - donor_organism_ref
       - biospecimen_classification
       - organism_tissue
-      - primary_cell
+      - cell_type
       - cell_line
       - other_biospecimen
       - sampling_protocol
-      - description
       - sample_collection_location
       - sample_collection_date
       - phenotype
@@ -95,31 +95,34 @@ slots:
   label:
     description: 'A human-readable description of the sample, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
     required: true
+    range: string
     pattern: "^.{1,60}$"
     examples:
       - value: 'Homo sapiens AG04450 cell line'
   description:
-    description: 'Human-readable description of the sample and the sampling process.'
+    description: 'Human-readable description of the biospecimen/sample and the sampling process.'
     range: string
     examples:
-      - value: 'donor:ENCDO001AAA'
+      - value: 'Homo sapiens AG04450 cell line'
   donor_organism_ref:
     description: 'Internal reference to the donor/organism from which the biospecimen/sample was taken.'
     required: true
     range: curie
     examples:
-      - value: 'cell line'
+      - value: 'donor:ENCDO001AAA'
   biospecimen_classification:
     description: 'Main type of structural unit to be used for classification of the biospecimen/sample.'
     required: true
     range: BiospecimenClassification
     examples:
-      - object:
-          id: 'UBERON:0002048'
-          label: 'lung'
+      - value: 'cell line'
   organism_tissue: 
     description: 'Part of organism (typically tissue or organ) from which the biospecimen/sample was taken, or cell line was derived from.'
     range: Term
+    examples:
+      - object:
+          id: 'UBERON:0002048'
+          label: 'lung'
   cell_type:
     description: 'Cell type of isolated normal cells in the biospecimen/sample.'
     range: Term
@@ -155,11 +158,6 @@ slots:
     range: uri
     examples:
       - value: 'https://www.encodeproject.org/documents/3ed29dac-da67-47be-91b0-c9cad6a1b791/@@download/attachment/AG04450_Stam_protocol.pdf'
-  description:
-    description: 'Human-readable description of the biospecimen/sample.'
-    range: string
-    examples:
-      - value: 'Homo sapiens AG04450 cell line'
   sample_collection_location:
     description: 'Geographical location where the sample was collected.'
     # TODO: change to a more specific type for geographical locations
