@@ -1,5 +1,9 @@
 id: https://w3id.org/fga-wg/schema/input-source
 name: input_source
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
 imports:
   - linkml:types
   - term

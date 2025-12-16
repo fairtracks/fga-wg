@@ -1,5 +1,9 @@
 id: https://w3id.org/fga-wg/schema/quality-assessment
 name: quality_assessment
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
 imports:
   - linkml:types
   - term

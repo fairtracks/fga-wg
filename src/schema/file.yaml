@@ -1,5 +1,9 @@
 id: https://w3id.org/fga-wg/schema/file
 name: file
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
 imports:
   - linkml:types
   - access_method
