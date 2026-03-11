@@ -10,6 +10,8 @@ imports:
 classes:
   Checksum:
     description: 'A checksum of a File object (orig: DrsObject). Exact copy of the Checksum object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/ChecksumModel).'
+    conforms_to: "GA4GH DRS 1.4.0"
+    source: https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/
     slots:
       - checksum
       - checksum_type

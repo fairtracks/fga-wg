@@ -10,6 +10,10 @@ imports:
 classes:
   GenomeAssembly:
     description: 'Information about of the exact genome assembly used to generate the annotation file, defining the genomic coordinate system for the sequence features.'
+    conforms_to: "GA4GH Refget Sequence Collections v1.0"
+    implements:
+      - https://ga4gh.github.io/refget/docs/schemas/seqcol_extended_v1.0.0.json
+    source: https://ga4gh.github.io/refget/
     slots:
       - seqcol_digest
       - seqcol_ordered_coord_system

@@ -11,6 +11,8 @@ imports:
 classes:
   AccessMethod:
     description: 'Description of an access method (i.e. communication protocol) that can be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel)'
+    conforms_to: "GA4GH DRS 1.4.0"
+    source: https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/
     slots:
       - access_method
       - access_url
