@@ -3,6 +3,7 @@ name: genome_assembly
 
 prefixes:
   linkml: https://w3id.org/linkml/
+  ga4gh_refget_info: https://ga4gh.github.io/refget/
 
 imports:
   - linkml:types
@@ -11,9 +12,8 @@ classes:
   GenomeAssembly:
     description: 'Information about of the exact genome assembly used to generate the annotation file, defining the genomic coordinate system for the sequence features.'
     conforms_to: "GA4GH Refget Sequence Collections v1.0"
-    implements:
-      - https://ga4gh.github.io/refget/docs/schemas/seqcol_extended_v1.0.0.json
-    source: https://ga4gh.github.io/refget/
+    source: ga4gh_refget_info:schemas/seqcol_extended_v1.0.0.json
+    see_also: ga4gh_refget_info:seqcols
     slots:
       - seqcol_digest
       - seqcol_ordered_coord_system
