@@ -3,6 +3,9 @@ name: file
 
 prefixes:
   linkml: https://w3id.org/linkml/
+  ga4gh_drs_info: https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/
+#  ga4gh_drs:  https://w3id.org/ga4gh/schema/drs/1.4.0/
+
 
 imports:
   - linkml:types
@@ -14,8 +17,13 @@ imports:
 
 classes:
   File:
-    description: 'General information about a particular data file. Most fields (marked with an asterix*) are copied from the GA4GH DRS DrsObject model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/DrsObjectModel), which is the top-level object returned from a DRS server in response to a successful lookup call (i.e. https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/Objects).'
-    slots: 
+    description: 'General information about a particular data file. Most fields (marked with an asterix*) are copied from the GA4GH DRS DrsObject model, which is the top-level object returned from a DRS server in response to a successful lookup call (i.e. https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/Objects).'
+    conforms_to: "GA4GH DRS 1.4.0"
+#    class_uri: ga4gh_drs:DrsObject
+    source: ga4gh_drs_info:openapi.yaml
+    see_also:
+      - ga4gh_drs_info:docs/#tag/DrsObjectModel
+    slots:
       - file_external_id
       - file_id
       - file_name
@@ -318,6 +326,7 @@ slots:
       - value: 'encode:ENCFF323LCS'
   file_id:
     description: 'Internal identifier for the data file (unique within the metadata deposit). '
+#    slot_uri: ga4gh_drs:DrsObject/id
     required: true
     identifier: true
     range: curie
@@ -325,6 +334,7 @@ slots:
       - value: 'file:ENCFF323LCS'
   file_name:
     description: 'A string that can be used to name a data file. This string is made up of uppercase and lowercase letters, decimal digits, hypen, period, and underscore [A-Za-z0-9.-_]. See http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_282 [portable filenames].'
+#    slot_uri: ga4gh_drs:DrsObject/name
     range: string
     examples:
       - value: '87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed'
@@ -337,6 +347,7 @@ slots:
       - value: 'H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450'
   file_description:
     description: 'A human readable description of the data file.'
+#    slot_uri: ga4gh_drs:DrsObject/description
     range: string
     examples:
       - value: 'H3K9me3 ChIP-seq replicated peaks on human (hg38) AG04450 (Fibroblast derived cell line).'
@@ -360,11 +371,13 @@ slots:
           technical_replicate_labels: [ "1_1", "2_1" ]
   drs_uri:
     description: 'A drs:// hostname-based URI, as defined in the DRS documentation, that tells clients how to access this object. The intent of this field is to make DRS objects self-contained, and therefore easier for clients to store and pass around. For example, if you arrive at this DRS JSON by resolving a compact identifier-based DRS URI, the self_uri presents you with a hostname and properly encoded DRS ID for use in subsequent access endpoint calls.'
+#    slot_uri: ga4gh_drs:DrsObject/self_uri
     range: uri
     examples:
       - value: 'drs://drs.example.org/ENCFF323LCS'
   access_methods: 
     description: 'The list of access methods that can be used to fetch the data file. '
+#    slot_uri: ga4gh_drs:DrsObject/access_methods
     required: true
     range: AccessMethod
     multivalued: true
@@ -417,6 +430,7 @@ slots:
           label: 'bigBed'
   mime_type:
     description: 'A string providing the mime-type of the data file.'
+#    slot_uri: ga4gh_drs:DrsObject/mime_type
     range: string
     examples:
       - value: 'application/octet-stream'
@@ -428,28 +442,33 @@ slots:
       - value: 'replicated peaks'
   file_size:
     description: 'For blobs, the blob size in bytes. '
+#    slot_uri: ga4gh_drs:DrsObject/size
     required: true
     range: integer
     examples:
       - object: 5359719
   created_time:
     description: 'Timestamp of content creation in RFC3339. (This is the creation time of the underlying content, not of the JSON object.).'
+#    slot_uri: ga4gh_drs:DrsObject/created_time
     required: true
     range: datetime
     examples:
       - value: '2016-11-13T17:42:04.385801+00:00'
   updated_time:
     description: 'Timestamp of content update in RFC3339, identical to created_time in systems that do not support updates. (This is the update time of the underlying content, not of the JSON object.).'
+#    slot_uri: ga4gh_drs:DrsObject/updated_time
     range: datetime
     examples:
       - value: '2016-11-13T17:42:04.385801+00:00'
   file_version:
     description: 'A string representing a version. (Some systems may use checksum, a RFC3339 timestamp, or an incrementing version number.).'
+#    slot_uri: ga4gh_drs:DrsObject/version
     range: string
     examples:
       - value: 'efd4e74e-7875-4d13-9630-0085bc834f18'
   checksums:
     description: 'A list of checksums of the data file. At least one checksum must be provided. For blobs, the checksum is computed over the bytes in the blob.'
+#    slot_uri: ga4gh_drs:DrsObject/checksums
     required: true
     range: Checksum
     multivalued: true

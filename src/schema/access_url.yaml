@@ -3,26 +3,35 @@ name: access_url
 
 prefixes:
   linkml: https://w3id.org/linkml/
+  ga4gh_drs_info: https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/
+#  ga4gh_drs:  https://w3id.org/ga4gh/schema/drs/1.4.0/
 
 imports:
   - linkml:types
 
 classes:
   AccessURL:
-    description: 'The URL and associated HTTP headers to access the File object (orig: DrsObject). Exact copy of AccessURL object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessURLModel).'
-    slots: 
+    description: 'The URL and associated HTTP headers to access the File object (orig: DrsObject). Exact copy of AccessURL object of the GA4GH DRS data model.'
+    conforms_to: "GA4GH DRS 1.4.0"
+#    class_uri: ga4gh_drs:AccessURL
+    source: ga4gh_drs_info:openapi.yaml
+    see_also:
+      - ga4gh_drs_info:docs/#tag/AccessURLModel
+    slots:
       - url
       - headers
 
 slots:
   url: 
     description: 'A fully resolvable URL that can be used to fetch the actual object bytes.'
+#    slot_uri: ga4gh_drs:AccessURL/url
     required: true
     range: uri
     examples:
       - value: 'https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed'
   headers:
     description: 'An optional list of headers to include in the HTTP request to `url`. These headers can be used to provide auth tokens required to fetch the object bytes.'
+#    slot_uri: ga4gh_drs:AccessURL/headers
     range: string
     multivalued: true
     examples: []
