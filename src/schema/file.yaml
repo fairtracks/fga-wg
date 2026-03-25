@@ -3,6 +3,9 @@ name: file
 
 prefixes:
   linkml: https://w3id.org/linkml/
+  ga4gh_drs_info: https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/
+  ga4gh_drs:  https://w3id.org/ga4gh/schema/drs/1.4.0/
+
 
 imports:
   - linkml:types
