@@ -15,7 +15,8 @@ classes:
     conforms_to: "GA4GH DRS 1.4.0"
     class_uri: ga4gh_drs:AccessURL
     source: ga4gh_drs_info:openapi.yaml
-    see_also: ga4gh_drs_info:docs/#tag/AccessURLModel
+    see_also:
+      - ga4gh_drs_info:docs/#tag/AccessURLModel
     slots:
       - url
       - headers

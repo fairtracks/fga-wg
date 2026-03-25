@@ -16,7 +16,8 @@ classes:
     conforms_to: "GA4GH DRS 1.4.0"
     class_uri: ga4gh_drs:AccessMethod
     source: ga4gh_drs_info:openapi.yaml
-    see_also: ga4gh_drs_info:docs/#tag/AccessMethodModel
+    see_also:
+      - ga4gh_drs_info:docs/#tag/AccessMethodModel
     slots:
       - access_method
       - access_url

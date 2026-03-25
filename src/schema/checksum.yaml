@@ -15,7 +15,8 @@ classes:
     conforms_to: "GA4GH DRS 1.4.0"
     class_uri: ga4gh_drs:Checksum
     source: ga4gh_drs_info:openapi.yaml
-    see_also: ga4gh_drs_info:docs/#tag/ChecksumModel
+    see_also:
+      - ga4gh_drs_info:docs/#tag/ChecksumModel
     slots:
       - checksum
       - checksum_type

@@ -21,7 +21,8 @@ classes:
     conforms_to: "GA4GH DRS 1.4.0"
     class_uri: ga4gh_drs:DrsObject
     source: ga4gh_drs_info:openapi.yaml
-    see_also: ga4gh_drs_info:docs/#tag/DrsObjectModel
+    see_also:
+      - ga4gh_drs_info:docs/#tag/DrsObjectModel
     slots:
       - file_external_id
       - file_id
