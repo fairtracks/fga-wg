@@ -1,0 +1,158 @@
+id: https://w3id.org/fga-wg/schema/track-geometry
+name: track_geometry
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+  
+classes:
+  TrackGeometry:
+    description: 'Overall geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track, in line with the track type delineations from Gundersen et. al, 2011. While conceptually based on visual characteristics, these properties are also useful to e.g. select relevant annotation files for non-visual analyses.'
+    slots:
+      - has_gaps
+      - has_lengths
+      - has_strands
+      - has_values
+      - has_edges
+      - has_names
+      - elements_overlapping
+      - elements_circular
+      - lengths_constant
+      - value_type
+      - edges_have_weights
+      - edge_weight_type
+      - edges_are_directed
+      - edges_denote_parents
+
+    rules:
+      - preconditions:
+          slot_conditions:
+            has_lengths:
+              # equals_number: true will fail in  linting (True is not of type 'integer', 'null')
+              # However, it is currently the only syntax that works to check for boolean true in linkml
+              # (until https://github.com/linkml/linkml/issues/1136 is fixed).
+              equals_number: true
+        postconditions:
+          slot_conditions:
+            lengths_constant:
+              required: true
+      - preconditions:
+          slot_conditions:
+            has_values:
+              equals_number: true
+        postconditions:
+          slot_conditions:
+            value_type:
+              required: true
+      - preconditions:
+          slot_conditions:
+            has_edges:
+              equals_number: true
+        postconditions:
+          all_of:
+            - slot_conditions:
+                edges_have_weights:
+                  required: true
+            - slot_conditions:
+                edges_are_directed:
+                  required: true
+            - slot_conditions:
+                edges_denote_parents:
+                  required: true
+      - preconditions:
+          slot_conditions:
+            edges_have_weights:
+              equals_number: true
+        postconditions:
+          slot_conditions:
+            edge_weight_type:
+              required: true
+
+enums:
+  DataTypes:
+    description: 'Types of data values associated with sequence features or edges.'
+    permissible_values:
+      integer:
+        description: 'Integer numeric values.'
+      decimal:
+        description: 'Decimal numeric values.'
+      boolean:
+        description: 'Boolean values (true/false).'
+      string:
+        description: 'Text string values.'
+      multiple:
+        description: 'Multiple types of values are associated (e.g. both integer and string).'
+
+slots:
+  has_gaps:
+    description: 'Whether there are gaps between the sequence features (there exists at least one gap between two features on the same sequence).'
+    required: true
+    range: boolean
+    examples:
+      - object: true
+  has_lengths:
+    description: 'Whether the sequence features have lengths (at least one feature spans more than 1 base pair).'
+    required: true
+    range: boolean
+    examples:
+      - object: true
+  has_strands:
+    description: 'Whether the sequence features are stranded (at least one feature has strand information).'
+    required: true
+    range: boolean
+    examples:
+      - object: false
+  has_values:
+    description: 'Whether the sequence features have associated values (at least one feature has an associated value).'
+    required: true
+    range: boolean
+    examples:
+      - object: true
+  has_edges:
+    description: 'Whether the sequence features are linked across positions (at least one edge between features exists).'
+    required: true
+    range: boolean
+    examples:
+      - object: false
+  has_names:
+    description: 'Whether the sequence features are named (at least one feature has a name).'
+    required: true
+    range: boolean
+    examples:
+      - object: true
+  elements_overlapping: 
+    description: 'Whether the sequence features are overlapping (at least one base pair is simultaneously covered by two sequence features).'
+    required: true
+    range: boolean
+    examples:
+      - object: false
+  elements_circular:
+    description: 'Whether the sequence features have circular coordinates (at least one feature that cross a sequence border).'
+    required: true
+    range: boolean
+    examples:
+      - object: false
+  lengths_constant:
+    description: 'Whether the sequence lengths are constant (all sequence features have the same length, excluding features at the very end of a sequence).'
+    range: boolean
+    examples:
+      - object: false
+  value_type:
+    description: 'The type of values associated with the sequence features, if any.'
+    range: DataTypes
+    examples:
+      - value: multiple
+  edges_have_weights:
+    description: 'Whether the edges linking sequence features are weighted (at least one edge between sequence features has an associated weight).'
+    range: boolean
+  edge_weight_type:
+    description: 'The type of values associated with the edges.'
+    range: DataTypes
+  edges_are_directed:
+    description: 'Whether the edges linking sequence features are directed (at least one edge between sequence features is defined with a direction).'
+    range: boolean
+  edges_denote_parents:
+    description: 'Whether the edges linking sequence features denote a parent-child relationship (all edges between sequence features denote parent-child relationships such as genes to exons, i.e. where the child is fully covered by the parent).'
+    range: boolean

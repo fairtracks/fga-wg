@@ -1,0 +1,28 @@
+id: https://w3id.org/fga-wg/schema/term
+name: term
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+
+classes:
+  Term:
+    description: 'Helper entity to represent an ontology term as a data value. '
+    slots:
+      - id
+      - label
+
+slots: 
+  id: 
+    description: 'External, globally unique identifier for the ontology term (in CURIE form).'
+    required: true
+    range: curie
+    examples:
+      - value: 'obi:OBI_0000716'
+  label:
+    description: 'Human-readable label associated to the term id in the current version of the ontology (as listed in the "ontology_versions" field of the Deposit object).'
+    range: string
+    examples:
+      - value: 'ChIP-seq assay'

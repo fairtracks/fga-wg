@@ -1,0 +1,47 @@
+id: https://w3id.org/fga-wg/schema/donor
+name: donor
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+  - term
+  
+classes:
+  Donor:
+    description: 'Information about the donor or complete organism from which the sample was taken.'
+    slots:
+      - donor_external_id
+      - donor_id
+      - species_taxon
+      - sex
+
+slots:
+  donor_external_id:
+    description: 'External, globally unique identifier for the donor/organism.'
+    range: curie
+    examples:
+      - value: 'biosamples:SAMN04284578'
+  donor_id:
+    description: 'Internal identifier for the donor/organism (unique within the metadata deposit). '
+    required: true
+    identifier: true
+    range: curie
+    examples:
+      - value: 'donor:ENCDO001AAA'
+  species_taxon:
+    description: 'Taxonomical classification of the species of the donor/organism.'
+    required: true
+    range: Term
+    examples:
+      - object:
+          id: 'NCBITaxon:9606'
+          label: 'Homo sapiens'
+  sex:
+    description: 'Biological sex of the donor/organism.'
+    range: Term
+    examples:
+      - object:
+          id: 'CARO:0000027'
+          label: 'male organism'

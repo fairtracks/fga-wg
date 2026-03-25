@@ -1,0 +1,74 @@
+id: https://w3id.org/fga-wg/schema/quality-assessment
+name: quality_assessment
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+  - term
+  - util
+  
+classes:
+  QualityAssessment:
+    description: 'Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis.'
+    slots:
+      - assessment_method
+      - assessment_values
+      - assessment_details_url
+
+  AssessmentValue:
+    description: 'Key-value pair representing a specific value produced by a quality assessment.'
+    slots:
+      - key
+      - value
+
+slots:
+  assessment_method:
+    description: 'Quality assessment method that has been carried out (e.g. BUSCO, OMArk, peak calling statistics, etc.)'
+    required: true
+    range: Any
+    any_of:
+      - range: string
+      - range: Term
+    examples:
+      - value: 'histone-chipseq-quality-metrics'
+  assessment_values:
+    description: 'Main values produced by the quality assessment.'
+    required: true
+    range: Any
+    any_of:
+      - range: string
+      - range: AssessmentValue
+        multivalued: true
+    examples:
+      - object:
+          nreads: 21018235
+          nreads_in_peaks: 6161851
+          frip: 0.2931669095906483
+  assessment_details_url:
+    description: 'URL to a report containing the detailed output from the quality assessment.'
+    range: uri
+    examples:
+      - value: 'https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/'
+  key:
+    description: 'Key/name of the assessment value.'
+    required: true
+    range: string
+    examples:
+      - value: 'nreads'
+      - value: 'nreads_in_peaks'
+      - value: 'frip'
+  value:
+    description: 'Value corresponding to the assessment key.'
+    required: true
+    range: Any
+    any_of:
+      - range: decimal
+      - range: boolean
+      - range: integer
+      - range: string
+    examples:
+      - object: 21018235
+      - object: 6161851
+      - object: 0.2931669095906483

@@ -1,0 +1,126 @@
+id: https://w3id.org/fga-wg/schema/experiment
+name: experiment
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+  - input_source
+  - term
+
+classes:
+  Experiment:
+    description: 'Represents a sequencing experiment that has been carried out within a study, based on biological samples, and providing data files as output. Subsequent analysis of output data is described by the Analysis entity.'
+    slots:
+      - experiment_external_id
+      - experiment_id
+      - experiment_label
+      - experiment_study_ref
+      - experiment_samples
+      - molecule_type
+      - assay_type
+      - design_description
+      - library_layout
+      - instrument
+      - sequencing_protocol
+      - antibody_target
+      - biological_processes
+
+slots:
+  experiment_external_id:
+    description: 'External, globally unique identifier for the experiment.'
+    range: curie
+    examples:
+      - value: 'encode:ENCSR000DPJ'
+  experiment_id:
+    description: 'Internal identifier for the experiment (unique within the metadata deposit).'
+    required: true
+    identifier: true
+    range: curie
+    examples:
+      - value: 'experiment:ENCSR000DPJ'
+  experiment_label:
+    description: 'A human-readable description of the experiment, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
+    required: true
+    range: string
+    pattern: "^.{1,60}$"
+    examples:
+      - value: 'H3K9me3 ChIP-seq on human AG04450'
+  experiment_study_ref:
+    description: 'Internal reference to the study within which the experiment has been carried out.'
+    required: true
+    range: curie
+    examples:
+      - value: 'study:E-GEOD-35583'
+  experiment_samples:
+    description: 'External or internal references to samples used in the experiment. Internal references should refer to Sample objects.'
+    required: true
+    range: InputSource
+    multivalued: true
+    examples:
+      - object:
+          inputsource_ref: 'sample:ENCBS004ENC'
+          qualified_relation: 'prov:used'
+          biological_replicate_labels:
+            - '1'
+            - '2'
+          technical_replicate_labels:
+            - '1_1'
+            - '2_1'
+  molecule_type:
+    description: 'Specifies the type of source material that is being sequenced.'
+    required: true
+    range: Term
+    examples:
+      - object:
+          id: 'SO:0000991'
+          label: 'genomic_DNA'
+  assay_type:
+    description: 'Sequencing technique intended for this library.'
+    required: true
+    range: Term
+    examples:
+      - object:
+          id: 'obi:OBI_0000716'
+          label: 'ChIP-seq assay'
+  design_description:
+    description: 'The high-level experiment design including layout, protocol.'
+    range: string
+    examples:
+      - value: 'https://www.encodeproject.org/documents/92cd1386-ccad-450a-b5a6-ad49983e7e3f/@@download/attachment/wgEncodeUwHistone.release5.html.pdf'
+  library_layout:
+    description: 'Whether the library was built as paired-end, or single-end.'
+    range: Term
+    examples:
+      - object:
+          id: 'obi:OBI_0000736'
+          label: 'single fragment library'
+  instrument:
+    description: 'Technology platform used to perform nucleic acid sequencing, including name and/or number associated with a specific sequencing instrument model. It is recommended to be as specific as possible for this property (e.g. if the model/revision are available, providing that instead of just the instrument maker).'
+    range: Term
+    examples:
+      - object:
+          id: 'obi:OBI_0002128'
+          label: 'Illumina Genome Analyzer'
+  sequencing_protocol:
+    description: 'Set of rules which guides how the sequencing protocol was followed. Change-tracking services such as Protocol.io or GitHub are encouraged instead of dumping free text in this field.'
+    range: uriorcurie
+  antibody_target:
+    description: 'The target of the antibody used in the experiment.'
+# TODO: Implement conditional requirement for "antibody_target"
+#    required_if: Required if assay_type is e.g. ChIP-seq.
+    range: Term
+    examples:
+      - object:
+          id: 'SO:0001707'
+          label: 'H3K9Me3'
+  biological_processes:
+    description: 'Biological processes illuminated by the experiment.'
+    range: Term
+    multivalued: true
+    examples:
+      - object:
+          id: 'GO:0140999'
+          label: 'histone H3K4 trimethyltransferase activity'
+

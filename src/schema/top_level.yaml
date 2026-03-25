@@ -1,0 +1,73 @@
+id: https://w3id.org/fga-wg/schema/top_level
+name: top-level
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+  - analysis
+  - document
+  - donor
+  - experiment
+  - file
+  - file_collection
+  - genomic_annotation_file
+  - sample
+
+
+classes:
+  TopLevel:
+    description: 'A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document.'
+    slots:
+      - document
+      - file_collections
+      - files
+      - experiments
+      - analyses
+      - samples
+      - donors
+
+slots: 
+  document:
+    description: 'Information about this document containing harmonised metadata about a set of genome annotation files. This includes self-referential identifiers and versioning of public deposits of the document.'
+    required: true
+    range: Document
+    inlined: true
+  file_collections:
+    description: 'Information about collections of files contained in this dataset, each collection defined according to some selection criteria.'
+    range: FileCollection
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  files:
+    description: 'Information about particular genome annotation (and other relevant) files.'
+    range: File
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  donors:
+    description: 'Information about the donors or complete organisms from which the samples were taken.'
+    range: Donor
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  samples:
+    description: 'Information about the biospecimens/samples used as raw material for lab experiments.'
+    range: Sample
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  experiments:
+    description: 'Information about sequencing experiments that have been carried out to generate the files.'
+    range: Experiment
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  analyses:
+    description: 'Information about computational processing and analyses that have been carried out to generate the files.'
+    range: Analysis
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+
