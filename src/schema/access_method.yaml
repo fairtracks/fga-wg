@@ -41,7 +41,7 @@ slots:
   access_method:
     description: 'Access method used to access the File object (orig: DrsObject).'
     required: true
-    range: AccessMethod
+    range: AccessMethods
     examples:
       - value: https
   access_url: 

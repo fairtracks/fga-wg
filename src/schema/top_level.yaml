@@ -12,6 +12,7 @@ imports:
   - experiment
   - file
   - file_collection
+  - genomic_annotation_file
   - sample
 
 
