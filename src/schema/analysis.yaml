@@ -56,7 +56,7 @@ slots:
     examples:
       - value: 'study:S-EPMC7391744'
   analysis_input_sources:
-    description: 'Internal reference to the study within which the analysis has been carried out.'
+    description: 'External or internal references to sources for the input data analyzed. Internal references should lead to FileCollection, File, Experiment, or Analysis objects.'
     required: true
     range: InputSource
     multivalued: true
