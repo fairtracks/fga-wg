@@ -42,14 +42,98 @@ def uv(cmd: str) -> str:
     return f"uv run {cmd}"
 
 
+# ── Known linkml-lint false positives ──────────────────────────────────────
+# Errors that fail lint due to bugs or missing features in LinkML itself.
+# Each entry documents the reason and a link to the upstream issue.
+# Suppressed issues are still printed as visible warnings — they are NOT silently ignored.
+
+LINT_KNOWN_ISSUES = [
+    {
+        # equals_number: true uses a boolean where the metamodel expects integer/null.
+        # This is the only syntax that works to check for boolean true in rule preconditions.
+        # Upstream issue: https://github.com/linkml/linkml/issues/1136
+        "message_pattern": "equals_number: True is not of type 'integer', 'null'",
+        "reason": (
+            "equals_number: true is the only working syntax to check for boolean true "
+            "in LinkML rule preconditions. See https://github.com/linkml/linkml/issues/1136"
+        ),
+    },
+]
+
+
+def _run_lint() -> bool:
+    """Run linkml-lint with JSON output, filtering documented known false positives.
+
+    Suppressed issues are still printed visibly so they are not silently lost.
+    Returns False (task failure) if any non-suppressed errors are found.
+    """
+    import json
+    import subprocess
+
+    lint_command = [
+        "linkml-lint",
+        "--config", str(LINT_CFG),
+        "--validate",
+        "--format", "json",
+        str(SCHEMA_DIR),
+    ]
+    print(f"        Cmd: {' '.join(lint_command)}")
+    result = subprocess.run(
+        lint_command,
+        capture_output=True,
+        text=True,
+    )
+
+    # Parse JSON output — linkml-lint exits non-zero on errors so we ignore returncode
+    # and inspect the structured output ourselves.
+    try:
+        problems = json.loads(result.stdout) if result.stdout.strip() else []
+    except json.JSONDecodeError:
+        # Unexpected / unparseable output — print raw and fail
+        print(result.stdout)
+        if result.stderr:
+            print(result.stderr)
+        return False
+
+    # Partition into known false positives vs real problems
+    real_problems: list = []
+    suppressed: list = []
+    for problem in problems:
+        matched = next(
+            (ki for ki in LINT_KNOWN_ISSUES if ki["message_pattern"] in problem["message"]),
+            None,
+        )
+        if matched:
+            suppressed.append((problem, matched))
+        else:
+            real_problems.append(problem)
+
+    # Always print suppressed issues — they are known but should remain visible
+    if suppressed:
+        print(f"\n  ⚠  {len(suppressed)} known issue(s) suppressed (upstream LinkML bugs):")
+        for problem, known_issue in suppressed:
+            print(f"     [{problem['level']}] {problem['message']}")
+            print(f"     → {known_issue['reason']}")
+
+    # Print and fail on real problems
+    if real_problems:
+        print(f"\n  ✖  {len(real_problems)} problem(s) found:")
+        for p in real_problems:
+            print(f"     [{p['level']}] {p['message']}")
+        return False
+
+    suffix = f" ({len(suppressed)} suppressed)" if suppressed else ""
+    print(f"✓ No problems found{suffix}")
+    return True
+
+
 # ── Tasks ────────────────────────────────────────────────────────────────────
 
 def task_lint():
-    """Validate the schema with linkml-lint."""
+    """Validate the schema with linkml-lint, filtering documented known false positives."""
     return {
-        "actions":  [uv(f"linkml-lint --config {LINT_CFG} --validate {SCHEMA_DIR}")],
-        "title":    title_with_actions,
-        "uptodate": [False],  # always run — lint is a check, not a build step
+        "actions":  [_run_lint],
+        "uptodate": [False],   # always run — lint is a check, not a build step
         "verbosity": 2,
     }
 
