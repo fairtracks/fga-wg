@@ -74,7 +74,7 @@ class CommandOnRunReporter(ConsoleReporter):
 # ── Global doit configuration ───────────────────────────────────────────────
 
 DOIT_CONFIG = {
-    "default_tasks": ["lint", "json_schema", "summary", "erdiagram", "plantuml", "docs", "overview"],
+    "default_tasks": ["lint", "json_schema", "summary", "erdiagram", "plantuml", "docs", "overview", "nav"],
     "verbosity": 1,
     "reporter": CommandOnRunReporter,
 }
@@ -272,27 +272,16 @@ def task_plantuml():
 def task_docs():
     """Generate per-class Markdown documentation → docs/"""
     # TopLevel.md is used as the representative target for up-to-date checks
-    target     = DOCS_DIR / "TopLevel.md"
-    pages_file = DOCS_DIR / ".pages"
-
-    def write_pages_file():
-        """Pin the nav order: index first, overview second, then everything else."""
-        pages_file.write_text(
-            "nav:\n"
-            "  - index.md\n"
-            "  - overview.md\n"
-            "  - ...\n"
-        )
+    target = DOCS_DIR / "TopLevel.md"
 
     return {
         "actions": [
             f"mkdir -p {DOCS_DIR}",
             uv(f"gen-doc -d {DOCS_DIR} {TOP_LEVEL}"),
-            write_pages_file,
         ],
-        'title': title_with_actions,
+        "title":    title_with_actions,
         "file_dep": SCHEMA_FILES + TOOL_DEPS,
-        "targets":  [target, pages_file],
+        "targets":  [target],
         "uptodate": non_empty_targets(target),
     }
 
@@ -330,12 +319,77 @@ def task_overview():
     }
 
 
+def task_nav():
+    """Categorise generated docs pages and write the literate-nav file → docs/nav.md
+
+    Reads the schema via SchemaView to determine which pages are classes, slots,
+    types, or enums, then writes docs/nav.md which mkdocs-literate-nav uses to
+    build a tabbed navigation (Introduction | Classes | Slots | Types & Enums).
+    """
+    target = DOCS_DIR / "nav.md"
+
+    def generate_nav():
+        from linkml_runtime.utils.schemaview import SchemaView
+
+        sv = SchemaView(str(TOP_LEVEL))
+
+        class_names = set(sv.all_classes().keys())
+        slot_names  = set(sv.all_slots().keys())
+        type_names  = set(sv.all_types().keys())
+        enum_names  = set(sv.all_enums().keys())
+
+        # Pages with fixed positions at the top — excluded from category scan
+        skip = {"index.md", "overview.md", "nav.md"}
+
+        classes, slots, types_enums, other = [], [], [], []
+
+        for p in sorted(DOCS_DIR.iterdir()):
+            if not p.name.endswith(".md") or p.name in skip or p.name.startswith("."):
+                continue
+            stem = p.stem
+            if stem in class_names:
+                classes.append(stem)
+            elif stem in slot_names:
+                slots.append(stem)
+            elif stem in type_names or stem in enum_names:
+                types_enums.append(stem)
+            else:
+                other.append(stem)
+
+        def entry(name):
+            return f"    * [{name}]({name}.md)"
+
+        lines = [
+            "* Introduction",
+            "    * [Home](index.md)",
+            "    * [Schema Overview](overview.md)",
+            "* Classes",
+            *[entry(n) for n in classes],
+            "* Slots",
+            *[entry(n) for n in slots],
+            "* Types & Enums",
+            *[entry(n) for n in types_enums],
+        ]
+        if other:
+            lines += ["* Other", *[entry(n) for n in other]]
+
+        target.write_text("\n".join(lines) + "\n")
+
+    return {
+        "actions":  [generate_nav],
+        "file_dep": SCHEMA_FILES + TOOL_DEPS,
+        "targets":  [target],
+        "task_dep": ["docs", "overview"],
+        "uptodate": non_empty_targets(target),
+    }
+
+
 def task_build_site():
-    """Build the full MkDocs HTML site → site/  (run after docs)"""
+    """Build the full MkDocs HTML site → site/  (run after nav)"""
     return {
         "actions":   [uv("mkdocs build")],
-        'title': title_with_actions,
-        "task_dep":  ["docs", "overview"],
+        "title":     title_with_actions,
+        "task_dep":  ["nav"],   # nav implies docs + overview
         "verbosity": 2,
     }
 
@@ -344,8 +398,8 @@ def task_serve():
     """Serve the docs site locally for live preview  (mkdocs serve)"""
     return {
         "actions":   [uv("mkdocs serve")],
-        'title': title_with_actions,
-        "task_dep":  ["docs", "overview"],
-        "uptodate":  [False],   # always run when explicitly requested
+        "title":     title_with_actions,
+        "task_dep":  ["nav"],   # nav implies docs + overview
+        "uptodate":  [False],
         "verbosity": 2,
     }

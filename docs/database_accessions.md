@@ -35,7 +35,7 @@ Alias: database_accessions
 
 | Property | Value |
 | --- | --- |
-| Range | [String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md)&nbsp;or&nbsp;<br />[Any](Any.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[Curie](Curie.md)&nbsp;or&nbsp;<br />[String](String.md) |
 | Domain Of | [InputSource](InputSource.md) |
 
 ### Cardinality and Requirements

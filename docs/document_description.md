@@ -35,7 +35,7 @@ Alias: document_description
 
 | Property | Value |
 | --- | --- |
-| Range | [String](String.md)&nbsp;or&nbsp;<br />[Uri](Uri.md)&nbsp;or&nbsp;<br />[Any](Any.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Uri](Uri.md) |
 | Domain Of | [Document](Document.md) |
 
 ### Cardinality and Requirements

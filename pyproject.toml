@@ -9,7 +9,7 @@ dependencies = [
     "linkml>=1.10.0",
     # Documentation
     "mkdocs-material>=9",
-    "mkdocs-awesome-pages-plugin>=2",
+    "mkdocs-literate-nav>=0.6",
     "mkdocs-kroki-plugin>=0.6",
     # Task runner
     "doit>=0.36",

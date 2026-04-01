@@ -75,7 +75,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/FileCollection](https://w3id.org/
 | [filecollection_external_id](filecollection_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the file collection (in most cases, ... | direct |
 | [filecollection_id](filecollection_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the file collection (unique within the metadata depos... | direct |
 | [filecollection_label](filecollection_label.md) | 1 <br/> [String](String.md) | A human-readable description of the file collection, short enough to be used ... | direct |
-| [filecollection_description](filecollection_description.md) | 0..1 <br/> [String](String.md)&nbsp;or&nbsp;<br />[Uri](Uri.md)&nbsp;or&nbsp;<br />[Any](Any.md) | Human-readable description of the file collection | direct |
+| [filecollection_description](filecollection_description.md) | 0..1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Uri](Uri.md) | Human-readable description of the file collection | direct |
 | [filecollection_input_sources](filecollection_input_sources.md) | * <br/> [InputSource](InputSource.md) | References to other input sources from which this file collection was derived | direct |
 | [deposit_versioned_ref](deposit_versioned_ref.md) | 1 <br/> [Curie](Curie.md) | Reference to versioned id of deposit containing this file collection | direct |
 | [contact](contact.md) | 0..1 <br/> [Contact](Contact.md) | Contact point to the creator and/or maintainer of the file collection | direct |
