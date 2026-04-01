@@ -42,6 +42,10 @@ DOCS_DIR   = Path("docs")
 # Every .yaml in the schema dir — any change triggers dependent tasks
 SCHEMA_FILES = list(SCHEMA_DIR.glob("*.yaml"))
 
+# uv.lock changes whenever a dependency is updated (e.g. a new linkml release).
+# Adding it to file_dep ensures all generation tasks re-run after any dep change.
+TOOL_DEPS = [Path("uv.lock")]
+
 # Upper file size threshold for empty files. If target files are smaller
 # than this, they are considered empty and tasks execution is not skipped.
 EMPTY_FILE_THRESHOLD = 10
@@ -213,7 +217,7 @@ def task_json_schema():
             uv(f"gen-json-schema {TOP_LEVEL} > {target}"),
         ],
         'title': title_with_actions,
-        "file_dep": SCHEMA_FILES,
+        "file_dep": SCHEMA_FILES + TOOL_DEPS,
         "targets":  [target],
         "uptodate": non_empty_targets(target),
     }
@@ -228,7 +232,7 @@ def task_summary():
             uv(f"gen-summary {TOP_LEVEL} > {target}"),
         ],
         'title': title_with_actions,
-        "file_dep": SCHEMA_FILES,
+        "file_dep": SCHEMA_FILES + TOOL_DEPS,
         "targets":  [target],
         "uptodate": non_empty_targets(target),
     }
@@ -243,7 +247,7 @@ def task_erdiagram():
             uv(f"gen-erdiagram {TOP_LEVEL} > {target}"),
         ],
         'title': title_with_actions,
-        "file_dep": SCHEMA_FILES,
+        "file_dep": SCHEMA_FILES + TOOL_DEPS,
         "targets":  [target],
         "uptodate": non_empty_targets(target),
     }
@@ -259,7 +263,7 @@ def task_plantuml():
             uv(f"gen-plantuml --format puml --preserve-names {TOP_LEVEL} > {target}"),
         ],
         'title': title_with_actions,
-        "file_dep": SCHEMA_FILES,
+        "file_dep": SCHEMA_FILES + TOOL_DEPS,
         "targets":  [target],
         "uptodate": non_empty_targets(target),
     }
@@ -287,7 +291,7 @@ def task_docs():
             write_pages_file,
         ],
         'title': title_with_actions,
-        "file_dep": SCHEMA_FILES,
+        "file_dep": SCHEMA_FILES + TOOL_DEPS,
         "targets":  [target, pages_file],
         "uptodate": non_empty_targets(target),
     }
@@ -319,7 +323,7 @@ def task_overview():
 
     return {
         "actions":  [create_overview],
-        "file_dep": [erdiagram_src, plantuml_src],
+        "file_dep": [erdiagram_src, plantuml_src] + TOOL_DEPS,
         "targets":  [target],
         "uptodate": non_empty_targets(target),
         "task_dep": ["erdiagram", "plantuml"],
