@@ -1,0 +1,104 @@
+
+
+# Slot: biospecimen_classification 
+
+
+_Main type of structural unit to be used for classification of the biospecimen/sample._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/biospecimen_classification](https://w3id.org/fga-wg/schema/top_level/biospecimen_classification)
+Alias: biospecimen_classification
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Sample](Sample.md) | Information about a biospecimen/sample used as raw material for lab experimen... |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [BiospecimenClassification](BiospecimenClassification.md) |
+| Domain Of | [Sample](Sample.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| cell line |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/biospecimen_classification |
+| native | https://w3id.org/fga-wg/schema/top_level/biospecimen_classification |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: biospecimen_classification
+description: Main type of structural unit to be used for classification of the biospecimen/sample.
+examples:
+- value: cell line
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: biospecimen_classification
+domain_of:
+- Sample
+range: BiospecimenClassification
+required: true
+
+```
+</details>

@@ -1,0 +1,108 @@
+
+
+# Slot: key 
+
+
+_Key/name of the assessment value._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/key](https://w3id.org/fga-wg/schema/top_level/key)
+Alias: key
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [AssessmentValue](AssessmentValue.md) | Key-value pair representing a specific value produced by a quality assessment |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](String.md) |
+| Domain Of | [AssessmentValue](AssessmentValue.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| nreads |
+| nreads_in_peaks |
+| frip |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/key |
+| native | https://w3id.org/fga-wg/schema/top_level/key |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: key
+description: Key/name of the assessment value.
+examples:
+- value: nreads
+- value: nreads_in_peaks
+- value: frip
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: key
+domain_of:
+- AssessmentValue
+range: string
+required: true
+
+```
+</details>

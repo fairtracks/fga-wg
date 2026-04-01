@@ -1,0 +1,102 @@
+
+
+# Slot: checksum 
+
+
+_The hex-string encoded checksum for the data._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/checksum](https://w3id.org/fga-wg/schema/top_level/checksum)
+Alias: checksum
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Checksum](Checksum.md) | A checksum of a File object (orig: DrsObject) |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](String.md) |
+| Domain Of | [Checksum](Checksum.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| 535bc9628a1c5e5215226f9996e4eaca |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/checksum |
+| native | https://w3id.org/fga-wg/schema/top_level/checksum |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: checksum
+description: The hex-string encoded checksum for the data.
+examples:
+- value: 535bc9628a1c5e5215226f9996e4eaca
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: checksum
+domain_of:
+- Checksum
+range: string
+
+```
+</details>

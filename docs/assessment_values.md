@@ -1,0 +1,121 @@
+
+
+# Slot: assessment_values 
+
+
+_Main values produced by the quality assessment._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/assessment_values](https://w3id.org/fga-wg/schema/top_level/assessment_values)
+Alias: assessment_values
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [QualityAssessment](QualityAssessment.md) | Represents the results of a quality assessment that has been carried out on a... |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](String.md)&nbsp;or&nbsp;<br />[AssessmentValue](AssessmentValue.md)&nbsp;or&nbsp;<br />[Any](Any.md) |
+| Domain Of | [QualityAssessment](QualityAssessment.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+<details>
+<summary>Expressions & Logic</summary>
+#### Any Of
+
+Value must satisfy at least one of:
+- AnonymousSlotExpression({'range': 'string'})
+- AnonymousSlotExpression({'range': 'AssessmentValue', 'multivalued': True})
+
+</details>
+
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| None |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/assessment_values |
+| native | https://w3id.org/fga-wg/schema/top_level/assessment_values |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: assessment_values
+description: Main values produced by the quality assessment.
+examples:
+- object:
+    nreads: 21018235
+    nreads_in_peaks: 6161851
+    frip: 0.2931669095906483
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: assessment_values
+domain_of:
+- QualityAssessment
+range: Any
+required: true
+any_of:
+- range: string
+- range: AssessmentValue
+  multivalued: true
+
+```
+</details>

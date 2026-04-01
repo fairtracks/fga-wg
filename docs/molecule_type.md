@@ -1,0 +1,106 @@
+
+
+# Slot: molecule_type 
+
+
+_Specifies the type of source material that is being sequenced._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/molecule_type](https://w3id.org/fga-wg/schema/top_level/molecule_type)
+Alias: molecule_type
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Experiment](Experiment.md) | Represents a sequencing experiment that has been carried out within a study, ... |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Term](Term.md) |
+| Domain Of | [Experiment](Experiment.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| None |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/molecule_type |
+| native | https://w3id.org/fga-wg/schema/top_level/molecule_type |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: molecule_type
+description: Specifies the type of source material that is being sequenced.
+examples:
+- object:
+    id: SO:0000991
+    label: genomic_DNA
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: molecule_type
+domain_of:
+- Experiment
+range: Term
+required: true
+
+```
+</details>

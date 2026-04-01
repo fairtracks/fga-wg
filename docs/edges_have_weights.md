@@ -1,0 +1,94 @@
+
+
+# Slot: edges_have_weights 
+
+
+_Whether the edges linking sequence features are weighted (at least one edge between sequence features has an associated weight)._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/edges_have_weights](https://w3id.org/fga-wg/schema/top_level/edges_have_weights)
+Alias: edges_have_weights
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [TrackGeometry](TrackGeometry.md) | Overall geometric properties of the sequence features in the genomic annotati... |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Boolean](Boolean.md) |
+| Domain Of | [TrackGeometry](TrackGeometry.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/edges_have_weights |
+| native | https://w3id.org/fga-wg/schema/top_level/edges_have_weights |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: edges_have_weights
+description: Whether the edges linking sequence features are weighted (at least one
+  edge between sequence features has an associated weight).
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: edges_have_weights
+domain_of:
+- TrackGeometry
+range: boolean
+
+```
+</details>

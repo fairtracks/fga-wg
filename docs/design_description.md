@@ -1,0 +1,102 @@
+
+
+# Slot: design_description 
+
+
+_The high-level experiment design including layout, protocol._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/design_description](https://w3id.org/fga-wg/schema/top_level/design_description)
+Alias: design_description
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Experiment](Experiment.md) | Represents a sequencing experiment that has been carried out within a study, ... |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](String.md) |
+| Domain Of | [Experiment](Experiment.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| https://www.encodeproject.org/documents/92cd1386-ccad-450a-b5a6-ad49983e7e3f/@@download/attachment/wgEncodeUwHistone.release5.html.pdf |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/design_description |
+| native | https://w3id.org/fga-wg/schema/top_level/design_description |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: design_description
+description: The high-level experiment design including layout, protocol.
+examples:
+- value: https://www.encodeproject.org/documents/92cd1386-ccad-450a-b5a6-ad49983e7e3f/@@download/attachment/wgEncodeUwHistone.release5.html.pdf
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: design_description
+domain_of:
+- Experiment
+range: string
+
+```
+</details>

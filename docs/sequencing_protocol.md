@@ -1,0 +1,95 @@
+
+
+# Slot: sequencing_protocol 
+
+
+_Set of rules which guides how the sequencing protocol was followed. Change-tracking services such as Protocol.io or GitHub are encouraged instead of dumping free text in this field._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/sequencing_protocol](https://w3id.org/fga-wg/schema/top_level/sequencing_protocol)
+Alias: sequencing_protocol
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Experiment](Experiment.md) | Represents a sequencing experiment that has been carried out within a study, ... |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Uriorcurie](Uriorcurie.md) |
+| Domain Of | [Experiment](Experiment.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/sequencing_protocol |
+| native | https://w3id.org/fga-wg/schema/top_level/sequencing_protocol |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: sequencing_protocol
+description: Set of rules which guides how the sequencing protocol was followed. Change-tracking
+  services such as Protocol.io or GitHub are encouraged instead of dumping free text
+  in this field.
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: sequencing_protocol
+domain_of:
+- Experiment
+range: uriorcurie
+
+```
+</details>

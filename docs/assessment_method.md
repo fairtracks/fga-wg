@@ -1,0 +1,118 @@
+
+
+# Slot: assessment_method 
+
+
+_Quality assessment method that has been carried out (e.g. BUSCO, OMArk, peak calling statistics, etc.)_
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/assessment_method](https://w3id.org/fga-wg/schema/top_level/assessment_method)
+Alias: assessment_method
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [QualityAssessment](QualityAssessment.md) | Represents the results of a quality assessment that has been carried out on a... |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](String.md)&nbsp;or&nbsp;<br />[Term](Term.md)&nbsp;or&nbsp;<br />[Any](Any.md) |
+| Domain Of | [QualityAssessment](QualityAssessment.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+<details>
+<summary>Expressions & Logic</summary>
+#### Any Of
+
+Value must satisfy at least one of:
+- AnonymousSlotExpression({'range': 'string'})
+- AnonymousSlotExpression({'range': 'Term'})
+
+</details>
+
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| histone-chipseq-quality-metrics |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/assessment_method |
+| native | https://w3id.org/fga-wg/schema/top_level/assessment_method |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: assessment_method
+description: Quality assessment method that has been carried out (e.g. BUSCO, OMArk,
+  peak calling statistics, etc.)
+examples:
+- value: histone-chipseq-quality-metrics
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: assessment_method
+domain_of:
+- QualityAssessment
+range: Any
+required: true
+any_of:
+- range: string
+- range: Term
+
+```
+</details>

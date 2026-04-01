@@ -1,0 +1,105 @@
+
+
+# Slot: contact 
+
+
+_Contact point to the creator and/or maintainer of the file collection._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/schema/top_level/contact)
+Alias: contact
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [FileCollection](FileCollection.md) | A collection of files, according to some selection criteria |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Contact](Contact.md) |
+| Domain Of | [FileCollection](FileCollection.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| None |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/contact |
+| native | https://w3id.org/fga-wg/schema/top_level/contact |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: contact
+description: Contact point to the creator and/or maintainer of the file collection.
+examples:
+- object:
+    name: International Human Epigenome Consortium
+    contact_id: bioproject:PRJNA234466
+    email: info@ihec-epigenomes.org
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: contact
+domain_of:
+- FileCollection
+range: Contact
+
+```
+</details>

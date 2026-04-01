@@ -1,0 +1,98 @@
+
+
+# Slot: experiments 
+
+
+_Information about sequencing experiments that have been carried out to generate the files._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/experiments](https://w3id.org/fga-wg/schema/top_level/experiments)
+Alias: experiments
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [TopLevel](TopLevel.md) | A document of harmonised metadata for a set of genome annotation files |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Experiment](Experiment.md) |
+| Domain Of | [TopLevel](TopLevel.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Multivalued | Yes |
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/experiments |
+| native | https://w3id.org/fga-wg/schema/top_level/experiments |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: experiments
+description: Information about sequencing experiments that have been carried out to
+  generate the files.
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: experiments
+domain_of:
+- TopLevel
+range: Experiment
+multivalued: true
+inlined: true
+inlined_as_list: true
+
+```
+</details>

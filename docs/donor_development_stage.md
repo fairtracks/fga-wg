@@ -1,0 +1,104 @@
+
+
+# Slot: donor_development_stage 
+
+
+_Development stage of the donor at the time of sampling._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/donor_development_stage](https://w3id.org/fga-wg/schema/top_level/donor_development_stage)
+Alias: donor_development_stage
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Sample](Sample.md) | Information about a biospecimen/sample used as raw material for lab experimen... |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Term](Term.md) |
+| Domain Of | [Sample](Sample.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| None |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/donor_development_stage |
+| native | https://w3id.org/fga-wg/schema/top_level/donor_development_stage |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: donor_development_stage
+description: Development stage of the donor at the time of sampling.
+examples:
+- object:
+    id: UBERON:0000323
+    label: late embryo
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: donor_development_stage
+domain_of:
+- Sample
+range: Term
+
+```
+</details>

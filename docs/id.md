@@ -1,0 +1,105 @@
+
+
+# Slot: id 
+
+
+_External, globally unique identifier for the ontology term (in CURIE form)._
+
+
+
+
+
+URI: [https://w3id.org/fga-wg/schema/top_level/id](https://w3id.org/fga-wg/schema/top_level/id)
+Alias: id
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Term](Term.md) | Helper entity to represent an ontology term as a data value |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Curie](Curie.md) |
+| Domain Of | [Term](Term.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| obi:OBI_0000716 |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/top_level
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/top_level/id |
+| native | https://w3id.org/fga-wg/schema/top_level/id |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: id
+description: External, globally unique identifier for the ontology term (in CURIE
+  form).
+examples:
+- value: obi:OBI_0000716
+from_schema: https://w3id.org/fga-wg/schema/top_level
+rank: 1000
+alias: id
+domain_of:
+- Term
+range: curie
+required: true
+
+```
+</details>
