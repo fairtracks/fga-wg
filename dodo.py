@@ -28,6 +28,7 @@ Default tasks (run by `uv run doit`):
 """
 from pathlib import Path
 
+from doit.reporter import ConsoleReporter
 from doit.tools import title_with_actions
 
 # ── Constants ──────────────────────────────────────────────────────────────────
@@ -45,19 +46,34 @@ SCHEMA_FILES = list(SCHEMA_DIR.glob("*.yaml"))
 # than this, they are considered empty and tasks execution is not skipped.
 EMPTY_FILE_THRESHOLD = 10
 
-# ── Global doit configuration ───────────────────────────────────────────────
-
-DOIT_CONFIG = {
-    "default_tasks": ["lint", "json_schema", "summary", "erdiagram", "plantuml", "docs", "overview"],
-    "verbosity": 1,
-}
-
-
 # ── Helpers ─────────────────────────────────────────────────────────────────
 
 def uv(cmd: str) -> str:
     """Prefix a command with `uv run` so it uses the project virtual env."""
     return f"uv run {cmd}"
+
+
+class CommandOnRunReporter(ConsoleReporter):
+    """Doit reporter that shows task commands only when a task actually runs.
+
+    Doit's default ConsoleReporter calls task.title() for both executed and
+    skipped tasks, so title_with_actions shows the command list even for
+    skipped (--) tasks — which is confusing.  This reporter overrides
+    skip_uptodate to show just the task name instead.
+    """
+
+
+    def skip_uptodate(self, task):
+        self.write(f"-- {task.name}\n")
+
+
+# ── Global doit configuration ───────────────────────────────────────────────
+
+DOIT_CONFIG = {
+    "default_tasks": ["lint", "json_schema", "summary", "erdiagram", "plantuml", "docs", "overview"],
+    "verbosity": 1,
+    "reporter": CommandOnRunReporter,
+}
 
 
 def non_empty_targets(*targets: Path):
