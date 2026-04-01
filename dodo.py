@@ -292,26 +292,12 @@ def task_overview():
     plantuml_src  = GEN_DIR / "schema_overview.puml"
     target        = DOCS_DIR / "overview.md"
 
-    def create_overview():
-        erdiagram = erdiagram_src.read_text().strip()
-        plantuml  = plantuml_src.read_text().strip()
-        content = (
-            "# Schema Overview\n\n"
-            "## Entity–Relationship Diagram\n\n"
-            "The diagram below shows all classes in the FGA-WG schema "
-            "and their relationships.\n\n"
-            f"{erdiagram}\n\n"
-            "## UML Class Diagram\n\n"
-            "The PlantUML diagram below provides a UML class view of the schema, "
-            "showing field types and inheritance relationships.\n\n"
-            "```kroki-plantuml\n"
-            f"{plantuml}\n"
-            "```\n"
-        )
-        target.write_text(content)
+    def run():
+        from src.docs.overview import create_overview
+        create_overview(erdiagram_src, plantuml_src, target)
 
     return {
-        "actions":  [create_overview],
+        "actions":  [run],
         "file_dep": [erdiagram_src, plantuml_src] + TOOL_DEPS,
         "targets":  [target],
         "uptodate": non_empty_targets(target),
@@ -322,61 +308,17 @@ def task_overview():
 def task_nav():
     """Categorise generated docs pages and write the literate-nav file → docs/nav.md
 
-    Reads the schema via SchemaView to determine which pages are classes, slots,
-    types, or enums, then writes docs/nav.md which mkdocs-literate-nav uses to
-    build a tabbed navigation (Introduction | Classes | Slots | Types & Enums).
+    Delegates to src/docs/nav.py which uses SchemaView to group pages into
+    Introduction | Classes | Slots | Types & Enums tabs.
     """
     target = DOCS_DIR / "nav.md"
 
-    def generate_nav():
-        from linkml_runtime.utils.schemaview import SchemaView
-
-        sv = SchemaView(str(TOP_LEVEL))
-
-        class_names = set(sv.all_classes().keys())
-        slot_names  = set(sv.all_slots().keys())
-        type_names  = set(sv.all_types().keys())
-        enum_names  = set(sv.all_enums().keys())
-
-        # Pages with fixed positions at the top — excluded from category scan
-        skip = {"index.md", "overview.md", "nav.md"}
-
-        classes, slots, types_enums, other = [], [], [], []
-
-        for p in sorted(DOCS_DIR.iterdir()):
-            if not p.name.endswith(".md") or p.name in skip or p.name.startswith("."):
-                continue
-            stem = p.stem
-            if stem in class_names:
-                classes.append(stem)
-            elif stem in slot_names:
-                slots.append(stem)
-            elif stem in type_names or stem in enum_names:
-                types_enums.append(stem)
-            else:
-                other.append(stem)
-
-        def entry(name):
-            return f"    * [{name}]({name}.md)"
-
-        lines = [
-            "* Introduction",
-            "    * [Home](index.md)",
-            "    * [Schema Overview](overview.md)",
-            "* Classes",
-            *[entry(n) for n in classes],
-            "* Slots",
-            *[entry(n) for n in slots],
-            "* Types & Enums",
-            *[entry(n) for n in types_enums],
-        ]
-        if other:
-            lines += ["* Other", *[entry(n) for n in other]]
-
-        target.write_text("\n".join(lines) + "\n")
+    def run():
+        from src.docs.nav import generate_nav
+        generate_nav(TOP_LEVEL, DOCS_DIR, target)
 
     return {
-        "actions":  [generate_nav],
+        "actions":  [run],
         "file_dep": SCHEMA_FILES + TOOL_DEPS,
         "targets":  [target],
         "task_dep": ["docs", "overview"],
