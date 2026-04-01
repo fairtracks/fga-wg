@@ -35,7 +35,7 @@ Alias: analysis_main_tool
 
 | Property | Value |
 | --- | --- |
-| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[Curie](Curie.md)&nbsp;or&nbsp;<br />[String](String.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) |
 | Domain Of | [Analysis](Analysis.md) |
 
 ### Cardinality and Requirements

@@ -67,7 +67,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/InputSource](https://w3id.org/fga
 | ---  | --- | --- | --- |
 | [inputsource_external_ref](inputsource_external_ref.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Reference to an external entity as the input source, using a globally unique ... | direct |
 | [inputsource_ref](inputsource_ref.md) | 0..1 <br/> [Curie](Curie.md) | Reference to an internal object as the input source using a local identifier | direct |
-| [database_accessions](database_accessions.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Curie](Curie.md)&nbsp;or&nbsp;<br />[String](String.md) | Accession numbers for database records used as input source | direct |
+| [database_accessions](database_accessions.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) | Accession numbers for database records used as input source | direct |
 | [qualified_relation](qualified_relation.md) | 1 <br/> [Term](Term.md) | A description of the relationship with the input source | direct |
 | [biological_replicate_labels](biological_replicate_labels.md) | * <br/> [String](String.md) | Labels denoting the biological replicates within which the relation is define... | direct |
 | [technical_replicate_labels](technical_replicate_labels.md) | * <br/> [String](String.md) | Labels denoting the technical replicates within which the relation is defined... | direct |
