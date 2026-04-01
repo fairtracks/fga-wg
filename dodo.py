@@ -16,7 +16,7 @@ from pathlib import Path
 
 from doit.tools import title_with_actions
 
-# ── Paths ──────────────────────────────────────────────────────────────────
+# ── Constants ──────────────────────────────────────────────────────────────────
 
 SCHEMA_DIR = Path("src/schema")
 TOP_LEVEL  = SCHEMA_DIR / "top_level.yaml"
@@ -27,6 +27,10 @@ DOCS_DIR   = Path("docs")
 # Every .yaml in the schema dir — any change triggers dependent tasks
 SCHEMA_FILES = list(SCHEMA_DIR.glob("*.yaml"))
 
+# Upper file size threshold for empty files. If target files are smaller
+# than this, they are considered empty and tasks execution is not skipped.
+EMPTY_FILE_THRESHOLD = 10
+
 # ── Global doit configuration ───────────────────────────────────────────────
 
 DOIT_CONFIG = {
@@ -35,11 +39,32 @@ DOIT_CONFIG = {
 }
 
 
-# ── Helper ──────────────────────────────────────────────────────────────────
+# ── Helpers ─────────────────────────────────────────────────────────────────
 
 def uv(cmd: str) -> str:
     """Prefix a command with `uv run` so it uses the project virtual env."""
     return f"uv run {cmd}"
+
+
+def non_empty_targets(*targets: Path):
+    """Return an uptodate callable that fails if any target is missing or suspiciously small.
+
+    Doit's default up-to-date check only compares modification times, so a
+    task whose target was overwritten with an empty or near-empty file would be
+    incorrectly skipped.  Adding this to a task's `uptodate` list catches that
+    case and forces a re-run.
+
+    The 10-byte threshold catches both 0-byte files and near-empty outputs
+    (e.g. a stray newline written by a failed command), while staying well
+    below the minimum meaningful size of any generated file in this project.
+
+    Usage:
+        "uptodate": non_empty_targets(target),
+    """
+    def check() -> bool:
+        return all(Path(t).exists()
+                   and Path(t).stat().st_size > EMPTY_FILE_THRESHOLD for t in targets)
+    return [check]
 
 
 # ── Known linkml-lint false positives ──────────────────────────────────────
@@ -149,6 +174,7 @@ def task_json_schema():
         'title': title_with_actions,
         "file_dep": SCHEMA_FILES,
         "targets":  [target],
+        "uptodate": non_empty_targets(target),
     }
 
 
@@ -163,6 +189,7 @@ def task_summary():
         'title': title_with_actions,
         "file_dep": SCHEMA_FILES,
         "targets":  [target],
+        "uptodate": non_empty_targets(target),
     }
 
 
@@ -177,6 +204,7 @@ def task_erdiagram():
         'title': title_with_actions,
         "file_dep": SCHEMA_FILES,
         "targets":  [target],
+        "uptodate": non_empty_targets(target),
     }
 
 
@@ -192,6 +220,7 @@ def task_plantuml():
         'title': title_with_actions,
         "file_dep": SCHEMA_FILES,
         "targets":  [target],
+        "uptodate": non_empty_targets(target),
     }
 
 
@@ -219,6 +248,7 @@ def task_docs():
         'title': title_with_actions,
         "file_dep": SCHEMA_FILES,
         "targets":  [target, pages_file],
+        "uptodate": non_empty_targets(target),
     }
 
 
@@ -250,6 +280,7 @@ def task_overview():
         "actions":  [create_overview],
         "file_dep": [erdiagram_src, plantuml_src],
         "targets":  [target],
+        "uptodate": non_empty_targets(target),
         "task_dep": ["erdiagram", "plantuml"],
     }
 
