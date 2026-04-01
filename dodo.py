@@ -4,13 +4,27 @@ dodo.py — doit task definitions for the FGA-WG LinkML schema project.
 All commands run inside the uv-managed virtual environment via `uv run`.
 
 Usage:
-    uv run doit              # run all default tasks
-    uv run doit <task>       # run a specific task, e.g. `uv run doit lint`
-    uv run doit list         # list all available tasks with descriptions
-    uv run doit --continue   # keep going even if one task fails
+    uv run doit                       # run all default tasks
+    uv run doit <task>                # run a specific task, e.g. `uv run doit lint`
+    uv run doit list                  # list all available tasks with descriptions
+    uv run doit --continue            # keep going even if one task fails
+    uv run doit -a                    # force-run all tasks, ignoring up-to-date checks
+
+Diagnostic commands:
+    uv run doit info <task>           # show task status, file deps, and targets
+    uv run doit list --status         # show up-to-date status for all tasks
+    uv run doit -r executed-only      # show only tasks that actually ran (hides skipped)
+
+Understanding the run output:
+    .  task_name   task ran (either a schema file changed, or a target was missing/small)
+    -- task_name   task skipped (all up-to-date checks passed)
+
+    When a target file triggers a re-run (missing or suspiciously small), the reason
+    is printed explicitly.  For file_dep-triggered re-runs, use `doit info <task>` to
+    inspect which dependencies are newer than the target.
 
 Default tasks (run by `uv run doit`):
-    lint, json_schema, summary, erdiagram, plantuml, docs
+    lint, json_schema, summary, erdiagram, plantuml, docs, overview
 """
 from pathlib import Path
 
@@ -58,12 +72,23 @@ def non_empty_targets(*targets: Path):
     (e.g. a stray newline written by a failed command), while staying well
     below the minimum meaningful size of any generated file in this project.
 
+    When a target triggers a re-run, the reason is printed to stdout so it
+    appears alongside the task output in the doit run log.
+
     Usage:
         "uptodate": non_empty_targets(target),
     """
     def check() -> bool:
-        return all(Path(t).exists()
-                   and Path(t).stat().st_size > EMPTY_FILE_THRESHOLD for t in targets)
+        for t in targets:
+            p = Path(t)
+            if not p.exists():
+                print(f"↻ {p.name}: target does not exist")
+                return False
+            size = p.stat().st_size
+            if size <= EMPTY_FILE_THRESHOLD:
+                print(f"↻ {p.name}: target too small ({size}B ≤ {EMPTY_FILE_THRESHOLD}B)")
+                return False
+        return True
     return [check]
 
 
