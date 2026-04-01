@@ -1,0 +1,97 @@
+name: Build and Deploy
+
+# Generates all schema artifacts and documentation.
+#
+# On pull requests  : generates everything, uploads as downloadable artifacts
+#                     so reviewers can inspect the outputs before merging.
+# On push to main   : generates everything, commits generated/ and docs/ back
+#                     to the repo, then deploys the MkDocs site to GitHub Pages.
+#
+# Note: GitHub Pages must be configured to deploy from the gh-pages branch
+# (Settings → Pages → Source → Deploy from branch → gh-pages).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Cancel any in-progress run for the same ref when a new one starts
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write   # needed to commit back and to push to gh-pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full history is needed so git push back to main works correctly
+          fetch-depth: 0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      # ── Generate all artifacts ─────────────────────────────────────────────
+
+      - name: Generate JSON Schema and TSV summary
+        run: uv run doit json_schema summary
+
+      - name: Generate diagrams (Mermaid ER + PlantUML)
+        run: uv run doit erdiagram plantuml
+
+      - name: Generate per-class documentation and overview page
+        run: uv run doit docs overview
+
+      # ── Build the static site ──────────────────────────────────────────────
+
+      - name: Build MkDocs site
+        run: uv run mkdocs build
+
+      # ── Commit generated files back to main (push to main only) ───────────
+
+      - name: Commit generated files
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add generated/ docs/
+          # Only commit if there are actual changes; [skip ci] prevents re-triggering
+          git diff --cached --quiet || (
+            git commit -m "chore: regenerate schema artifacts and docs [skip ci]" &&
+            git push
+          )
+
+      # ── Deploy to GitHub Pages (push to main only) ────────────────────────
+
+      - name: Deploy to GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: uv run mkdocs gh-deploy --force
+
+      # ── Upload artifacts for PR review ────────────────────────────────────
+
+      - name: Upload generated artifacts (PR review)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: schema-artifacts-pr-${{ github.event.number }}
+          path: generated/
+          retention-days: 14
+
+      - name: Upload docs site preview (PR review)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-site-pr-${{ github.event.number }}
+          path: site/
+          retention-days: 14
+
