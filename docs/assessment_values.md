@@ -35,7 +35,7 @@ Alias: assessment_values
 
 | Property | Value |
 | --- | --- |
-| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[AssessmentValue](AssessmentValue.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[AssessmentValue](AssessmentValue.md)&nbsp;or&nbsp;<br />[String](String.md) |
 | Domain Of | [QualityAssessment](QualityAssessment.md) |
 
 ### Cardinality and Requirements

@@ -3,7 +3,7 @@
 # Class: Any 
 
 
-_The linkml:Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type)._
+_The Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type)._
 
 
 
@@ -101,7 +101,7 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 <details>
 ```yaml
 name: Any
-description: The linkml:Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).
+description: The Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).
 from_schema: https://w3id.org/fga-wg/schema/top_level
 class_uri: linkml:Any
 
@@ -113,7 +113,7 @@ class_uri: linkml:Any
 <details>
 ```yaml
 name: Any
-description: The linkml:Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).
+description: The Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).
 from_schema: https://w3id.org/fga-wg/schema/top_level
 class_uri: linkml:Any
 

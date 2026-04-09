@@ -22,8 +22,8 @@ Alias: mime_type
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [File](File.md) | General information about a particular data file |  no  |
 | [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
+| [File](File.md) | General information about a particular data file |  no  |
 
 
 

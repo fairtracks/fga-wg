@@ -55,8 +55,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/QualityAssessment](https://w3id.o
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [assessment_method](assessment_method.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Term](Term.md) | Quality assessment method that has been carried out (e | direct |
-| [assessment_values](assessment_values.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[AssessmentValue](AssessmentValue.md) | Main values produced by the quality assessment | direct |
+| [assessment_method](assessment_method.md) | 1 <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) | Quality assessment method that has been carried out (e | direct |
+| [assessment_values](assessment_values.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[AssessmentValue](AssessmentValue.md)&nbsp;or&nbsp;<br />[String](String.md) | Main values produced by the quality assessment | direct |
 | [assessment_details_url](assessment_details_url.md) | 0..1 <br/> [Uri](Uri.md) | URL to a report containing the detailed output from the quality assessment | direct |
 
 

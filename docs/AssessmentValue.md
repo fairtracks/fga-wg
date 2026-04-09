@@ -45,7 +45,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AssessmentValue](https://w3id.org
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [key](key.md) | 1 <br/> [String](String.md) | Key/name of the assessment value | direct |
-| [value](value.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Decimal](Decimal.md)&nbsp;or&nbsp;<br />[Boolean](Boolean.md)&nbsp;or&nbsp;<br />[Integer](Integer.md)&nbsp;or&nbsp;<br />[String](String.md) | Value corresponding to the assessment key | direct |
+| [value](value.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Decimal](Decimal.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Integer](Integer.md)&nbsp;or&nbsp;<br />[Boolean](Boolean.md) | Value corresponding to the assessment key | direct |
 
 
 

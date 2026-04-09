@@ -1,10 +1,10 @@
-# top-level
+# TopLevel
 
 
 
 URI: https://w3id.org/fga-wg/schema/top_level
 
-Name: top-level
+Name: TopLevel
 
 
 
@@ -15,7 +15,7 @@ Name: top-level
 | [AccessMethod](AccessMethod.md) | Description of an access method (i |
 | [AccessURL](AccessURL.md) | The URL and associated HTTP headers to access the File object (orig: DrsObjec... |
 | [Analysis](Analysis.md) | Represents the computational processing applied to data from a sequencing exp... |
-| [Any](Any.md) | The linkml:Any allows the range of a slot to be any object (see https://linkm... |
+| [Any](Any.md) | The Any allows the range of a slot to be any object (see https://linkml |
 | [AssessmentValue](AssessmentValue.md) | Key-value pair representing a specific value produced by a quality assessment |
 | [Checksum](Checksum.md) | A checksum of a File object (orig: DrsObject) |
 | [Contact](Contact.md) | Contact information for a person or an organisation |
