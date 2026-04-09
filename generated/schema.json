@@ -2630,7 +2630,77 @@
     "$id": "https://w3id.org/fga-wg/schema/top_level",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "additionalProperties": true,
+    "description": "A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the \"FAIRification of Genomic Annotations\" data model. This is the top-level class to be used as root for the metadata document.",
     "metamodel_version": "1.7.0",
+    "properties": {
+        "analyses": {
+            "description": "Information about computational processing and analyses that have been carried out to generate the files.",
+            "items": {
+                "$ref": "#/$defs/Analysis"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "document": {
+            "$ref": "#/$defs/Document",
+            "description": "Information about this document containing harmonised metadata about a set of genome annotation files. This includes self-referential identifiers and versioning of public deposits of the document."
+        },
+        "donors": {
+            "description": "Information about the donors or complete organisms from which the samples were taken.",
+            "items": {
+                "$ref": "#/$defs/Donor"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "experiments": {
+            "description": "Information about sequencing experiments that have been carried out to generate the files.",
+            "items": {
+                "$ref": "#/$defs/Experiment"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "file_collections": {
+            "description": "Information about collections of files contained in this dataset, each collection defined according to some selection criteria.",
+            "items": {
+                "$ref": "#/$defs/FileCollection"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "files": {
+            "description": "Information about particular genome annotation (and other relevant) files.",
+            "items": {
+                "$ref": "#/$defs/File"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "samples": {
+            "description": "Information about the biospecimens/samples used as raw material for lab experiments.",
+            "items": {
+                "$ref": "#/$defs/Sample"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        }
+    },
+    "required": [
+        "document"
+    ],
     "title": "TopLevel",
     "type": "object",
     "version": null

@@ -34,9 +34,10 @@ from doit.tools import title_with_actions
 # ── Constants ──────────────────────────────────────────────────────────────────
 
 SCHEMA_DIR = Path("src/schema")
-TOP_LEVEL  = SCHEMA_DIR / "TopLevel.yaml"
-LINT_CFG   = Path("src/linkml_lint_config.yaml")
-GEN_DIR    = Path("generated")
+TOP_LEVEL = SCHEMA_DIR / "TopLevel.yaml"
+TOP_LEVEL_CLASS = 'TopLevel'
+LINT_CFG = Path("src/linkml_lint_config.yaml")
+GEN_DIR = Path("generated")
 DOCS_DIR   = Path("docs")
 
 # Every .yaml in the schema dir — any change triggers dependent tasks
@@ -214,7 +215,7 @@ def task_json_schema():
     return {
         "actions": [
             f"mkdir -p {GEN_DIR}",
-            uv(f"gen-json-schema {TOP_LEVEL} > {target}"),
+            uv(f"gen-json-schema {TOP_LEVEL} -t {TOP_LEVEL_CLASS} > {target}"),
         ],
         'title': title_with_actions,
         "file_dep": SCHEMA_FILES + TOOL_DEPS,
