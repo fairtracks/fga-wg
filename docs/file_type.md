@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: file_type 
 
@@ -7,11 +10,11 @@ _The file format of the data file._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/file_type](https://w3id.org/fga-wg/schema/top_level/file_type)
-Alias: file_type
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: file_type
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -97,11 +100,10 @@ examples:
     label: bigBed
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: file_type
 domain_of:
 - File
 range: Term
 required: true
 
 ```
-</details>
+</details></div>

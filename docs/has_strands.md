@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: has_strands 
 
@@ -7,11 +10,11 @@ _Whether the sequence features are stranded (at least one feature has strand inf
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/has_strands](https://w3id.org/fga-wg/schema/top_level/has_strands)
-Alias: has_strands
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - object: false
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: has_strands
 domain_of:
 - TrackGeometry
 range: boolean
 required: true
 
 ```
-</details>
+</details></div>

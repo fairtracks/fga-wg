@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: species_taxon 
 
@@ -7,11 +10,11 @@ _Taxonomical classification of the species of the donor/organism._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/species_taxon](https://w3id.org/fga-wg/schema/top_level/species_taxon)
-Alias: species_taxon
-
 <!-- no inheritance hierarchy -->
 
 
@@ -96,11 +99,10 @@ examples:
     label: Homo sapiens
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: species_taxon
 domain_of:
 - Donor
 range: Term
 required: true
 
 ```
-</details>
+</details></div>

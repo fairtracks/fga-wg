@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: sequencing_protocol 
 
@@ -7,11 +10,11 @@ _Set of rules which guides how the sequencing protocol was followed. Change-trac
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/sequencing_protocol](https://w3id.org/fga-wg/schema/top_level/sequencing_protocol)
-Alias: sequencing_protocol
-
 <!-- no inheritance hierarchy -->
 
 
@@ -86,10 +89,9 @@ description: Set of rules which guides how the sequencing protocol was followed.
   in this field.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: sequencing_protocol
 domain_of:
 - Experiment
 range: uriorcurie
 
 ```
-</details>
+</details></div>

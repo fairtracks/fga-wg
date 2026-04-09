@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analysis_description 
 
@@ -7,11 +10,11 @@ _Human-readable description of the analysis._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/analysis_description](https://w3id.org/fga-wg/schema/top_level/analysis_description)
-Alias: analysis_description
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: ENCODE3 ChIP-seq pipeline on GRCH38 with replicated peak calling using MACS.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: analysis_description
 domain_of:
 - Analysis
 range: string
 
 ```
-</details>
+</details></div>

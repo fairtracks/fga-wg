@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: assessment_values 
 
@@ -7,11 +10,11 @@ _Main values produced by the quality assessment._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/assessment_values](https://w3id.org/fga-wg/schema/top_level/assessment_values)
-Alias: assessment_values
-
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +38,7 @@ Alias: assessment_values
 
 | Property | Value |
 | --- | --- |
-| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[AssessmentValue](AssessmentValue.md)&nbsp;or&nbsp;<br />[String](String.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[AssessmentValue](AssessmentValue.md) |
 | Domain Of | [QualityAssessment](QualityAssessment.md) |
 
 ### Cardinality and Requirements
@@ -107,7 +110,6 @@ examples:
     frip: 0.2931669095906483
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: assessment_values
 domain_of:
 - QualityAssessment
 range: Any
@@ -118,4 +120,4 @@ any_of:
   multivalued: true
 
 ```
-</details>
+</details></div>

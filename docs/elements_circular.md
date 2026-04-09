@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: elements_circular 
 
@@ -7,11 +10,11 @@ _Whether the sequence features have circular coordinates (at least one feature t
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/elements_circular](https://w3id.org/fga-wg/schema/top_level/elements_circular)
-Alias: elements_circular
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - object: false
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: elements_circular
 domain_of:
 - TrackGeometry
 range: boolean
 required: true
 
 ```
-</details>
+</details></div>

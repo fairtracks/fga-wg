@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: edge_weight_type 
 
@@ -7,11 +10,11 @@ _The type of values associated with the edges._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/edge_weight_type](https://w3id.org/fga-wg/schema/top_level/edge_weight_type)
-Alias: edge_weight_type
-
 <!-- no inheritance hierarchy -->
 
 
@@ -84,10 +87,9 @@ name: edge_weight_type
 description: The type of values associated with the edges.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: edge_weight_type
 domain_of:
 - TrackGeometry
 range: DataTypes
 
 ```
-</details>
+</details></div>

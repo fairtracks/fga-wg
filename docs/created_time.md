@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: created_time 
 
@@ -7,11 +10,11 @@ _Timestamp of content creation in RFC3339. (This is the creation time of the und
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/created_time](https://w3id.org/fga-wg/schema/top_level/created_time)
-Alias: created_time
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: created_time
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -96,11 +99,10 @@ examples:
 - value: '2016-11-13T17:42:04.385801+00:00'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: created_time
 domain_of:
 - File
 range: datetime
 required: true
 
 ```
-</details>
+</details></div>

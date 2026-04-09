@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: QualityAssessment 
 
@@ -6,6 +9,8 @@
 _Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -55,8 +60,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/QualityAssessment](https://w3id.o
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [assessment_method](assessment_method.md) | 1 <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) | Quality assessment method that has been carried out (e | direct |
-| [assessment_values](assessment_values.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[AssessmentValue](AssessmentValue.md)&nbsp;or&nbsp;<br />[String](String.md) | Main values produced by the quality assessment | direct |
+| [assessment_method](assessment_method.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Term](Term.md) | Quality assessment method that has been carried out (e | direct |
+| [assessment_values](assessment_values.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[AssessmentValue](AssessmentValue.md) | Main values produced by the quality assessment | direct |
 | [assessment_details_url](assessment_details_url.md) | 0..1 <br/> [Uri](Uri.md) | URL to a report containing the detailed output from the quality assessment | direct |
 
 
@@ -144,7 +149,6 @@ attributes:
     - value: histone-chipseq-quality-metrics
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: assessment_method
     owner: QualityAssessment
     domain_of:
     - QualityAssessment
@@ -163,7 +167,6 @@ attributes:
         frip: 0.2931669095906483
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: assessment_values
     owner: QualityAssessment
     domain_of:
     - QualityAssessment
@@ -180,11 +183,10 @@ attributes:
     - value: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: assessment_details_url
     owner: QualityAssessment
     domain_of:
     - QualityAssessment
     range: uri
 
 ```
-</details>
+</details></div>

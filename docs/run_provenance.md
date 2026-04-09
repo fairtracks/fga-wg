@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: run_provenance 
 
@@ -7,11 +10,11 @@ _Document detailing the provenance of the experiment or analysis run which produ
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/run_provenance](https://w3id.org/fga-wg/schema/top_level/run_provenance)
-Alias: run_provenance
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: run_provenance
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -96,10 +99,9 @@ examples:
 - value: encode:ENCAN718KHT
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: run_provenance
 domain_of:
 - File
 range: uriorcurie
 
 ```
-</details>
+</details></div>

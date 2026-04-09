@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: version 
 
@@ -7,11 +10,11 @@ _Version information for the retrieval from the input source._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/version](https://w3id.org/fga-wg/schema/top_level/version)
-Alias: version
-
 <!-- no inheritance hierarchy -->
 
 
@@ -84,10 +87,9 @@ name: version
 description: Version information for the retrieval from the input source.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: version
 domain_of:
 - InputSource
 range: string
 
 ```
-</details>
+</details></div>

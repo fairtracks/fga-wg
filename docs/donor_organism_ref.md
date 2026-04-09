@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: donor_organism_ref 
 
@@ -7,11 +10,11 @@ _Internal reference to the donor/organism from which the biospecimen/sample was 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/donor_organism_ref](https://w3id.org/fga-wg/schema/top_level/donor_organism_ref)
-Alias: donor_organism_ref
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - value: donor:ENCDO001AAA
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: donor_organism_ref
 domain_of:
 - Sample
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: document_ontology_versions 
 
@@ -7,11 +10,11 @@ _Map from the version-agnostic URL to a versioned URL (e.g. "versionIRI" in owl)
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/document_ontology_versions](https://w3id.org/fga-wg/schema/top_level/document_ontology_versions)
-Alias: document_ontology_versions
-
 <!-- no inheritance hierarchy -->
 
 
@@ -130,7 +133,6 @@ examples:
     versioned_ontology_url: http://purl.obolibrary.org/obo/uberon/releases/2020-06-30/uberon.owl
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: document_ontology_versions
 domain_of:
 - Document
 range: OntologyVersions
@@ -138,4 +140,4 @@ required: true
 multivalued: true
 
 ```
-</details>
+</details></div>

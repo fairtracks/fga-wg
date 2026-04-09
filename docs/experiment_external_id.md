@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: experiment_external_id 
 
@@ -7,11 +10,11 @@ _External, globally unique identifier for the experiment._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/experiment_external_id](https://w3id.org/fga-wg/schema/top_level/experiment_external_id)
-Alias: experiment_external_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: encode:ENCSR000DPJ
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: experiment_external_id
 domain_of:
 - Experiment
 range: curie
 
 ```
-</details>
+</details></div>

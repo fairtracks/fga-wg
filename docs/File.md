@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: File 
 
@@ -6,6 +9,8 @@
 _General information about a particular data file. Most fields (marked with an asterix*) are copied from the GA4GH DRS DrsObject model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/DrsObjectModel), which is the top-level object returned from a DRS server in response to a successful lookup call (i.e. https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/Objects)._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -253,7 +258,6 @@ attributes:
     - value: encode:ENCFF323LCS
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_external_id
     owner: File
     domain_of:
     - File
@@ -267,7 +271,6 @@ attributes:
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     identifier: true
-    alias: file_id
     owner: File
     domain_of:
     - File
@@ -283,7 +286,6 @@ attributes:
     - value: 87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_name
     owner: File
     domain_of:
     - File
@@ -297,7 +299,6 @@ attributes:
     - value: H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_label
     owner: File
     domain_of:
     - File
@@ -312,7 +313,6 @@ attributes:
         derived cell line).
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_description
     owner: File
     domain_of:
     - File
@@ -325,7 +325,6 @@ attributes:
     - value: collection:ihec_encode
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: filecollection_refs
     owner: File
     domain_of:
     - File
@@ -349,7 +348,6 @@ attributes:
         - '2_1'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_input_sources
     owner: File
     domain_of:
     - File
@@ -368,7 +366,6 @@ attributes:
     - value: drs://drs.example.org/ENCFF323LCS
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: drs_uri
     owner: File
     domain_of:
     - File
@@ -399,7 +396,6 @@ attributes:
           url: https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: access_methods
     owner: File
     domain_of:
     - File
@@ -415,7 +411,6 @@ attributes:
     - value: encode:ENCAN718KHT
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: run_provenance
     owner: File
     domain_of:
     - File
@@ -434,7 +429,6 @@ attributes:
         assessment_details_url: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: quality_assessments
     owner: File
     domain_of:
     - File
@@ -449,7 +443,6 @@ attributes:
         label: bigBed
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_type
     owner: File
     domain_of:
     - File
@@ -462,7 +455,6 @@ attributes:
     - value: application/octet-stream
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: mime_type
     owner: File
     domain_of:
     - File
@@ -474,7 +466,6 @@ attributes:
     - value: replicated peaks
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: data_content
     owner: File
     domain_of:
     - File
@@ -487,7 +478,6 @@ attributes:
     - object: 5359719
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_size
     owner: File
     domain_of:
     - File
@@ -501,7 +491,6 @@ attributes:
     - value: '2016-11-13T17:42:04.385801+00:00'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: created_time
     owner: File
     domain_of:
     - File
@@ -516,7 +505,6 @@ attributes:
     - value: '2016-11-13T17:42:04.385801+00:00'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: updated_time
     owner: File
     domain_of:
     - File
@@ -529,7 +517,6 @@ attributes:
     - value: efd4e74e-7875-4d13-9630-0085bc834f18
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_version
     owner: File
     domain_of:
     - File
@@ -544,7 +531,6 @@ attributes:
         type: md5
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: checksums
     owner: File
     domain_of:
     - File
@@ -553,4 +539,4 @@ attributes:
     multivalued: true
 
 ```
-</details>
+</details></div>

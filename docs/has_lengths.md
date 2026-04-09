@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: has_lengths 
 
@@ -7,11 +10,11 @@ _Whether the sequence features have lengths (at least one feature spans more tha
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/has_lengths](https://w3id.org/fga-wg/schema/top_level/has_lengths)
-Alias: has_lengths
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - object: true
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: has_lengths
 domain_of:
 - TrackGeometry
 range: boolean
 required: true
 
 ```
-</details>
+</details></div>

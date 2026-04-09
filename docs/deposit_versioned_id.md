@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: deposit_versioned_id 
 
@@ -7,11 +10,11 @@ _A globally unique, persistent and versioned identifier for the public deposit o
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/deposit_versioned_id](https://w3id.org/fga-wg/schema/top_level/deposit_versioned_id)
-Alias: deposit_versioned_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -103,11 +106,10 @@ examples:
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 identifier: true
-alias: deposit_versioned_id
 domain_of:
 - Deposit
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

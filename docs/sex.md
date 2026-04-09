@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: sex 
 
@@ -7,11 +10,11 @@ _Biological sex of the donor/organism._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/sex](https://w3id.org/fga-wg/schema/top_level/sex)
-Alias: sex
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,10 +98,9 @@ examples:
     label: male organism
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: sex
 domain_of:
 - Donor
 range: Term
 
 ```
-</details>
+</details></div>

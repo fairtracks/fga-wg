@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: checksums 
 
@@ -7,11 +10,11 @@ _A list of checksums of the data file. At least one checksum must be provided. F
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/checksums](https://w3id.org/fga-wg/schema/top_level/checksums)
-Alias: checksums
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: checksums
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -99,7 +102,6 @@ examples:
     type: md5
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: checksums
 domain_of:
 - File
 range: Checksum
@@ -107,4 +109,4 @@ required: true
 multivalued: true
 
 ```
-</details>
+</details></div>

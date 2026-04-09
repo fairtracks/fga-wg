@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: donors 
 
@@ -7,11 +10,11 @@ _Information about the donors or complete organisms from which the samples were 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/donors](https://w3id.org/fga-wg/schema/top_level/donors)
-Alias: donors
-
 <!-- no inheritance hierarchy -->
 
 
@@ -86,7 +89,6 @@ description: Information about the donors or complete organisms from which the s
   were taken.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: donors
 domain_of:
 - TopLevel
 range: Donor
@@ -95,4 +97,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

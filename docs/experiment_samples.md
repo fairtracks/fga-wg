@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: experiment_samples 
 
@@ -7,11 +10,11 @@ _External or internal references to samples used in the experiment. Internal ref
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/experiment_samples](https://w3id.org/fga-wg/schema/top_level/experiment_samples)
-Alias: experiment_samples
-
 <!-- no inheritance hierarchy -->
 
 
@@ -104,7 +107,6 @@ examples:
     - '2_1'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: experiment_samples
 domain_of:
 - Experiment
 range: InputSource
@@ -112,4 +114,4 @@ required: true
 multivalued: true
 
 ```
-</details>
+</details></div>

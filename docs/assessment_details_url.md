@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: assessment_details_url 
 
@@ -7,11 +10,11 @@ _URL to a report containing the detailed output from the quality assessment._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/assessment_details_url](https://w3id.org/fga-wg/schema/top_level/assessment_details_url)
-Alias: assessment_details_url
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: assessment_details_url
 domain_of:
 - QualityAssessment
 range: uri
 
 ```
-</details>
+</details></div>

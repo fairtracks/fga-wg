@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Donor 
 
@@ -6,6 +9,8 @@
 _Information about the donor or complete organism from which the sample was taken._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -146,7 +151,6 @@ attributes:
     - value: biosamples:SAMN04284578
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: donor_external_id
     owner: Donor
     domain_of:
     - Donor
@@ -160,7 +164,6 @@ attributes:
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     identifier: true
-    alias: donor_id
     owner: Donor
     domain_of:
     - Donor
@@ -175,7 +178,6 @@ attributes:
         label: Homo sapiens
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: species_taxon
     owner: Donor
     domain_of:
     - Donor
@@ -190,11 +192,10 @@ attributes:
         label: male organism
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: sex
     owner: Donor
     domain_of:
     - Donor
     range: Term
 
 ```
-</details>
+</details></div>

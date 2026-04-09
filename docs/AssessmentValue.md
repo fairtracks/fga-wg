@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: AssessmentValue 
 
@@ -6,6 +9,8 @@
 _Key-value pair representing a specific value produced by a quality assessment._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -45,7 +50,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AssessmentValue](https://w3id.org
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [key](key.md) | 1 <br/> [String](String.md) | Key/name of the assessment value | direct |
-| [value](value.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Decimal](Decimal.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Integer](Integer.md)&nbsp;or&nbsp;<br />[Boolean](Boolean.md) | Value corresponding to the assessment key | direct |
+| [value](value.md) | 1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Decimal](Decimal.md)&nbsp;or&nbsp;<br />[Boolean](Boolean.md)&nbsp;or&nbsp;<br />[Integer](Integer.md)&nbsp;or&nbsp;<br />[String](String.md) | Value corresponding to the assessment key | direct |
 
 
 
@@ -129,7 +134,6 @@ attributes:
     - value: frip
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: key
     owner: AssessmentValue
     domain_of:
     - AssessmentValue
@@ -144,7 +148,6 @@ attributes:
     - object: 0.2931669095906483
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: value
     owner: AssessmentValue
     domain_of:
     - AssessmentValue
@@ -157,4 +160,4 @@ attributes:
     - range: string
 
 ```
-</details>
+</details></div>

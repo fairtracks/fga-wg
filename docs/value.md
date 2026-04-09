@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: value 
 
@@ -7,11 +10,11 @@ _Value corresponding to the assessment key._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/value](https://w3id.org/fga-wg/schema/top_level/value)
-Alias: value
-
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +38,7 @@ Alias: value
 
 | Property | Value |
 | --- | --- |
-| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[Decimal](Decimal.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Integer](Integer.md)&nbsp;or&nbsp;<br />[Boolean](Boolean.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[Decimal](Decimal.md)&nbsp;or&nbsp;<br />[Boolean](Boolean.md)&nbsp;or&nbsp;<br />[Integer](Integer.md)&nbsp;or&nbsp;<br />[String](String.md) |
 | Domain Of | [AssessmentValue](AssessmentValue.md) |
 
 ### Cardinality and Requirements
@@ -110,7 +113,6 @@ examples:
 - object: 0.2931669095906483
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: value
 domain_of:
 - AssessmentValue
 range: Any
@@ -122,4 +124,4 @@ any_of:
 - range: string
 
 ```
-</details>
+</details></div>

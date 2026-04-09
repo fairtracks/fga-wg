@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: region 
 
@@ -7,11 +10,11 @@ _Name of the region in the cloud service provider that the object belongs to._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/region](https://w3id.org/fga-wg/schema/top_level/region)
-Alias: region
-
 <!-- no inheritance hierarchy -->
 
 
@@ -85,10 +88,9 @@ description: Name of the region in the cloud service provider that the object be
   to.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: region
 domain_of:
 - AccessMethod
 range: string
 
 ```
-</details>
+</details></div>

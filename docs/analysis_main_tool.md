@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analysis_main_tool 
 
@@ -7,11 +10,11 @@ _Main software tool used for the analysis._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/analysis_main_tool](https://w3id.org/fga-wg/schema/top_level/analysis_main_tool)
-Alias: analysis_main_tool
-
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +38,7 @@ Alias: analysis_main_tool
 
 | Property | Value |
 | --- | --- |
-| Range | [Curie](Curie.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) |
 | Domain Of | [Analysis](Analysis.md) |
 
 ### Cardinality and Requirements
@@ -103,7 +106,6 @@ examples:
 - value: biotools:macs
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: analysis_main_tool
 domain_of:
 - Analysis
 range: Any
@@ -112,4 +114,4 @@ any_of:
 - range: curie
 
 ```
-</details>
+</details></div>

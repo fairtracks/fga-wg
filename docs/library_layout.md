@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: library_layout 
 
@@ -7,11 +10,11 @@ _Whether the library was built as paired-end, or single-end._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/library_layout](https://w3id.org/fga-wg/schema/top_level/library_layout)
-Alias: library_layout
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,10 +98,9 @@ examples:
     label: single fragment library
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: library_layout
 domain_of:
 - Experiment
 range: Term
 
 ```
-</details>
+</details></div>

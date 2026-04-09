@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: database_accessions 
 
@@ -7,11 +10,11 @@ _Accession numbers for database records used as input source. Used in connection
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/database_accessions](https://w3id.org/fga-wg/schema/top_level/database_accessions)
-Alias: database_accessions
-
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +38,7 @@ Alias: database_accessions
 
 | Property | Value |
 | --- | --- |
-| Range | [Curie](Curie.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) |
 | Domain Of | [InputSource](InputSource.md) |
 
 ### Cardinality and Requirements
@@ -96,7 +99,6 @@ description: Accession numbers for database records used as input source. Used i
   connection with "inputsource_external_ref".
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: database_accessions
 domain_of:
 - InputSource
 range: Any
@@ -106,4 +108,4 @@ any_of:
 - range: curie
 
 ```
-</details>
+</details></div>

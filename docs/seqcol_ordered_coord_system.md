@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: seqcol_ordered_coord_system 
 
@@ -7,11 +10,11 @@ _Content-derived digest that uniquely identifies the ordered coordinate system o
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_ordered_coord_system](https://w3id.org/fga-wg/schema/top_level/seqcol_ordered_coord_system)
-Alias: seqcol_ordered_coord_system
-
 <!-- no inheritance hierarchy -->
 
 
@@ -101,11 +104,10 @@ examples:
 - value: ga4gh:SC.name_length_pairs.Yyz0Expaluj09xdDYg2Y6VOApvjg05Hf
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: seqcol_ordered_coord_system
 domain_of:
 - GenomeAssembly
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analyses 
 
@@ -7,11 +10,11 @@ _Information about computational processing and analyses that have been carried 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/analyses](https://w3id.org/fga-wg/schema/top_level/analyses)
-Alias: analyses
-
 <!-- no inheritance hierarchy -->
 
 
@@ -86,7 +89,6 @@ description: Information about computational processing and analyses that have b
   carried out to generate the files.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: analyses
 domain_of:
 - TopLevel
 range: Analysis
@@ -95,4 +97,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

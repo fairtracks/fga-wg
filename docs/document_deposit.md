@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: document_deposit 
 
@@ -7,11 +10,11 @@ _Information about the public deposit of the metadata document._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/document_deposit](https://w3id.org/fga-wg/schema/top_level/document_deposit)
-Alias: document_deposit
-
 <!-- no inheritance hierarchy -->
 
 
@@ -97,11 +100,10 @@ examples:
     deposit_last_changed: '2025-07-01T12:36:00Z'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: document_deposit
 domain_of:
 - Document
 range: Deposit
 inlined: true
 
 ```
-</details>
+</details></div>

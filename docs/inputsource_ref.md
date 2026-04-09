@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: inputsource_ref 
 
@@ -7,11 +10,11 @@ _Reference to an internal object as the input source using a local identifier. E
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/inputsource_ref](https://w3id.org/fga-wg/schema/top_level/inputsource_ref)
-Alias: inputsource_ref
-
 <!-- no inheritance hierarchy -->
 
 
@@ -88,10 +91,9 @@ description: Reference to an internal object as the input source using a local i
   must be specified.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: inputsource_ref
 domain_of:
 - InputSource
 range: curie
 
 ```
-</details>
+</details></div>

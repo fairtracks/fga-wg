@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: assay_type 
 
@@ -7,11 +10,11 @@ _Sequencing technique intended for this library._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/assay_type](https://w3id.org/fga-wg/schema/top_level/assay_type)
-Alias: assay_type
-
 <!-- no inheritance hierarchy -->
 
 
@@ -96,11 +99,10 @@ examples:
     label: ChIP-seq assay
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: assay_type
 domain_of:
 - Experiment
 range: Term
 required: true
 
 ```
-</details>
+</details></div>

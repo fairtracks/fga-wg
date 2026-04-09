@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: document_description 
 
@@ -7,11 +10,11 @@ _Human-readable description of the metadata document._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/document_description](https://w3id.org/fga-wg/schema/top_level/document_description)
-Alias: document_description
-
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +38,7 @@ Alias: document_description
 
 | Property | Value |
 | --- | --- |
-| Range | [Uri](Uri.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Uri](Uri.md) |
 | Domain Of | [Document](Document.md) |
 
 ### Cardinality and Requirements
@@ -106,7 +109,6 @@ examples:
     metadata from original sources.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: document_description
 domain_of:
 - Document
 range: Any
@@ -115,4 +117,4 @@ any_of:
 - range: uri
 
 ```
-</details>
+</details></div>

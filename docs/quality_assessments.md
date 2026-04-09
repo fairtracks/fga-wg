@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: quality_assessments 
 
@@ -7,11 +10,11 @@ _An array of QualityAssessment objects containing the main quality scores from a
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/quality_assessments](https://w3id.org/fga-wg/schema/top_level/quality_assessments)
-Alias: quality_assessments
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: quality_assessments
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -102,11 +105,10 @@ examples:
     assessment_details_url: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: quality_assessments
 domain_of:
 - File
 range: QualityAssessment
 multivalued: true
 
 ```
-</details>
+</details></div>

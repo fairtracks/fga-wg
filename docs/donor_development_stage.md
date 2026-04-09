@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: donor_development_stage 
 
@@ -7,11 +10,11 @@ _Development stage of the donor at the time of sampling._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/donor_development_stage](https://w3id.org/fga-wg/schema/top_level/donor_development_stage)
-Alias: donor_development_stage
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,10 +98,9 @@ examples:
     label: late embryo
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: donor_development_stage
 domain_of:
 - Sample
 range: Term
 
 ```
-</details>
+</details></div>

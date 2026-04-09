@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: TopLevel 
 
@@ -6,6 +9,8 @@
 _A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -198,7 +203,6 @@ attributes:
       and versioning of public deposits of the document.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: document
     owner: TopLevel
     domain_of:
     - TopLevel
@@ -211,7 +215,6 @@ attributes:
       each collection defined according to some selection criteria.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_collections
     owner: TopLevel
     domain_of:
     - TopLevel
@@ -225,7 +228,6 @@ attributes:
       files.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: files
     owner: TopLevel
     domain_of:
     - TopLevel
@@ -239,7 +241,6 @@ attributes:
       to generate the files.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: experiments
     owner: TopLevel
     domain_of:
     - TopLevel
@@ -253,7 +254,6 @@ attributes:
       been carried out to generate the files.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analyses
     owner: TopLevel
     domain_of:
     - TopLevel
@@ -267,7 +267,6 @@ attributes:
       lab experiments.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: samples
     owner: TopLevel
     domain_of:
     - TopLevel
@@ -281,7 +280,6 @@ attributes:
       samples were taken.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: donors
     owner: TopLevel
     domain_of:
     - TopLevel
@@ -291,4 +289,4 @@ attributes:
     inlined_as_list: true
 
 ```
-</details>
+</details></div>

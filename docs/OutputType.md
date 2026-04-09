@@ -1,4 +1,7 @@
-# Enum: OutputType 
+---
+search:
+  boost: 2.0
+---# Enum: OutputType 
 
 
 
@@ -6,6 +9,8 @@
 _Vocabulary from the ENCODE model describing the purpose or content of a file (see "Properties->output_type" in https://www.encodeproject.org/profiles/file)._
 
 
+
+<div data-search-exclude markdown="1">
 
 URI: [https://w3id.org/fga-wg/schema/top_level/OutputType](https://w3id.org/fga-wg/schema/top_level/OutputType)
 
@@ -867,3 +872,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

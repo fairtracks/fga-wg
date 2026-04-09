@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: has_gaps 
 
@@ -7,11 +10,11 @@ _Whether there are gaps between the sequence features (there exists at least one
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/has_gaps](https://w3id.org/fga-wg/schema/top_level/has_gaps)
-Alias: has_gaps
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - object: true
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: has_gaps
 domain_of:
 - TrackGeometry
 range: boolean
 required: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: file_collections 
 
@@ -7,11 +10,11 @@ _Information about collections of files contained in this dataset, each collecti
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/file_collections](https://w3id.org/fga-wg/schema/top_level/file_collections)
-Alias: file_collections
-
 <!-- no inheritance hierarchy -->
 
 
@@ -86,7 +89,6 @@ description: Information about collections of files contained in this dataset, e
   collection defined according to some selection criteria.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: file_collections
 domain_of:
 - TopLevel
 range: FileCollection
@@ -95,4 +97,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

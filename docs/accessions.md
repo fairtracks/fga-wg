@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: accessions 
 
@@ -7,11 +10,11 @@ _Database accession numbers for the genome assembly, if available. Should precis
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/accessions](https://w3id.org/fga-wg/schema/top_level/accessions)
-Alias: accessions
-
 <!-- no inheritance hierarchy -->
 
 
@@ -96,11 +99,10 @@ examples:
 - value: encode:ENCSR425FOI
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: accessions
 domain_of:
 - GenomeAssembly
 range: string
 multivalued: true
 
 ```
-</details>
+</details></div>

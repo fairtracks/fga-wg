@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: document 
 
@@ -7,11 +10,11 @@ _Information about this document containing harmonised metadata about a set of g
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/document](https://w3id.org/fga-wg/schema/top_level/document)
-Alias: document
-
 <!-- no inheritance hierarchy -->
 
 
@@ -87,7 +90,6 @@ description: Information about this document containing harmonised metadata abou
   versioning of public deposits of the document.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: document
 domain_of:
 - TopLevel
 range: Document
@@ -95,4 +97,4 @@ required: true
 inlined: true
 
 ```
-</details>
+</details></div>

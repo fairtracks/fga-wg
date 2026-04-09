@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: namespace 
 
@@ -7,11 +10,11 @@ _The CURIE namespace (prefix) an ontology (e.g. "GO" for Gene Ontology)._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/namespace](https://w3id.org/fga-wg/schema/top_level/namespace)
-Alias: namespace
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,11 +97,10 @@ examples:
 - value: edam
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: namespace
 domain_of:
 - OntologyVersions
 range: string
 required: true
 
 ```
-</details>
+</details></div>

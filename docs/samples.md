@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: samples 
 
@@ -7,11 +10,11 @@ _Information about the biospecimens/samples used as raw material for lab experim
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/samples](https://w3id.org/fga-wg/schema/top_level/samples)
-Alias: samples
-
 <!-- no inheritance hierarchy -->
 
 
@@ -86,7 +89,6 @@ description: Information about the biospecimens/samples used as raw material for
   experiments.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: samples
 domain_of:
 - TopLevel
 range: Sample
@@ -95,4 +97,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

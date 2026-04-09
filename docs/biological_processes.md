@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: biological_processes 
 
@@ -7,11 +10,11 @@ _Biological processes illuminated by the experiment._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/biological_processes](https://w3id.org/fga-wg/schema/top_level/biological_processes)
-Alias: biological_processes
-
 <!-- no inheritance hierarchy -->
 
 
@@ -96,11 +99,10 @@ examples:
     label: histone H3K4 trimethyltransferase activity
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: biological_processes
 domain_of:
 - Experiment
 range: Term
 multivalued: true
 
 ```
-</details>
+</details></div>

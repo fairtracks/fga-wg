@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: aliases 
 
@@ -7,11 +10,11 @@ _Human-readable aliases of the genome assembly. Can be imprecise, as preciseness
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/aliases](https://w3id.org/fga-wg/schema/top_level/aliases)
-Alias: aliases
-
 <!-- no inheritance hierarchy -->
 
 
@@ -100,7 +103,6 @@ examples:
 - value: hg38
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: aliases
 domain_of:
 - GenomeAssembly
 range: curie
@@ -108,4 +110,4 @@ required: true
 multivalued: true
 
 ```
-</details>
+</details></div>

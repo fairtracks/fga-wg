@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: organism_tissue 
 
@@ -7,11 +10,11 @@ _Part of organism (typically tissue or organ) from which the biospecimen/sample 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/organism_tissue](https://w3id.org/fga-wg/schema/top_level/organism_tissue)
-Alias: organism_tissue
-
 <!-- no inheritance hierarchy -->
 
 
@@ -96,10 +99,9 @@ examples:
     label: lung
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: organism_tissue
 domain_of:
 - Sample
 range: Term
 
 ```
-</details>
+</details></div>

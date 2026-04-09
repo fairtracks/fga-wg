@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: data_content 
 
@@ -7,11 +10,11 @@ _Classification describing the file's purpose or contents._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/data_content](https://w3id.org/fga-wg/schema/top_level/data_content)
-Alias: data_content
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: data_content
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -95,11 +98,10 @@ examples:
 - value: replicated peaks
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: data_content
 domain_of:
 - File
 range: OutputType
 required: true
 
 ```
-</details>
+</details></div>

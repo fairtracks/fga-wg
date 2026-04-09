@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: access_url 
 
@@ -7,11 +10,11 @@ _AccessURL object providing URL and associated HTTP headers to access the File o
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/access_url](https://w3id.org/fga-wg/schema/top_level/access_url)
-Alias: access_url
-
 <!-- no inheritance hierarchy -->
 
 
@@ -96,11 +99,10 @@ examples:
     url: https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: access_url
 domain_of:
 - AccessMethod
 range: AccessURL
 required: true
 
 ```
-</details>
+</details></div>

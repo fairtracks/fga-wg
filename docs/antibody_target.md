@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: antibody_target 
 
@@ -7,11 +10,11 @@ _The target of the antibody used in the experiment._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/antibody_target](https://w3id.org/fga-wg/schema/top_level/antibody_target)
-Alias: antibody_target
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,10 +98,9 @@ examples:
     label: H3K9Me3
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: antibody_target
 domain_of:
 - Experiment
 range: Term
 
 ```
-</details>
+</details></div>

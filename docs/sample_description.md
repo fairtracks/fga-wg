@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: sample_description 
 
@@ -7,11 +10,11 @@ _Human-readable description of the biospecimen/sample and the sampling process._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/sample_description](https://w3id.org/fga-wg/schema/top_level/sample_description)
-Alias: sample_description
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,10 +97,9 @@ examples:
 - value: Homo sapiens AG04450 cell line
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: sample_description
 domain_of:
 - Sample
 range: string
 
 ```
-</details>
+</details></div>

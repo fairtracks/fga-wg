@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: checksum 
 
@@ -7,11 +10,11 @@ _The hex-string encoded checksum for the data._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/checksum](https://w3id.org/fga-wg/schema/top_level/checksum)
-Alias: checksum
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: 535bc9628a1c5e5215226f9996e4eaca
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: checksum
 domain_of:
 - Checksum
 range: string
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-# Enum: BiospecimenClassification 
+---
+search:
+  boost: 2.0
+---# Enum: BiospecimenClassification 
 
 
 
@@ -6,6 +9,8 @@
 _Vocabulary from the ENCODE model describing the general category of boispecimen (see "Properties->classification" in https://www.encodeproject.org/profiles/biosample_type)._
 
 
+
+<div data-search-exclude markdown="1">
 
 URI: [https://w3id.org/fga-wg/schema/top_level/BiospecimenClassification](https://w3id.org/fga-wg/schema/top_level/BiospecimenClassification)
 
@@ -87,3 +92,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Deposit 
 
@@ -6,6 +9,8 @@
 _Information about a public deposit of a document containing metadata about a set of genome annotation files._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -129,7 +134,6 @@ attributes:
     - value: doi:10.1234/zenodo.12345678
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: deposit_id
     owner: Deposit
     domain_of:
     - Deposit
@@ -144,7 +148,6 @@ attributes:
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     identifier: true
-    alias: deposit_versioned_id
     owner: Deposit
     domain_of:
     - Deposit
@@ -158,7 +161,6 @@ attributes:
     - value: '2025-07-01T12:36:00Z'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: deposit_first_created
     owner: Deposit
     domain_of:
     - Deposit
@@ -172,7 +174,6 @@ attributes:
     - value: '2025-07-01T12:36:00Z'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: deposit_last_changed
     owner: Deposit
     domain_of:
     - Deposit
@@ -180,4 +181,4 @@ attributes:
     required: true
 
 ```
-</details>
+</details></div>

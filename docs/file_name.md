@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: file_name 
 
@@ -7,11 +10,11 @@ _A string that can be used to name a data file. This string is made up of upperc
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/file_name](https://w3id.org/fga-wg/schema/top_level/file_name)
-Alias: file_name
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: file_name
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -97,10 +100,9 @@ examples:
 - value: 87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: file_name
 domain_of:
 - File
 range: string
 
 ```
-</details>
+</details></div>

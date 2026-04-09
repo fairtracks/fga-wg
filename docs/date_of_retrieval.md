@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: date_of_retrieval 
 
@@ -7,11 +10,11 @@ _Date of retrieval from the input source, typically used to timestamp downloadin
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/date_of_retrieval](https://w3id.org/fga-wg/schema/top_level/date_of_retrieval)
-Alias: date_of_retrieval
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,10 +97,9 @@ examples:
 - value: '2016-04-19'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: date_of_retrieval
 domain_of:
 - InputSource
 range: datetime
 
 ```
-</details>
+</details></div>

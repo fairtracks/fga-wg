@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: file_version 
 
@@ -7,11 +10,11 @@ _A string representing a version. (Some systems may use checksum, a RFC3339 time
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/file_version](https://w3id.org/fga-wg/schema/top_level/file_version)
-Alias: file_version
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: file_version
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -95,10 +98,9 @@ examples:
 - value: efd4e74e-7875-4d13-9630-0085bc834f18
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: file_version
 domain_of:
 - File
 range: string
 
 ```
-</details>
+</details></div>

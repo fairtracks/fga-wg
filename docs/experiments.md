@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: experiments 
 
@@ -7,11 +10,11 @@ _Information about sequencing experiments that have been carried out to generate
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/experiments](https://w3id.org/fga-wg/schema/top_level/experiments)
-Alias: experiments
-
 <!-- no inheritance hierarchy -->
 
 
@@ -86,7 +89,6 @@ description: Information about sequencing experiments that have been carried out
   generate the files.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: experiments
 domain_of:
 - TopLevel
 range: Experiment
@@ -95,4 +97,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

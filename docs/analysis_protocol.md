@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analysis_protocol 
 
@@ -7,11 +10,11 @@ _Document describing the analysis protocol that was followed._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/analysis_protocol](https://w3id.org/fga-wg/schema/top_level/analysis_protocol)
-Alias: analysis_protocol
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: https://www.encodeproject.org/documents/7009beb8-340b-4e71-b9db-53bb020c7fe2/@@download/attachment/ChIP-seq_pipeline_overview.pdf
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: analysis_protocol
 domain_of:
 - Analysis
 range: uriorcurie
 
 ```
-</details>
+</details></div>

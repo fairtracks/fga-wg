@@ -1,4 +1,7 @@
-# Enum: DataTypes 
+---
+search:
+  boost: 2.0
+---# Enum: DataTypes 
 
 
 
@@ -6,6 +9,8 @@
 _Types of data values associated with sequence features or edges._
 
 
+
+<div data-search-exclude markdown="1">
 
 URI: [https://w3id.org/fga-wg/schema/top_level/DataTypes](https://w3id.org/fga-wg/schema/top_level/DataTypes)
 
@@ -80,3 +85,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

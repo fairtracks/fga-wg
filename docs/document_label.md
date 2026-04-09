@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: document_label 
 
@@ -7,11 +10,11 @@ _A human-readable description of the metadata document, short enough to be used 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/document_label](https://w3id.org/fga-wg/schema/top_level/document_label)
-Alias: document_label
-
 <!-- no inheritance hierarchy -->
 
 
@@ -103,7 +106,6 @@ examples:
 - value: IHEC data portal metadata, harmonised to the FGA-WG model.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: document_label
 domain_of:
 - Document
 range: string
@@ -111,4 +113,4 @@ required: true
 pattern: ^.{1,60}$
 
 ```
-</details>
+</details></div>

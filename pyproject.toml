@@ -20,5 +20,4 @@ dependencies = [
 package = false
 
 [tool.uv.sources]
-# Uncomment and fill in when you want to use your linkml fork:
-# linkml = { git = "https://github.com/<your-fork>/linkml.git", branch = "main" }
+ linkml = { git = "https://github.com/sveinugu/linkml.git", branch = "all-fixes", subdirectory = "packages/linkml" }

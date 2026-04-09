@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: OntologyVersions 
 
@@ -6,6 +9,8 @@
 _Information about an ontology used in the metadata._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -122,7 +127,6 @@ attributes:
     - value: edam
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: namespace
     owner: OntologyVersions
     domain_of:
     - OntologyVersions
@@ -136,7 +140,6 @@ attributes:
     - value: http://edamontology.org/EDAM.owl
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: ontology_url
     owner: OntologyVersions
     domain_of:
     - OntologyVersions
@@ -149,7 +152,6 @@ attributes:
     - value: http://edamontology.org/EDAM_1.21.owl
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: versioned_ontology_url
     owner: OntologyVersions
     domain_of:
     - OntologyVersions
@@ -157,4 +159,4 @@ attributes:
     required: true
 
 ```
-</details>
+</details></div>

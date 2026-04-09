@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: document_input_sources 
 
@@ -7,11 +10,11 @@ _References to other input sources from which this entire metadata document was 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/document_input_sources](https://w3id.org/fga-wg/schema/top_level/document_input_sources)
-Alias: document_input_sources
-
 <!-- no inheritance hierarchy -->
 
 
@@ -97,11 +100,10 @@ examples:
     qualified_relation: prov:wasDerivedFrom
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: document_input_sources
 domain_of:
 - Document
 range: InputSource
 multivalued: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: sample_collection_date 
 
@@ -7,11 +10,11 @@ _Date of sample collection._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/sample_collection_date](https://w3id.org/fga-wg/schema/top_level/sample_collection_date)
-Alias: sample_collection_date
-
 <!-- no inheritance hierarchy -->
 
 
@@ -84,10 +87,9 @@ name: sample_collection_date
 description: Date of sample collection.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: sample_collection_date
 domain_of:
 - Sample
 range: datetime
 
 ```
-</details>
+</details></div>

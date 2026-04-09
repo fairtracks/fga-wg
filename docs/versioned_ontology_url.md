@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: versioned_ontology_url 
 
@@ -7,11 +10,11 @@ _The versioned URL of the ontology (e.g. the "versionIRI" in OWL)._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url](https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url)
-Alias: versioned_ontology_url
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,11 +97,10 @@ examples:
 - value: http://edamontology.org/EDAM_1.21.owl
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: versioned_ontology_url
 domain_of:
 - OntologyVersions
 range: uri
 required: true
 
 ```
-</details>
+</details></div>

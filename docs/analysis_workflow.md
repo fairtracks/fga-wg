@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analysis_workflow 
 
@@ -7,11 +10,11 @@ _External reference to the analysis workflow, with availability in at least one 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/analysis_workflow](https://w3id.org/fga-wg/schema/top_level/analysis_workflow)
-Alias: analysis_workflow
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,10 +97,9 @@ examples:
 - value: encode:ENCPL272XAE
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: analysis_workflow
 domain_of:
 - Analysis
 range: uriorcurie
 
 ```
-</details>
+</details></div>

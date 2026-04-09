@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: biospecimen_classification 
 
@@ -7,11 +10,11 @@ _Main type of structural unit to be used for classification of the biospecimen/s
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/biospecimen_classification](https://w3id.org/fga-wg/schema/top_level/biospecimen_classification)
-Alias: biospecimen_classification
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,11 +97,10 @@ examples:
 - value: cell line
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: biospecimen_classification
 domain_of:
 - Sample
 range: BiospecimenClassification
 required: true
 
 ```
-</details>
+</details></div>

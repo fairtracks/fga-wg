@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: deposit_versioned_ref 
 
@@ -7,11 +10,11 @@ _Reference to versioned id of deposit containing this file collection._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/deposit_versioned_ref](https://w3id.org/fga-wg/schema/top_level/deposit_versioned_ref)
-Alias: deposit_versioned_ref
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,11 +97,10 @@ examples:
 - value: doi:10.1234/zenodo.12345679
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: deposit_versioned_ref
 domain_of:
 - FileCollection
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

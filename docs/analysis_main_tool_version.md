@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analysis_main_tool_version 
 
@@ -7,11 +10,11 @@ _Version of the main software tool used for the analysis._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/analysis_main_tool_version](https://w3id.org/fga-wg/schema/top_level/analysis_main_tool_version)
-Alias: analysis_main_tool_version
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: '2.10'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: analysis_main_tool_version
 domain_of:
 - Analysis
 range: string
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: files 
 
@@ -7,11 +10,11 @@ _Information about particular genome annotation (and other relevant) files._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/files](https://w3id.org/fga-wg/schema/top_level/files)
-Alias: files
-
 <!-- no inheritance hierarchy -->
 
 
@@ -85,7 +88,6 @@ name: files
 description: Information about particular genome annotation (and other relevant) files.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: files
 domain_of:
 - TopLevel
 range: File
@@ -94,4 +96,4 @@ inlined: true
 inlined_as_list: true
 
 ```
-</details>
+</details></div>

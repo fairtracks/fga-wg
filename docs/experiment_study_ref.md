@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: experiment_study_ref 
 
@@ -7,11 +10,11 @@ _Internal reference to the study within which the experiment has been carried ou
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/experiment_study_ref](https://w3id.org/fga-wg/schema/top_level/experiment_study_ref)
-Alias: experiment_study_ref
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - value: study:E-GEOD-35583
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: experiment_study_ref
 domain_of:
 - Experiment
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

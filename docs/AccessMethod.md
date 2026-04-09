@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: AccessMethod 
 
@@ -6,6 +9,8 @@
 _Description of an access method (i.e. communication protocol) that can be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel)_
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -145,7 +150,6 @@ attributes:
     - value: https
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: access_method
     owner: AccessMethod
     domain_of:
     - AccessMethod
@@ -160,7 +164,6 @@ attributes:
         url: https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: access_url
     owner: AccessMethod
     domain_of:
     - AccessMethod
@@ -172,11 +175,10 @@ attributes:
       belongs to.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: region
     owner: AccessMethod
     domain_of:
     - AccessMethod
     range: string
 
 ```
-</details>
+</details></div>

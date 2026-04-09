@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: InputSource 
 
@@ -6,6 +9,8 @@
 _General object representing the source of data files, samples, or other entities used as input to a process or a result. An input source refering to a single file or sample object will represent that item only, while an input source referring to a container or process may represent a number of disctinct input items. InputSource also contains information about the type of relationship, replication labelling, versioning and retrieval date._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -67,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/InputSource](https://w3id.org/fga
 | ---  | --- | --- | --- |
 | [inputsource_external_ref](inputsource_external_ref.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Reference to an external entity as the input source, using a globally unique ... | direct |
 | [inputsource_ref](inputsource_ref.md) | 0..1 <br/> [Curie](Curie.md) | Reference to an internal object as the input source using a local identifier | direct |
-| [database_accessions](database_accessions.md) | * <br/> [Curie](Curie.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) | Accession numbers for database records used as input source | direct |
+| [database_accessions](database_accessions.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) | Accession numbers for database records used as input source | direct |
 | [qualified_relation](qualified_relation.md) | 1 <br/> [Term](Term.md) | A description of the relationship with the input source | direct |
 | [biological_replicate_labels](biological_replicate_labels.md) | * <br/> [String](String.md) | Labels denoting the biological replicates within which the relation is define... | direct |
 | [technical_replicate_labels](technical_replicate_labels.md) | * <br/> [String](String.md) | Labels denoting the technical replicates within which the relation is defined... | direct |
@@ -206,7 +211,6 @@ attributes:
     - value: https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: inputsource_external_ref
     owner: InputSource
     domain_of:
     - InputSource
@@ -220,7 +224,6 @@ attributes:
       must be specified.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: inputsource_ref
     owner: InputSource
     domain_of:
     - InputSource
@@ -231,7 +234,6 @@ attributes:
       in connection with "inputsource_external_ref".
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: database_accessions
     owner: InputSource
     domain_of:
     - InputSource
@@ -247,7 +249,6 @@ attributes:
     - value: bioschemas:FormalParameter
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: qualified_relation
     owner: InputSource
     domain_of:
     - InputSource
@@ -262,7 +263,6 @@ attributes:
     - value: '2'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: biological_replicate_labels
     owner: InputSource
     domain_of:
     - InputSource
@@ -277,7 +277,6 @@ attributes:
     - value: '1_2'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: technical_replicate_labels
     owner: InputSource
     domain_of:
     - InputSource
@@ -288,7 +287,6 @@ attributes:
     description: Version information for the retrieval from the input source.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: version
     owner: InputSource
     domain_of:
     - InputSource
@@ -301,7 +299,6 @@ attributes:
     - value: '2016-04-19'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: date_of_retrieval
     owner: InputSource
     domain_of:
     - InputSource
@@ -324,4 +321,4 @@ rules:
           required: true
 
 ```
-</details>
+</details></div>

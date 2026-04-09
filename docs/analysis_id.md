@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analysis_id 
 
@@ -7,11 +10,11 @@ _Internal identifier for the experiment (unique within the metadata deposit). _
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/analysis_id](https://w3id.org/fga-wg/schema/top_level/analysis_id)
-Alias: analysis_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -102,11 +105,10 @@ examples:
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 identifier: true
-alias: analysis_id
 domain_of:
 - Analysis
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: inputsource_external_ref 
 
@@ -7,11 +10,11 @@ _Reference to an external entity as the input source, using a globally unique id
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/inputsource_external_ref](https://w3id.org/fga-wg/schema/top_level/inputsource_external_ref)
-Alias: inputsource_external_ref
-
 <!-- no inheritance hierarchy -->
 
 
@@ -96,10 +99,9 @@ examples:
 - value: https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: inputsource_external_ref
 domain_of:
 - InputSource
 range: uriorcurie
 
 ```
-</details>
+</details></div>

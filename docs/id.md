@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: id 
 
@@ -7,11 +10,11 @@ _External, globally unique identifier for the ontology term (in CURIE form)._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/id](https://w3id.org/fga-wg/schema/top_level/id)
-Alias: id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - value: obi:OBI_0000716
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: id
 domain_of:
 - Term
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

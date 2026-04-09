@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: name 
 
@@ -7,11 +10,11 @@ _Name of the person or organisation._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/name](https://w3id.org/fga-wg/schema/top_level/name)
-Alias: name
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,11 +97,10 @@ examples:
 - value: John Doe
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: name
 domain_of:
 - Contact
 range: string
 required: true
 
 ```
-</details>
+</details></div>

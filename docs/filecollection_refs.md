@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: filecollection_refs 
 
@@ -7,11 +10,11 @@ _Internal references to the FileCollection objects (within the deposit) that con
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_refs](https://w3id.org/fga-wg/schema/top_level/filecollection_refs)
-Alias: filecollection_refs
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: filecollection_refs
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -97,7 +100,6 @@ examples:
 - value: collection:ihec_encode
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: filecollection_refs
 domain_of:
 - File
 range: curie
@@ -105,4 +107,4 @@ required: true
 multivalued: true
 
 ```
-</details>
+</details></div>

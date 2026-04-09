@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: experiment_label 
 
@@ -7,11 +10,11 @@ _A human-readable description of the experiment, short enough to be used for lis
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/experiment_label](https://w3id.org/fga-wg/schema/top_level/experiment_label)
-Alias: experiment_label
-
 <!-- no inheritance hierarchy -->
 
 
@@ -102,7 +105,6 @@ examples:
 - value: H3K9me3 ChIP-seq on human AG04450
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: experiment_label
 domain_of:
 - Experiment
 range: string
@@ -110,4 +112,4 @@ required: true
 pattern: ^.{1,60}$
 
 ```
-</details>
+</details></div>

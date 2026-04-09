@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: key 
 
@@ -7,11 +10,11 @@ _Key/name of the assessment value._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/key](https://w3id.org/fga-wg/schema/top_level/key)
-Alias: key
-
 <!-- no inheritance hierarchy -->
 
 
@@ -98,11 +101,10 @@ examples:
 - value: frip
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: key
 domain_of:
 - AssessmentValue
 range: string
 required: true
 
 ```
-</details>
+</details></div>

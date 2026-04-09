@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: molecule_type 
 
@@ -7,11 +10,11 @@ _Specifies the type of source material that is being sequenced._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/molecule_type](https://w3id.org/fga-wg/schema/top_level/molecule_type)
-Alias: molecule_type
-
 <!-- no inheritance hierarchy -->
 
 
@@ -96,11 +99,10 @@ examples:
     label: genomic_DNA
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: molecule_type
 domain_of:
 - Experiment
 range: Term
 required: true
 
 ```
-</details>
+</details></div>

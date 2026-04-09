@@ -323,7 +323,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "doit", specifier = ">=0.36" },
-    { name = "linkml", specifier = ">=1.10.0" },
+    { name = "linkml", git = "https://github.com/sveinugu/linkml.git?subdirectory=packages%2Flinkml&branch=all-fixes" },
     { name = "mkdocs-kroki-plugin", specifier = ">=0.6" },
     { name = "mkdocs-literate-nav", specifier = ">=0.6" },
     { name = "mkdocs-material", specifier = ">=9" },
@@ -588,8 +588,8 @@ wheels = [
 
 [[package]]
 name = "linkml"
-version = "1.10.0"
-source = { registry = "https://pypi.org/simple" }
+version = "0.0.0.post4385.dev0+4d640103"
+source = { git = "https://github.com/sveinugu/linkml.git?subdirectory=packages%2Flinkml&branch=all-fixes#4d640103062acf4e375a483e94574a30fb95350a" }
 dependencies = [
     { name = "antlr4-python3-runtime" },
     { name = "click" },
@@ -617,15 +617,11 @@ dependencies = [
     { name = "typing-extensions", marker = "python_full_version < '3.12'" },
     { name = "watchdog" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f3/57/e480d016c94ac1dcfeccde3fd751fa1464545e3de2446c9ebf9fe66dd393/linkml-1.10.0.tar.gz", hash = "sha256:ca70bba1474bc7de37edd33005a8a556d4718190584ab2c88f7c46d090477d55", size = 334216, upload-time = "2026-02-25T17:13:32.086Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/b3/54/0d01e407b3b8657cb1a58031e3f23e7039d26338173a130a3be30fdd8e0b/linkml-1.10.0-py3-none-any.whl", hash = "sha256:2d4934f000977489352307336267a8a4270de3156187c3394d542a0a4b8130e5", size = 434438, upload-time = "2026-02-25T17:13:29.068Z" },
-]
 
 [[package]]
 name = "linkml-runtime"
-version = "1.10.0"
-source = { registry = "https://pypi.org/simple" }
+version = "0.0.0.post4385.dev0+4d640103"
+source = { git = "https://github.com/sveinugu/linkml.git?subdirectory=packages%2Flinkml_runtime&branch=all-fixes#4d640103062acf4e375a483e94574a30fb95350a" }
 dependencies = [
     { name = "click" },
     { name = "curies" },
@@ -641,10 +637,6 @@ dependencies = [
     { name = "pyyaml" },
     { name = "rdflib" },
     { name = "requests" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/36/3d/031e2e8ef7ca872340fb7b7102cfd1fe4a0b329dc04ff694ad9ec6ccaddc/linkml_runtime-1.10.0.tar.gz", hash = "sha256:899889d584ce8056c5c44512b2d247bdc84a8484c3aa228aeb2db283e3a9d2ec", size = 589957, upload-time = "2026-02-25T17:13:34.034Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/1c/2d/6ab4127bb9aa6e3b54ad5d81fd0c0c12e4d1a80300f2bfdac8f2e18f9d17/linkml_runtime-1.10.0-py3-none-any.whl", hash = "sha256:b7caf806e1b49bf62005d8f398b070c282742c5f6626469fdc1660add0c9da58", size = 584001, upload-time = "2026-02-25T17:13:30.603Z" },
 ]
 
 [[package]]

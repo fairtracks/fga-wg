@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: lengths_constant 
 
@@ -7,11 +10,11 @@ _Whether the sequence lengths are constant (all sequence features have the same 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/lengths_constant](https://w3id.org/fga-wg/schema/top_level/lengths_constant)
-Alias: lengths_constant
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,10 +97,9 @@ examples:
 - object: false
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: lengths_constant
 domain_of:
 - TrackGeometry
 range: boolean
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: contact_id 
 
@@ -7,11 +10,11 @@ _Globally unique identifier for a person (e.g. ORCID ID) or organisation (e.g. B
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/contact_id](https://w3id.org/fga-wg/schema/top_level/contact_id)
-Alias: contact_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,10 +97,9 @@ examples:
 - value: orcid:0000-0001-2345-6789
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: contact_id
 domain_of:
 - Contact
 range: curie
 
 ```
-</details>
+</details></div>

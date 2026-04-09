@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Experiment 
 
@@ -6,6 +9,8 @@
 _Represents a sequencing experiment that has been carried out within a study, based on biological samples, and providing data files as output. Subsequent analysis of output data is described by the Analysis entity._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -229,7 +234,6 @@ attributes:
     - value: encode:ENCSR000DPJ
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: experiment_external_id
     owner: Experiment
     domain_of:
     - Experiment
@@ -243,7 +247,6 @@ attributes:
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     identifier: true
-    alias: experiment_id
     owner: Experiment
     domain_of:
     - Experiment
@@ -258,7 +261,6 @@ attributes:
     - value: H3K9me3 ChIP-seq on human AG04450
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: experiment_label
     owner: Experiment
     domain_of:
     - Experiment
@@ -273,7 +275,6 @@ attributes:
     - value: study:E-GEOD-35583
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: experiment_study_ref
     owner: Experiment
     domain_of:
     - Experiment
@@ -295,7 +296,6 @@ attributes:
         - '2_1'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: experiment_samples
     owner: Experiment
     domain_of:
     - Experiment
@@ -311,7 +311,6 @@ attributes:
         label: genomic_DNA
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: molecule_type
     owner: Experiment
     domain_of:
     - Experiment
@@ -326,7 +325,6 @@ attributes:
         label: ChIP-seq assay
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: assay_type
     owner: Experiment
     domain_of:
     - Experiment
@@ -339,7 +337,6 @@ attributes:
     - value: https://www.encodeproject.org/documents/92cd1386-ccad-450a-b5a6-ad49983e7e3f/@@download/attachment/wgEncodeUwHistone.release5.html.pdf
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: design_description
     owner: Experiment
     domain_of:
     - Experiment
@@ -353,7 +350,6 @@ attributes:
         label: single fragment library
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: library_layout
     owner: Experiment
     domain_of:
     - Experiment
@@ -371,7 +367,6 @@ attributes:
         label: Illumina Genome Analyzer
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: instrument
     owner: Experiment
     domain_of:
     - Experiment
@@ -383,7 +378,6 @@ attributes:
       of dumping free text in this field.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: sequencing_protocol
     owner: Experiment
     domain_of:
     - Experiment
@@ -397,7 +391,6 @@ attributes:
         label: H3K9Me3
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: antibody_target
     owner: Experiment
     domain_of:
     - Experiment
@@ -411,7 +404,6 @@ attributes:
         label: histone H3K4 trimethyltransferase activity
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: biological_processes
     owner: Experiment
     domain_of:
     - Experiment
@@ -419,4 +411,4 @@ attributes:
     multivalued: true
 
 ```
-</details>
+</details></div>

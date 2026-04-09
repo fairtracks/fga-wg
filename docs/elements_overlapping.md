@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: elements_overlapping 
 
@@ -7,11 +10,11 @@ _Whether the sequence features are overlapping (at least one base pair is simult
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/elements_overlapping](https://w3id.org/fga-wg/schema/top_level/elements_overlapping)
-Alias: elements_overlapping
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - object: false
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: elements_overlapping
 domain_of:
 - TrackGeometry
 range: boolean
 required: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: TrackGeometry 
 
@@ -6,6 +9,8 @@
 _Overall geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track, in line with the track type delineations from Gundersen et. al, 2011. While conceptually based on visual characteristics, these properties are also useful to e.g. select relevant annotation files for non-visual analyses._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -279,7 +284,6 @@ attributes:
     - object: true
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: has_gaps
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -293,7 +297,6 @@ attributes:
     - object: true
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: has_lengths
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -307,7 +310,6 @@ attributes:
     - object: false
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: has_strands
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -321,7 +323,6 @@ attributes:
     - object: true
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: has_values
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -335,7 +336,6 @@ attributes:
     - object: false
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: has_edges
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -349,7 +349,6 @@ attributes:
     - object: true
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: has_names
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -363,7 +362,6 @@ attributes:
     - object: false
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: elements_overlapping
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -377,7 +375,6 @@ attributes:
     - object: false
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: elements_circular
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -391,7 +388,6 @@ attributes:
     - object: false
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: lengths_constant
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -403,7 +399,6 @@ attributes:
     - value: multiple
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: value_type
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -414,7 +409,6 @@ attributes:
       one edge between sequence features has an associated weight).
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: edges_have_weights
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -424,7 +418,6 @@ attributes:
     description: The type of values associated with the edges.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: edge_weight_type
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -435,7 +428,6 @@ attributes:
       one edge between sequence features is defined with a direction).
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: edges_are_directed
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -447,7 +439,6 @@ attributes:
       such as genes to exons, i.e. where the child is fully covered by the parent).
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: edges_denote_parents
     owner: TrackGeometry
     domain_of:
     - TrackGeometry
@@ -504,4 +495,4 @@ rules:
         required: true
 
 ```
-</details>
+</details></div>

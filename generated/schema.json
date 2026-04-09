@@ -6,11 +6,19 @@
             "properties": {
                 "access_method": {
                     "$ref": "#/$defs/AccessMethods",
-                    "description": "Access method used to access the File object (orig: DrsObject)."
+                    "description": "Access method used to access the File object (orig: DrsObject).",
+                    "examples": [
+                        "https"
+                    ]
                 },
                 "access_url": {
                     "$ref": "#/$defs/AccessURL",
-                    "description": "AccessURL object providing URL and associated HTTP headers to access the File object (orig: DrsObject)."
+                    "description": "AccessURL object providing URL and associated HTTP headers to access the File object (orig: DrsObject).",
+                    "examples": [
+                        {
+                            "url": "https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed"
+                        }
+                    ]
                 },
                 "region": {
                     "description": "Name of the region in the cloud service provider that the object belongs to.",
@@ -58,6 +66,9 @@
                 },
                 "url": {
                     "description": "A fully resolvable URL that can be used to fetch the actual object bytes.",
+                    "examples": [
+                        "https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed"
+                    ],
                     "type": "string"
                 }
             },
@@ -73,6 +84,9 @@
             "properties": {
                 "analysis_description": {
                     "description": "Human-readable description of the analysis.",
+                    "examples": [
+                        "ENCODE3 ChIP-seq pipeline on GRCH38 with replicated peak calling using MACS."
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -80,6 +94,9 @@
                 },
                 "analysis_external_id": {
                     "description": "External, globally unique identifier for the experiment.",
+                    "examples": [
+                        "encode:ENCAN718KHT"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -87,10 +104,42 @@
                 },
                 "analysis_id": {
                     "description": "Internal identifier for the experiment (unique within the metadata deposit). ",
+                    "examples": [
+                        "analysis:ENCAN718KHT"
+                    ],
                     "type": "string"
                 },
                 "analysis_input_sources": {
                     "description": "External or internal references to sources for the input data analyzed. Internal references should lead to FileCollection, File, Experiment, or Analysis objects.",
+                    "examples": [
+                        [
+                            {
+                                "biological_replicate_labels": [
+                                    "1",
+                                    "2"
+                                ],
+                                "inputsource_ref": "experiment:ENCSR000DPJ",
+                                "qualified_relation": "prov:wasInformedBy",
+                                "technical_replicate_labels": [
+                                    "1_1",
+                                    "2_1"
+                                ]
+                            },
+                            {
+                                "biological_replicate_labels": [
+                                    "1",
+                                    "2"
+                                ],
+                                "date_retrieved": "2016-04-19",
+                                "inputsource_external_ref": "https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15",
+                                "qualified_relation": "https://bioschemas.org/FormalParameter",
+                                "technical_replicate_labels": [
+                                    "1_1",
+                                    "2_1"
+                                ]
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/InputSource"
                     },
@@ -98,6 +147,9 @@
                 },
                 "analysis_label": {
                     "description": "A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.",
+                    "examples": [
+                        "ENCODE3 ChIP-seq pipeline, GRCH38, replicated peak calling"
+                    ],
                     "pattern": "^.{1,60}$",
                     "type": "string"
                 },
@@ -113,10 +165,16 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Main software tool used for the analysis."
+                    "description": "Main software tool used for the analysis.",
+                    "examples": [
+                        "biotools:macs"
+                    ]
                 },
                 "analysis_main_tool_version": {
                     "description": "Version of the main software tool used for the analysis.",
+                    "examples": [
+                        "2.10"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -124,6 +182,9 @@
                 },
                 "analysis_protocol": {
                     "description": "Document describing the analysis protocol that was followed.",
+                    "examples": [
+                        "https://www.encodeproject.org/documents/7009beb8-340b-4e71-b9db-53bb020c7fe2/@@download/attachment/ChIP-seq_pipeline_overview.pdf"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -131,6 +192,9 @@
                 },
                 "analysis_study_ref": {
                     "description": "Internal reference to the study within which the analysis has been carried out.",
+                    "examples": [
+                        "study:S-EPMC7391744"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -138,10 +202,19 @@
                 },
                 "analysis_type": {
                     "$ref": "#/$defs/Term",
-                    "description": "The type of analysis carried out."
+                    "description": "The type of analysis carried out.",
+                    "examples": [
+                        {
+                            "id": "edam:operation_3222",
+                            "label": "Peak calling"
+                        }
+                    ]
                 },
                 "analysis_workflow": {
                     "description": "External reference to the analysis workflow, with availability in at least one machine-operable form (e.g. CWL, Nextflow, ...).",
+                    "examples": [
+                        "encode:ENCPL272XAE"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -159,7 +232,7 @@
         },
         "Any": {
             "additionalProperties": true,
-            "description": "The linkml:Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).",
+            "description": "The Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).",
             "title": "Any",
             "type": [
                 "null",
@@ -175,6 +248,11 @@
             "properties": {
                 "key": {
                     "description": "Key/name of the assessment value.",
+                    "examples": [
+                        "nreads",
+                        "nreads_in_peaks",
+                        "frip"
+                    ],
                     "type": "string"
                 },
                 "value": {
@@ -193,7 +271,12 @@
                             "type": "string"
                         }
                     ],
-                    "description": "Value corresponding to the assessment key."
+                    "description": "Value corresponding to the assessment key.",
+                    "examples": [
+                        21018235,
+                        6161851,
+                        0.2931669095906483
+                    ]
                 }
             },
             "required": [
@@ -225,6 +308,9 @@
             "properties": {
                 "checksum": {
                     "description": "The hex-string encoded checksum for the data.",
+                    "examples": [
+                        "535bc9628a1c5e5215226f9996e4eaca"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -232,6 +318,9 @@
                 },
                 "checksum_type": {
                     "description": "The digest method used to create the checksum. The value (e.g. `sha-256`) SHOULD be listed as `Hash Name String` in the https://www.iana.org/assignments/named-information/named-information.xhtml#hash-alg [IANA Named Information Hash Algorithm Registry]. Other values MAY be used, as long as implementors are aware of the issues discussed in https://tools.ietf.org/html/rfc6920#section-9.4 [RFC6920]. GA4GH may provide more explicit guidance for use of non-IANA-registered algorithms in the future. Until then, if implementors do choose such an algorithm (e.g. because it's implemented by their storage provider), they SHOULD use an existing standard `type` value such as `md5`, `etag`, `crc32c`, `trunc512`, or `sha1`.",
+                    "examples": [
+                        "md5"
+                    ],
                     "type": "string"
                 }
             },
@@ -247,6 +336,9 @@
             "properties": {
                 "contact_id": {
                     "description": "Globally unique identifier for a person (e.g. ORCID ID) or organisation (e.g. BioProject accession).",
+                    "examples": [
+                        "orcid:0000-0001-2345-6789"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -254,6 +346,9 @@
                 },
                 "email": {
                     "description": "E-mail address of the person or organisation.",
+                    "examples": [
+                        "john@doe.com"
+                    ],
                     "pattern": "^\\S+@\\S+\\.\\S+$",
                     "type": [
                         "string",
@@ -262,6 +357,9 @@
                 },
                 "name": {
                     "description": "Name of the person or organisation.",
+                    "examples": [
+                        "John Doe"
+                    ],
                     "type": "string"
                 }
             },
@@ -289,11 +387,17 @@
             "properties": {
                 "deposit_first_created": {
                     "description": "The date and time of the creation of the first deposited version of the metadata document.",
+                    "examples": [
+                        "2025-07-01T12:36:00Z"
+                    ],
                     "format": "date-time",
                     "type": "string"
                 },
                 "deposit_id": {
                     "description": "A globally unique and persistent identifier for the public deposit of the metadata document. A DOI or other persistent identifier is recommended.",
+                    "examples": [
+                        "doi:10.1234/zenodo.12345678"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -301,11 +405,17 @@
                 },
                 "deposit_last_changed": {
                     "description": "The date and time of the last deposited change of the current metadata document (corresponding to \"deposit_versioned_id\").",
+                    "examples": [
+                        "2025-07-01T12:36:00Z"
+                    ],
                     "format": "date-time",
                     "type": "string"
                 },
                 "deposit_versioned_id": {
                     "description": "A globally unique, persistent and versioned identifier for the public deposit of the metadata document. A versioned DOI to a deposited document is recommended.",
+                    "examples": [
+                        "doi:10.1234/zenodo.12345679"
+                    ],
                     "type": "string"
                 }
             },
@@ -330,7 +440,15 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Information about the public deposit of the metadata document."
+                    "description": "Information about the public deposit of the metadata document.",
+                    "examples": [
+                        {
+                            "deposit_first_created": "2025-07-01T12:36:00Z",
+                            "deposit_id": "doi:10.1234/zenodo.12345678",
+                            "deposit_last_changed": "2025-07-01T12:36:00Z",
+                            "deposit_versioned_id": "doi:10.1234/zenodo.12345679"
+                        }
+                    ]
                 },
                 "document_description": {
                     "anyOf": [
@@ -344,10 +462,21 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Human-readable description of the metadata document."
+                    "description": "Human-readable description of the metadata document.",
+                    "examples": [
+                        "The metadata contents of the International Human Epigenome Consortium (IHEC) data portal, harmonised to follow the metadata model developed by the \"FAIRification of Genomic Annotations WG\" in the Research Data Alliance (RDA), enhanced with metadata from original sources."
+                    ]
                 },
                 "document_input_sources": {
                     "description": "References to other input sources from which this entire metadata document was derived, or possibly including DOIs of other metadata documents used as source.",
+                    "examples": [
+                        [
+                            {
+                                "inputsource_external_ref": "https://epigenomesportal.ca/ihec/",
+                                "qualified_relation": "prov:wasDerivedFrom"
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/InputSource"
                     },
@@ -358,11 +487,53 @@
                 },
                 "document_label": {
                     "description": "A human-readable description of the metadata document, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.",
+                    "examples": [
+                        "IHEC data portal metadata, harmonised to the FGA-WG model."
+                    ],
                     "pattern": "^.{1,60}$",
                     "type": "string"
                 },
                 "document_ontology_versions": {
                     "description": "Map from the version-agnostic URL to a versioned URL (e.g. \"versionIRI\" in owl) of each ontology used in the current metadata deposit (corresponding to deposit_versioned_id\").",
+                    "examples": [
+                        [
+                            {
+                                "namespace": "edam",
+                                "ontology_url": "http://edamontology.org/EDAM.owl",
+                                "versioned_ontology_url": "http://edamontology.org/EDAM_1.21.owl"
+                            },
+                            {
+                                "namespace": "cl",
+                                "ontology_url": "http://purl.obolibrary.org/obo/cl.owl",
+                                "versioned_ontology_url": "http://purl.obolibrary.org/obo/cl/releases/2020-05-21/cl.owl"
+                            },
+                            {
+                                "namespace": "efo",
+                                "ontology_url": "http://www.ebi.ac.uk/efo/efo.owl",
+                                "versioned_ontology_url": "http://www.ebi.ac.uk/efo/releases/v3.21.0/efo.owl"
+                            },
+                            {
+                                "namespace": "ncit",
+                                "ontology_url": "http://purl.obolibrary.org/obo/ncit.owl",
+                                "versioned_ontology_url": "http://purl.obolibrary.org/obo/ncit/releases/2020-07-17/ncit.owl"
+                            },
+                            {
+                                "namespace": "obi",
+                                "ontology_url": "http://purl.obolibrary.org/obo/obi.owl",
+                                "versioned_ontology_url": "http://purl.obolibrary.org/obo/obi/2020-04-23/obi.owl"
+                            },
+                            {
+                                "namespace": "so",
+                                "ontology_url": "http://purl.obolibrary.org/obo/so.owl",
+                                "versioned_ontology_url": "http://purl.obolibrary.org/obo/so/2020-08-20/so.owl"
+                            },
+                            {
+                                "namespace": "uberon",
+                                "ontology_url": "http://purl.obolibrary.org/obo/uberon.owl",
+                                "versioned_ontology_url": "http://purl.obolibrary.org/obo/uberon/releases/2020-06-30/uberon.owl"
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/OntologyVersions"
                     },
@@ -382,6 +553,9 @@
             "properties": {
                 "donor_external_id": {
                     "description": "External, globally unique identifier for the donor/organism.",
+                    "examples": [
+                        "biosamples:SAMN04284578"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -389,6 +563,9 @@
                 },
                 "donor_id": {
                     "description": "Internal identifier for the donor/organism (unique within the metadata deposit). ",
+                    "examples": [
+                        "donor:ENCDO001AAA"
+                    ],
                     "type": "string"
                 },
                 "sex": {
@@ -400,11 +577,23 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Biological sex of the donor/organism."
+                    "description": "Biological sex of the donor/organism.",
+                    "examples": [
+                        {
+                            "id": "CARO:0000027",
+                            "label": "male organism"
+                        }
+                    ]
                 },
                 "species_taxon": {
                     "$ref": "#/$defs/Term",
-                    "description": "Taxonomical classification of the species of the donor/organism."
+                    "description": "Taxonomical classification of the species of the donor/organism.",
+                    "examples": [
+                        {
+                            "id": "NCBITaxon:9606",
+                            "label": "Homo sapiens"
+                        }
+                    ]
                 }
             },
             "required": [
@@ -427,14 +616,34 @@
                             "type": "null"
                         }
                     ],
-                    "description": "The target of the antibody used in the experiment."
+                    "description": "The target of the antibody used in the experiment.",
+                    "examples": [
+                        {
+                            "id": "SO:0001707",
+                            "label": "H3K9Me3"
+                        }
+                    ]
                 },
                 "assay_type": {
                     "$ref": "#/$defs/Term",
-                    "description": "Sequencing technique intended for this library."
+                    "description": "Sequencing technique intended for this library.",
+                    "examples": [
+                        {
+                            "id": "obi:OBI_0000716",
+                            "label": "ChIP-seq assay"
+                        }
+                    ]
                 },
                 "biological_processes": {
                     "description": "Biological processes illuminated by the experiment.",
+                    "examples": [
+                        [
+                            {
+                                "id": "GO:0140999",
+                                "label": "histone H3K4 trimethyltransferase activity"
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/Term"
                     },
@@ -445,6 +654,9 @@
                 },
                 "design_description": {
                     "description": "The high-level experiment design including layout, protocol.",
+                    "examples": [
+                        "https://www.encodeproject.org/documents/92cd1386-ccad-450a-b5a6-ad49983e7e3f/@@download/attachment/wgEncodeUwHistone.release5.html.pdf"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -452,6 +664,9 @@
                 },
                 "experiment_external_id": {
                     "description": "External, globally unique identifier for the experiment.",
+                    "examples": [
+                        "encode:ENCSR000DPJ"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -459,15 +674,37 @@
                 },
                 "experiment_id": {
                     "description": "Internal identifier for the experiment (unique within the metadata deposit).",
+                    "examples": [
+                        "experiment:ENCSR000DPJ"
+                    ],
                     "type": "string"
                 },
                 "experiment_label": {
                     "description": "A human-readable description of the experiment, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.",
+                    "examples": [
+                        "H3K9me3 ChIP-seq on human AG04450"
+                    ],
                     "pattern": "^.{1,60}$",
                     "type": "string"
                 },
                 "experiment_samples": {
                     "description": "External or internal references to samples used in the experiment. Internal references should refer to Sample objects.",
+                    "examples": [
+                        [
+                            {
+                                "biological_replicate_labels": [
+                                    "1",
+                                    "2"
+                                ],
+                                "inputsource_ref": "sample:ENCBS004ENC",
+                                "qualified_relation": "prov:used",
+                                "technical_replicate_labels": [
+                                    "1_1",
+                                    "2_1"
+                                ]
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/InputSource"
                     },
@@ -475,6 +712,9 @@
                 },
                 "experiment_study_ref": {
                     "description": "Internal reference to the study within which the experiment has been carried out.",
+                    "examples": [
+                        "study:E-GEOD-35583"
+                    ],
                     "type": "string"
                 },
                 "instrument": {
@@ -486,7 +726,13 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Technology platform used to perform nucleic acid sequencing, including name and/or number associated with a specific sequencing instrument model. It is recommended to be as specific as possible for this property (e.g. if the model/revision are available, providing that instead of just the instrument maker)."
+                    "description": "Technology platform used to perform nucleic acid sequencing, including name and/or number associated with a specific sequencing instrument model. It is recommended to be as specific as possible for this property (e.g. if the model/revision are available, providing that instead of just the instrument maker).",
+                    "examples": [
+                        {
+                            "id": "obi:OBI_0002128",
+                            "label": "Illumina Genome Analyzer"
+                        }
+                    ]
                 },
                 "library_layout": {
                     "anyOf": [
@@ -497,11 +743,23 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Whether the library was built as paired-end, or single-end."
+                    "description": "Whether the library was built as paired-end, or single-end.",
+                    "examples": [
+                        {
+                            "id": "obi:OBI_0000736",
+                            "label": "single fragment library"
+                        }
+                    ]
                 },
                 "molecule_type": {
                     "$ref": "#/$defs/Term",
-                    "description": "Specifies the type of source material that is being sequenced."
+                    "description": "Specifies the type of source material that is being sequenced.",
+                    "examples": [
+                        {
+                            "id": "SO:0000991",
+                            "label": "genomic_DNA"
+                        }
+                    ]
                 },
                 "sequencing_protocol": {
                     "description": "Set of rules which guides how the sequencing protocol was followed. Change-tracking services such as Protocol.io or GitHub are encouraged instead of dumping free text in this field.",
@@ -528,6 +786,40 @@
             "properties": {
                 "access_methods": {
                     "description": "The list of access methods that can be used to fetch the data file. ",
+                    "examples": [
+                        [
+                            {
+                                "access_method": "https",
+                                "access_url": {
+                                    "url": "https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed"
+                                }
+                            },
+                            {
+                                "access_method": "https",
+                                "access_url": {
+                                    "url": "https://www.encodeproject.org/files/ENCFF323LCS/@@download/ENCFF323LCS.bigBed"
+                                }
+                            },
+                            {
+                                "access_method": "s3",
+                                "access_url": {
+                                    "url": "s3://encode-public/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed"
+                                }
+                            },
+                            {
+                                "access_method": "https",
+                                "access_url": {
+                                    "url": "https://encode-public.s3.amazonaws.com/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed"
+                                }
+                            },
+                            {
+                                "access_method": "https",
+                                "access_url": {
+                                    "url": "https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D"
+                                }
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/AccessMethod"
                     },
@@ -535,6 +827,14 @@
                 },
                 "checksums": {
                     "description": "A list of checksums of the data file. At least one checksum must be provided. For blobs, the checksum is computed over the bytes in the blob.",
+                    "examples": [
+                        [
+                            {
+                                "checksum": "535bc9628a1c5e5215226f9996e4eaca",
+                                "type": "md5"
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/Checksum"
                     },
@@ -542,15 +842,24 @@
                 },
                 "created_time": {
                     "description": "Timestamp of content creation in RFC3339. (This is the creation time of the underlying content, not of the JSON object.).",
+                    "examples": [
+                        "2016-11-13T17:42:04.385801+00:00"
+                    ],
                     "format": "date-time",
                     "type": "string"
                 },
                 "data_content": {
                     "$ref": "#/$defs/OutputType",
-                    "description": "Classification describing the file's purpose or contents."
+                    "description": "Classification describing the file's purpose or contents.",
+                    "examples": [
+                        "replicated peaks"
+                    ]
                 },
                 "drs_uri": {
                     "description": "A drs:// hostname-based URI, as defined in the DRS documentation, that tells clients how to access this object. The intent of this field is to make DRS objects self-contained, and therefore easier for clients to store and pass around. For example, if you arrive at this DRS JSON by resolving a compact identifier-based DRS URI, the self_uri presents you with a hostname and properly encoded DRS ID for use in subsequent access endpoint calls.",
+                    "examples": [
+                        "drs://drs.example.org/ENCFF323LCS"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -558,6 +867,9 @@
                 },
                 "file_description": {
                     "description": "A human readable description of the data file.",
+                    "examples": [
+                        "H3K9me3 ChIP-seq replicated peaks on human (hg38) AG04450 (Fibroblast derived cell line)."
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -565,6 +877,9 @@
                 },
                 "file_external_id": {
                     "description": "External, globally unique identifier for the data file.",
+                    "examples": [
+                        "encode:ENCFF323LCS"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -572,10 +887,29 @@
                 },
                 "file_id": {
                     "description": "Internal identifier for the data file (unique within the metadata deposit). ",
+                    "examples": [
+                        "file:ENCFF323LCS"
+                    ],
                     "type": "string"
                 },
                 "file_input_sources": {
                     "description": "External or internal references to data sources for the file, typically a data collection or a process that has generated the file. Internal references should lead to FileCollection, File, Experiment, or Analysis objects.",
+                    "examples": [
+                        [
+                            {
+                                "biological_replicate_labels": [
+                                    "1",
+                                    "2"
+                                ],
+                                "inputsource_ref": "analysis:ENCAN718KHT",
+                                "qualified_relation": "prov:wasGeneratedBy",
+                                "technical_replicate_labels": [
+                                    "1_1",
+                                    "2_1"
+                                ]
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/InputSource"
                     },
@@ -583,11 +917,17 @@
                 },
                 "file_label": {
                     "description": "A human-readable description of the data file, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.",
+                    "examples": [
+                        "H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450"
+                    ],
                     "pattern": "^.{1,60}$",
                     "type": "string"
                 },
                 "file_name": {
                     "description": "A string that can be used to name a data file. This string is made up of uppercase and lowercase letters, decimal digits, hypen, period, and underscore [A-Za-z0-9.-_]. See http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_282 [portable filenames].",
+                    "examples": [
+                        "87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -595,14 +935,26 @@
                 },
                 "file_size": {
                     "description": "For blobs, the blob size in bytes. ",
+                    "examples": [
+                        5359719
+                    ],
                     "type": "integer"
                 },
                 "file_type": {
                     "$ref": "#/$defs/Term",
-                    "description": "The file format of the data file."
+                    "description": "The file format of the data file.",
+                    "examples": [
+                        {
+                            "id": "edam:format_3004",
+                            "label": "bigBed"
+                        }
+                    ]
                 },
                 "file_version": {
                     "description": "A string representing a version. (Some systems may use checksum, a RFC3339 timestamp, or an incrementing version number.).",
+                    "examples": [
+                        "efd4e74e-7875-4d13-9630-0085bc834f18"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -610,6 +962,11 @@
                 },
                 "filecollection_refs": {
                     "description": "Internal references to the FileCollection objects (within the deposit) that contains the data file, if any.",
+                    "examples": [
+                        [
+                            "collection:ihec_encode"
+                        ]
+                    ],
                     "items": {
                         "type": "string"
                     },
@@ -617,6 +974,9 @@
                 },
                 "mime_type": {
                     "description": "A string providing the mime-type of the data file.",
+                    "examples": [
+                        "application/octet-stream"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -624,6 +984,19 @@
                 },
                 "quality_assessments": {
                     "description": "An array of QualityAssessment objects containing the main quality scores from assessment techniques applied to the data file.",
+                    "examples": [
+                        [
+                            {
+                                "assessment_details_url": "https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/",
+                                "assessment_method": "histone-chipseq-quality-metrics",
+                                "assessment_values": {
+                                    "frip": 0.2931669095906483,
+                                    "nreads": 21018235,
+                                    "nreads_in_peaks": 6161851
+                                }
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/QualityAssessment"
                     },
@@ -634,6 +1007,9 @@
                 },
                 "run_provenance": {
                     "description": "Document detailing the provenance of the experiment or analysis run which produced the file as one of its outputs. The provenance info should include software versions, parameter settings, etc.",
+                    "examples": [
+                        "encode:ENCAN718KHT"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -641,6 +1017,9 @@
                 },
                 "updated_time": {
                     "description": "Timestamp of content update in RFC3339, identical to created_time in systems that do not support updates. (This is the update time of the underlying content, not of the JSON object.).",
+                    "examples": [
+                        "2016-11-13T17:42:04.385801+00:00"
+                    ],
                     "format": "date-time",
                     "type": [
                         "string",
@@ -676,10 +1055,20 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Contact point to the creator and/or maintainer of the file collection."
+                    "description": "Contact point to the creator and/or maintainer of the file collection.",
+                    "examples": [
+                        {
+                            "contact_id": "bioproject:PRJNA234466",
+                            "email": "info@ihec-epigenomes.org",
+                            "name": "International Human Epigenome Consortium"
+                        }
+                    ]
                 },
                 "deposit_versioned_ref": {
                     "description": "Reference to versioned id of deposit containing this file collection.",
+                    "examples": [
+                        "doi:10.1234/zenodo.12345679"
+                    ],
                     "type": "string"
                 },
                 "filecollection_description": {
@@ -694,7 +1083,10 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Human-readable description of the file collection."
+                    "description": "Human-readable description of the file collection.",
+                    "examples": [
+                        "ENCODE dataset in the International Human Epigenome Consortium (IHEC) data portal, enhanced with metadata from the ENCODE data portal."
+                    ]
                 },
                 "filecollection_external_id": {
                     "description": "External, globally unique identifier for the file collection (in most cases, this will not exist).",
@@ -705,10 +1097,26 @@
                 },
                 "filecollection_id": {
                     "description": "Internal identifier for the file collection (unique within the metadata deposit). ",
+                    "examples": [
+                        "filecollection:ihec_encode"
+                    ],
                     "type": "string"
                 },
                 "filecollection_input_sources": {
                     "description": "References to other input sources from which this file collection was derived.",
+                    "examples": [
+                        [
+                            {
+                                "inputsource_external_ref": "https://epigenomesportal.ca/ihec/grid.html?build=2020-10&assembly=4&institutions=4",
+                                "qualified_relation": "prov:wasDerivedFrom",
+                                "version": "2020-10"
+                            },
+                            {
+                                "inputsource_external_ref": "https://www.encodeproject.org",
+                                "qualified_relation": "prov:hadPrimarySource"
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/InputSource"
                     },
@@ -719,6 +1127,9 @@
                 },
                 "filecollection_label": {
                     "description": "A human-readable description of the file collection, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.",
+                    "examples": [
+                        "IHEC data portal: ENCODE dataset"
+                    ],
                     "pattern": "^.{1,60}$",
                     "type": "string"
                 }
@@ -737,6 +1148,11 @@
             "properties": {
                 "accessions": {
                     "description": "Database accession numbers for the genome assembly, if available. Should precisely identify the genome assembly and be omitted if changes have been made to the assembly after retrieval, such as removing the alternate sequences.",
+                    "examples": [
+                        [
+                            "encode:ENCSR425FOI"
+                        ]
+                    ],
                     "items": {
                         "type": "string"
                     },
@@ -747,6 +1163,13 @@
                 },
                 "aliases": {
                     "description": "Human-readable aliases of the genome assembly. Can be imprecise, as preciseness is enforced in the other fields.",
+                    "examples": [
+                        [
+                            "GRCh38_no_alt_analysis_set_GCA_000001405.15",
+                            "GRCh38",
+                            "hg38"
+                        ]
+                    ],
                     "items": {
                         "type": "string"
                     },
@@ -754,14 +1177,23 @@
                 },
                 "seqcol_digest": {
                     "description": "Top-level sequence collection digest according to the GA4GH refget, Sequence Collections standard (v1.0). This a globally unique identifier for the genome assembly, algorithmically derivable from the genome assembly content. Usage is to uniquely identify the exact genome assembly used and allow detailed comparisons across genome assembly variants (say, variants of the GRCh38 assembly).",
+                    "examples": [
+                        "ga4gh:SC.EiFob05aCWgVU_B_Ae0cypnQut3cxUP1"
+                    ],
                     "type": "string"
                 },
                 "seqcol_ordered_coord_system": {
                     "description": "Content-derived digest that uniquely identifies the ordered coordinate system of the genome assembly. (Coordinate systems with the same sequence names and lengths, but where the sequences are ordered differently, will have different ordered digests.). Usage is the ordered coordinate system digest can be used to uniquely generate a chromSizes file, useful in a number of analysis tools. Definition is the ordered coordinate system digest is defined as the level 1 digest of the name_length_pairs attribute of the sequence collection generated from the genome assembly.",
+                    "examples": [
+                        "ga4gh:SC.name_length_pairs.Yyz0Expaluj09xdDYg2Y6VOApvjg05Hf"
+                    ],
                     "type": "string"
                 },
                 "seqcol_unordered_coord_system": {
                     "description": "Content-derived digest that uniquely identifies the order-invariant coordinate system of the genome assembly. This digest will be shared across all coordinate systems with the same sequence names and lenghts, regardless of the order of the sequences. Usage is the order-invariant coordinate system digest can be used to uniquely describe the coordinate system of a particular genome browser instance and the annotation files that are compatible with it. Definition is the order-invariant coordinate system digest is defined as the level 1 digest of the sorted_name_length_pairs attribute of the sequence collection generated from the genome assembly.",
+                    "examples": [
+                        "ga4gh:SC.sorted_name_length_pairs._dMQ5dPUNVx4OGQnDAPmGMkVRWWcYV99"
+                    ],
                     "type": "string"
                 }
             },
@@ -780,6 +1212,40 @@
             "properties": {
                 "access_methods": {
                     "description": "The list of access methods that can be used to fetch the data file. ",
+                    "examples": [
+                        [
+                            {
+                                "access_method": "https",
+                                "access_url": {
+                                    "url": "https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed"
+                                }
+                            },
+                            {
+                                "access_method": "https",
+                                "access_url": {
+                                    "url": "https://www.encodeproject.org/files/ENCFF323LCS/@@download/ENCFF323LCS.bigBed"
+                                }
+                            },
+                            {
+                                "access_method": "s3",
+                                "access_url": {
+                                    "url": "s3://encode-public/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed"
+                                }
+                            },
+                            {
+                                "access_method": "https",
+                                "access_url": {
+                                    "url": "https://encode-public.s3.amazonaws.com/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed"
+                                }
+                            },
+                            {
+                                "access_method": "https",
+                                "access_url": {
+                                    "url": "https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D"
+                                }
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/AccessMethod"
                     },
@@ -787,6 +1253,14 @@
                 },
                 "checksums": {
                     "description": "A list of checksums of the data file. At least one checksum must be provided. For blobs, the checksum is computed over the bytes in the blob.",
+                    "examples": [
+                        [
+                            {
+                                "checksum": "535bc9628a1c5e5215226f9996e4eaca",
+                                "type": "md5"
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/Checksum"
                     },
@@ -794,15 +1268,24 @@
                 },
                 "created_time": {
                     "description": "Timestamp of content creation in RFC3339. (This is the creation time of the underlying content, not of the JSON object.).",
+                    "examples": [
+                        "2016-11-13T17:42:04.385801+00:00"
+                    ],
                     "format": "date-time",
                     "type": "string"
                 },
                 "data_content": {
                     "$ref": "#/$defs/OutputType",
-                    "description": "Classification describing the file's purpose or contents."
+                    "description": "Classification describing the file's purpose or contents.",
+                    "examples": [
+                        "replicated peaks"
+                    ]
                 },
                 "drs_uri": {
                     "description": "A drs:// hostname-based URI, as defined in the DRS documentation, that tells clients how to access this object. The intent of this field is to make DRS objects self-contained, and therefore easier for clients to store and pass around. For example, if you arrive at this DRS JSON by resolving a compact identifier-based DRS URI, the self_uri presents you with a hostname and properly encoded DRS ID for use in subsequent access endpoint calls.",
+                    "examples": [
+                        "drs://drs.example.org/ENCFF323LCS"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -810,6 +1293,9 @@
                 },
                 "file_description": {
                     "description": "A human readable description of the data file.",
+                    "examples": [
+                        "H3K9me3 ChIP-seq replicated peaks on human (hg38) AG04450 (Fibroblast derived cell line)."
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -817,6 +1303,9 @@
                 },
                 "file_external_id": {
                     "description": "External, globally unique identifier for the data file.",
+                    "examples": [
+                        "encode:ENCFF323LCS"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -824,10 +1313,29 @@
                 },
                 "file_id": {
                     "description": "Internal identifier for the data file (unique within the metadata deposit). ",
+                    "examples": [
+                        "file:ENCFF323LCS"
+                    ],
                     "type": "string"
                 },
                 "file_input_sources": {
                     "description": "External or internal references to data sources for the file, typically a data collection or a process that has generated the file. Internal references should lead to FileCollection, File, Experiment, or Analysis objects.",
+                    "examples": [
+                        [
+                            {
+                                "biological_replicate_labels": [
+                                    "1",
+                                    "2"
+                                ],
+                                "inputsource_ref": "analysis:ENCAN718KHT",
+                                "qualified_relation": "prov:wasGeneratedBy",
+                                "technical_replicate_labels": [
+                                    "1_1",
+                                    "2_1"
+                                ]
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/InputSource"
                     },
@@ -835,11 +1343,17 @@
                 },
                 "file_label": {
                     "description": "A human-readable description of the data file, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.",
+                    "examples": [
+                        "H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450"
+                    ],
                     "pattern": "^.{1,60}$",
                     "type": "string"
                 },
                 "file_name": {
                     "description": "A string that can be used to name a data file. This string is made up of uppercase and lowercase letters, decimal digits, hypen, period, and underscore [A-Za-z0-9.-_]. See http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_282 [portable filenames].",
+                    "examples": [
+                        "87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -847,14 +1361,26 @@
                 },
                 "file_size": {
                     "description": "For blobs, the blob size in bytes. ",
+                    "examples": [
+                        5359719
+                    ],
                     "type": "integer"
                 },
                 "file_type": {
                     "$ref": "#/$defs/Term",
-                    "description": "The file format of the data file."
+                    "description": "The file format of the data file.",
+                    "examples": [
+                        {
+                            "id": "edam:format_3004",
+                            "label": "bigBed"
+                        }
+                    ]
                 },
                 "file_version": {
                     "description": "A string representing a version. (Some systems may use checksum, a RFC3339 timestamp, or an incrementing version number.).",
+                    "examples": [
+                        "efd4e74e-7875-4d13-9630-0085bc834f18"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -862,6 +1388,11 @@
                 },
                 "filecollection_refs": {
                     "description": "Internal references to the FileCollection objects (within the deposit) that contains the data file, if any.",
+                    "examples": [
+                        [
+                            "collection:ihec_encode"
+                        ]
+                    ],
                     "items": {
                         "type": "string"
                     },
@@ -869,6 +1400,9 @@
                 },
                 "genome_assembly": {
                     "description": "Information about the genome assembly used to generate the genomic annotation file, consequently defining the genomic coordinate system for the annotation.",
+                    "examples": [
+                        "ga4gh:SC.EiFob05aCWgVU_B_Ae0cypnQut3cxUP1"
+                    ],
                     "type": "string"
                 },
                 "genomic_annotation_digest": {
@@ -880,6 +1414,9 @@
                 },
                 "mime_type": {
                     "description": "A string providing the mime-type of the data file.",
+                    "examples": [
+                        "application/octet-stream"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -887,6 +1424,19 @@
                 },
                 "quality_assessments": {
                     "description": "An array of QualityAssessment objects containing the main quality scores from assessment techniques applied to the data file.",
+                    "examples": [
+                        [
+                            {
+                                "assessment_details_url": "https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/",
+                                "assessment_method": "histone-chipseq-quality-metrics",
+                                "assessment_values": {
+                                    "frip": 0.2931669095906483,
+                                    "nreads": 21018235,
+                                    "nreads_in_peaks": 6161851
+                                }
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/QualityAssessment"
                     },
@@ -897,6 +1447,9 @@
                 },
                 "run_provenance": {
                     "description": "Document detailing the provenance of the experiment or analysis run which produced the file as one of its outputs. The provenance info should include software versions, parameter settings, etc.",
+                    "examples": [
+                        "encode:ENCAN718KHT"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -915,6 +1468,9 @@
                 },
                 "updated_time": {
                     "description": "Timestamp of content update in RFC3339, identical to created_time in systems that do not support updates. (This is the update time of the underlying content, not of the JSON object.).",
+                    "examples": [
+                        "2016-11-13T17:42:04.385801+00:00"
+                    ],
                     "format": "date-time",
                     "type": [
                         "string",
@@ -954,6 +1510,12 @@
             "properties": {
                 "biological_replicate_labels": {
                     "description": "Labels denoting the biological replicates within which the relation is defined, if any.",
+                    "examples": [
+                        [
+                            "1",
+                            "2"
+                        ]
+                    ],
                     "items": {
                         "type": "string"
                     },
@@ -982,6 +1544,9 @@
                 },
                 "date_of_retrieval": {
                     "description": "Date of retrieval from the input source, typically used to timestamp downloading data from a database or URL.",
+                    "examples": [
+                        "2016-04-19"
+                    ],
                     "format": "date-time",
                     "type": [
                         "string",
@@ -990,6 +1555,9 @@
                 },
                 "inputsource_external_ref": {
                     "description": "Reference to an external entity as the input source, using a globally unique identifier or an URL. External references will in most cases refer to a database, data record, data file, website or other data source. One of \"inputsource_external_ref\" or \"inputsource_ref\" must be specified.",
+                    "examples": [
+                        "https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -1004,10 +1572,19 @@
                 },
                 "qualified_relation": {
                     "$ref": "#/$defs/Term",
-                    "description": "A description of the relationship with the input source."
+                    "description": "A description of the relationship with the input source.",
+                    "examples": [
+                        "bioschemas:FormalParameter"
+                    ]
                 },
                 "technical_replicate_labels": {
                     "description": "Labels denoting the technical replicates within which the relation is defined, if any.",
+                    "examples": [
+                        [
+                            "1_1",
+                            "1_2"
+                        ]
+                    ],
                     "items": {
                         "type": "string"
                     },
@@ -1056,14 +1633,23 @@
             "properties": {
                 "namespace": {
                     "description": "The CURIE namespace (prefix) an ontology (e.g. \"GO\" for Gene Ontology).",
+                    "examples": [
+                        "edam"
+                    ],
                     "type": "string"
                 },
                 "ontology_url": {
                     "description": "The version-agnostic URL of the ontology (e.g. the IRI of the ontology in OWL).",
+                    "examples": [
+                        "http://edamontology.org/EDAM.owl"
+                    ],
                     "type": "string"
                 },
                 "versioned_ontology_url": {
                     "description": "The versioned URL of the ontology (e.g. the \"versionIRI\" in OWL).",
+                    "examples": [
+                        "http://edamontology.org/EDAM_1.21.owl"
+                    ],
                     "type": "string"
                 }
             },
@@ -1357,6 +1943,9 @@
             "properties": {
                 "assessment_details_url": {
                     "description": "URL to a report containing the detailed output from the quality assessment.",
+                    "examples": [
+                        "https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -1372,7 +1961,10 @@
                             "$ref": "#/$defs/Term"
                         }
                     ],
-                    "description": "Quality assessment method that has been carried out (e.g. BUSCO, OMArk, peak calling statistics, etc.)"
+                    "description": "Quality assessment method that has been carried out (e.g. BUSCO, OMArk, peak calling statistics, etc.)",
+                    "examples": [
+                        "histone-chipseq-quality-metrics"
+                    ]
                 },
                 "assessment_values": {
                     "$ref": "#/$defs/Any",
@@ -1387,7 +1979,14 @@
                             "type": "array"
                         }
                     ],
-                    "description": "Main values produced by the quality assessment."
+                    "description": "Main values produced by the quality assessment.",
+                    "examples": [
+                        {
+                            "frip": 0.2931669095906483,
+                            "nreads": 21018235,
+                            "nreads_in_peaks": 6161851
+                        }
+                    ]
                 }
             },
             "required": [
@@ -1493,7 +2092,10 @@
             "properties": {
                 "biospecimen_classification": {
                     "$ref": "#/$defs/BiospecimenClassification",
-                    "description": "Main type of structural unit to be used for classification of the biospecimen/sample."
+                    "description": "Main type of structural unit to be used for classification of the biospecimen/sample.",
+                    "examples": [
+                        "cell line"
+                    ]
                 },
                 "cell_line": {
                     "anyOf": [
@@ -1504,7 +2106,13 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Cultured cell line used in the biospecimen/sample."
+                    "description": "Cultured cell line used in the biospecimen/sample.",
+                    "examples": [
+                        {
+                            "id": "CLO:0034832",
+                            "label": "AG04450 cell"
+                        }
+                    ]
                 },
                 "cell_type": {
                     "anyOf": [
@@ -1519,6 +2127,9 @@
                 },
                 "donor_age": {
                     "description": "Age of the donor/organism at the time of sampling",
+                    "examples": [
+                        "W12"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -1526,6 +2137,9 @@
                 },
                 "donor_clinical_information": {
                     "description": "Clinical information of the donor/organism at the time of sampling.",
+                    "examples": [
+                        "apparently healthy"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -1540,10 +2154,19 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Development stage of the donor at the time of sampling."
+                    "description": "Development stage of the donor at the time of sampling.",
+                    "examples": [
+                        {
+                            "id": "UBERON:0000323",
+                            "label": "late embryo"
+                        }
+                    ]
                 },
                 "donor_organism_ref": {
                     "description": "Internal reference to the donor/organism from which the biospecimen/sample was taken.",
+                    "examples": [
+                        "donor:ENCDO001AAA"
+                    ],
                     "type": "string"
                 },
                 "organism_tissue": {
@@ -1555,10 +2178,40 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Part of organism (typically tissue or organ) from which the biospecimen/sample was taken, or cell line was derived from."
+                    "description": "Part of organism (typically tissue or organ) from which the biospecimen/sample was taken, or cell line was derived from.",
+                    "examples": [
+                        {
+                            "id": "UBERON:0002048",
+                            "label": "lung"
+                        }
+                    ]
                 },
                 "other_biospecimen": {
                     "description": "Other biospecimen-related terms that can be used to further classify the biospecimen/sample.",
+                    "examples": [
+                        [
+                            {
+                                "id": "UBERON:0002384",
+                                "label": "connective tissue"
+                            },
+                            {
+                                "id": "CL:0002320",
+                                "label": "connective tissue cell"
+                            },
+                            {
+                                "id": "CL:0000057",
+                                "label": "fibroblast"
+                            },
+                            {
+                                "id": "UBERON:0000925",
+                                "label": "endoterm"
+                            },
+                            {
+                                "id": "UBERON:0001004",
+                                "label": "respiratory system"
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/Term"
                     },
@@ -1576,7 +2229,13 @@
                             "type": "null"
                         }
                     ],
-                    "description": "Main phenotype (e.g. disease) connected to the biospecimen/sample."
+                    "description": "Main phenotype (e.g. disease) connected to the biospecimen/sample.",
+                    "examples": [
+                        {
+                            "id": "PATO:0000461",
+                            "label": "normal"
+                        }
+                    ]
                 },
                 "sample_collection_date": {
                     "description": "Date of sample collection.",
@@ -1595,6 +2254,9 @@
                 },
                 "sample_description": {
                     "description": "Human-readable description of the biospecimen/sample and the sampling process.",
+                    "examples": [
+                        "Homo sapiens AG04450 cell line"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -1602,19 +2264,31 @@
                 },
                 "sample_external_id": {
                     "description": "External, globally unique identifier for the biospecimen/sample.",
+                    "examples": [
+                        "encode:ENCBS004ENC"
+                    ],
                     "type": "string"
                 },
                 "sample_id": {
                     "description": "Internal identifier for the biospecimen/sample (unique within the metadata deposit).",
+                    "examples": [
+                        "sample:ENCBS004ENC"
+                    ],
                     "type": "string"
                 },
                 "sample_label": {
                     "description": "A human-readable description of the sample, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.",
+                    "examples": [
+                        "Homo sapiens AG04450 cell line"
+                    ],
                     "pattern": "^.{1,60}$",
                     "type": "string"
                 },
                 "sampling_protocol": {
                     "description": "Protocol detailing the collection and treatment of the biospecimen/sample.",
+                    "examples": [
+                        "https://www.encodeproject.org/documents/3ed29dac-da67-47be-91b0-c9cad6a1b791/@@download/attachment/AG04450_Stam_protocol.pdf"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -1637,10 +2311,16 @@
             "properties": {
                 "id": {
                     "description": "External, globally unique identifier for the ontology term (in CURIE form).",
+                    "examples": [
+                        "obi:OBI_0000716"
+                    ],
                     "type": "string"
                 },
                 "label": {
                     "description": "Human-readable label associated to the term id in the current version of the ontology (as listed in the \"ontology_versions\" field of the Deposit object).",
+                    "examples": [
+                        "ChIP-seq assay"
+                    ],
                     "type": [
                         "string",
                         "null"
@@ -1861,38 +2541,65 @@
                 },
                 "elements_circular": {
                     "description": "Whether the sequence features have circular coordinates (at least one feature that cross a sequence border).",
+                    "examples": [
+                        false
+                    ],
                     "type": "boolean"
                 },
                 "elements_overlapping": {
                     "description": "Whether the sequence features are overlapping (at least one base pair is simultaneously covered by two sequence features).",
+                    "examples": [
+                        false
+                    ],
                     "type": "boolean"
                 },
                 "has_edges": {
                     "description": "Whether the sequence features are linked across positions (at least one edge between features exists).",
+                    "examples": [
+                        false
+                    ],
                     "type": "boolean"
                 },
                 "has_gaps": {
                     "description": "Whether there are gaps between the sequence features (there exists at least one gap between two features on the same sequence).",
+                    "examples": [
+                        true
+                    ],
                     "type": "boolean"
                 },
                 "has_lengths": {
                     "description": "Whether the sequence features have lengths (at least one feature spans more than 1 base pair).",
+                    "examples": [
+                        true
+                    ],
                     "type": "boolean"
                 },
                 "has_names": {
                     "description": "Whether the sequence features are named (at least one feature has a name).",
+                    "examples": [
+                        true
+                    ],
                     "type": "boolean"
                 },
                 "has_strands": {
                     "description": "Whether the sequence features are stranded (at least one feature has strand information).",
+                    "examples": [
+                        false
+                    ],
                     "type": "boolean"
                 },
                 "has_values": {
                     "description": "Whether the sequence features have associated values (at least one feature has an associated value).",
+                    "examples": [
+                        true
+                    ],
                     "type": "boolean"
                 },
                 "lengths_constant": {
                     "description": "Whether the sequence lengths are constant (all sequence features have the same length, excluding features at the very end of a sequence).",
+                    "examples": [
+                        false
+                    ],
                     "type": [
                         "boolean",
                         "null"
@@ -1900,7 +2607,10 @@
                 },
                 "value_type": {
                     "$ref": "#/$defs/DataTypes",
-                    "description": "The type of values associated with the sequence features, if any."
+                    "description": "The type of values associated with the sequence features, if any.",
+                    "examples": [
+                        "multiple"
+                    ]
                 }
             },
             "required": [
@@ -1921,7 +2631,7 @@
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "additionalProperties": true,
     "metamodel_version": "1.7.0",
-    "title": "top-level",
+    "title": "TopLevel",
     "type": "object",
     "version": null
 }

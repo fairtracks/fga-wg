@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analysis_study_ref 
 
@@ -7,11 +10,11 @@ _Internal reference to the study within which the analysis has been carried out.
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/analysis_study_ref](https://w3id.org/fga-wg/schema/top_level/analysis_study_ref)
-Alias: analysis_study_ref
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,10 +97,9 @@ examples:
 - value: study:S-EPMC7391744
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: analysis_study_ref
 domain_of:
 - Analysis
 range: curie
 
 ```
-</details>
+</details></div>

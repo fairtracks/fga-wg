@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: sequence_features 
 
@@ -7,11 +10,11 @@ _List of sequence features described by the genomic annotation file._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/sequence_features](https://w3id.org/fga-wg/schema/top_level/sequence_features)
-Alias: sequence_features
-
 <!-- no inheritance hierarchy -->
 
 
@@ -86,7 +89,6 @@ name: sequence_features
 description: List of sequence features described by the genomic annotation file.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: sequence_features
 domain_of:
 - GenomicAnnotationFile
 range: Term
@@ -94,4 +96,4 @@ required: true
 multivalued: true
 
 ```
-</details>
+</details></div>

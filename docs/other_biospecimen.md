@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: other_biospecimen 
 
@@ -7,11 +10,11 @@ _Other biospecimen-related terms that can be used to further classify the biospe
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/other_biospecimen](https://w3id.org/fga-wg/schema/top_level/other_biospecimen)
-Alias: other_biospecimen
-
 <!-- no inheritance hierarchy -->
 
 
@@ -113,11 +116,10 @@ examples:
     label: respiratory system
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: other_biospecimen
 domain_of:
 - Sample
 range: Term
 multivalued: true
 
 ```
-</details>
+</details></div>

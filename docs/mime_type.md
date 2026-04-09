@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: mime_type 
 
@@ -7,11 +10,11 @@ _A string providing the mime-type of the data file._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/mime_type](https://w3id.org/fga-wg/schema/top_level/mime_type)
-Alias: mime_type
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: mime_type
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -94,10 +97,9 @@ examples:
 - value: application/octet-stream
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: mime_type
 domain_of:
 - File
 range: string
 
 ```
-</details>
+</details></div>

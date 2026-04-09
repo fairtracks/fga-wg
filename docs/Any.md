@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Any 
 
@@ -6,6 +9,8 @@
 _The Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type)._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -118,4 +123,4 @@ from_schema: https://w3id.org/fga-wg/schema/top_level
 class_uri: linkml:Any
 
 ```
-</details>
+</details></div>

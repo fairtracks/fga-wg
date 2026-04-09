@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: seqcol_digest 
 
@@ -7,11 +10,11 @@ _Top-level sequence collection digest according to the GA4GH refget, Sequence Co
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_digest](https://w3id.org/fga-wg/schema/top_level/seqcol_digest)
-Alias: seqcol_digest
-
 <!-- no inheritance hierarchy -->
 
 
@@ -106,11 +109,10 @@ examples:
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 identifier: true
-alias: seqcol_digest
 domain_of:
 - GenomeAssembly
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

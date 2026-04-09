@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: email 
 
@@ -7,11 +10,11 @@ _E-mail address of the person or organisation._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/email](https://w3id.org/fga-wg/schema/top_level/email)
-Alias: email
-
 <!-- no inheritance hierarchy -->
 
 
@@ -100,11 +103,10 @@ examples:
 - value: john@doe.com
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: email
 domain_of:
 - Contact
 range: string
 pattern: ^\S+@\S+\.\S+$
 
 ```
-</details>
+</details></div>

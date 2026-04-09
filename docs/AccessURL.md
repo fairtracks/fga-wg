@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: AccessURL 
 
@@ -6,6 +9,8 @@
 _The URL and associated HTTP headers to access the File object (orig: DrsObject). Exact copy of AccessURL object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessURLModel)._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -121,7 +126,6 @@ attributes:
     - value: https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: url
     owner: AccessURL
     domain_of:
     - AccessURL
@@ -134,7 +138,6 @@ attributes:
       bytes.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: headers
     owner: AccessURL
     domain_of:
     - AccessURL
@@ -142,4 +145,4 @@ attributes:
     multivalued: true
 
 ```
-</details>
+</details></div>

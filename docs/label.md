@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: label 
 
@@ -7,11 +10,11 @@ _Human-readable label associated to the term id in the current version of the on
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/label](https://w3id.org/fga-wg/schema/top_level/label)
-Alias: label
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,10 +97,9 @@ examples:
 - value: ChIP-seq assay
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: label
 domain_of:
 - Term
 range: string
 
 ```
-</details>
+</details></div>

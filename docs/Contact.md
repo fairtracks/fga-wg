@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: contact 
 
@@ -7,11 +10,11 @@ _Contact point to the creator and/or maintainer of the file collection._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/schema/top_level/contact)
-Alias: contact
-
 <!-- no inheritance hierarchy -->
 
 
@@ -96,10 +99,9 @@ examples:
     email: info@ihec-epigenomes.org
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: contact
 domain_of:
 - FileCollection
 range: Contact
 
 ```
-</details>
+</details></div>

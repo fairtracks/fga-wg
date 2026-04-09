@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: file_id 
 
@@ -7,11 +10,11 @@ _Internal identifier for the data file (unique within the metadata deposit). _
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/file_id](https://w3id.org/fga-wg/schema/top_level/file_id)
-Alias: file_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: file_id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -103,11 +106,10 @@ examples:
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 identifier: true
-alias: file_id
 domain_of:
 - File
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

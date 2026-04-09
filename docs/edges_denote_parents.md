@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: edges_denote_parents 
 
@@ -7,11 +10,11 @@ _Whether the edges linking sequence features denote a parent-child relationship 
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/edges_denote_parents](https://w3id.org/fga-wg/schema/top_level/edges_denote_parents)
-Alias: edges_denote_parents
-
 <!-- no inheritance hierarchy -->
 
 
@@ -86,10 +89,9 @@ description: Whether the edges linking sequence features denote a parent-child r
   to exons, i.e. where the child is fully covered by the parent).
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: edges_denote_parents
 domain_of:
 - TrackGeometry
 range: boolean
 
 ```
-</details>
+</details></div>

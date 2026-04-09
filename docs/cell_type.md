@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: cell_type 
 
@@ -7,11 +10,11 @@ _Cell type of isolated normal cells in the biospecimen/sample._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/cell_type](https://w3id.org/fga-wg/schema/top_level/cell_type)
-Alias: cell_type
-
 <!-- no inheritance hierarchy -->
 
 
@@ -84,10 +87,9 @@ name: cell_type
 description: Cell type of isolated normal cells in the biospecimen/sample.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: cell_type
 domain_of:
 - Sample
 range: Term
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: deposit_id 
 
@@ -7,11 +10,11 @@ _A globally unique and persistent identifier for the public deposit of the metad
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/deposit_id](https://w3id.org/fga-wg/schema/top_level/deposit_id)
-Alias: deposit_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,10 +97,9 @@ examples:
 - value: doi:10.1234/zenodo.12345678
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: deposit_id
 domain_of:
 - Deposit
 range: curie
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: design_description 
 
@@ -7,11 +10,11 @@ _The high-level experiment design including layout, protocol._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/design_description](https://w3id.org/fga-wg/schema/top_level/design_description)
-Alias: design_description
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: https://www.encodeproject.org/documents/92cd1386-ccad-450a-b5a6-ad49983e7e3f/@@download/attachment/wgEncodeUwHistone.release5.html.pdf
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: design_description
 domain_of:
 - Experiment
 range: string
 
 ```
-</details>
+</details></div>

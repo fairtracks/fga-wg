@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: filecollection_input_sources 
 
@@ -7,11 +10,11 @@ _References to other input sources from which this file collection was derived._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_input_sources](https://w3id.org/fga-wg/schema/top_level/filecollection_input_sources)
-Alias: filecollection_input_sources
-
 <!-- no inheritance hierarchy -->
 
 
@@ -102,11 +105,10 @@ examples:
     qualified_relation: prov:hadPrimarySource
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: filecollection_input_sources
 domain_of:
 - FileCollection
 range: InputSource
 multivalued: true
 
 ```
-</details>
+</details></div>

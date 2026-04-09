@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Analysis 
 
@@ -6,6 +9,8 @@
 _Represents the computational processing applied to data from a sequencing experiment, or from another analysis. This can be described at the level of individual analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline as a whole._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -87,7 +92,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Analysis](https://w3id.org/fga-wg
 | [analysis_study_ref](analysis_study_ref.md) | 0..1 <br/> [Curie](Curie.md) | Internal reference to the study within which the analysis has been carried ou... | direct |
 | [analysis_input_sources](analysis_input_sources.md) | 1..* <br/> [InputSource](InputSource.md) | External or internal references to sources for the input data analyzed | direct |
 | [analysis_type](analysis_type.md) | 1 <br/> [Term](Term.md) | The type of analysis carried out | direct |
-| [analysis_main_tool](analysis_main_tool.md) | 0..1 <br/> [Curie](Curie.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) | Main software tool used for the analysis | direct |
+| [analysis_main_tool](analysis_main_tool.md) | 0..1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) | Main software tool used for the analysis | direct |
 | [analysis_main_tool_version](analysis_main_tool_version.md) | 0..1 <br/> [String](String.md) | Version of the main software tool used for the analysis | direct |
 | [analysis_protocol](analysis_protocol.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Document describing the analysis protocol that was followed | direct |
 | [analysis_workflow](analysis_workflow.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | External reference to the analysis workflow, with availability in at least on... | direct |
@@ -187,7 +192,6 @@ attributes:
     - value: encode:ENCAN718KHT
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_external_id
     owner: Analysis
     domain_of:
     - Analysis
@@ -201,7 +205,6 @@ attributes:
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     identifier: true
-    alias: analysis_id
     owner: Analysis
     domain_of:
     - Analysis
@@ -216,7 +219,6 @@ attributes:
     - value: ENCODE3 ChIP-seq pipeline, GRCH38, replicated peak calling
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_label
     owner: Analysis
     domain_of:
     - Analysis
@@ -231,7 +233,6 @@ attributes:
         MACS.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_description
     owner: Analysis
     domain_of:
     - Analysis
@@ -244,7 +245,6 @@ attributes:
     - value: study:S-EPMC7391744
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_study_ref
     owner: Analysis
     domain_of:
     - Analysis
@@ -276,7 +276,6 @@ attributes:
         date_retrieved: '2016-04-19'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_input_sources
     owner: Analysis
     domain_of:
     - Analysis
@@ -292,7 +291,6 @@ attributes:
         label: Peak calling
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_type
     owner: Analysis
     domain_of:
     - Analysis
@@ -305,7 +303,6 @@ attributes:
     - value: biotools:macs
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_main_tool
     owner: Analysis
     domain_of:
     - Analysis
@@ -320,7 +317,6 @@ attributes:
     - value: '2.10'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_main_tool_version
     owner: Analysis
     domain_of:
     - Analysis
@@ -332,7 +328,6 @@ attributes:
     - value: https://www.encodeproject.org/documents/7009beb8-340b-4e71-b9db-53bb020c7fe2/@@download/attachment/ChIP-seq_pipeline_overview.pdf
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_protocol
     owner: Analysis
     domain_of:
     - Analysis
@@ -345,11 +340,10 @@ attributes:
     - value: encode:ENCPL272XAE
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: analysis_workflow
     owner: Analysis
     domain_of:
     - Analysis
     range: uriorcurie
 
 ```
-</details>
+</details></div>

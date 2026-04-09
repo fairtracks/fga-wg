@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: ontology_url 
 
@@ -7,11 +10,11 @@ _The version-agnostic URL of the ontology (e.g. the IRI of the ontology in OWL).
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/ontology_url](https://w3id.org/fga-wg/schema/top_level/ontology_url)
-Alias: ontology_url
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - value: http://edamontology.org/EDAM.owl
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: ontology_url
 domain_of:
 - OntologyVersions
 range: uri
 required: true
 
 ```
-</details>
+</details></div>

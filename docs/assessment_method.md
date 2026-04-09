@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: assessment_method 
 
@@ -7,11 +10,11 @@ _Quality assessment method that has been carried out (e.g. BUSCO, OMArk, peak ca
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/assessment_method](https://w3id.org/fga-wg/schema/top_level/assessment_method)
-Alias: assessment_method
-
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +38,7 @@ Alias: assessment_method
 
 | Property | Value |
 | --- | --- |
-| Range | [Term](Term.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Term](Term.md) |
 | Domain Of | [QualityAssessment](QualityAssessment.md) |
 
 ### Cardinality and Requirements
@@ -105,7 +108,6 @@ examples:
 - value: histone-chipseq-quality-metrics
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: assessment_method
 domain_of:
 - QualityAssessment
 range: Any
@@ -115,4 +117,4 @@ any_of:
 - range: Term
 
 ```
-</details>
+</details></div>

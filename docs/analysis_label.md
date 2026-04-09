@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: analysis_label 
 
@@ -7,11 +10,11 @@ _A human-readable description of the analysis, short enough to be used for listi
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/analysis_label](https://w3id.org/fga-wg/schema/top_level/analysis_label)
-Alias: analysis_label
-
 <!-- no inheritance hierarchy -->
 
 
@@ -102,7 +105,6 @@ examples:
 - value: ENCODE3 ChIP-seq pipeline, GRCH38, replicated peak calling
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: analysis_label
 domain_of:
 - Analysis
 range: string
@@ -110,4 +112,4 @@ required: true
 pattern: ^.{1,60}$
 
 ```
-</details>
+</details></div>

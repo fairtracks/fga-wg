@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: access_methods 
 
@@ -7,11 +10,11 @@ _The list of access methods that can be used to fetch the data file. _
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/access_methods](https://w3id.org/fga-wg/schema/top_level/access_methods)
-Alias: access_methods
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: access_methods
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -119,7 +122,6 @@ examples:
       url: https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: access_methods
 domain_of:
 - File
 range: AccessMethod
@@ -127,4 +129,4 @@ required: true
 multivalued: true
 
 ```
-</details>
+</details></div>

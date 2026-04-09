@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: filecollection_description 
 
@@ -7,11 +10,11 @@ _Human-readable description of the file collection._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_description](https://w3id.org/fga-wg/schema/top_level/filecollection_description)
-Alias: filecollection_description
-
 <!-- no inheritance hierarchy -->
 
 
@@ -35,7 +38,7 @@ Alias: filecollection_description
 
 | Property | Value |
 | --- | --- |
-| Range | [Uri](Uri.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) |
+| Range | [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Uri](Uri.md) |
 | Domain Of | [FileCollection](FileCollection.md) |
 
 ### Cardinality and Requirements
@@ -104,7 +107,6 @@ examples:
     portal, enhanced with metadata from the ENCODE data portal.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: filecollection_description
 domain_of:
 - FileCollection
 range: Any
@@ -113,4 +115,4 @@ any_of:
 - range: uri
 
 ```
-</details>
+</details></div>

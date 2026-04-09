@@ -1,4 +1,7 @@
-# Enum: AccessMethods 
+---
+search:
+  boost: 2.0
+---# Enum: AccessMethods 
 
 
 
@@ -6,6 +9,8 @@
 _Access methods (i.e. communication protocols), following the vocabulary defined in the GA4GH DRS specification (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel/operation/getAccessMethod)._
 
 
+
+<div data-search-exclude markdown="1">
 
 URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethods](https://w3id.org/fga-wg/schema/top_level/AccessMethods)
 
@@ -95,3 +100,5 @@ permissible_values:
 
 ```
 </details>
+
+</div>

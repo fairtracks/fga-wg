@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: biological_replicate_labels 
 
@@ -7,11 +10,11 @@ _Labels denoting the biological replicates within which the relation is defined,
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/biological_replicate_labels](https://w3id.org/fga-wg/schema/top_level/biological_replicate_labels)
-Alias: biological_replicate_labels
-
 <!-- no inheritance hierarchy -->
 
 
@@ -97,11 +100,10 @@ examples:
 - value: '2'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: biological_replicate_labels
 domain_of:
 - InputSource
 range: string
 multivalued: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: edges_have_weights 
 
@@ -7,11 +10,11 @@ _Whether the edges linking sequence features are weighted (at least one edge bet
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/edges_have_weights](https://w3id.org/fga-wg/schema/top_level/edges_have_weights)
-Alias: edges_have_weights
-
 <!-- no inheritance hierarchy -->
 
 
@@ -85,10 +88,9 @@ description: Whether the edges linking sequence features are weighted (at least 
   edge between sequence features has an associated weight).
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: edges_have_weights
 domain_of:
 - TrackGeometry
 range: boolean
 
 ```
-</details>
+</details></div>

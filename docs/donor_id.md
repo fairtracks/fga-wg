@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: donor_id 
 
@@ -7,11 +10,11 @@ _Internal identifier for the donor/organism (unique within the metadata deposit)
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/donor_id](https://w3id.org/fga-wg/schema/top_level/donor_id)
-Alias: donor_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -103,11 +106,10 @@ examples:
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 identifier: true
-alias: donor_id
 domain_of:
 - Donor
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

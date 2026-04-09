@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: file_label 
 
@@ -7,11 +10,11 @@ _A human-readable description of the data file, short enough to be used for list
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/file_label](https://w3id.org/fga-wg/schema/top_level/file_label)
-Alias: file_label
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: file_label
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -103,7 +106,6 @@ examples:
 - value: H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: file_label
 domain_of:
 - File
 range: string
@@ -111,4 +113,4 @@ required: true
 pattern: ^.{1,60}$
 
 ```
-</details>
+</details></div>

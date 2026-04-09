@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: file_description 
 
@@ -7,11 +10,11 @@ _A human readable description of the data file._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/file_description](https://w3id.org/fga-wg/schema/top_level/file_description)
-Alias: file_description
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: file_description
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -95,10 +98,9 @@ examples:
     cell line).
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: file_description
 domain_of:
 - File
 range: string
 
 ```
-</details>
+</details></div>

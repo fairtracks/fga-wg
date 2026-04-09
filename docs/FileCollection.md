@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: FileCollection 
 
@@ -6,6 +9,8 @@
 _A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -75,7 +80,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/FileCollection](https://w3id.org/
 | [filecollection_external_id](filecollection_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the file collection (in most cases, ... | direct |
 | [filecollection_id](filecollection_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the file collection (unique within the metadata depos... | direct |
 | [filecollection_label](filecollection_label.md) | 1 <br/> [String](String.md) | A human-readable description of the file collection, short enough to be used ... | direct |
-| [filecollection_description](filecollection_description.md) | 0..1 <br/> [Uri](Uri.md)&nbsp;or&nbsp;<br />[Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md) | Human-readable description of the file collection | direct |
+| [filecollection_description](filecollection_description.md) | 0..1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Uri](Uri.md) | Human-readable description of the file collection | direct |
 | [filecollection_input_sources](filecollection_input_sources.md) | * <br/> [InputSource](InputSource.md) | References to other input sources from which this file collection was derived | direct |
 | [deposit_versioned_ref](deposit_versioned_ref.md) | 1 <br/> [Curie](Curie.md) | Reference to versioned id of deposit containing this file collection | direct |
 | [contact](contact.md) | 0..1 <br/> [Contact](Contact.md) | Contact point to the creator and/or maintainer of the file collection | direct |
@@ -170,7 +175,6 @@ attributes:
       most cases, this will not exist).
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: filecollection_external_id
     owner: FileCollection
     domain_of:
     - FileCollection
@@ -185,7 +189,6 @@ attributes:
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     identifier: true
-    alias: filecollection_id
     owner: FileCollection
     domain_of:
     - FileCollection
@@ -200,7 +203,6 @@ attributes:
     - value: 'IHEC data portal: ENCODE dataset'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: filecollection_label
     owner: FileCollection
     domain_of:
     - FileCollection
@@ -215,7 +217,6 @@ attributes:
         data portal, enhanced with metadata from the ENCODE data portal.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: filecollection_description
     owner: FileCollection
     domain_of:
     - FileCollection
@@ -237,7 +238,6 @@ attributes:
         qualified_relation: prov:hadPrimarySource
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: filecollection_input_sources
     owner: FileCollection
     domain_of:
     - FileCollection
@@ -250,7 +250,6 @@ attributes:
     - value: doi:10.1234/zenodo.12345679
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: deposit_versioned_ref
     owner: FileCollection
     domain_of:
     - FileCollection
@@ -266,11 +265,10 @@ attributes:
         email: info@ihec-epigenomes.org
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: contact
     owner: FileCollection
     domain_of:
     - FileCollection
     range: Contact
 
 ```
-</details>
+</details></div>

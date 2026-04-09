@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: sampling_protocol 
 
@@ -7,11 +10,11 @@ _Protocol detailing the collection and treatment of the biospecimen/sample._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/sampling_protocol](https://w3id.org/fga-wg/schema/top_level/sampling_protocol)
-Alias: sampling_protocol
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: https://www.encodeproject.org/documents/3ed29dac-da67-47be-91b0-c9cad6a1b791/@@download/attachment/AG04450_Stam_protocol.pdf
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: sampling_protocol
 domain_of:
 - Sample
 range: uri
 
 ```
-</details>
+</details></div>

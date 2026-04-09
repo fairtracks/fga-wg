@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: instrument 
 
@@ -7,11 +10,11 @@ _Technology platform used to perform nucleic acid sequencing, including name and
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/instrument](https://w3id.org/fga-wg/schema/top_level/instrument)
-Alias: instrument
-
 <!-- no inheritance hierarchy -->
 
 
@@ -98,10 +101,9 @@ examples:
     label: Illumina Genome Analyzer
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: instrument
 domain_of:
 - Experiment
 range: Term
 
 ```
-</details>
+</details></div>

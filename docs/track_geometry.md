@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: track_geometry 
 
@@ -7,11 +10,11 @@ _Geometric properties of the sequence features in the genomic annotation file if
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/track_geometry](https://w3id.org/fga-wg/schema/top_level/track_geometry)
-Alias: track_geometry
-
 <!-- no inheritance hierarchy -->
 
 
@@ -87,11 +90,10 @@ description: Geometric properties of the sequence features in the genomic annota
   non-visual analyses).
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: track_geometry
 domain_of:
 - GenomicAnnotationFile
 range: TrackGeometry
 required: true
 
 ```
-</details>
+</details></div>

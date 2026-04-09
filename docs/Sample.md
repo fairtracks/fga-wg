@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Sample 
 
@@ -6,6 +9,8 @@
 _Information about a biospecimen/sample used as raw material for lab experiments._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -310,7 +315,6 @@ attributes:
     - value: encode:ENCBS004ENC
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: sample_external_id
     owner: Sample
     domain_of:
     - Sample
@@ -325,7 +329,6 @@ attributes:
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     identifier: true
-    alias: sample_id
     owner: Sample
     domain_of:
     - Sample
@@ -340,7 +343,6 @@ attributes:
     - value: Homo sapiens AG04450 cell line
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: sample_label
     owner: Sample
     domain_of:
     - Sample
@@ -355,7 +357,6 @@ attributes:
     - value: Homo sapiens AG04450 cell line
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: sample_description
     owner: Sample
     domain_of:
     - Sample
@@ -368,7 +369,6 @@ attributes:
     - value: donor:ENCDO001AAA
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: donor_organism_ref
     owner: Sample
     domain_of:
     - Sample
@@ -382,7 +382,6 @@ attributes:
     - value: cell line
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: biospecimen_classification
     owner: Sample
     domain_of:
     - Sample
@@ -398,7 +397,6 @@ attributes:
         label: lung
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: organism_tissue
     owner: Sample
     domain_of:
     - Sample
@@ -408,7 +406,6 @@ attributes:
     description: Cell type of isolated normal cells in the biospecimen/sample.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: cell_type
     owner: Sample
     domain_of:
     - Sample
@@ -422,7 +419,6 @@ attributes:
         label: AG04450 cell
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: cell_line
     owner: Sample
     domain_of:
     - Sample
@@ -449,7 +445,6 @@ attributes:
         label: respiratory system
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: other_biospecimen
     owner: Sample
     domain_of:
     - Sample
@@ -462,7 +457,6 @@ attributes:
     - value: https://www.encodeproject.org/documents/3ed29dac-da67-47be-91b0-c9cad6a1b791/@@download/attachment/AG04450_Stam_protocol.pdf
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: sampling_protocol
     owner: Sample
     domain_of:
     - Sample
@@ -472,7 +466,6 @@ attributes:
     description: Geographical location where the sample was collected.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: sample_collection_location
     owner: Sample
     domain_of:
     - Sample
@@ -482,7 +475,6 @@ attributes:
     description: Date of sample collection.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: sample_collection_date
     owner: Sample
     domain_of:
     - Sample
@@ -496,7 +488,6 @@ attributes:
         label: normal
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: phenotype
     owner: Sample
     domain_of:
     - Sample
@@ -508,7 +499,6 @@ attributes:
     - value: W12
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: donor_age
     owner: Sample
     domain_of:
     - Sample
@@ -522,7 +512,6 @@ attributes:
         label: late embryo
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: donor_development_stage
     owner: Sample
     domain_of:
     - Sample
@@ -534,7 +523,6 @@ attributes:
     - value: apparently healthy
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: donor_clinical_information
     owner: Sample
     domain_of:
     - Sample
@@ -582,4 +570,4 @@ rules:
         required: true
 
 ```
-</details>
+</details></div>

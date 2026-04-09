@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: filecollection_label 
 
@@ -7,11 +10,11 @@ _A human-readable description of the file collection, short enough to be used fo
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_label](https://w3id.org/fga-wg/schema/top_level/filecollection_label)
-Alias: filecollection_label
-
 <!-- no inheritance hierarchy -->
 
 
@@ -103,7 +106,6 @@ examples:
 - value: 'IHEC data portal: ENCODE dataset'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: filecollection_label
 domain_of:
 - FileCollection
 range: string
@@ -111,4 +113,4 @@ required: true
 pattern: ^.{1,60}$
 
 ```
-</details>
+</details></div>

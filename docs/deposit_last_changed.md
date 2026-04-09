@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: deposit_last_changed 
 
@@ -7,11 +10,11 @@ _The date and time of the last deposited change of the current metadata document
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/deposit_last_changed](https://w3id.org/fga-wg/schema/top_level/deposit_last_changed)
-Alias: deposit_last_changed
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,11 +98,10 @@ examples:
 - value: '2025-07-01T12:36:00Z'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: deposit_last_changed
 domain_of:
 - Deposit
 range: datetime
 required: true
 
 ```
-</details>
+</details></div>

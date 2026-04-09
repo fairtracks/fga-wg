@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: phenotype 
 
@@ -7,11 +10,11 @@ _Main phenotype (e.g. disease) connected to the biospecimen/sample._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/phenotype](https://w3id.org/fga-wg/schema/top_level/phenotype)
-Alias: phenotype
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,10 +98,9 @@ examples:
     label: normal
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: phenotype
 domain_of:
 - Sample
 range: Term
 
 ```
-</details>
+</details></div>

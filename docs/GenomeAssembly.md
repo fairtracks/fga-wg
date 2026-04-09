@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: GenomeAssembly 
 
@@ -6,6 +9,8 @@
 _Information about of the exact genome assembly used to generate the annotation file, defining the genomic coordinate system for the sequence features._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -137,7 +142,6 @@ attributes:
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     identifier: true
-    alias: seqcol_digest
     owner: GenomeAssembly
     domain_of:
     - GenomeAssembly
@@ -157,7 +161,6 @@ attributes:
     - value: ga4gh:SC.name_length_pairs.Yyz0Expaluj09xdDYg2Y6VOApvjg05Hf
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: seqcol_ordered_coord_system
     owner: GenomeAssembly
     domain_of:
     - GenomeAssembly
@@ -178,7 +181,6 @@ attributes:
     - value: ga4gh:SC.sorted_name_length_pairs._dMQ5dPUNVx4OGQnDAPmGMkVRWWcYV99
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: seqcol_unordered_coord_system
     owner: GenomeAssembly
     domain_of:
     - GenomeAssembly
@@ -193,7 +195,6 @@ attributes:
     - value: encode:ENCSR425FOI
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: accessions
     owner: GenomeAssembly
     domain_of:
     - GenomeAssembly
@@ -209,7 +210,6 @@ attributes:
     - value: hg38
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: aliases
     owner: GenomeAssembly
     domain_of:
     - GenomeAssembly
@@ -218,4 +218,4 @@ attributes:
     multivalued: true
 
 ```
-</details>
+</details></div>

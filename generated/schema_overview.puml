@@ -139,7 +139,7 @@ class "InputSource" [[{General object representing the source of data files, sam
 class "QualityAssessment" [[{Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis.}]] {
     {field} assessment_details_url : uri  
 }
-class "Any" [[{The linkml:Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).}]] {
+class "Any" [[{The Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).}]] {
 
 }
 "QualityAssessment" *--> "1" "Any" : "assessment_values"

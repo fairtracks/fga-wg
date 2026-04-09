@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: access_method 
 
@@ -7,11 +10,11 @@ _Access method used to access the File object (orig: DrsObject)._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/access_method](https://w3id.org/fga-wg/schema/top_level/access_method)
-Alias: access_method
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,11 +97,10 @@ examples:
 - value: https
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: access_method
 domain_of:
 - AccessMethod
 range: AccessMethods
 required: true
 
 ```
-</details>
+</details></div>

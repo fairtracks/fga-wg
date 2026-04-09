@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: drs_uri 
 
@@ -7,11 +10,11 @@ _A drs:// hostname-based URI, as defined in the DRS documentation, that tells cl
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/drs_uri](https://w3id.org/fga-wg/schema/top_level/drs_uri)
-Alias: drs_uri
-
 <!-- no inheritance hierarchy -->
 
 
@@ -22,8 +25,8 @@ Alias: drs_uri
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 | [File](File.md) | General information about a particular data file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
 
 
 
@@ -99,10 +102,9 @@ examples:
 - value: drs://drs.example.org/ENCFF323LCS
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: drs_uri
 domain_of:
 - File
 range: uri
 
 ```
-</details>
+</details></div>

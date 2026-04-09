@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: Term 
 
@@ -6,6 +9,8 @@
 _Helper entity to represent an ontology term as a data value. _
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -138,7 +143,6 @@ attributes:
     - value: obi:OBI_0000716
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: id
     owner: Term
     domain_of:
     - Term
@@ -152,11 +156,10 @@ attributes:
     - value: ChIP-seq assay
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: label
     owner: Term
     domain_of:
     - Term
     range: string
 
 ```
-</details>
+</details></div>

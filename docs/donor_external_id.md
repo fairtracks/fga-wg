@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: donor_external_id 
 
@@ -7,11 +10,11 @@ _External, globally unique identifier for the donor/organism._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/donor_external_id](https://w3id.org/fga-wg/schema/top_level/donor_external_id)
-Alias: donor_external_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: biosamples:SAMN04284578
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: donor_external_id
 domain_of:
 - Donor
 range: curie
 
 ```
-</details>
+</details></div>

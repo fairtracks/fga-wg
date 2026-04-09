@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: sample_external_id 
 
@@ -7,11 +10,11 @@ _External, globally unique identifier for the biospecimen/sample._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/sample_external_id](https://w3id.org/fga-wg/schema/top_level/sample_external_id)
-Alias: sample_external_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -94,11 +97,10 @@ examples:
 - value: encode:ENCBS004ENC
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: sample_external_id
 domain_of:
 - Sample
 range: curie
 required: true
 
 ```
-</details>
+</details></div>

@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: cell_line 
 
@@ -7,11 +10,11 @@ _Cultured cell line used in the biospecimen/sample._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/cell_line](https://w3id.org/fga-wg/schema/top_level/cell_line)
-Alias: cell_line
-
 <!-- no inheritance hierarchy -->
 
 
@@ -95,10 +98,9 @@ examples:
     label: AG04450 cell
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: cell_line
 domain_of:
 - Sample
 range: Term
 
 ```
-</details>
+</details></div>

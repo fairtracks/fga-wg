@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: checksum_type 
 
@@ -7,11 +10,11 @@ _The digest method used to create the checksum. The value (e.g. `sha-256`) SHOUL
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/checksum_type](https://w3id.org/fga-wg/schema/top_level/checksum_type)
-Alias: checksum_type
-
 <!-- no inheritance hierarchy -->
 
 
@@ -101,11 +104,10 @@ examples:
 - value: md5
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: checksum_type
 domain_of:
 - Checksum
 range: string
 required: true
 
 ```
-</details>
+</details></div>

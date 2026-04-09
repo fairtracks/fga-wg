@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: filecollection_external_id 
 
@@ -7,11 +10,11 @@ _External, globally unique identifier for the file collection (in most cases, th
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_external_id](https://w3id.org/fga-wg/schema/top_level/filecollection_external_id)
-Alias: filecollection_external_id
-
 <!-- no inheritance hierarchy -->
 
 
@@ -85,11 +88,10 @@ description: External, globally unique identifier for the file collection (in mo
   cases, this will not exist).
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: filecollection_external_id
 domain_of:
 - FileCollection
 range: curie
 required: false
 
 ```
-</details>
+</details></div>

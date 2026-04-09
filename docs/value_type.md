@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: value_type 
 
@@ -7,11 +10,11 @@ _The type of values associated with the sequence features, if any._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/value_type](https://w3id.org/fga-wg/schema/top_level/value_type)
-Alias: value_type
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: multiple
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: value_type
 domain_of:
 - TrackGeometry
 range: DataTypes
 
 ```
-</details>
+</details></div>

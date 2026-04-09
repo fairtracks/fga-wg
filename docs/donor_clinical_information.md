@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: donor_clinical_information 
 
@@ -7,11 +10,11 @@ _Clinical information of the donor/organism at the time of sampling._
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/donor_clinical_information](https://w3id.org/fga-wg/schema/top_level/donor_clinical_information)
-Alias: donor_clinical_information
-
 <!-- no inheritance hierarchy -->
 
 
@@ -93,10 +96,9 @@ examples:
 - value: apparently healthy
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: donor_clinical_information
 domain_of:
 - Sample
 range: string
 
 ```
-</details>
+</details></div>

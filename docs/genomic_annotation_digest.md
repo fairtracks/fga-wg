@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 5.0
+---
 
 # Slot: genomic_annotation_digest 
 
@@ -7,11 +10,11 @@ _Content-derived digest for distributed identification of genomic annotation fil
 
 
 
+<div data-search-exclude markdown="1">
+
 
 
 URI: [https://w3id.org/fga-wg/schema/top_level/genomic_annotation_digest](https://w3id.org/fga-wg/schema/top_level/genomic_annotation_digest)
-Alias: genomic_annotation_digest
-
 <!-- no inheritance hierarchy -->
 
 
@@ -86,10 +89,9 @@ description: Content-derived digest for distributed identification of genomic an
   a digest is yet to be specified.).
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
-alias: genomic_annotation_digest
 domain_of:
 - GenomicAnnotationFile
 range: curie
 
 ```
-</details>
+</details></div>

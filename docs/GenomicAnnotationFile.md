@@ -1,4 +1,7 @@
-
+---
+search:
+  boost: 10.0
+---
 
 # Class: GenomicAnnotationFile 
 
@@ -6,6 +9,8 @@
 _Information about a genomic annotation / track file. GenomicAnnotationFile is a specification of the File entity and inherits all the fields defined in File, in addition to the fields that are specific to GenomicAnnotationFile, as detailed here._
 
 
+
+<div data-search-exclude markdown="1">
 
 
 
@@ -272,7 +277,6 @@ attributes:
       generating such a digest is yet to be specified.).
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: genomic_annotation_digest
     owner: GenomicAnnotationFile
     domain_of:
     - GenomicAnnotationFile
@@ -286,7 +290,6 @@ attributes:
     - value: ga4gh:SC.EiFob05aCWgVU_B_Ae0cypnQut3cxUP1
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: genome_assembly
     owner: GenomicAnnotationFile
     domain_of:
     - GenomicAnnotationFile
@@ -299,7 +302,6 @@ attributes:
       for non-visual analyses).
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: track_geometry
     owner: GenomicAnnotationFile
     domain_of:
     - GenomicAnnotationFile
@@ -310,7 +312,6 @@ attributes:
     description: List of sequence features described by the genomic annotation file.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: sequence_features
     owner: GenomicAnnotationFile
     domain_of:
     - GenomicAnnotationFile
@@ -324,7 +325,6 @@ attributes:
     - value: encode:ENCFF323LCS
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_external_id
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -338,7 +338,6 @@ attributes:
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     identifier: true
-    alias: file_id
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -354,7 +353,6 @@ attributes:
     - value: 87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_name
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -368,7 +366,6 @@ attributes:
     - value: H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_label
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -383,7 +380,6 @@ attributes:
         derived cell line).
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_description
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -396,7 +392,6 @@ attributes:
     - value: collection:ihec_encode
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: filecollection_refs
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -420,7 +415,6 @@ attributes:
         - '2_1'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_input_sources
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -439,7 +433,6 @@ attributes:
     - value: drs://drs.example.org/ENCFF323LCS
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: drs_uri
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -470,7 +463,6 @@ attributes:
           url: https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: access_methods
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -486,7 +478,6 @@ attributes:
     - value: encode:ENCAN718KHT
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: run_provenance
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -505,7 +496,6 @@ attributes:
         assessment_details_url: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: quality_assessments
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -520,7 +510,6 @@ attributes:
         label: bigBed
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_type
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -533,7 +522,6 @@ attributes:
     - value: application/octet-stream
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: mime_type
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -545,7 +533,6 @@ attributes:
     - value: replicated peaks
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: data_content
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -558,7 +545,6 @@ attributes:
     - object: 5359719
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_size
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -572,7 +558,6 @@ attributes:
     - value: '2016-11-13T17:42:04.385801+00:00'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: created_time
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -587,7 +572,6 @@ attributes:
     - value: '2016-11-13T17:42:04.385801+00:00'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: updated_time
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -600,7 +584,6 @@ attributes:
     - value: efd4e74e-7875-4d13-9630-0085bc834f18
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: file_version
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -615,7 +598,6 @@ attributes:
         type: md5
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
-    alias: checksums
     owner: GenomicAnnotationFile
     domain_of:
     - File
@@ -624,4 +606,4 @@ attributes:
     multivalued: true
 
 ```
-</details>
+</details></div>
