@@ -34,7 +34,7 @@ from doit.tools import title_with_actions
 # ── Constants ──────────────────────────────────────────────────────────────────
 
 SCHEMA_DIR = Path("src/schema")
-TOP_LEVEL  = SCHEMA_DIR / "top_level.yaml"
+TOP_LEVEL  = SCHEMA_DIR / "TopLevel.yaml"
 LINT_CFG   = Path("src/linkml_lint_config.yaml")
 GEN_DIR    = Path("generated")
 DOCS_DIR   = Path("docs")

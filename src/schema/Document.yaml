@@ -1,14 +1,13 @@
 id: https://w3id.org/fga-wg/schema/document
-name: document
+name: Document
 
 prefixes:
   linkml: https://w3id.org/linkml/
 
 imports:
   - linkml:types
-  - deposit
-  - input_source
-  - util
+  - Deposit
+  - InputSource
 
 classes:
   Document:

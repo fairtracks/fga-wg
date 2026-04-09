@@ -1,12 +1,12 @@
 id: https://w3id.org/fga-wg/schema/access-method
-name: access_method
+name: AccessMethod
 
 prefixes:
   linkml: https://w3id.org/linkml/
 
 imports:
   - linkml:types
-  - access_url
+  - AccessURL
 
 classes:
   AccessMethod:

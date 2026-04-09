@@ -1,13 +1,13 @@
 id: https://w3id.org/fga-wg/schema/experiment
-name: experiment
+name: Experiment
 
 prefixes:
   linkml: https://w3id.org/linkml/
 
 imports:
   - linkml:types
-  - input_source
-  - term
+  - InputSource
+  - Term
 
 classes:
   Experiment:

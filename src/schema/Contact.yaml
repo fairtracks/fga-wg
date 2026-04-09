@@ -1,5 +1,5 @@
 id: https://w3id.org/fga-wg/schema/contact
-name: contact
+name: Contact
 
 prefixes:
   linkml: https://w3id.org/linkml/

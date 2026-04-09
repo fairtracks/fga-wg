@@ -1,5 +1,5 @@
 id: https://w3id.org/fga-wg/schema/term
-name: term
+name: Term
 
 prefixes:
   linkml: https://w3id.org/linkml/

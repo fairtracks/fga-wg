@@ -1,13 +1,14 @@
 id: https://w3id.org/fga-wg/schema/analysis
-name: analysis
+name: Analysis
 
 prefixes:
   linkml: https://w3id.org/linkml/
 
 imports:
   - linkml:types
-  - input_source
-  - term
+  - InputSource
+  - Term
+  - Any
 
 classes:
   Analysis:

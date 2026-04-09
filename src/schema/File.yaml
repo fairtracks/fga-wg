@@ -1,16 +1,16 @@
 id: https://w3id.org/fga-wg/schema/file
-name: file
+name: File
 
 prefixes:
   linkml: https://w3id.org/linkml/
 
 imports:
   - linkml:types
-  - access_method
-  - checksum
-  - input_source
-  - quality_assessment
-  - term
+  - AccessMethod
+  - Checksum
+  - InputSource
+  - QualityAssessment
+  - Term
 
 classes:
   File:

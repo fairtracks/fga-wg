@@ -1,5 +1,5 @@
 id: https://w3id.org/fga-wg/schema/deposit
-name: deposit
+name: Deposit
 
 prefixes:
   linkml: https://w3id.org/linkml/

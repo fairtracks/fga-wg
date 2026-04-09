@@ -1,19 +1,19 @@
 id: https://w3id.org/fga-wg/schema/top_level
-name: top-level
+name: TopLevel
 
 prefixes:
   linkml: https://w3id.org/linkml/
 
 imports:
   - linkml:types
-  - analysis
-  - document
-  - donor
-  - experiment
-  - file
-  - file_collection
-  - genomic_annotation_file
-  - sample
+  - Analysis
+  - Document
+  - Donor
+  - Experiment
+  - File
+  - FileCollection
+  - GenomicAnnotationFile
+  - Sample
 
 
 classes:

@@ -1,15 +1,15 @@
 id: https://w3id.org/fga-wg/schema/genomic-annotation-file
-name: genomic_annotation_file
+name: GenomicAnnotationFile
 
 prefixes:
   linkml: https://w3id.org/linkml/
 
 imports:
   - linkml:types
-  - file
-  - genome_assembly
-  - term
-  - track_geometry
+  - File
+  - GenomeAssembly
+  - Term
+  - TrackGeometry
 
 classes:
   GenomicAnnotationFile:

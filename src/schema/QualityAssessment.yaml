@@ -1,13 +1,13 @@
 id: https://w3id.org/fga-wg/schema/quality-assessment
-name: quality_assessment
+name: QualityAssessment
 
 prefixes:
   linkml: https://w3id.org/linkml/
 
 imports:
   - linkml:types
-  - term
-  - util
+  - Term
+  - Any
   
 classes:
   QualityAssessment:

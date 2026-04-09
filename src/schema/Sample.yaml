@@ -1,12 +1,12 @@
 id: https://w3id.org/fga-wg/schema/sample
-name: sample
+name: Sample
 
 prefixes:
   linkml: https://w3id.org/linkml/
 
 imports:
   - linkml:types
-  - term
+  - Term
   
 classes:
   Sample:
