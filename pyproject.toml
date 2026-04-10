@@ -15,6 +15,7 @@ dependencies = [
     "doit>=0.36",
     "datamodel-code-generator[ruff]<0.55",
     "basedpyright>=1.39.0",
+    "jsonschema>=4.26.0",
 ]
 
 [tool.uv]

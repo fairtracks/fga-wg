@@ -26,13 +26,25 @@ Understanding the run output:
 Default tasks (run by `uv run doit`):
     lint, json_schema, summary, erdiagram, plantuml, docs, overview
 """
-from collections.abc import Callable
+import json
+import jsonschema
+
+from collections.abc import Callable, Iterator
 from pathlib import Path
+import sys
 from typing import override, TypedDict, NotRequired, Literal
 
 from doit.task import Task
 from doit.reporter import ConsoleReporter
 from doit.tools import title_with_actions
+
+# Add src/ to sys.path so project-local modules are importable without the
+# 'src.' prefix (e.g. ``from scripts.helpers import …`` instead of
+# ``from src.scripts.helpers import …``).  This is needed because the project
+# is declared non-installable (``package = false`` in pyproject.toml).
+sys.path.insert(0, str(Path(__file__).parent / "src"))
+
+from scripts.helpers import import_from_path  # noqa: E402
 
 # ── Types ─────────────────────────────────────────────────────────────────
 
@@ -220,7 +232,12 @@ class CommandOnRunReporter(ConsoleReporter):
 # ── Global doit configuration ───────────────────────────────────────────────
 
 DOIT_CONFIG = {
-    "default_tasks": ["lint", "json_schema", "pydantic", "examples", "summary", "erdiagram", "plantuml", "docs", "overview", "nav"],
+    "default_tasks": [
+        "lint",
+        "json_schema", "pydantic", "examples",
+        "validate_linkml", "validate_json_schema", "validate_pydantic_v1", "validate_pydantic_v2",
+        "summary", "erdiagram", "plantuml", "docs", "overview", "nav",
+    ],
     "verbosity": 1,
     "reporter": CommandOnRunReporter,
     "continue": True,   # keep running independent tasks even when one validation subtask fails
@@ -430,6 +447,140 @@ def task_examples() -> TaskDict:
         "targets":  targets,
         "uptodate": non_empty_targets(*targets),
     }
+
+def task_validate_linkml() -> Iterator[TaskDict]:
+    """Validate each generated example against its LinkML class — one subtask per file.
+
+    Subtasks are named ``validate_linkml:<ClassName>`` so individual examples can be
+    targeted with ``uv run doit validate_linkml:Assessment`` and failed subtasks are
+    identified by name in the run output.  Because each subtask has its own file_dep,
+    only examples whose source file (or any schema file) changed are re-validated.
+    """
+    for example_file in EXAMPLE_FILES:
+        class_name = example_file.stem
+
+        # Default-argument capture avoids the closure-over-loop-variable pitfall
+        def run(cls: str = class_name, fp: Path = example_file) -> bool:
+            import subprocess
+            result = subprocess.run(
+                [
+                    "linkml-validate",
+                    "--schema", str(TOP_LEVEL),
+                    "--target-class", cls,
+                    str(fp),
+                ],
+                capture_output=True,
+                text=True,
+            )
+            if result.returncode != 0:
+                print((result.stderr or result.stdout).strip())
+                return False
+            return True
+
+        task: TaskDict = {
+            "name":     class_name,
+            "actions":  [run],
+            "file_dep": (example_file, *SCHEMA_FILES, *TOOL_DEPS),
+            "task_dep": ["examples"],
+            "verbosity": 2,
+        }
+        yield task
+
+
+def task_validate_json_schema() -> Iterator[TaskDict]:
+    """Validate each generated example against its class definition in the JSON Schema.
+
+    Each subtask loads the full schema once, then validates one example file so that
+    only changed example files (or a changed JSON Schema) are re-checked.
+    """
+    for example_file in EXAMPLE_FILES:
+        class_name = example_file.stem
+
+        def run(cls: str = class_name, fp: Path = example_file) -> bool:
+            full_schema = json.loads(JSON_SCHEMA.read_text())
+            defs = full_schema.get("$defs", {})
+
+            if cls not in defs:
+                print(f"no '$defs.{cls}' entry found in JSON Schema")
+                return False
+
+            instance = json.loads(fp.read_text())
+            ref_schema = {"$ref": f"#/$defs/{cls}", "$defs": defs}
+
+            try:
+                jsonschema.validate(instance, ref_schema)
+            except jsonschema.ValidationError as exc:
+                print(exc.message)
+                return False
+            return True
+
+        task: TaskDict = {
+            "name":     class_name,
+            "actions":  [run],
+            "file_dep": (example_file, JSON_SCHEMA, *TOOL_DEPS),
+            "task_dep": ["examples", "json_schema"],
+            "verbosity": 2,
+        }
+        yield task
+
+
+def _pydantic_subtasks(
+    model_file: Path,
+    version: Literal["v1", "v2"],
+) -> Iterator[TaskDict]:
+    """Yield one per-example validation subtask for the given Pydantic model version.
+
+    ``module_name``, ``model_file``, and ``version`` are captured from the enclosing
+    function scope (stable across the loop), so only the per-iteration ``cls`` and
+    ``fp`` need default-argument capture.
+    """
+    module_name = f"_doit_pydantic_{version}"
+
+    for example_file in EXAMPLE_FILES:
+        class_name = Path(example_file).stem
+
+        def run(cls: str = class_name, fp: Path = example_file) -> bool:
+            import json
+            import sys
+
+            if module_name not in sys.modules:
+                import_from_path(module_name, model_file)
+
+            model_class = getattr(sys.modules[module_name], cls, None)
+            if model_class is None:
+                print(f"class '{cls}' not found in Pydantic {version} module")
+                return False
+
+            try:
+                if version == "v2":
+                    model_class.model_validate(json.loads(fp.read_text()))
+                else:
+                    model_class.parse_obj(json.loads(fp.read_text()))
+            except Exception as exc:  # noqa: BLE001
+                print(str(exc))
+                return False
+
+            return True
+
+        task: TaskDict = {
+            "name":     class_name,
+            "actions":  [run],
+            "file_dep": (example_file, model_file, *TOOL_DEPS),
+            "task_dep": ["examples", "pydantic"],
+            "verbosity": 2,
+        }
+        yield task
+
+
+def task_validate_pydantic_v1() -> Iterator[TaskDict]:
+    """Validate each generated example against the Pydantic v1 models."""
+    yield from _pydantic_subtasks(PYDANTIC_V1_MODEL, "v1")
+
+
+def task_validate_pydantic_v2() -> Iterator[TaskDict]:
+    """Validate each generated example against the Pydantic v2 models."""
+    yield from _pydantic_subtasks(PYDANTIC_V2_MODEL, "v2")
+
 
 def task_summary() -> TaskDict:
     """Generate TSV class/slot summary → generated/schema_summary.tsv"""
