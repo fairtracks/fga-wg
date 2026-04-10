@@ -129,6 +129,15 @@ Sample {
     string sample_label  
     uri sampling_protocol  
 }
+Study {
+    uriorcurie project_external_ref  
+    string project_name  
+    curieList publications  
+    string study_abstract  
+    curie study_external_id  
+    curie study_id  
+    string study_title  
+}
 Term {
     curie id  
     string label  
@@ -174,7 +183,7 @@ File ||--}| AccessMethod : "access_methods"
 File ||--}| Checksum : "checksums"
 File ||--}| InputSource : "file_input_sources"
 FileCollection ||--|o Any : "filecollection_description"
-FileCollection ||--|o Contact : "contact"
+FileCollection ||--|o Contact : "filecollection_contact"
 FileCollection ||--}o InputSource : "filecollection_input_sources"
 GenomicAnnotationFile ||--|| GenomeAssembly : "genome_assembly"
 GenomicAnnotationFile ||--|| Term : "file_type"
@@ -189,6 +198,7 @@ InputSource ||--}o Any : "database_accessions"
 QualityAssessment ||--|| Any : "assessment_method, assessment_values"
 Sample ||--|o Term : "cell_line, cell_type, donor_development_stage, organism_tissue, phenotype"
 Sample ||--}o Term : "other_biospecimen"
+Study ||--|o Contact : "contact"
 TopLevel ||--|| Document : "document"
 TopLevel ||--}o Analysis : "analyses"
 TopLevel ||--}o Donor : "donors"
@@ -196,6 +206,7 @@ TopLevel ||--}o Experiment : "experiments"
 TopLevel ||--}o File : "files"
 TopLevel ||--}o FileCollection : "file_collections"
 TopLevel ||--}o Sample : "samples"
+TopLevel ||--}o Study : "studies"
 
 ```
 

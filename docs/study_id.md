@@ -3,10 +3,10 @@ search:
   boost: 5.0
 ---
 
-# Slot: contact 
+# Slot: study_id 
 
 
-_Contact point for the study._
+_Internal identifier for the study (unique within the metadata deposit). Namespace: "study"._
 
 
 
@@ -14,7 +14,7 @@ _Contact point for the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/schema/top_level/contact)
+URI: [https://w3id.org/fga-wg/schema/top_level/study_id](https://w3id.org/fga-wg/schema/top_level/study_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,13 +38,21 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Property | Value |
 | --- | --- |
-| Range | [Contact](Contact.md) |
+| Range | [Curie](Curie.md) |
 | Domain Of | [Study](Study.md) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Required | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Identifier | Yes |
+
+
 
 
 
@@ -58,7 +66,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Value |
 | --- |
-| None |
+| study:S-EPMC7391744 |
 
 
 
@@ -80,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/contact |
-| native | https://w3id.org/fga-wg/schema/top_level/contact |
+| self | https://w3id.org/fga-wg/schema/top_level/study_id |
+| native | https://w3id.org/fga-wg/schema/top_level/study_id |
 
 
 
@@ -90,18 +98,18 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 <details>
 ```yaml
-name: contact
-description: Contact point for the study.
+name: study_id
+description: 'Internal identifier for the study (unique within the metadata deposit).
+  Namespace: "study".'
 examples:
-- object:
-    name: Mark Gerstein
-    contact_id: orcid:0000-0002-9746-3719
-    email: mark@gersteinlab.org
+- value: study:S-EPMC7391744
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
+identifier: true
 domain_of:
 - Study
-range: Contact
+range: curie
+required: true
 
 ```
 </details></div>

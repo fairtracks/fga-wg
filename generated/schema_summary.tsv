@@ -86,7 +86,7 @@ FileCollection		FileCollection	"A collection of files, according to some selecti
 					filecollection_description		Any	0..1	Human-readable description of the file collection.	https://w3id.org/fga-wg/schema/file-collection/filecollection_description
 					filecollection_input_sources		InputSource	0..*	References to other input sources from which this file collection was derived.	https://w3id.org/fga-wg/schema/file-collection/filecollection_input_sources
 					deposit_versioned_ref		Curie	1..1	Reference to versioned id of deposit containing this file collection.	https://w3id.org/fga-wg/schema/file-collection/deposit_versioned_ref
-					contact		Contact	0..1	Contact point to the creator and/or maintainer of the file collection.	https://w3id.org/fga-wg/schema/file-collection/contact
+					filecollection_contact		Contact	0..1	Contact point to the creator and/or maintainer of the file collection.	https://w3id.org/fga-wg/schema/file-collection/filecollection_contact
 GenomeAssembly		GenomeAssembly	Information about of the exact genome assembly used to generate the annotation file, defining the genomic coordinate system for the sequence features.							
 				I	seqcol_digest		Curie	1..1	Top-level sequence collection digest according to the GA4GH refget, Sequence Collections standard (v1.0). This a globally unique identifier for the genome assembly, algorithmically derivable from the genome assembly content. Usage is to uniquely identify the exact genome assembly used and allow detailed comparisons across genome assembly variants (say, variants of the GRCh38 assembly).	https://w3id.org/fga-wg/schema/genome-assembly/seqcol_digest
 					seqcol_ordered_coord_system		Curie	1..1	Content-derived digest that uniquely identifies the ordered coordinate system of the genome assembly. (Coordinate systems with the same sequence names and lengths, but where the sequences are ordered differently, will have different ordered digests.). Usage is the ordered coordinate system digest can be used to uniquely generate a chromSizes file, useful in a number of analysis tools. Definition is the ordered coordinate system digest is defined as the level 1 digest of the name_length_pairs attribute of the sequence collection generated from the genome assembly.	https://w3id.org/fga-wg/schema/genome-assembly/seqcol_ordered_coord_system
@@ -133,17 +133,27 @@ Sample		Sample	Information about a biospecimen/sample used as raw material for l
 					donor_age		str	0..1	Age of the donor/organism at the time of sampling	https://w3id.org/fga-wg/schema/sample/donor_age
 					donor_development_stage		Term	0..1	Development stage of the donor at the time of sampling.	https://w3id.org/fga-wg/schema/sample/donor_development_stage
 					donor_clinical_information		str	0..1	Clinical information of the donor/organism at the time of sampling.	https://w3id.org/fga-wg/schema/sample/donor_clinical_information
+Study		Study	A scientific study, i.e. a unit of research, within which experiments and/or analyses have been carried out.							
+					study_external_id		Curie	0..1	External, globally unique identifier for the study (preferably a BioStudies CURIE).	https://w3id.org/fga-wg/schema/study/study_external_id
+				I	study_id		Curie	1..1	"Internal identifier for the study (unique within the metadata deposit). Namespace: ""study""."	https://w3id.org/fga-wg/schema/study/study_id
+					study_title		str	1..1	Title of the study.	https://w3id.org/fga-wg/schema/study/study_title
+					study_abstract		str	0..1	Abstract of the study.	https://w3id.org/fga-wg/schema/study/study_abstract
+					project_external_ref		URIorCURIE	0..1	Reference to a project within which the study was carried out (preferably a BioProject CURIE).	https://w3id.org/fga-wg/schema/study/project_external_ref
+					project_name		str	0..1	Name of the project within which the study was carried out.	https://w3id.org/fga-wg/schema/study/project_name
+					publications		Curie	0..*	List of (relevant) publications containing the results of the study (in the form of DOI CURIEs).	https://w3id.org/fga-wg/schema/study/publications
+					contact		Contact	0..1	Contact point for the study.	https://w3id.org/fga-wg/schema/study/contact
 Term		Term	Helper entity to represent an ontology term as a data value. 							
 					id		Curie	1..1	External, globally unique identifier for the ontology term (in CURIE form).	https://w3id.org/fga-wg/schema/term/id
 					label		str	0..1	"Human-readable label associated to the term id in the current version of the ontology (as listed in the ""ontology_versions"" field of the Deposit object)."	https://w3id.org/fga-wg/schema/term/label
 TopLevel		TopLevel	"A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the ""FAIRification of Genomic Annotations"" data model. This is the top-level class to be used as root for the metadata document."							
 					document		Document	1..1	Information about this document containing harmonised metadata about a set of genome annotation files. This includes self-referential identifiers and versioning of public deposits of the document.	https://w3id.org/fga-wg/schema/top_level/document
-					file_collections		FileCollection	0..*	Information about collections of files contained in this dataset, each collection defined according to some selection criteria.	https://w3id.org/fga-wg/schema/top_level/file_collections
-					files		File	0..*	Information about particular genome annotation (and other relevant) files.	https://w3id.org/fga-wg/schema/top_level/files
+					donors		Donor	0..*	Information about the donors or complete organisms from which the samples were taken.	https://w3id.org/fga-wg/schema/top_level/donors
 					experiments		Experiment	0..*	Information about sequencing experiments that have been carried out to generate the files.	https://w3id.org/fga-wg/schema/top_level/experiments
+					files		File	0..*	Information about particular genome annotation (and other relevant) files.	https://w3id.org/fga-wg/schema/top_level/files
+					file_collections		FileCollection	0..*	Information about collections of files contained in this dataset, each collection defined according to some selection criteria.	https://w3id.org/fga-wg/schema/top_level/file_collections
 					analyses		Analysis	0..*	Information about computational processing and analyses that have been carried out to generate the files.	https://w3id.org/fga-wg/schema/top_level/analyses
 					samples		Sample	0..*	Information about the biospecimens/samples used as raw material for lab experiments.	https://w3id.org/fga-wg/schema/top_level/samples
-					donors		Donor	0..*	Information about the donors or complete organisms from which the samples were taken.	https://w3id.org/fga-wg/schema/top_level/donors
+					studies		Study	0..*	The scientific studies, i.e. units of research, within which experiments and/or analyses have been carried out.	https://w3id.org/fga-wg/schema/top_level/studies
 TrackGeometry		TrackGeometry	Overall geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track, in line with the track type delineations from Gundersen et. al, 2011. While conceptually based on visual characteristics, these properties are also useful to e.g. select relevant annotation files for non-visual analyses.							
 					has_gaps		Bool	1..1	Whether there are gaps between the sequence features (there exists at least one gap between two features on the same sequence).	https://w3id.org/fga-wg/schema/track-geometry/has_gaps
 					has_lengths		Bool	1..1	Whether the sequence features have lengths (at least one feature spans more than 1 base pair).	https://w3id.org/fga-wg/schema/track-geometry/has_lengths

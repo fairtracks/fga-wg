@@ -19,7 +19,7 @@ classes:
       - filecollection_description
       - filecollection_input_sources
       - deposit_versioned_ref
-      - contact
+      - filecollection_contact
 
 slots:
   filecollection_external_id:
@@ -66,7 +66,7 @@ slots:
     range: curie
     examples:
       - value: 'doi:10.1234/zenodo.12345679'
-  contact:
+  filecollection_contact:
     description: 'Contact point to the creator and/or maintainer of the file collection.'
     range: Contact
     examples:

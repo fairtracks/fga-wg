@@ -31,6 +31,7 @@ Name: TopLevel
 | [OntologyVersions](OntologyVersions.md) | Information about an ontology used in the metadata |
 | [QualityAssessment](QualityAssessment.md) | Represents the results of a quality assessment that has been carried out on a... |
 | [Sample](Sample.md) | Information about a biospecimen/sample used as raw material for lab experimen... |
+| [Study](Study.md) | A scientific study, i |
 | [Term](Term.md) | Helper entity to represent an ontology term as a data value |
 | [TopLevel](TopLevel.md) | A document of harmonised metadata for a set of genome annotation files |
 | [TrackGeometry](TrackGeometry.md) | Overall geometric properties of the sequence features in the genomic annotati... |
@@ -71,7 +72,7 @@ Name: TopLevel
 | [checksum](checksum.md) | The hex-string encoded checksum for the data |
 | [checksum_type](checksum_type.md) | The digest method used to create the checksum |
 | [checksums](checksums.md) | A list of checksums of the data file |
-| [contact](contact.md) | Contact point to the creator and/or maintainer of the file collection |
+| [contact](contact.md) | Contact point for the study |
 | [contact_id](contact_id.md) | Globally unique identifier for a person (e |
 | [created_time](created_time.md) | Timestamp of content creation in RFC3339 |
 | [data_content](data_content.md) | Classification describing the file's purpose or contents |
@@ -120,6 +121,7 @@ Name: TopLevel
 | [file_size](file_size.md) | For blobs, the blob size in bytes |
 | [file_type](file_type.md) | The file format of the data file |
 | [file_version](file_version.md) | A string representing a version |
+| [filecollection_contact](filecollection_contact.md) | Contact point to the creator and/or maintainer of the file collection |
 | [filecollection_description](filecollection_description.md) | Human-readable description of the file collection |
 | [filecollection_external_id](filecollection_external_id.md) | External, globally unique identifier for the file collection (in most cases, ... |
 | [filecollection_id](filecollection_id.md) | Internal identifier for the file collection (unique within the metadata depos... |
@@ -152,6 +154,9 @@ Name: TopLevel
 | [organism_tissue](organism_tissue.md) | Part of organism (typically tissue or organ) from which the biospecimen/sampl... |
 | [other_biospecimen](other_biospecimen.md) | Other biospecimen-related terms that can be used to further classify the bios... |
 | [phenotype](phenotype.md) | Main phenotype (e |
+| [project_external_ref](project_external_ref.md) | Reference to a project within which the study was carried out (preferably a B... |
+| [project_name](project_name.md) | Name of the project within which the study was carried out |
+| [publications](publications.md) | List of (relevant) publications containing the results of the study (in the f... |
 | [qualified_relation](qualified_relation.md) | A description of the relationship with the input source |
 | [quality_assessments](quality_assessments.md) | An array of QualityAssessment objects containing the main quality scores from... |
 | [region](region.md) | Name of the region in the cloud service provider that the object belongs to |
@@ -171,6 +176,11 @@ Name: TopLevel
 | [sequencing_protocol](sequencing_protocol.md) | Set of rules which guides how the sequencing protocol was followed |
 | [sex](sex.md) | Biological sex of the donor/organism |
 | [species_taxon](species_taxon.md) | Taxonomical classification of the species of the donor/organism |
+| [studies](studies.md) | The scientific studies, i |
+| [study_abstract](study_abstract.md) | Abstract of the study |
+| [study_external_id](study_external_id.md) | External, globally unique identifier for the study (preferably a BioStudies C... |
+| [study_id](study_id.md) | Internal identifier for the study (unique within the metadata deposit) |
+| [study_title](study_title.md) | Title of the study |
 | [technical_replicate_labels](technical_replicate_labels.md) | Labels denoting the technical replicates within which the relation is defined... |
 | [track_geometry](track_geometry.md) | Geometric properties of the sequence features in the genomic annotation file ... |
 | [updated_time](updated_time.md) | Timestamp of content update in RFC3339, identical to created_time in systems ... |

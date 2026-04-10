@@ -39,9 +39,14 @@ class "TrackGeometry" [[{Overall geometric properties of the sequence features i
 class "TopLevel" [[{A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document.}]] {
 
 }
-class "Donor" [[{Information about the donor or complete organism from which the sample was taken.}]] {
-    {field} donor_external_id : curie  
-    {field} donor_id : curie  
+class "Study" [[{A scientific study, i.e. a unit of research, within which experiments and/or analyses have been carried out.}]] {
+    {field} study_external_id : curie  
+    {field} study_id : curie  
+    {field} study_title : string  
+    {field} study_abstract : string  
+    {field} project_external_ref : uriorcurie  
+    {field} project_name : string  
+    {field} publications : curie  [0..*]
 }
 class "Sample" [[{Information about a biospecimen/sample used as raw material for lab experiments.}]] {
     {field} sample_external_id : curie  
@@ -66,13 +71,11 @@ class "Analysis" [[{Represents the computational processing applied to data from
     {field} analysis_protocol : uriorcurie  
     {field} analysis_workflow : uriorcurie  
 }
-class "Experiment" [[{Represents a sequencing experiment that has been carried out within a study, based on biological samples, and providing data files as output. Subsequent analysis of output data is described by the Analysis entity.}]] {
-    {field} experiment_external_id : curie  
-    {field} experiment_id : curie  
-    {field} experiment_label : string  
-    {field} experiment_study_ref : curie  
-    {field} design_description : string  
-    {field} sequencing_protocol : uriorcurie  
+class "FileCollection" [[{A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files.}]] {
+    {field} filecollection_external_id : curie  
+    {field} filecollection_id : curie  
+    {field} filecollection_label : string  
+    {field} deposit_versioned_ref : curie  
 }
 class "File" [[{General information about a particular data file. Most fields (marked with an asterix*) are copied from the GA4GH DRS DrsObject model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/DrsObjectModel), which is the top-level object returned from a DRS server in response to a successful lookup call (i.e. https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/Objects).}]] {
     {field} file_external_id : curie  
@@ -90,21 +93,28 @@ class "File" [[{General information about a particular data file. Most fields (m
     {field} updated_time : datetime  
     {field} file_version : string  
 }
-class "FileCollection" [[{A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files.}]] {
-    {field} filecollection_external_id : curie  
-    {field} filecollection_id : curie  
-    {field} filecollection_label : string  
-    {field} deposit_versioned_ref : curie  
+class "Experiment" [[{Represents a sequencing experiment that has been carried out within a study, based on biological samples, and providing data files as output. Subsequent analysis of output data is described by the Analysis entity.}]] {
+    {field} experiment_external_id : curie  
+    {field} experiment_id : curie  
+    {field} experiment_label : string  
+    {field} experiment_study_ref : curie  
+    {field} design_description : string  
+    {field} sequencing_protocol : uriorcurie  
+}
+class "Donor" [[{Information about the donor or complete organism from which the sample was taken.}]] {
+    {field} donor_external_id : curie  
+    {field} donor_id : curie  
 }
 class "Document" [[{Information about a document containing metadata about a set of genome annotation files, harmonised according to the "FAIRification of Genomic Annotations" data model.  This includes self-referential identifiers and versioning of public deposits of the document.}]] {
     {field} document_label : string  
 }
-"TopLevel" *--> "0..*" "Donor" : "donors"
+"TopLevel" *--> "0..*" "Study" : "studies"
 "TopLevel" *--> "0..*" "Sample" : "samples"
 "TopLevel" *--> "0..*" "Analysis" : "analyses"
-"TopLevel" *--> "0..*" "Experiment" : "experiments"
-"TopLevel" *--> "0..*" "File" : "files"
 "TopLevel" *--> "0..*" "FileCollection" : "file_collections"
+"TopLevel" *--> "0..*" "File" : "files"
+"TopLevel" *--> "0..*" "Experiment" : "experiments"
+"TopLevel" *--> "0..*" "Donor" : "donors"
 "TopLevel" *--> "1" "Document" : "document"
 class "Term" [[{Helper entity to represent an ontology term as a data value. }]] {
     {field} id : curie  
@@ -136,6 +146,12 @@ class "InputSource" [[{General object representing the source of data files, sam
 "GenomicAnnotationFile" *--> "1..*" "Term" : "sequence_features"
 "Donor" *--> "0..1" "Term" : "sex"
 "Donor" *--> "1" "Term" : "species_taxon"
+class "Contact" [[{Contact information for a person or an organisation.}]] {
+    {field} name : string  
+    {field} contact_id : curie  
+    {field} email : string  
+}
+"Study" *--> "0..1" "Contact" : "contact"
 class "QualityAssessment" [[{Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis.}]] {
     {field} assessment_details_url : uri  
 }
@@ -166,12 +182,7 @@ class "GenomeAssembly" [[{Information about of the exact genome assembly used to
 }
 "GenomicAnnotationFile" --> "1" "GenomeAssembly" : "genome_assembly"
 "File" ^-- "GenomicAnnotationFile"
-class "Contact" [[{Contact information for a person or an organisation.}]] {
-    {field} name : string  
-    {field} contact_id : curie  
-    {field} email : string  
-}
-"FileCollection" *--> "0..1" "Contact" : "contact"
+"FileCollection" *--> "0..1" "Contact" : "filecollection_contact"
 "FileCollection" *--> "0..1" "Any" : "filecollection_description"
 class "Checksum" [[{A checksum of a File object (orig: DrsObject). Exact copy of the Checksum object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/ChecksumModel).}]] {
     {field} checksum : string  

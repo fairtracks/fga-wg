@@ -3,10 +3,10 @@ search:
   boost: 5.0
 ---
 
-# Slot: contact 
+# Slot: publications 
 
 
-_Contact point for the study._
+_List of (relevant) publications containing the results of the study (in the form of DOI CURIEs)._
 
 
 
@@ -14,7 +14,7 @@ _Contact point for the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/schema/top_level/contact)
+URI: [https://w3id.org/fga-wg/schema/top_level/publications](https://w3id.org/fga-wg/schema/top_level/publications)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,13 +38,14 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Property | Value |
 | --- | --- |
-| Range | [Contact](Contact.md) |
+| Range | [Curie](Curie.md) |
 | Domain Of | [Study](Study.md) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Multivalued | Yes |
 
 
 
@@ -58,7 +59,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Value |
 | --- |
-| None |
+| https://doi.org/10.1038/s41467-020-14743-w |
 
 
 
@@ -80,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/contact |
-| native | https://w3id.org/fga-wg/schema/top_level/contact |
+| self | https://w3id.org/fga-wg/schema/top_level/publications |
+| native | https://w3id.org/fga-wg/schema/top_level/publications |
 
 
 
@@ -90,18 +91,17 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 <details>
 ```yaml
-name: contact
-description: Contact point for the study.
+name: publications
+description: List of (relevant) publications containing the results of the study (in
+  the form of DOI CURIEs).
 examples:
-- object:
-    name: Mark Gerstein
-    contact_id: orcid:0000-0002-9746-3719
-    email: mark@gersteinlab.org
+- value: https://doi.org/10.1038/s41467-020-14743-w
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:
 - Study
-range: Contact
+range: curie
+multivalued: true
 
 ```
 </details></div>

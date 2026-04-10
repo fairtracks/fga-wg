@@ -24,18 +24,18 @@ URI: [https://w3id.org/fga-wg/schema/top_level/FileCollection](https://w3id.org/
  classDiagram
     class FileCollection
     click FileCollection href "../FileCollection/"
-      FileCollection : contact
+      FileCollection : deposit_versioned_ref
+        
+      FileCollection : filecollection_contact
         
           
     
         
         
-        FileCollection --> "0..1" Contact : contact
+        FileCollection --> "0..1" Contact : filecollection_contact
         click Contact href "../Contact/"
     
 
-        
-      FileCollection : deposit_versioned_ref
         
       FileCollection : filecollection_description
         
@@ -83,7 +83,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/FileCollection](https://w3id.org/
 | [filecollection_description](filecollection_description.md) | 0..1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Uri](Uri.md) | Human-readable description of the file collection | direct |
 | [filecollection_input_sources](filecollection_input_sources.md) | * <br/> [InputSource](InputSource.md) | References to other input sources from which this file collection was derived | direct |
 | [deposit_versioned_ref](deposit_versioned_ref.md) | 1 <br/> [Curie](Curie.md) | Reference to versioned id of deposit containing this file collection | direct |
-| [contact](contact.md) | 0..1 <br/> [Contact](Contact.md) | Contact point to the creator and/or maintainer of the file collection | direct |
+| [filecollection_contact](filecollection_contact.md) | 0..1 <br/> [Contact](Contact.md) | Contact point to the creator and/or maintainer of the file collection | direct |
 
 
 
@@ -153,7 +153,7 @@ slots:
 - filecollection_description
 - filecollection_input_sources
 - deposit_versioned_ref
-- contact
+- filecollection_contact
 
 ```
 </details>
@@ -255,8 +255,8 @@ attributes:
     - FileCollection
     range: curie
     required: true
-  contact:
-    name: contact
+  filecollection_contact:
+    name: filecollection_contact
     description: Contact point to the creator and/or maintainer of the file collection.
     examples:
     - object:

@@ -3,10 +3,10 @@ search:
   boost: 5.0
 ---
 
-# Slot: contact 
+# Slot: project_external_ref 
 
 
-_Contact point for the study._
+_Reference to a project within which the study was carried out (preferably a BioProject CURIE)._
 
 
 
@@ -14,7 +14,7 @@ _Contact point for the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/schema/top_level/contact)
+URI: [https://w3id.org/fga-wg/schema/top_level/project_external_ref](https://w3id.org/fga-wg/schema/top_level/project_external_ref)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Property | Value |
 | --- | --- |
-| Range | [Contact](Contact.md) |
+| Range | [Uriorcurie](Uriorcurie.md) |
 | Domain Of | [Study](Study.md) |
 
 ### Cardinality and Requirements
@@ -58,7 +58,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Value |
 | --- |
-| None |
+| bioproject:PRJNA63441 |
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/contact |
-| native | https://w3id.org/fga-wg/schema/top_level/contact |
+| self | https://w3id.org/fga-wg/schema/top_level/project_external_ref |
+| native | https://w3id.org/fga-wg/schema/top_level/project_external_ref |
 
 
 
@@ -90,18 +90,16 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 <details>
 ```yaml
-name: contact
-description: Contact point for the study.
+name: project_external_ref
+description: Reference to a project within which the study was carried out (preferably
+  a BioProject CURIE).
 examples:
-- object:
-    name: Mark Gerstein
-    contact_id: orcid:0000-0002-9746-3719
-    email: mark@gersteinlab.org
+- value: bioproject:PRJNA63441
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:
 - Study
-range: Contact
+range: uriorcurie
 
 ```
 </details></div>

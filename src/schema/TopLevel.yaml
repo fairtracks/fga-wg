@@ -14,6 +14,7 @@ imports:
   - FileCollection
   - GenomicAnnotationFile
   - Sample
+  - Study
 
 
 classes:
@@ -21,12 +22,13 @@ classes:
     description: 'A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document.'
     slots:
       - document
-      - file_collections
-      - files
+      - donors
       - experiments
+      - files
+      - file_collections
       - analyses
       - samples
-      - donors
+      - studies
 
 slots: 
   document:
@@ -43,6 +45,12 @@ slots:
   files:
     description: 'Information about particular genome annotation (and other relevant) files.'
     range: File
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  studies:
+    description: 'The scientific studies, i.e. units of research, within which experiments and/or analyses have been carried out.'
+    range: Study
     multivalued: true
     inlined: true
     inlined_as_list: true

@@ -3,10 +3,10 @@ search:
   boost: 5.0
 ---
 
-# Slot: contact 
+# Slot: study_external_id 
 
 
-_Contact point for the study._
+_External, globally unique identifier for the study (preferably a BioStudies CURIE)._
 
 
 
@@ -14,7 +14,7 @@ _Contact point for the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/schema/top_level/contact)
+URI: [https://w3id.org/fga-wg/schema/top_level/study_external_id](https://w3id.org/fga-wg/schema/top_level/study_external_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Property | Value |
 | --- | --- |
-| Range | [Contact](Contact.md) |
+| Range | [Curie](Curie.md) |
 | Domain Of | [Study](Study.md) |
 
 ### Cardinality and Requirements
@@ -58,7 +58,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Value |
 | --- |
-| None |
+| biostudies:S-EPMC7391744 |
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/contact |
-| native | https://w3id.org/fga-wg/schema/top_level/contact |
+| self | https://w3id.org/fga-wg/schema/top_level/study_external_id |
+| native | https://w3id.org/fga-wg/schema/top_level/study_external_id |
 
 
 
@@ -90,18 +90,16 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 <details>
 ```yaml
-name: contact
-description: Contact point for the study.
+name: study_external_id
+description: External, globally unique identifier for the study (preferably a BioStudies
+  CURIE).
 examples:
-- object:
-    name: Mark Gerstein
-    contact_id: orcid:0000-0002-9746-3719
-    email: mark@gersteinlab.org
+- value: biostudies:S-EPMC7391744
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:
 - Study
-range: Contact
+range: curie
 
 ```
 </details></div>

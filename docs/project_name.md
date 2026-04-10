@@ -3,10 +3,10 @@ search:
   boost: 5.0
 ---
 
-# Slot: contact 
+# Slot: project_name 
 
 
-_Contact point for the study._
+_Name of the project within which the study was carried out._
 
 
 
@@ -14,7 +14,7 @@ _Contact point for the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/schema/top_level/contact)
+URI: [https://w3id.org/fga-wg/schema/top_level/project_name](https://w3id.org/fga-wg/schema/top_level/project_name)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,7 +38,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Property | Value |
 | --- | --- |
-| Range | [Contact](Contact.md) |
+| Range | [String](String.md) |
 | Domain Of | [Study](Study.md) |
 
 ### Cardinality and Requirements
@@ -52,13 +52,6 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 
 
-
-
-## Examples
-
-| Value |
-| --- |
-| None |
 
 
 
@@ -80,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/contact |
-| native | https://w3id.org/fga-wg/schema/top_level/contact |
+| self | https://w3id.org/fga-wg/schema/top_level/project_name |
+| native | https://w3id.org/fga-wg/schema/top_level/project_name |
 
 
 
@@ -90,18 +83,13 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 <details>
 ```yaml
-name: contact
-description: Contact point for the study.
-examples:
-- object:
-    name: Mark Gerstein
-    contact_id: orcid:0000-0002-9746-3719
-    email: mark@gersteinlab.org
+name: project_name
+description: Name of the project within which the study was carried out.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:
 - Study
-range: Contact
+range: string
 
 ```
 </details></div>

@@ -3,10 +3,10 @@ search:
   boost: 5.0
 ---
 
-# Slot: contact 
+# Slot: study_title 
 
 
-_Contact point for the study._
+_Title of the study._
 
 
 
@@ -14,7 +14,7 @@ _Contact point for the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/schema/top_level/contact)
+URI: [https://w3id.org/fga-wg/schema/top_level/study_title](https://w3id.org/fga-wg/schema/top_level/study_title)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,13 +38,14 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Property | Value |
 | --- | --- |
-| Range | [Contact](Contact.md) |
+| Range | [String](String.md) |
 | Domain Of | [Study](Study.md) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Required | Yes |
 
 
 
@@ -58,7 +59,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Value |
 | --- |
-| None |
+| An integrative ENCODE resource for cancer genomics |
 
 
 
@@ -80,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/contact |
-| native | https://w3id.org/fga-wg/schema/top_level/contact |
+| self | https://w3id.org/fga-wg/schema/top_level/study_title |
+| native | https://w3id.org/fga-wg/schema/top_level/study_title |
 
 
 
@@ -90,18 +91,16 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 <details>
 ```yaml
-name: contact
-description: Contact point for the study.
+name: study_title
+description: Title of the study.
 examples:
-- object:
-    name: Mark Gerstein
-    contact_id: orcid:0000-0002-9746-3719
-    email: mark@gersteinlab.org
+- value: An integrative ENCODE resource for cancer genomics
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:
 - Study
-range: Contact
+range: string
+required: true
 
 ```
 </details></div>
