@@ -146,7 +146,7 @@ EXAMPLE_FILES = tuple(EXAMPLES_DIR / f"{model.with_suffix('.json').name}"
 
 # uv.lock changes whenever a dependency is updated (e.g. a new linkml release).
 # Adding it to file_dep ensures all generation tasks re-run after any dep change.
-TOOL_DEPS: list[_FilePath] = [Path("uv.lock")]
+TOOL_DEPS = (Path("uv.lock"), 'dodo.py') + SCRIPT_FILES
 
 # Upper file size threshold for empty files. If target files are smaller
 # than this, they are considered empty and tasks execution is not skipped.
