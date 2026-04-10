@@ -372,7 +372,7 @@ def task_json_schema() -> TaskDict:
             uv(f"gen-json-schema {TOP_LEVEL} -t {TOP_LEVEL_CLASS} > {target}"),
         ],
         'title': title_with_actions,
-        "file_dep": SCHEMA_FILES + TOOL_DEPS,
+        "file_dep": (*SCHEMA_FILES, *TOOL_DEPS),
         "targets":  [target],
         "uptodate": non_empty_targets(target),
     }
@@ -404,7 +404,7 @@ def task_pydantic() -> TaskDict:
             uv(get_common_cmd(PYDANTIC_V2_MODEL) + ['--output-model-type pydantic_v2.BaseModel']),
         ],
         'title': title_with_actions,
-        "file_dep": TOOL_DEPS + (JSON_SCHEMA,),
+        "file_dep": (JSON_SCHEMA, *TOOL_DEPS),
         "targets":  targets,
         "uptodate": non_empty_targets(*targets),
     }
@@ -426,7 +426,7 @@ def task_examples() -> TaskDict:
                + [_file.stem for _file in EXAMPLE_FILES]),
         ],
         'title': title_with_actions,
-        "file_dep": TOOL_DEPS + PYDANTIC_MODELS,
+        "file_dep": (*PYDANTIC_MODELS, *TOOL_DEPS),
         "targets":  targets,
         "uptodate": non_empty_targets(*targets),
     }
@@ -467,7 +467,7 @@ def task_plantuml() -> TaskDict:
     return {
         "actions": [
             f"mkdir -p {GEN_DIR}",
-            # --preserve-names keeps original LinkML names rather than normalising them
+            # --preserve-names keeps original LinkML names rather than normalizing them
             uv(f"gen-plantuml --format puml --preserve-names {TOP_LEVEL} > {target}"),
         ],
         'title': title_with_actions,
@@ -514,7 +514,7 @@ def task_overview() -> TaskDict:
 
 
 def task_nav() -> TaskDict:
-    """Categorise generated docs pages and write the literate-nav file → docs/nav.md
+    """Categorize generated docs pages and write the literate-nav file → docs/nav.md
 
     Delegates to src/docs/nav.py which uses SchemaView to group pages into
     Introduction | Classes | Slots | Types & Enums tabs.
