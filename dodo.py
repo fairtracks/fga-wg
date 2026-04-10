@@ -127,6 +127,10 @@ TOP_LEVEL = SCHEMA_DIR / "TopLevel.yaml"
 TOP_LEVEL_CLASS = 'TopLevel'
 LINT_CFG = Path("src/linkml_lint_config.yaml")
 GEN_DIR = Path("generated")
+JSON_SCHEMA = GEN_DIR / "schema.json"
+PYDANTIC_V1_MODEL = GEN_DIR / "pydantic_v1_model.py"
+PYDANTIC_V2_MODEL = GEN_DIR / "pydantic_v2_model.py"
+PYDANTIC_MODELS: list[_FilePath] = [PYDANTIC_V1_MODEL, PYDANTIC_V2_MODEL]
 DOCS_DIR   = Path("docs")
 
 # Every .yaml in the schema dir — any change triggers dependent tasks
@@ -143,8 +147,11 @@ EMPTY_FILE_THRESHOLD = 10
 
 # ── Helpers ─────────────────────────────────────────────────────────────────
 
-def uv(cmd: str) -> str:
+def uv(cmd: str | list[str]) -> str:
     """Prefix a command with `uv run` so it uses the project virtual env."""
+    if isinstance(cmd, list):
+        cmd = ' '.join(cmd)
+
     return f"uv run {cmd}"
 
 
@@ -165,7 +172,7 @@ class CommandOnRunReporter(ConsoleReporter):
 # ── Global doit configuration ───────────────────────────────────────────────
 
 DOIT_CONFIG = {
-    "default_tasks": ["lint", "json_schema", "summary", "erdiagram", "plantuml", "docs", "overview", "nav"],
+    "default_tasks": ["lint", "json_schema", "pydantic", "summary", "erdiagram", "plantuml", "docs", "overview", "nav"],
     "verbosity": 1,
     "reporter": CommandOnRunReporter,
 }
@@ -301,7 +308,7 @@ def task_lint() -> TaskDict:
 
 def task_json_schema() -> TaskDict:
     """Generate JSON Schema → generated/schema.json"""
-    target = GEN_DIR / "schema.json"
+    target = JSON_SCHEMA
     return {
         "actions": [
             f"mkdir -p {GEN_DIR}",
@@ -313,6 +320,37 @@ def task_json_schema() -> TaskDict:
         "uptodate": non_empty_targets(target),
     }
 
+
+def task_pydantic() -> TaskDict:
+    """Generate Pydantic models → generated/pydantic_v1_schema.py and generated/pydantic_v2_schema.py"""
+    targets = PYDANTIC_MODELS
+
+    def replace_import_line_for_embedded_pydantic_v1():
+        content = PYDANTIC_V1_MODEL.read_text()
+        new_content = content.replace("from pydantic import", "from pydantic.v1 import")
+        PYDANTIC_V1_MODEL.write_text(new_content)
+
+    def get_common_cmd(target: Path) -> list[str]:
+        return [
+            'datamodel-codegen',
+            '--formatters ruff-format',
+            f'--input {JSON_SCHEMA}',
+            f'--input-file-type jsonschema',
+            f'--output {target}',
+        ]
+
+    return {
+        "actions": [
+            f"mkdir -p {GEN_DIR}",
+            uv(get_common_cmd(PYDANTIC_V1_MODEL) + ['--output-model-type pydantic.BaseModel']),
+            replace_import_line_for_embedded_pydantic_v1,
+            uv(get_common_cmd(PYDANTIC_V2_MODEL) + ['--output-model-type pydantic_v2.BaseModel']),
+        ],
+        'title': title_with_actions,
+        "file_dep": TOOL_DEPS + [JSON_SCHEMA],
+        "targets":  targets,
+        "uptodate": non_empty_targets(*targets),
+    }
 
 def task_summary() -> TaskDict:
     """Generate TSV class/slot summary → generated/schema_summary.tsv"""

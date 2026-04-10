@@ -13,6 +13,7 @@ dependencies = [
     "mkdocs-kroki-plugin>=0.6",
     # Task runner
     "doit>=0.36",
+    "datamodel-code-generator[ruff]<0.55",
     "basedpyright>=1.39.0",
 ]
 
