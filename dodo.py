@@ -130,11 +130,19 @@ GEN_DIR = Path("generated")
 JSON_SCHEMA = GEN_DIR / "schema.json"
 PYDANTIC_V1_MODEL = GEN_DIR / "pydantic_v1_model.py"
 PYDANTIC_V2_MODEL = GEN_DIR / "pydantic_v2_model.py"
-PYDANTIC_MODELS: list[_FilePath] = [PYDANTIC_V1_MODEL, PYDANTIC_V2_MODEL]
+PYDANTIC_MODELS = (PYDANTIC_V1_MODEL, PYDANTIC_V2_MODEL)
+EXAMPLES_DIR = GEN_DIR / "examples"
 DOCS_DIR   = Path("docs")
+SCRIPTS_DIR = Path("src/scripts")
+
+EXTRACT_EXAMPLES_SCRIPT = SCRIPTS_DIR / "extract_examples.py"
 
 # Every .yaml in the schema dir — any change triggers dependent tasks
-SCHEMA_FILES: list[_FilePath] = list(SCHEMA_DIR.glob("*.yaml"))
+SCRIPT_FILES = tuple(SCRIPTS_DIR.glob("*.py"))
+SCHEMA_FILES = tuple(SCHEMA_DIR.glob("*.yaml"))
+EXAMPLE_FILES = tuple(EXAMPLES_DIR / f"{model.with_suffix('.json').name}"
+                 for model in SCHEMA_FILES
+                 if model.stem != "Any") # skip Any since it is a special case with no examples
 
 # uv.lock changes whenever a dependency is updated (e.g. a new linkml release).
 # Adding it to file_dep ensures all generation tasks re-run after any dep change.
@@ -172,7 +180,7 @@ class CommandOnRunReporter(ConsoleReporter):
 # ── Global doit configuration ───────────────────────────────────────────────
 
 DOIT_CONFIG = {
-    "default_tasks": ["lint", "json_schema", "pydantic", "summary", "erdiagram", "plantuml", "docs", "overview", "nav"],
+    "default_tasks": ["lint", "json_schema", "pydantic", "examples", "summary", "erdiagram", "plantuml", "docs", "overview", "nav"],
     "verbosity": 1,
     "reporter": CommandOnRunReporter,
 }
@@ -347,7 +355,29 @@ def task_pydantic() -> TaskDict:
             uv(get_common_cmd(PYDANTIC_V2_MODEL) + ['--output-model-type pydantic_v2.BaseModel']),
         ],
         'title': title_with_actions,
-        "file_dep": TOOL_DEPS + [JSON_SCHEMA],
+        "file_dep": TOOL_DEPS + (JSON_SCHEMA,),
+        "targets":  targets,
+        "uptodate": non_empty_targets(*targets),
+    }
+
+
+def task_examples() -> TaskDict:
+    """Generate JSON examples from Pydantic models → generated/examples/*.json"""
+    targets = EXAMPLE_FILES
+
+    def _module_string_from_path(file_path: Path) -> str:
+        return ".".join(file_path.with_suffix("").parts)
+
+    return {
+        "actions": [
+            f"mkdir -p {GEN_DIR}",
+            uv(['python',
+                '-m',
+                _module_string_from_path(EXTRACT_EXAMPLES_SCRIPT)]
+               + [_file.stem for _file in EXAMPLE_FILES]),
+        ],
+        'title': title_with_actions,
+        "file_dep": TOOL_DEPS + PYDANTIC_MODELS,
         "targets":  targets,
         "uptodate": non_empty_targets(*targets),
     }
@@ -427,7 +457,7 @@ def task_overview() -> TaskDict:
 
     return {
         "actions":  [run],
-        "file_dep": [erdiagram_src, plantuml_src] + TOOL_DEPS,
+        "file_dep": (erdiagram_src, plantuml_src) + TOOL_DEPS,
         "targets":  [target],
         "uptodate": non_empty_targets(target),
         "task_dep": ["erdiagram", "plantuml"],

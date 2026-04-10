@@ -1,0 +1,12 @@
+{
+  "donor_external_id": "biosamples:SAMN04284578",
+  "donor_id": "donor:ENCDO001AAA",
+  "sex": {
+    "id": "CARO:0000027",
+    "label": "male organism"
+  },
+  "species_taxon": {
+    "id": "NCBITaxon:9606",
+    "label": "Homo sapiens"
+  }
+}

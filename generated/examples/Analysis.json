@@ -1,0 +1,42 @@
+{
+  "analysis_description": "ENCODE3 ChIP-seq pipeline on GRCH38 with replicated peak calling using MACS.",
+  "analysis_external_id": "encode:ENCAN718KHT",
+  "analysis_id": "analysis:ENCAN718KHT",
+  "analysis_input_sources": [
+    {
+      "biological_replicate_labels": [
+        "1",
+        "2"
+      ],
+      "inputsource_ref": "experiment:ENCSR000DPJ",
+      "qualified_relation": "prov:wasInformedBy",
+      "technical_replicate_labels": [
+        "1_1",
+        "2_1"
+      ]
+    },
+    {
+      "biological_replicate_labels": [
+        "1",
+        "2"
+      ],
+      "date_retrieved": "2016-04-19",
+      "inputsource_external_ref": "https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15",
+      "qualified_relation": "https://bioschemas.org/FormalParameter",
+      "technical_replicate_labels": [
+        "1_1",
+        "2_1"
+      ]
+    }
+  ],
+  "analysis_label": "ENCODE3 ChIP-seq pipeline, GRCH38, replicated peak calling",
+  "analysis_main_tool": "biotools:macs",
+  "analysis_main_tool_version": "2.10",
+  "analysis_protocol": "https://www.encodeproject.org/documents/7009beb8-340b-4e71-b9db-53bb020c7fe2/@@download/attachment/ChIP-seq_pipeline_overview.pdf",
+  "analysis_study_ref": "study:S-EPMC7391744",
+  "analysis_type": {
+    "id": "edam:operation_3222",
+    "label": "Peak calling"
+  },
+  "analysis_workflow": "encode:ENCPL272XAE"
+}

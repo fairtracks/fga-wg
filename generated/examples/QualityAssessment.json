@@ -1,0 +1,9 @@
+{
+  "assessment_details_url": "https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/",
+  "assessment_method": "histone-chipseq-quality-metrics",
+  "assessment_values": {
+    "frip": 0.2931669095906483,
+    "nreads": 21018235,
+    "nreads_in_peaks": 6161851
+  }
+}
