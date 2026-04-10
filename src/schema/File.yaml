@@ -431,7 +431,7 @@ slots:
     required: true
     range: integer
     examples:
-      - object: 5359719
+      - value: 5359719
   created_time:
     description: 'Timestamp of content creation in RFC3339. (This is the creation time of the underlying content, not of the JSON object.).'
     required: true

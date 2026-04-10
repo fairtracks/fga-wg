@@ -59,7 +59,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_edges](https://w3id.org/fga-w
 
 | Value |
 | --- |
-| None |
+| False |
 
 
 
@@ -95,7 +95,7 @@ name: has_edges
 description: Whether the sequence features are linked across positions (at least one
   edge between features exists).
 examples:
-- object: false
+- value: 'False'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

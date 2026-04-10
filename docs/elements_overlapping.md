@@ -59,7 +59,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/elements_overlapping](https://w3i
 
 | Value |
 | --- |
-| None |
+| False |
 
 
 
@@ -95,7 +95,7 @@ name: elements_overlapping
 description: Whether the sequence features are overlapping (at least one base pair
   is simultaneously covered by two sequence features).
 examples:
-- object: false
+- value: 'False'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

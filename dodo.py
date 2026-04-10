@@ -234,6 +234,14 @@ LINT_KNOWN_ISSUES : list[KnownIssue] = [
             "in LinkML rule preconditions. See https://github.com/linkml/linkml/issues/1136"
         ),
     },
+    {
+        "message_pattern": "is not of type 'string', 'null'",
+        "reason": (
+            "LinkML's metamodel for Example.value only supports strings, while Example.object"
+            "supports only objects/dicts. Integers, boolean, floats and lists are not supported."
+            "See https://github.com/linkml/linkml/issues/3018"
+        ),
+    },
 ]
 
 

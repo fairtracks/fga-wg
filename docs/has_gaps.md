@@ -59,7 +59,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_gaps](https://w3id.org/fga-wg
 
 | Value |
 | --- |
-| None |
+| True |
 
 
 
@@ -95,7 +95,7 @@ name: has_gaps
 description: Whether there are gaps between the sequence features (there exists at
   least one gap between two features on the same sequence).
 examples:
-- object: true
+- value: 'True'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

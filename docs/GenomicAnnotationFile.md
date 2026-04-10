@@ -542,7 +542,7 @@ attributes:
     name: file_size
     description: 'For blobs, the blob size in bytes. '
     examples:
-    - object: 5359719
+    - value: '5359719'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: GenomicAnnotationFile

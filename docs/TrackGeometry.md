@@ -281,7 +281,7 @@ attributes:
     description: Whether there are gaps between the sequence features (there exists
       at least one gap between two features on the same sequence).
     examples:
-    - object: true
+    - value: 'True'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: TrackGeometry
@@ -294,7 +294,7 @@ attributes:
     description: Whether the sequence features have lengths (at least one feature
       spans more than 1 base pair).
     examples:
-    - object: true
+    - value: 'True'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: TrackGeometry
@@ -307,7 +307,7 @@ attributes:
     description: Whether the sequence features are stranded (at least one feature
       has strand information).
     examples:
-    - object: false
+    - value: 'False'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: TrackGeometry
@@ -320,7 +320,7 @@ attributes:
     description: Whether the sequence features have associated values (at least one
       feature has an associated value).
     examples:
-    - object: true
+    - value: 'True'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: TrackGeometry
@@ -333,7 +333,7 @@ attributes:
     description: Whether the sequence features are linked across positions (at least
       one edge between features exists).
     examples:
-    - object: false
+    - value: 'False'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: TrackGeometry
@@ -346,7 +346,7 @@ attributes:
     description: Whether the sequence features are named (at least one feature has
       a name).
     examples:
-    - object: true
+    - value: 'True'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: TrackGeometry
@@ -359,7 +359,7 @@ attributes:
     description: Whether the sequence features are overlapping (at least one base
       pair is simultaneously covered by two sequence features).
     examples:
-    - object: false
+    - value: 'False'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: TrackGeometry
@@ -372,7 +372,7 @@ attributes:
     description: Whether the sequence features have circular coordinates (at least
       one feature that cross a sequence border).
     examples:
-    - object: false
+    - value: 'False'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: TrackGeometry
@@ -385,7 +385,7 @@ attributes:
     description: Whether the sequence lengths are constant (all sequence features
       have the same length, excluding features at the very end of a sequence).
     examples:
-    - object: false
+    - value: 'False'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: TrackGeometry

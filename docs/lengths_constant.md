@@ -58,7 +58,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/lengths_constant](https://w3id.or
 
 | Value |
 | --- |
-| None |
+| False |
 
 
 
@@ -94,7 +94,7 @@ name: lengths_constant
 description: Whether the sequence lengths are constant (all sequence features have
   the same length, excluding features at the very end of a sequence).
 examples:
-- object: false
+- value: 'False'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

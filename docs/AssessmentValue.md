@@ -128,10 +128,6 @@ attributes:
   key:
     name: key
     description: Key/name of the assessment value.
-    examples:
-    - value: nreads
-    - value: nreads_in_peaks
-    - value: frip
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: AssessmentValue
@@ -142,10 +138,6 @@ attributes:
   value:
     name: value
     description: Value corresponding to the assessment key.
-    examples:
-    - object: 21018235
-    - object: 6161851
-    - object: 0.2931669095906483
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: AssessmentValue

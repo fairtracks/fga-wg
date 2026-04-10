@@ -59,7 +59,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_names](https://w3id.org/fga-w
 
 | Value |
 | --- |
-| None |
+| True |
 
 
 
@@ -94,7 +94,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_names](https://w3id.org/fga-w
 name: has_names
 description: Whether the sequence features are named (at least one feature has a name).
 examples:
-- object: true
+- value: 'True'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

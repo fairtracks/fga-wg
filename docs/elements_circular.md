@@ -59,7 +59,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/elements_circular](https://w3id.o
 
 | Value |
 | --- |
-| None |
+| False |
 
 
 
@@ -95,7 +95,7 @@ name: elements_circular
 description: Whether the sequence features have circular coordinates (at least one
   feature that cross a sequence border).
 examples:
-- object: false
+- value: 'False'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

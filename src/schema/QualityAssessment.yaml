@@ -55,10 +55,6 @@ slots:
     description: 'Key/name of the assessment value.'
     required: true
     range: string
-    examples:
-      - value: 'nreads'
-      - value: 'nreads_in_peaks'
-      - value: 'frip'
   value:
     description: 'Value corresponding to the assessment key.'
     required: true
@@ -68,7 +64,3 @@ slots:
       - range: boolean
       - range: integer
       - range: string
-    examples:
-      - object: 21018235
-      - object: 6161851
-      - object: 0.2931669095906483

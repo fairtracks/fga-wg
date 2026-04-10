@@ -59,7 +59,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_lengths](https://w3id.org/fga
 
 | Value |
 | --- |
-| None |
+| True |
 
 
 
@@ -95,7 +95,7 @@ name: has_lengths
 description: Whether the sequence features have lengths (at least one feature spans
   more than 1 base pair).
 examples:
-- object: true
+- value: 'True'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

@@ -59,7 +59,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_values](https://w3id.org/fga-
 
 | Value |
 | --- |
-| None |
+| True |
 
 
 
@@ -95,7 +95,7 @@ name: has_values
 description: Whether the sequence features have associated values (at least one feature
   has an associated value).
 examples:
-- object: true
+- value: 'True'
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

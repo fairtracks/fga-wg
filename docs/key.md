@@ -55,15 +55,6 @@ URI: [https://w3id.org/fga-wg/schema/top_level/key](https://w3id.org/fga-wg/sche
 
 
 
-## Examples
-
-| Value |
-| --- |
-| nreads |
-| nreads_in_peaks |
-| frip |
-
-
 
 ## Identifier and Mapping Information
 
@@ -95,10 +86,6 @@ URI: [https://w3id.org/fga-wg/schema/top_level/key](https://w3id.org/fga-wg/sche
 ```yaml
 name: key
 description: Key/name of the assessment value.
-examples:
-- value: nreads
-- value: nreads_in_peaks
-- value: frip
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

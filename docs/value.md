@@ -67,15 +67,6 @@ Value must satisfy at least one of:
 
 
 
-## Examples
-
-| Value |
-| --- |
-| None |
-| None |
-| None |
-
-
 
 ## Identifier and Mapping Information
 
@@ -107,10 +98,6 @@ Value must satisfy at least one of:
 ```yaml
 name: value
 description: Value corresponding to the assessment key.
-examples:
-- object: 21018235
-- object: 6161851
-- object: 0.2931669095906483
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:
