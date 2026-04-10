@@ -3,7 +3,7 @@ name = "fga-wg-schema"
 version = "0.1.0"
 description = "FAIRification of Genomic Annotations WG — LinkML Schema"
 readme = "README.md"
-requires-python = ">=3.10,<3.14"
+requires-python = ">=3.12,<3.14"
 dependencies = [
     # Schema tooling
     "linkml>=1.10.0",
@@ -13,6 +13,7 @@ dependencies = [
     "mkdocs-kroki-plugin>=0.6",
     # Task runner
     "doit>=0.36",
+    "basedpyright>=1.39.0",
 ]
 
 [tool.uv]
@@ -21,3 +22,8 @@ package = false
 
 [tool.uv.sources]
  linkml = { git = "https://github.com/sveinugu/linkml.git", branch = "all-fixes", subdirectory = "packages/linkml" }
+
+
+[tool.basedpyright]
+typeCheckingMode = 'standard'
+reportMissingTypeStubs = false

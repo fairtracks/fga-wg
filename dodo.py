@@ -26,10 +26,99 @@ Understanding the run output:
 Default tasks (run by `uv run doit`):
     lint, json_schema, summary, erdiagram, plantuml, docs, overview
 """
+from collections.abc import Callable
 from pathlib import Path
+from typing import override, TypedDict, NotRequired, Literal
 
+from doit.task import Task
 from doit.reporter import ConsoleReporter
 from doit.tools import title_with_actions
+
+# ── Types ─────────────────────────────────────────────────────────────────
+
+_FilePath = str | Path  # str or pathlib.Path, as accepted by doit for file_dep / targets
+
+# Tuple form of a Python action / uptodate callable: doit unpacks it as
+#   item[0]   → the callable
+#   item[1]   → positional args list  (optional)
+#   item[2]   → keyword args dict     (optional)
+_CallableTuple = (
+    tuple[Callable[..., object]]
+    | tuple[Callable[..., object], list[object]]
+    | tuple[Callable[..., object], list[object], dict[str, object]]
+)
+
+# A single action item accepted by doit:
+#   str                   → shell command (shell=True)
+#   list[str | Path]      → shell command + args (shell=False)
+#   _CallableTuple        → (callable,), (callable, args), or (callable, args, kwargs)
+#   Callable[..., object] → Python callable (PythonAction)
+_ActionItem = str | list[str | Path] | _CallableTuple | Callable[..., object]
+
+# A single uptodate item accepted by doit:
+#   bool / None           → fixed up-to-date status
+#   str                   → result dependency by task name
+#   Callable[..., object] → computed check (called at task evaluation time)
+#   _CallableTuple        → callable with explicit positional / keyword args
+_UpToDateItem = bool | None | str | Callable[..., object] | _CallableTuple
+
+
+class CmdParamDict(TypedDict):
+    """Dict format for a single task parameter (passed to doit's CmdOption)."""
+    name: str                                    # required
+    default: object                              # required; any Python value
+    section: NotRequired[str]
+    type: NotRequired[type]
+    short: NotRequired[str]                      # single-char short flag
+    long: NotRequired[str]                       # long flag name
+    inverse: NotRequired[str]                    # boolean inverse flag name
+    choices: NotRequired[list[tuple[str, str]]]  # [(value, description), ...]
+    help: NotRequired[str]
+    metavar: NotRequired[str]
+    env_var: NotRequired[str | None]
+
+
+class TaskDict(TypedDict):
+    """Dict format returned by doit task-creator functions.
+
+    Only ``actions`` is required (doit raises InvalidTask if it is absent).
+    All other keys are optional; omitted keys use doit's own defaults.
+
+    See ``doit.task.Task.valid_attr`` for the authoritative list of accepted
+    fields and their valid types.
+    """
+    actions: list[_ActionItem] | tuple[_ActionItem, ...] | None  # required key; None → no-op task
+    basename: NotRequired[str]             # used when a generator yields sub-tasks
+    name: NotRequired[str]                 # sub-task name (normally set by loader)
+    file_dep: NotRequired[list[_FilePath] | tuple[_FilePath, ...]]
+    task_dep: NotRequired[list[str] | tuple[str, ...]]
+    uptodate: NotRequired[list[_UpToDateItem] | tuple[_UpToDateItem, ...]]
+    calc_dep: NotRequired[list[str] | tuple[str, ...]]
+    targets: NotRequired[list[_FilePath] | tuple[_FilePath, ...]]
+    setup: NotRequired[list[str] | tuple[str, ...]]                              # task names to run as setup
+    clean: NotRequired[list[_ActionItem] | tuple[_ActionItem, ...] | Literal[True]]  # True → delete targets
+    teardown: NotRequired[list[_ActionItem] | tuple[_ActionItem, ...]]
+    doc: NotRequired[str]
+    params: NotRequired[list[CmdParamDict] | tuple[CmdParamDict, ...]]
+    pos_arg: NotRequired[str]
+    verbosity: NotRequired[Literal[0, 1, 2] | None]
+    io: NotRequired[dict[str, object]]                             # e.g. {"capture": True}
+    getargs: NotRequired[dict[str, tuple[str, str]]]               # {arg_name: (task_id, key)}
+    title: NotRequired[Callable[[Task], str]]
+    watch: NotRequired[list[object] | tuple[object, ...]]
+    meta: NotRequired[dict[str, object]]
+
+
+class LinterProblem(TypedDict):
+    message: str
+    level: str | None
+    schema_name: str | None
+    schema_source: str | None
+    rule_name: str | None
+
+class KnownIssue(TypedDict):
+    message_pattern: str
+    reason: str
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 
@@ -41,15 +130,16 @@ GEN_DIR = Path("generated")
 DOCS_DIR   = Path("docs")
 
 # Every .yaml in the schema dir — any change triggers dependent tasks
-SCHEMA_FILES = list(SCHEMA_DIR.glob("*.yaml"))
+SCHEMA_FILES: list[_FilePath] = list(SCHEMA_DIR.glob("*.yaml"))
 
 # uv.lock changes whenever a dependency is updated (e.g. a new linkml release).
 # Adding it to file_dep ensures all generation tasks re-run after any dep change.
-TOOL_DEPS = [Path("uv.lock")]
+TOOL_DEPS: list[_FilePath] = [Path("uv.lock")]
 
 # Upper file size threshold for empty files. If target files are smaller
 # than this, they are considered empty and tasks execution is not skipped.
 EMPTY_FILE_THRESHOLD = 10
+
 
 # ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -67,9 +157,9 @@ class CommandOnRunReporter(ConsoleReporter):
     skip_uptodate to show just the task name instead.
     """
 
-
-    def skip_uptodate(self, task):
-        self.write(f"-- {task.name}\n")
+    @override
+    def skip_uptodate(self, task: Task):
+        self.write(f"-- {task.name}\n")  # pyright: ignore[reportUnknownMemberType]
 
 
 # ── Global doit configuration ───────────────────────────────────────────────
@@ -81,7 +171,7 @@ DOIT_CONFIG = {
 }
 
 
-def non_empty_targets(*targets: Path):
+def non_empty_targets(*targets: _FilePath) -> list[_UpToDateItem]:
     """Return an uptodate callable that fails if any target is missing or suspiciously small.
 
     Doit's default up-to-date check only compares modification times, so a
@@ -118,7 +208,7 @@ def non_empty_targets(*targets: Path):
 # Each entry documents the reason and a link to the upstream issue.
 # Suppressed issues are still printed as visible warnings — they are NOT silently ignored.
 
-LINT_KNOWN_ISSUES = [
+LINT_KNOWN_ISSUES : list[KnownIssue] = [
     {
         # equals_number: true uses a boolean where the metamodel expects integer/null.
         # This is the only syntax that works to check for boolean true in rule preconditions.
@@ -158,7 +248,7 @@ def _run_lint() -> bool:
     # Parse JSON output — linkml-lint exits non-zero on errors so we ignore returncode
     # and inspect the structured output ourselves.
     try:
-        problems = json.loads(result.stdout) if result.stdout.strip() else []
+        problems: list[LinterProblem] = json.loads(result.stdout) if result.stdout.strip() else []
     except json.JSONDecodeError:
         # Unexpected / unparseable output — print raw and fail
         print(result.stdout)
@@ -167,14 +257,14 @@ def _run_lint() -> bool:
         return False
 
     # Partition into known false positives vs real problems
-    real_problems: list = []
-    suppressed: list = []
+    real_problems: list[LinterProblem] = []
+    suppressed: list[tuple[LinterProblem, KnownIssue]] = []
     for problem in problems:
-        matched = next(
+        matched: KnownIssue | None = next(
             (ki for ki in LINT_KNOWN_ISSUES if ki["message_pattern"] in problem["message"]),
             None,
         )
-        if matched:
+        if matched is not None:
             suppressed.append((problem, matched))
         else:
             real_problems.append(problem)
@@ -200,7 +290,7 @@ def _run_lint() -> bool:
 
 # ── Tasks ────────────────────────────────────────────────────────────────────
 
-def task_lint():
+def task_lint() -> TaskDict:
     """Validate the schema with linkml-lint, filtering documented known false positives."""
     return {
         "actions":  [_run_lint],
@@ -209,7 +299,7 @@ def task_lint():
     }
 
 
-def task_json_schema():
+def task_json_schema() -> TaskDict:
     """Generate JSON Schema → generated/schema.json"""
     target = GEN_DIR / "schema.json"
     return {
@@ -224,7 +314,7 @@ def task_json_schema():
     }
 
 
-def task_summary():
+def task_summary() -> TaskDict:
     """Generate TSV class/slot summary → generated/schema_summary.tsv"""
     target = GEN_DIR / "schema_summary.tsv"
     return {
@@ -239,7 +329,7 @@ def task_summary():
     }
 
 
-def task_erdiagram():
+def task_erdiagram() -> TaskDict:
     """Generate full-schema Mermaid ER diagram → generated/schema_overview.md"""
     target = GEN_DIR / "schema_overview.md"
     return {
@@ -254,7 +344,7 @@ def task_erdiagram():
     }
 
 
-def task_plantuml():
+def task_plantuml() -> TaskDict:
     """Generate PlantUML class diagram source → generated/schema_overview.puml"""
     target = GEN_DIR / "schema_overview.puml"
     return {
@@ -270,7 +360,7 @@ def task_plantuml():
     }
 
 
-def task_docs():
+def task_docs() -> TaskDict:
     """Generate per-class Markdown documentation → docs/"""
     # TopLevel.md is used as the representative target for up-to-date checks
     target = DOCS_DIR / "TopLevel.md"
@@ -287,7 +377,7 @@ def task_docs():
     }
 
 
-def task_overview():
+def task_overview() -> TaskDict:
     """Create schema overview page → docs/overview.md (erdiagram + PlantUML UML)"""
     erdiagram_src = GEN_DIR / "schema_overview.md"
     plantuml_src  = GEN_DIR / "schema_overview.puml"
@@ -306,7 +396,7 @@ def task_overview():
     }
 
 
-def task_nav():
+def task_nav() -> TaskDict:
     """Categorise generated docs pages and write the literate-nav file → docs/nav.md
 
     Delegates to src/docs/nav.py which uses SchemaView to group pages into
@@ -327,7 +417,7 @@ def task_nav():
     }
 
 
-def task_build_site():
+def task_build_site() -> TaskDict:
     """Build the full MkDocs HTML site → site/  (run after nav)"""
     return {
         "actions":   [uv("mkdocs build")],
@@ -337,7 +427,7 @@ def task_build_site():
     }
 
 
-def task_serve():
+def task_serve() -> TaskDict:
     """Serve the docs site locally for live preview  (mkdocs serve)"""
     return {
         "actions":   [uv("mkdocs serve")],
