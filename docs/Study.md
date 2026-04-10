@@ -24,17 +24,6 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Study](https://w3id.org/fga-wg/sc
  classDiagram
     class Study
     click Study href "../Study/"
-      Study : contact
-        
-          
-    
-        
-        
-        Study --> "0..1" Contact : contact
-        click Contact href "../Contact/"
-    
-
-        
       Study : project_external_ref
         
       Study : project_name
@@ -42,6 +31,17 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Study](https://w3id.org/fga-wg/sc
       Study : publications
         
       Study : study_abstract
+        
+      Study : study_contact
+        
+          
+    
+        
+        
+        Study --> "0..1" Contact : study_contact
+        click Contact href "../Contact/"
+    
+
         
       Study : study_external_id
         
@@ -68,7 +68,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Study](https://w3id.org/fga-wg/sc
 | [project_external_ref](project_external_ref.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Reference to a project within which the study was carried out (preferably a B... | direct |
 | [project_name](project_name.md) | 0..1 <br/> [String](String.md) | Name of the project within which the study was carried out | direct |
 | [publications](publications.md) | * <br/> [Curie](Curie.md) | List of (relevant) publications containing the results of the study (in the f... | direct |
-| [contact](contact.md) | 0..1 <br/> [Contact](Contact.md) | Contact point for the study | direct |
+| [study_contact](study_contact.md) | 0..1 <br/> [Contact](Contact.md) | Contact point for the study | direct |
 
 
 
@@ -137,7 +137,7 @@ slots:
 - project_external_ref
 - project_name
 - publications
-- contact
+- study_contact
 
 ```
 </details>
@@ -255,8 +255,8 @@ attributes:
     - Study
     range: curie
     multivalued: true
-  contact:
-    name: contact
+  study_contact:
+    name: study_contact
     description: Contact point for the study.
     examples:
     - object:

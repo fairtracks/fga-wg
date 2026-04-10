@@ -19,7 +19,7 @@ classes:
       - project_external_ref
       - project_name
       - publications
-      - contact
+      - study_contact
 
 slots:
   study_external_id:
@@ -59,7 +59,7 @@ slots:
     multivalued: true
     examples:
       - value: 'https://doi.org/10.1038/s41467-020-14743-w'
-  contact: 
+  study_contact:
     description: 'Contact point for the study.'
     range: Contact
     examples:

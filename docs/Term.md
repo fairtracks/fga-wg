@@ -51,7 +51,6 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Term](https://w3id.org/fga-wg/sch
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [InputSource](InputSource.md) | [qualified_relation](qualified_relation.md) | range | [Term](Term.md) |
 | [Analysis](Analysis.md) | [analysis_type](analysis_type.md) | range | [Term](Term.md) |
 | [Donor](Donor.md) | [species_taxon](species_taxon.md) | range | [Term](Term.md) |
 | [Donor](Donor.md) | [sex](sex.md) | range | [Term](Term.md) |

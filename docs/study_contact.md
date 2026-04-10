@@ -3,10 +3,10 @@ search:
   boost: 5.0
 ---
 
-# Slot: file_size 
+# Slot: study_contact 
 
 
-_The file size in bytes._
+_Contact point for the study._
 
 
 
@@ -14,7 +14,7 @@ _The file size in bytes._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_size](https://w3id.org/fga-wg/schema/top_level/file_size)
+URI: [https://w3id.org/fga-wg/schema/top_level/study_contact](https://w3id.org/fga-wg/schema/top_level/study_contact)
 <!-- no inheritance hierarchy -->
 
 
@@ -25,8 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_size](https://w3id.org/fga-w
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [File](File.md) | General information about a particular data file |  no  |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
+| [Study](Study.md) | A scientific study, i |  no  |
 
 
 
@@ -39,14 +38,13 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_size](https://w3id.org/fga-w
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](Integer.md) |
-| Domain Of | [File](File.md) |
+| Range | [Contact](Contact.md) |
+| Domain Of | [Study](Study.md) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
-| Required | Yes |
 
 
 
@@ -60,7 +58,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_size](https://w3id.org/fga-w
 
 | Value |
 | --- |
-| 5359719 |
+| None |
 
 
 
@@ -82,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_size](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_size |
-| native | https://w3id.org/fga-wg/schema/top_level/file_size |
+| self | https://w3id.org/fga-wg/schema/top_level/study_contact |
+| native | https://w3id.org/fga-wg/schema/top_level/study_contact |
 
 
 
@@ -92,16 +90,18 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_size](https://w3id.org/fga-w
 
 <details>
 ```yaml
-name: file_size
-description: The file size in bytes.
+name: study_contact
+description: Contact point for the study.
 examples:
-- value: '5359719'
+- object:
+    name: Mark Gerstein
+    contact_id: orcid:0000-0002-9746-3719
+    email: mark@gersteinlab.org
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:
-- File
-range: integer
-required: true
+- Study
+range: Contact
 
 ```
 </details></div>

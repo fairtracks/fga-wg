@@ -38,7 +38,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/date_of_retrieval](https://w3id.o
 
 | Property | Value |
 | --- | --- |
-| Range | [Datetime](Datetime.md) |
+| Range | [Date](Date.md) |
 | Domain Of | [InputSource](InputSource.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:
 - InputSource
-range: datetime
+range: date
 
 ```
 </details></div>

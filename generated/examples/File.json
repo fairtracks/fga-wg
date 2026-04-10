@@ -34,7 +34,7 @@
   "checksums": [
     {
       "checksum": "535bc9628a1c5e5215226f9996e4eaca",
-      "type": "md5"
+      "checksum_type": "md5"
     }
   ],
   "created_time": "2016-11-13T17:42:04.385801+00:00",

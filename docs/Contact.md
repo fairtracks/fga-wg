@@ -1,12 +1,12 @@
 ---
 search:
-  boost: 5.0
+  boost: 10.0
 ---
 
-# Slot: contact 
+# Class: Contact 
 
 
-_Contact point for the study._
+_Contact information for a person or an organisation._
 
 
 
@@ -14,37 +14,48 @@ _Contact point for the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/schema/top_level/contact)
+URI: [https://w3id.org/fga-wg/schema/top_level/Contact](https://w3id.org/fga-wg/schema/top_level/Contact)
+
+
+
+
+
+```mermaid
+ classDiagram
+    class Contact
+    click Contact href "../Contact/"
+      Contact : contact_id
+        
+      Contact : email
+        
+      Contact : name
+        
+      
+```
+
+
+
+
 <!-- no inheritance hierarchy -->
 
+## Slots
 
-
-
-
-## Applicable Classes
-
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Study](Study.md) | A scientific study, i |  no  |
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [name](name.md) | 1 <br/> [String](String.md) | Name of the person or organisation | direct |
+| [contact_id](contact_id.md) | 0..1 <br/> [Curie](Curie.md) | Globally unique identifier for a person (e | direct |
+| [email](email.md) | 0..1 <br/> [String](String.md) | E-mail address of the person or organisation | direct |
 
 
 
 
 
+## Usages
 
-## Properties
-
-### Type and Range
-
-| Property | Value |
-| --- | --- |
-| Range | [Contact](Contact.md) |
-| Domain Of | [Study](Study.md) |
-
-### Cardinality and Requirements
-
-| Property | Value |
-| --- | --- |
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [FileCollection](FileCollection.md) | [filecollection_contact](filecollection_contact.md) | range | [Contact](Contact.md) |
+| [Study](Study.md) | [study_contact](study_contact.md) | range | [Contact](Contact.md) |
 
 
 
@@ -54,11 +65,6 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 
 
-## Examples
-
-| Value |
-| --- |
-| None |
 
 
 
@@ -80,28 +86,77 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/contact |
-| native | https://w3id.org/fga-wg/schema/top_level/contact |
+| self | https://w3id.org/fga-wg/schema/top_level/Contact |
+| native | https://w3id.org/fga-wg/schema/top_level/Contact |
+
+
 
 
 
 
 ## LinkML Source
 
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
 <details>
 ```yaml
-name: contact
-description: Contact point for the study.
-examples:
-- object:
-    name: Mark Gerstein
-    contact_id: orcid:0000-0002-9746-3719
-    email: mark@gersteinlab.org
+name: Contact
+description: Contact information for a person or an organisation.
 from_schema: https://w3id.org/fga-wg/schema/top_level
-rank: 1000
-domain_of:
-- Study
-range: Contact
+slots:
+- name
+- contact_id
+- email
+
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+name: Contact
+description: Contact information for a person or an organisation.
+from_schema: https://w3id.org/fga-wg/schema/top_level
+attributes:
+  name:
+    name: name
+    description: Name of the person or organisation.
+    examples:
+    - value: John Doe
+    from_schema: https://w3id.org/fga-wg/schema/top_level
+    rank: 1000
+    owner: Contact
+    domain_of:
+    - Contact
+    range: string
+    required: true
+  contact_id:
+    name: contact_id
+    description: Globally unique identifier for a person (e.g. ORCID ID) or organisation
+      (e.g. BioProject accession).
+    examples:
+    - value: orcid:0000-0001-2345-6789
+    from_schema: https://w3id.org/fga-wg/schema/top_level
+    rank: 1000
+    owner: Contact
+    domain_of:
+    - Contact
+    range: curie
+  email:
+    name: email
+    description: E-mail address of the person or organisation.
+    examples:
+    - value: john@doe.com
+    from_schema: https://w3id.org/fga-wg/schema/top_level
+    rank: 1000
+    owner: Contact
+    domain_of:
+    - Contact
+    range: string
+    pattern: ^\S+@\S+\.\S+$
 
 ```
 </details></div>

@@ -55,6 +55,13 @@ URI: [https://w3id.org/fga-wg/schema/top_level/track_geometry](https://w3id.org/
 
 
 
+## Examples
+
+| Value |
+| --- |
+| None |
+
+
 
 ## Identifier and Mapping Information
 
@@ -88,6 +95,18 @@ name: track_geometry
 description: Geometric properties of the sequence features in the genomic annotation
   file if considered as an one-dimensional genome browser track (also relevant for
   non-visual analyses).
+examples:
+- object:
+    elements_circular: false
+    elements_overlapping: false
+    has_edges: false
+    has_gaps: true
+    has_lengths: true
+    has_names: true
+    has_strands: false
+    has_values: true
+    lengths_constant: false
+    value_type: multiple
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

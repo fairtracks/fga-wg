@@ -38,7 +38,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/qualified_relation](https://w3id.
 
 | Property | Value |
 | --- | --- |
-| Range | [Term](Term.md) |
+| Range | [Uriorcurie](Uriorcurie.md) |
 | Domain Of | [InputSource](InputSource.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:
 - InputSource
-range: Term
+range: uriorcurie
 required: true
 
 ```

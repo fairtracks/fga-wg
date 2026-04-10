@@ -72,7 +72,7 @@ slots:
           qualified_relation: 'https://bioschemas.org/FormalParameter'
           biological_replicate_labels: ['1', '2']
           technical_replicate_labels: ['1_1', '2_1']
-          date_retrieved: '2016-04-19'
+          date_of_retrieval: '2016-04-19'
   analysis_type:
     description: 'The type of analysis carried out.'
     required: true

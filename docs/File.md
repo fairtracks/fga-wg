@@ -149,7 +149,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/File](https://w3id.org/fga-wg/sch
 | [file_type](file_type.md) | 1 <br/> [Term](Term.md) | The file format of the data file | direct |
 | [mime_type](mime_type.md) | 0..1 <br/> [String](String.md) | A string providing the mime-type of the data file | direct |
 | [data_content](data_content.md) | 1 <br/> [OutputType](OutputType.md) | Classification describing the file's purpose or contents | direct |
-| [file_size](file_size.md) | 1 <br/> [Integer](Integer.md) | For blobs, the blob size in bytes | direct |
+| [file_size](file_size.md) | 1 <br/> [Integer](Integer.md) | The file size in bytes | direct |
 | [created_time](created_time.md) | 1 <br/> [Datetime](Datetime.md) | Timestamp of content creation in RFC3339 | direct |
 | [updated_time](updated_time.md) | 0..1 <br/> [Datetime](Datetime.md) | Timestamp of content update in RFC3339, identical to created_time in systems ... | direct |
 | [file_version](file_version.md) | 0..1 <br/> [String](String.md) | A string representing a version | direct |
@@ -473,7 +473,7 @@ attributes:
     required: true
   file_size:
     name: file_size
-    description: 'For blobs, the blob size in bytes. '
+    description: The file size in bytes.
     examples:
     - value: '5359719'
     from_schema: https://w3id.org/fga-wg/schema/top_level
@@ -528,7 +528,7 @@ attributes:
     examples:
     - object:
         checksum: 535bc9628a1c5e5215226f9996e4eaca
-        type: md5
+        checksum_type: md5
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: File

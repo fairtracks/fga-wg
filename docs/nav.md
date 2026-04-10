@@ -159,6 +159,7 @@
     * [species_taxon](species_taxon.md)
     * [studies](studies.md)
     * [study_abstract](study_abstract.md)
+    * [study_contact](study_contact.md)
     * [study_external_id](study_external_id.md)
     * [study_id](study_id.md)
     * [study_title](study_title.md)

@@ -72,7 +72,6 @@ Name: TopLevel
 | [checksum](checksum.md) | The hex-string encoded checksum for the data |
 | [checksum_type](checksum_type.md) | The digest method used to create the checksum |
 | [checksums](checksums.md) | A list of checksums of the data file |
-| [contact](contact.md) | Contact point for the study |
 | [contact_id](contact_id.md) | Globally unique identifier for a person (e |
 | [created_time](created_time.md) | Timestamp of content creation in RFC3339 |
 | [data_content](data_content.md) | Classification describing the file's purpose or contents |
@@ -118,7 +117,7 @@ Name: TopLevel
 | [file_input_sources](file_input_sources.md) | External or internal references to data sources for the file, typically a dat... |
 | [file_label](file_label.md) | A human-readable description of the data file, short enough to be used for li... |
 | [file_name](file_name.md) | A string that can be used to name a data file |
-| [file_size](file_size.md) | For blobs, the blob size in bytes |
+| [file_size](file_size.md) | The file size in bytes |
 | [file_type](file_type.md) | The file format of the data file |
 | [file_version](file_version.md) | A string representing a version |
 | [filecollection_contact](filecollection_contact.md) | Contact point to the creator and/or maintainer of the file collection |
@@ -178,6 +177,7 @@ Name: TopLevel
 | [species_taxon](species_taxon.md) | Taxonomical classification of the species of the donor/organism |
 | [studies](studies.md) | The scientific studies, i |
 | [study_abstract](study_abstract.md) | Abstract of the study |
+| [study_contact](study_contact.md) | Contact point for the study |
 | [study_external_id](study_external_id.md) | External, globally unique identifier for the study (preferably a BioStudies C... |
 | [study_id](study_id.md) | Internal identifier for the study (unique within the metadata deposit) |
 | [study_title](study_title.md) | Title of the study |

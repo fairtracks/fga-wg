@@ -188,7 +188,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/GenomicAnnotationFile](https://w3
 | [file_type](file_type.md) | 1 <br/> [Term](Term.md) | The file format of the data file | [File](File.md) |
 | [mime_type](mime_type.md) | 0..1 <br/> [String](String.md) | A string providing the mime-type of the data file | [File](File.md) |
 | [data_content](data_content.md) | 1 <br/> [OutputType](OutputType.md) | Classification describing the file's purpose or contents | [File](File.md) |
-| [file_size](file_size.md) | 1 <br/> [Integer](Integer.md) | For blobs, the blob size in bytes | [File](File.md) |
+| [file_size](file_size.md) | 1 <br/> [Integer](Integer.md) | The file size in bytes | [File](File.md) |
 | [created_time](created_time.md) | 1 <br/> [Datetime](Datetime.md) | Timestamp of content creation in RFC3339 | [File](File.md) |
 | [updated_time](updated_time.md) | 0..1 <br/> [Datetime](Datetime.md) | Timestamp of content update in RFC3339, identical to created_time in systems ... | [File](File.md) |
 | [file_version](file_version.md) | 0..1 <br/> [String](String.md) | A string representing a version | [File](File.md) |
@@ -300,6 +300,18 @@ attributes:
     description: Geometric properties of the sequence features in the genomic annotation
       file if considered as an one-dimensional genome browser track (also relevant
       for non-visual analyses).
+    examples:
+    - object:
+        elements_circular: false
+        elements_overlapping: false
+        has_edges: false
+        has_gaps: true
+        has_lengths: true
+        has_names: true
+        has_strands: false
+        has_values: true
+        lengths_constant: false
+        value_type: multiple
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: GenomicAnnotationFile
@@ -310,6 +322,10 @@ attributes:
   sequence_features:
     name: sequence_features
     description: List of sequence features described by the genomic annotation file.
+    examples:
+    - object:
+        id: SO:0001707
+        label: H3K9Me3
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: GenomicAnnotationFile
@@ -540,7 +556,7 @@ attributes:
     required: true
   file_size:
     name: file_size
-    description: 'For blobs, the blob size in bytes. '
+    description: The file size in bytes.
     examples:
     - value: '5359719'
     from_schema: https://w3id.org/fga-wg/schema/top_level
@@ -595,7 +611,7 @@ attributes:
     examples:
     - object:
         checksum: 535bc9628a1c5e5215226f9996e4eaca
-        type: md5
+        checksum_type: md5
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: GenomicAnnotationFile

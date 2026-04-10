@@ -20,7 +20,7 @@ Analysis		Analysis	Represents the computational processing applied to data from 
 					analysis_workflow		URIorCURIE	0..1	External reference to the analysis workflow, with availability in at least one machine-operable form (e.g. CWL, Nextflow, ...).	https://w3id.org/fga-wg/schema/analysis/analysis_workflow
 Any		Any	The Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).							
 AssessmentValue		AssessmentValue	Key-value pair representing a specific value produced by a quality assessment.							
-					key		str	1..1	Key/name of the assessment value.	https://w3id.org/fga-wg/schema/quality-assessment/key
+				I	key		str	1..1	Key/name of the assessment value.	https://w3id.org/fga-wg/schema/quality-assessment/key
 					value		Any	1..1	Value corresponding to the assessment key.	https://w3id.org/fga-wg/schema/quality-assessment/value
 Checksum		Checksum	A checksum of a File object (orig: DrsObject). Exact copy of the Checksum object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/ChecksumModel).							
 					checksum		str	0..1	The hex-string encoded checksum for the data.	https://w3id.org/fga-wg/schema/checksum/checksum
@@ -74,7 +74,7 @@ File		File	General information about a particular data file. Most fields (marked
 					file_type		Term	1..1	The file format of the data file.	https://w3id.org/fga-wg/schema/file/file_type
 					mime_type		str	0..1	A string providing the mime-type of the data file.	https://w3id.org/fga-wg/schema/file/mime_type
 					data_content		OutputType	1..1	Classification describing the file's purpose or contents.	https://w3id.org/fga-wg/schema/file/data_content
-					file_size		int	1..1	For blobs, the blob size in bytes. 	https://w3id.org/fga-wg/schema/file/file_size
+					file_size		int	1..1	The file size in bytes.	https://w3id.org/fga-wg/schema/file/file_size
 					created_time		XSDDateTime	1..1	Timestamp of content creation in RFC3339. (This is the creation time of the underlying content, not of the JSON object.).	https://w3id.org/fga-wg/schema/file/created_time
 					updated_time		XSDDateTime	0..1	Timestamp of content update in RFC3339, identical to created_time in systems that do not support updates. (This is the update time of the underlying content, not of the JSON object.).	https://w3id.org/fga-wg/schema/file/updated_time
 					file_version		str	0..1	A string representing a version. (Some systems may use checksum, a RFC3339 timestamp, or an incrementing version number.).	https://w3id.org/fga-wg/schema/file/file_version
@@ -102,11 +102,11 @@ InputSource		InputSource	General object representing the source of data files, s
 					inputsource_external_ref		URIorCURIE	0..1	"Reference to an external entity as the input source, using a globally unique identifier or an URL. External references will in most cases refer to a database, data record, data file, website or other data source. One of ""inputsource_external_ref"" or ""inputsource_ref"" must be specified."	https://w3id.org/fga-wg/schema/input-source/inputsource_external_ref
 					inputsource_ref		Curie	0..1	"Reference to an internal object as the input source using a local identifier. Entities to be used as an internal input source includes FileCollection, Sample, Experiment, Analysis or File as restricted by the description of the field where the input source is used. One of ""inputsource_external_ref"" or ""inputsource_ref"" must be specified."	https://w3id.org/fga-wg/schema/input-source/inputsource_ref
 					database_accessions		Any	0..*	"Accession numbers for database records used as input source. Used in connection with ""inputsource_external_ref""."	https://w3id.org/fga-wg/schema/input-source/database_accessions
-					qualified_relation		Term	1..1	A description of the relationship with the input source.	https://w3id.org/fga-wg/schema/input-source/qualified_relation
+					qualified_relation		URIorCURIE	1..1	A description of the relationship with the input source.	https://w3id.org/fga-wg/schema/input-source/qualified_relation
 					biological_replicate_labels		str	0..*	Labels denoting the biological replicates within which the relation is defined, if any.	https://w3id.org/fga-wg/schema/input-source/biological_replicate_labels
 					technical_replicate_labels		str	0..*	Labels denoting the technical replicates within which the relation is defined, if any.	https://w3id.org/fga-wg/schema/input-source/technical_replicate_labels
 					version		str	0..1	Version information for the retrieval from the input source.	https://w3id.org/fga-wg/schema/input-source/version
-					date_of_retrieval		XSDDateTime	0..1	Date of retrieval from the input source, typically used to timestamp downloading data from a database or URL.	https://w3id.org/fga-wg/schema/input-source/date_of_retrieval
+					date_of_retrieval		XSDDate	0..1	Date of retrieval from the input source, typically used to timestamp downloading data from a database or URL.	https://w3id.org/fga-wg/schema/input-source/date_of_retrieval
 OntologyVersions		OntologyVersions	Information about an ontology used in the metadata.							
 					namespace		str	1..1	"The CURIE namespace (prefix) an ontology (e.g. ""GO"" for Gene Ontology)."	https://w3id.org/fga-wg/schema/document/namespace
 					ontology_url		URI	1..1	The version-agnostic URL of the ontology (e.g. the IRI of the ontology in OWL).	https://w3id.org/fga-wg/schema/document/ontology_url
@@ -141,7 +141,7 @@ Study		Study	A scientific study, i.e. a unit of research, within which experimen
 					project_external_ref		URIorCURIE	0..1	Reference to a project within which the study was carried out (preferably a BioProject CURIE).	https://w3id.org/fga-wg/schema/study/project_external_ref
 					project_name		str	0..1	Name of the project within which the study was carried out.	https://w3id.org/fga-wg/schema/study/project_name
 					publications		Curie	0..*	List of (relevant) publications containing the results of the study (in the form of DOI CURIEs).	https://w3id.org/fga-wg/schema/study/publications
-					contact		Contact	0..1	Contact point for the study.	https://w3id.org/fga-wg/schema/study/contact
+					study_contact		Contact	0..1	Contact point for the study.	https://w3id.org/fga-wg/schema/study/study_contact
 Term		Term	Helper entity to represent an ontology term as a data value. 							
 					id		Curie	1..1	External, globally unique identifier for the ontology term (in CURIE form).	https://w3id.org/fga-wg/schema/term/id
 					label		str	0..1	"Human-readable label associated to the term id in the current version of the ontology (as listed in the ""ontology_versions"" field of the Deposit object)."	https://w3id.org/fga-wg/schema/term/label

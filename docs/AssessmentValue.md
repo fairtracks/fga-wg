@@ -130,6 +130,7 @@ attributes:
     description: Key/name of the assessment value.
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
+    identifier: true
     owner: AssessmentValue
     domain_of:
     - AssessmentValue

@@ -102,9 +102,10 @@ GenomicAnnotationFile {
 }
 InputSource {
     stringList biological_replicate_labels  
-    datetime date_of_retrieval  
+    date date_of_retrieval  
     uriorcurie inputsource_external_ref  
     curie inputsource_ref  
+    uriorcurie qualified_relation  
     stringList technical_replicate_labels  
     string version  
 }
@@ -193,12 +194,11 @@ GenomicAnnotationFile ||--}| AccessMethod : "access_methods"
 GenomicAnnotationFile ||--}| Checksum : "checksums"
 GenomicAnnotationFile ||--}| InputSource : "file_input_sources"
 GenomicAnnotationFile ||--}| Term : "sequence_features"
-InputSource ||--|| Term : "qualified_relation"
 InputSource ||--}o Any : "database_accessions"
 QualityAssessment ||--|| Any : "assessment_method, assessment_values"
 Sample ||--|o Term : "cell_line, cell_type, donor_development_stage, organism_tissue, phenotype"
 Sample ||--}o Term : "other_biospecimen"
-Study ||--|o Contact : "contact"
+Study ||--|o Contact : "study_contact"
 TopLevel ||--|| Document : "document"
 TopLevel ||--}o Analysis : "analyses"
 TopLevel ||--}o Donor : "donors"

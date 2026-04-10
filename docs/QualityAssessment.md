@@ -176,6 +176,8 @@ attributes:
     - range: string
     - range: AssessmentValue
       multivalued: true
+      inlined: true
+      inlined_as_list: false
   assessment_details_url:
     name: assessment_details_url
     description: URL to a report containing the detailed output from the quality assessment.

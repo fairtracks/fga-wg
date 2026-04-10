@@ -108,9 +108,10 @@ GenomicAnnotationFile {
 }
 InputSource {
     stringList biological_replicate_labels  
-    datetime date_of_retrieval  
+    date date_of_retrieval  
     uriorcurie inputsource_external_ref  
     curie inputsource_ref  
+    uriorcurie qualified_relation  
     stringList technical_replicate_labels  
     string version  
 }
@@ -199,12 +200,11 @@ GenomicAnnotationFile ||--}| AccessMethod : "access_methods"
 GenomicAnnotationFile ||--}| Checksum : "checksums"
 GenomicAnnotationFile ||--}| InputSource : "file_input_sources"
 GenomicAnnotationFile ||--}| Term : "sequence_features"
-InputSource ||--|| Term : "qualified_relation"
 InputSource ||--}o Any : "database_accessions"
 QualityAssessment ||--|| Any : "assessment_method, assessment_values"
 Sample ||--|o Term : "cell_line, cell_type, donor_development_stage, organism_tissue, phenotype"
 Sample ||--}o Term : "other_biospecimen"
-Study ||--|o Contact : "contact"
+Study ||--|o Contact : "study_contact"
 TopLevel ||--|| Document : "document"
 TopLevel ||--}o Analysis : "analyses"
 TopLevel ||--}o Donor : "donors"
@@ -343,14 +343,6 @@ class "Term" [[{Helper entity to represent an ontology term as a data value. }]]
     {field} id : curie  
     {field} label : string  
 }
-class "InputSource" [[{General object representing the source of data files, samples, or other entities used as input to a process or a result. An input source refering to a single file or sample object will represent that item only, while an input source referring to a container or process may represent a number of disctinct input items. InputSource also contains information about the type of relationship, replication labelling, versioning and retrieval date.}]] {
-    {field} inputsource_external_ref : uriorcurie  
-    {field} inputsource_ref : curie  
-    {field} biological_replicate_labels : string  [0..*]
-    {field} technical_replicate_labels : string  [0..*]
-    {field} version : string  
-    {field} date_of_retrieval : datetime  
-}
 "Analysis" *--> "1" "Term" : "analysis_type"
 "Experiment" *--> "0..1" "Term" : "antibody_target"
 "Experiment" *--> "1" "Term" : "assay_type"
@@ -365,7 +357,6 @@ class "InputSource" [[{General object representing the source of data files, sam
 "Sample" *--> "0..1" "Term" : "organism_tissue"
 "Sample" *--> "0..*" "Term" : "other_biospecimen"
 "Sample" *--> "0..1" "Term" : "phenotype"
-"InputSource" *--> "1" "Term" : "qualified_relation"
 "GenomicAnnotationFile" *--> "1..*" "Term" : "sequence_features"
 "Donor" *--> "0..1" "Term" : "sex"
 "Donor" *--> "1" "Term" : "species_taxon"
@@ -374,7 +365,7 @@ class "Contact" [[{Contact information for a person or an organisation.}]] {
     {field} contact_id : curie  
     {field} email : string  
 }
-"Study" *--> "0..1" "Contact" : "contact"
+"Study" *--> "0..1" "Contact" : "study_contact"
 class "QualityAssessment" [[{Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis.}]] {
     {field} assessment_details_url : uri  
 }
@@ -390,6 +381,15 @@ class "OntologyVersions" [[{Information about an ontology used in the metadata.}
     {field} versioned_ontology_url : uri  
 }
 "Document" *--> "1..*" "OntologyVersions" : "document_ontology_versions"
+class "InputSource" [[{General object representing the source of data files, samples, or other entities used as input to a process or a result. An input source refering to a single file or sample object will represent that item only, while an input source referring to a container or process may represent a number of disctinct input items. InputSource also contains information about the type of relationship, replication labelling, versioning and retrieval date.}]] {
+    {field} inputsource_external_ref : uriorcurie  
+    {field} inputsource_ref : curie  
+    {field} qualified_relation : uriorcurie  
+    {field} biological_replicate_labels : string  [0..*]
+    {field} technical_replicate_labels : string  [0..*]
+    {field} version : string  
+    {field} date_of_retrieval : date  
+}
 "InputSource" *--> "0..*" "Any" : "database_accessions"
 "Analysis" *--> "1..*" "InputSource" : "analysis_input_sources"
 "Document" *--> "0..*" "InputSource" : "document_input_sources"

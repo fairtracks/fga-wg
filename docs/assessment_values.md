@@ -52,7 +52,12 @@ URI: [https://w3id.org/fga-wg/schema/top_level/assessment_values](https://w3id.o
 
 Value must satisfy at least one of:
 - AnonymousSlotExpression({'range': 'string'})
-- AnonymousSlotExpression({'range': 'AssessmentValue', 'multivalued': True})
+- AnonymousSlotExpression({
+  'range': 'AssessmentValue',
+  'multivalued': True,
+  'inlined': True,
+  'inlined_as_list': False
+})
 
 </details>
 
@@ -118,6 +123,8 @@ any_of:
 - range: string
 - range: AssessmentValue
   multivalued: true
+  inlined: true
+  inlined_as_list: false
 
 ```
 </details></div>

@@ -56,6 +56,13 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sequence_features](https://w3id.o
 
 
 
+## Examples
+
+| Value |
+| --- |
+| None |
+
+
 
 ## Identifier and Mapping Information
 
@@ -87,6 +94,10 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sequence_features](https://w3id.o
 ```yaml
 name: sequence_features
 description: List of sequence features described by the genomic annotation file.
+examples:
+- object:
+    id: SO:0001707
+    label: H3K9Me3
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

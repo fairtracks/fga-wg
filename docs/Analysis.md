@@ -273,7 +273,7 @@ attributes:
         technical_replicate_labels:
         - '1_1'
         - '2_1'
-        date_retrieved: '2016-04-19'
+        date_of_retrieval: '2016-04-19'
     from_schema: https://w3id.org/fga-wg/schema/top_level
     rank: 1000
     owner: Analysis

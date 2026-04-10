@@ -20,7 +20,7 @@
         "1",
         "2"
       ],
-      "date_retrieved": "2016-04-19",
+      "date_of_retrieval": "2016-04-19",
       "inputsource_external_ref": "https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15",
       "qualified_relation": "https://bioschemas.org/FormalParameter",
       "technical_replicate_labels": [

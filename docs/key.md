@@ -46,6 +46,13 @@ URI: [https://w3id.org/fga-wg/schema/top_level/key](https://w3id.org/fga-wg/sche
 | Property | Value |
 | --- | --- |
 | Required | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Identifier | Yes |
+
+
 
 
 
@@ -88,6 +95,7 @@ name: key
 description: Key/name of the assessment value.
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
+identifier: true
 domain_of:
 - AssessmentValue
 range: string

@@ -57,7 +57,7 @@ slots:
   qualified_relation: 
     description: 'A description of the relationship with the input source.'
     required: true
-    range: Term
+    range: uriorcurie
     examples:
       - value: 'bioschemas:FormalParameter'
   biological_replicate_labels:
@@ -79,6 +79,6 @@ slots:
     range: string
   date_of_retrieval:
     description: 'Date of retrieval from the input source, typically used to timestamp downloading data from a database or URL.'
-    range: datetime
+    range: date
     examples:
       - value: '2016-04-19'

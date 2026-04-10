@@ -35,8 +35,24 @@ slots:
     description: 'Geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track (also relevant for non-visual analyses).'
     required: true
     range: TrackGeometry
+    examples:
+      - object:
+          elements_circular: false
+          elements_overlapping: false
+          has_edges: false
+          has_gaps: true
+          has_lengths: true
+          has_names: true
+          has_strands: false
+          has_values: true
+          lengths_constant: false
+          value_type: multiple
   sequence_features:
     description: 'List of sequence features described by the genomic annotation file.'
     required: true
     range: Term
     multivalued: true
+    examples:
+      - object:
+          id: SO:0001707
+          label: H3K9Me3

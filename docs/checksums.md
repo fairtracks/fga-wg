@@ -99,7 +99,7 @@ description: A list of checksums of the data file. At least one checksum must be
 examples:
 - object:
     checksum: 535bc9628a1c5e5215226f9996e4eaca
-    type: md5
+    checksum_type: md5
 from_schema: https://w3id.org/fga-wg/schema/top_level
 rank: 1000
 domain_of:

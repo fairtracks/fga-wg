@@ -41,6 +41,8 @@ slots:
       - range: string
       - range: AssessmentValue
         multivalued: true
+        inlined: true
+        inlined_as_list: false
     examples:
       - object:
           nreads: 21018235
@@ -54,6 +56,7 @@ slots:
   key:
     description: 'Key/name of the assessment value.'
     required: true
+    identifier: true
     range: string
   value:
     description: 'Value corresponding to the assessment key.'

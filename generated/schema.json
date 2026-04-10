@@ -130,7 +130,7 @@
                                     "1",
                                     "2"
                                 ],
-                                "date_retrieved": "2016-04-19",
+                                "date_of_retrieval": "2016-04-19",
                                 "inputsource_external_ref": "https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15",
                                 "qualified_relation": "https://bioschemas.org/FormalParameter",
                                 "technical_replicate_labels": [
@@ -271,6 +271,39 @@
             },
             "required": [
                 "key",
+                "value"
+            ],
+            "title": "AssessmentValue",
+            "type": "object"
+        },
+        "AssessmentValue__identifier_optional": {
+            "additionalProperties": false,
+            "description": "Key-value pair representing a specific value produced by a quality assessment.",
+            "properties": {
+                "key": {
+                    "description": "Key/name of the assessment value.",
+                    "type": "string"
+                },
+                "value": {
+                    "$ref": "#/$defs/Any",
+                    "anyOf": [
+                        {
+                            "type": "number"
+                        },
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "description": "Value corresponding to the assessment key."
+                }
+            },
+            "required": [
                 "value"
             ],
             "title": "AssessmentValue",
@@ -821,7 +854,7 @@
                         [
                             {
                                 "checksum": "535bc9628a1c5e5215226f9996e4eaca",
-                                "type": "md5"
+                                "checksum_type": "md5"
                             }
                         ]
                     ],
@@ -924,7 +957,7 @@
                     ]
                 },
                 "file_size": {
-                    "description": "For blobs, the blob size in bytes. ",
+                    "description": "The file size in bytes.",
                     "examples": [
                         5359719
                     ],
@@ -1247,7 +1280,7 @@
                         [
                             {
                                 "checksum": "535bc9628a1c5e5215226f9996e4eaca",
-                                "type": "md5"
+                                "checksum_type": "md5"
                             }
                         ]
                     ],
@@ -1350,7 +1383,7 @@
                     ]
                 },
                 "file_size": {
-                    "description": "For blobs, the blob size in bytes. ",
+                    "description": "The file size in bytes.",
                     "examples": [
                         5359719
                     ],
@@ -1447,6 +1480,14 @@
                 },
                 "sequence_features": {
                     "description": "List of sequence features described by the genomic annotation file.",
+                    "examples": [
+                        [
+                            {
+                                "id": "SO:0001707",
+                                "label": "H3K9Me3"
+                            }
+                        ]
+                    ],
                     "items": {
                         "$ref": "#/$defs/Term"
                     },
@@ -1454,7 +1495,21 @@
                 },
                 "track_geometry": {
                     "$ref": "#/$defs/TrackGeometry",
-                    "description": "Geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track (also relevant for non-visual analyses)."
+                    "description": "Geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track (also relevant for non-visual analyses).",
+                    "examples": [
+                        {
+                            "elements_circular": false,
+                            "elements_overlapping": false,
+                            "has_edges": false,
+                            "has_gaps": true,
+                            "has_lengths": true,
+                            "has_names": true,
+                            "has_strands": false,
+                            "has_values": true,
+                            "lengths_constant": false,
+                            "value_type": "multiple"
+                        }
+                    ]
                 },
                 "updated_time": {
                     "description": "Timestamp of content update in RFC3339, identical to created_time in systems that do not support updates. (This is the update time of the underlying content, not of the JSON object.).",
@@ -1537,7 +1592,7 @@
                     "examples": [
                         "2016-04-19"
                     ],
-                    "format": "date-time",
+                    "format": "date",
                     "type": [
                         "string",
                         "null"
@@ -1561,11 +1616,11 @@
                     ]
                 },
                 "qualified_relation": {
-                    "$ref": "#/$defs/Term",
                     "description": "A description of the relationship with the input source.",
                     "examples": [
                         "bioschemas:FormalParameter"
-                    ]
+                    ],
+                    "type": "string"
                 },
                 "technical_replicate_labels": {
                     "description": "Labels denoting the technical replicates within which the relation is defined, if any.",
@@ -1963,10 +2018,32 @@
                             "type": "string"
                         },
                         {
-                            "items": {
-                                "$ref": "#/$defs/AssessmentValue"
+                            "additionalProperties": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "#/$defs/AssessmentValue__identifier_optional"
+                                    },
+                                    {
+                                        "$ref": "#/$defs/Any",
+                                        "anyOf": [
+                                            {
+                                                "type": "number"
+                                            },
+                                            {
+                                                "type": "boolean"
+                                            },
+                                            {
+                                                "type": "integer"
+                                            },
+                                            {
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "description": "Value corresponding to the assessment key."
+                                    }
+                                ]
                             },
-                            "type": "array"
+                            "type": "object"
                         }
                     ],
                     "description": "Main values produced by the quality assessment.",
@@ -2299,24 +2376,6 @@
             "additionalProperties": false,
             "description": "A scientific study, i.e. a unit of research, within which experiments and/or analyses have been carried out.",
             "properties": {
-                "contact": {
-                    "anyOf": [
-                        {
-                            "$ref": "#/$defs/Contact"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "description": "Contact point for the study.",
-                    "examples": [
-                        {
-                            "contact_id": "orcid:0000-0002-9746-3719",
-                            "email": "mark@gersteinlab.org",
-                            "name": "Mark Gerstein"
-                        }
-                    ]
-                },
                 "project_external_ref": {
                     "description": "Reference to a project within which the study was carried out (preferably a BioProject CURIE).",
                     "examples": [
@@ -2357,6 +2416,24 @@
                     "type": [
                         "string",
                         "null"
+                    ]
+                },
+                "study_contact": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/Contact"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Contact point for the study.",
+                    "examples": [
+                        {
+                            "contact_id": "orcid:0000-0002-9746-3719",
+                            "email": "mark@gersteinlab.org",
+                            "name": "Mark Gerstein"
+                        }
                     ]
                 },
                 "study_external_id": {
