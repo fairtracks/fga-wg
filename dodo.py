@@ -164,17 +164,57 @@ def uv(cmd: str | list[str]) -> str:
 
 
 class CommandOnRunReporter(ConsoleReporter):
-    """Doit reporter that shows task commands only when a task actually runs.
+    """Doit reporter that shows task commands only when a task actually runs,
+    and prints a pass/fail summary at the end of the run.
 
     Doit's default ConsoleReporter calls task.title() for both executed and
     skipped tasks, so title_with_actions shows the command list even for
     skipped (--) tasks — which is confusing.  This reporter overrides
     skip_uptodate to show just the task name instead.
+
+    Failed task names are collected during the run and printed in a summary
+    block by complete_run(), making it easy to spot which subtasks need
+    attention after a --continue run.
     """
 
+    def __init__(self, outstream: object, options: dict[str, object]) -> None:
+        super().__init__(outstream, options)  # type: ignore[arg-type]
+        self._failed_tasks: list[str] = []
+        self._succeeded_tasks: list[str] = []
+
     @override
-    def skip_uptodate(self, task: Task):
+    def skip_uptodate(self, task: Task) -> None:
         self.write(f"-- {task.name}\n")  # pyright: ignore[reportUnknownMemberType]
+
+    @override
+    def add_success(self, task: Task) -> None:
+        super().add_success(task)  # type: ignore[arg-type]
+        self._succeeded_tasks.append(task.name)
+
+    @override
+    def add_failure(self, task: Task, fail: object) -> None:
+        super().add_failure(task, fail)  # type: ignore[arg-type]
+        self._failed_tasks.append(task.name)
+
+    @override
+    def complete_run(self) -> None:
+        super().complete_run()
+        n_ok   = len(self._succeeded_tasks)
+        n_fail = len(self._failed_tasks)
+        total  = n_ok + n_fail
+        if total == 0:
+            return
+        self.write(f"\n{'─' * 60}\n")  # pyright: ignore[reportUnknownMemberType]
+        if n_fail == 0:
+            self.write(f"  ✓  All {total} task(s) passed\n")  # pyright: ignore[reportUnknownMemberType]
+        else:
+            self.write(  # pyright: ignore[reportUnknownMemberType]
+                f"  ✖  {n_fail} of {total} task(s) failed"
+                f" ({n_ok} passed):\n"
+            )
+            for name in self._failed_tasks:
+                self.write(f"       • {name}\n")  # pyright: ignore[reportUnknownMemberType]
+        self.write(f"{'─' * 60}\n")  # pyright: ignore[reportUnknownMemberType]
 
 
 # ── Global doit configuration ───────────────────────────────────────────────
@@ -183,6 +223,7 @@ DOIT_CONFIG = {
     "default_tasks": ["lint", "json_schema", "pydantic", "examples", "summary", "erdiagram", "plantuml", "docs", "overview", "nav"],
     "verbosity": 1,
     "reporter": CommandOnRunReporter,
+    "continue": True,   # keep running independent tasks even when one validation subtask fails
 }
 
 
