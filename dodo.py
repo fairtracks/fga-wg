@@ -376,7 +376,7 @@ def task_lint() -> TaskDict:
     """Validate the schema with linkml-lint, filtering documented known false positives."""
     return {
         "actions":  [_run_lint],
-        "uptodate": [False],   # always run — lint is a check, not a build step
+        "file_dep": (*SCHEMA_FILES, *TOOL_DEPS),
         "verbosity": 2,
     }
 
