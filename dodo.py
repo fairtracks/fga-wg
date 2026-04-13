@@ -423,6 +423,7 @@ def task_pydantic() -> TaskDict:
         return [
             'datamodel-codegen',
             '--formatters ruff-format',
+            '--disable-timestamp',
             f'--input {JSON_SCHEMA}',
             f'--input-file-type jsonschema',
             f'--output {target}',
