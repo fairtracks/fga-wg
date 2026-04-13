@@ -2,7 +2,8 @@ import json
 import sys
 from os.path import abspath
 from pathlib import Path
-from types import ModuleType
+from types import ModuleType, UnionType
+from typing import get_args, get_origin
 
 from pydantic.v1.fields import ModelField
 from pydantic.fields import FieldInfo
@@ -46,7 +47,7 @@ def _generate_top_level_example(schema: ModuleType) -> dict[str, object]:
     for field_name, info in top_level_fields.items():
         model = extract_model_from_field_info(info)
 
-        if model is schema.File:
+        if get_origin(model) is UnionType and schema.File in get_args(model):
             model = schema.GenomicAnnotationFile
 
         model_example = _extract_model_example(model)

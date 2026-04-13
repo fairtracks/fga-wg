@@ -22,20 +22,20 @@ def extract_examples_from_field_info(info: ModelField | FieldInfo) -> list[objec
         return info.examples
 
 
-def extract_model_from_field_info(info: ModelField | FieldInfo) -> type[BaseModelV1 | BaseModelV2]:
+def extract_model_from_field_info(info: ModelField | FieldInfo) -> type[BaseModelV1 | BaseModelV2 | UnionType]:
     if isinstance(info, ModelField):
         return info.type_
     elif isinstance(info, FieldInfo):
 
-        def _extract_model_from_type(_typ: type|None) -> type[BaseModelV2] | None:
+        def _extract_model_from_type(_typ: type|None) -> type[BaseModelV2 | UnionType] | None:
             origin = get_origin(_typ)
             if origin is list:
                 arg = get_args(_typ)[0]
-                if lenient_issubclass(arg, BaseModelV2):
-                    return cast(type[BaseModelV2], arg)
+                if get_origin(arg) is UnionType or lenient_issubclass(arg, BaseModelV2):
+                    return cast(type[BaseModelV2 | UnionType], arg)
             else:
-                if lenient_issubclass(_typ, BaseModelV2):
-                    return cast(type[BaseModelV2], _typ)
+                if get_origin(_typ) is UnionType or lenient_issubclass(_typ, BaseModelV2):
+                    return cast(type[BaseModelV2 | UnionType], _typ)
 
         _typ = info.annotation
 
