@@ -43,14 +43,8 @@ jobs:
 
       # ── Generate all artifacts ─────────────────────────────────────────────
 
-      - name: Generate JSON Schema and TSV summary
-        run: uv run doit json_schema summary
-
-      - name: Generate diagrams (Mermaid ER + PlantUML)
-        run: uv run doit erdiagram plantuml
-
-      - name: Generate per-class documentation and overview page
-        run: uv run doit docs overview
+      - name: Generate all artifacts
+        run: uv run doit
 
       # ── Build the static site ──────────────────────────────────────────────
 
