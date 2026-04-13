@@ -381,12 +381,26 @@ def task_lint() -> TaskDict:
 
 
 def task_json_schema() -> TaskDict:
-    """Generate JSON Schema → generated/schema.json"""
+    """Generate JSON Schema → generated/schema.json
+
+    --include-range-class-descendants makes slots whose range has subclasses emit
+    ``anyOf: [{$ref: Parent}, {$ref: Child}, …]`` instead of just ``{$ref: Parent}``.
+    This is necessary for the ``files`` slot to accept both ``File`` and
+    ``GenomicAnnotationFile`` objects, because ``File`` is closed
+    (``additionalProperties: false``) and a plain ``{$ref: "#/$defs/File"}`` would
+    reject the extra fields on ``GenomicAnnotationFile``.
+    """
     target = JSON_SCHEMA
     return {
         "actions": [
             f"mkdir -p {GEN_DIR}",
-            uv(f"gen-json-schema {TOP_LEVEL} -t {TOP_LEVEL_CLASS} > {target}"),
+            uv([
+                'gen-json-schema',
+                f'{TOP_LEVEL}',
+                f'-t {TOP_LEVEL_CLASS}',
+               '--include-range-class-descendants',
+                f'> {target}'
+            ]),
         ],
         'title': title_with_actions,
         "file_dep": (*SCHEMA_FILES, *TOOL_DEPS),

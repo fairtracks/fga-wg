@@ -276,39 +276,6 @@
             "title": "AssessmentValue",
             "type": "object"
         },
-        "AssessmentValue__identifier_optional": {
-            "additionalProperties": false,
-            "description": "Key-value pair representing a specific value produced by a quality assessment.",
-            "properties": {
-                "key": {
-                    "description": "Key/name of the assessment value.",
-                    "type": "string"
-                },
-                "value": {
-                    "$ref": "#/$defs/Any",
-                    "anyOf": [
-                        {
-                            "type": "number"
-                        },
-                        {
-                            "type": "boolean"
-                        },
-                        {
-                            "type": "integer"
-                        },
-                        {
-                            "type": "string"
-                        }
-                    ],
-                    "description": "Value corresponding to the assessment key."
-                }
-            },
-            "required": [
-                "value"
-            ],
-            "title": "AssessmentValue",
-            "type": "object"
-        },
         "BiospecimenClassification": {
             "description": "Vocabulary from the ENCODE model describing the general category of boispecimen (see \"Properties->classification\" in https://www.encodeproject.org/profiles/biosample_type).",
             "enum": [
@@ -2019,29 +1986,22 @@
                         },
                         {
                             "additionalProperties": {
+                                "$ref": "#/$defs/Any",
                                 "anyOf": [
                                     {
-                                        "$ref": "#/$defs/AssessmentValue__identifier_optional"
+                                        "type": "number"
                                     },
                                     {
-                                        "$ref": "#/$defs/Any",
-                                        "anyOf": [
-                                            {
-                                                "type": "number"
-                                            },
-                                            {
-                                                "type": "boolean"
-                                            },
-                                            {
-                                                "type": "integer"
-                                            },
-                                            {
-                                                "type": "string"
-                                            }
-                                        ],
-                                        "description": "Value corresponding to the assessment key."
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "integer"
+                                    },
+                                    {
+                                        "type": "string"
                                     }
-                                ]
+                                ],
+                                "description": "Value corresponding to the assessment key."
                             },
                             "type": "object"
                         }
@@ -2547,7 +2507,14 @@
                 "files": {
                     "description": "Information about particular genome annotation (and other relevant) files.",
                     "items": {
-                        "$ref": "#/$defs/File"
+                        "anyOf": [
+                            {
+                                "$ref": "#/$defs/File"
+                            },
+                            {
+                                "$ref": "#/$defs/GenomicAnnotationFile"
+                            }
+                        ]
                     },
                     "type": [
                         "array",
@@ -2853,7 +2820,14 @@
         "files": {
             "description": "Information about particular genome annotation (and other relevant) files.",
             "items": {
-                "$ref": "#/$defs/File"
+                "anyOf": [
+                    {
+                        "$ref": "#/$defs/File"
+                    },
+                    {
+                        "$ref": "#/$defs/GenomicAnnotationFile"
+                    }
+                ]
             },
             "type": [
                 "array",
