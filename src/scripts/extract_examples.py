@@ -32,7 +32,6 @@ def _get_reordered_top_level_fields(schema: ModuleType) -> dict[str, ModelField 
 
 def _extract_model_example(model_cls: type[BaseModelV1 | BaseModelV2]) -> dict[str, object]:
     model_example: dict[str, object] = {}
-    model_cls
     for field, info in get_fields_from_model(model_cls).items():
         examples = extract_examples_from_field_info(info)
         if examples:
@@ -46,6 +45,7 @@ def _generate_top_level_example(schema: ModuleType) -> dict[str, object]:
     top_level_fields = _get_reordered_top_level_fields(schema)
 
     for field_name, info in top_level_fields.items():
+
         model = extract_model_from_field_info(info)
 
         if get_origin(model) is UnionType and schema.File in get_args(model):
