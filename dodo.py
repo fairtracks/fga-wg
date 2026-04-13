@@ -142,6 +142,7 @@ GEN_DIR = Path("generated")
 JSON_SCHEMA = GEN_DIR / "schema.json"
 PYDANTIC_V1_MODEL = GEN_DIR / "pydantic_v1_model.py"
 PYDANTIC_V2_MODEL = GEN_DIR / "pydantic_v2_model.py"
+PYDANTIC_V2_LINKML_MODEL = GEN_DIR / "pydantic_v2_linkml_model.py"
 PYDANTIC_MODELS = (PYDANTIC_V1_MODEL, PYDANTIC_V2_MODEL)
 EXAMPLES_DIR = GEN_DIR / "examples"
 DOCS_DIR   = Path("docs")
@@ -234,8 +235,8 @@ class CommandOnRunReporter(ConsoleReporter):
 DOIT_CONFIG = {
     "default_tasks": [
         "lint",
-        "json_schema", "pydantic", "examples",
-        "validate_linkml", "validate_json_schema", "validate_pydantic_v1", "validate_pydantic_v2",
+        "json_schema", "pydantic", "pydantic_linkml", "examples",
+        "validate_linkml", "validate_json_schema", "validate_pydantic_v1", "validate_pydantic_v2", "validate_pydantic_v2_linkml",
         "summary", "erdiagram", "plantuml", "docs", "overview", "nav",
     ],
     "verbosity": 1,
@@ -441,6 +442,45 @@ def task_pydantic() -> TaskDict:
     }
 
 
+def task_pydantic_linkml() -> TaskDict:
+    """Generate a LinkML-native Pydantic v2 model → generated/pydantic_v2_linkml_model.py
+
+    Unlike the ``pydantic`` task (which uses datamodel-codegen from the JSON Schema),
+    this task uses LinkML's own ``gen-pydantic`` generator, which reads ``is_a``
+    relationships directly and therefore preserves Python class inheritance:
+
+        class GenomicAnnotationFile(File): ...   # ← is_a: File preserved
+
+    With ``datamodel-codegen``, the JSON Schema is flattened (all inherited properties
+    are inlined into each class definition without ``allOf``), so the generator has no
+    signal to reconstruct the hierarchy and emits ``class GenomicAnnotationFile(BaseModel)``
+    instead.
+
+    Trade-off: the ``files`` slot is typed as ``list[File]`` in this model (following
+    the ``range: File`` declaration).  Because ``GenomicAnnotationFile`` truly inherits
+    from ``File``, Python's type system and most validators accept subclass instances.
+
+    As in task_json_schema, ``--include-range-class-descendants`` is required for the
+    ``files`` slot to accept both ``File`` and ``GenomicAnnotationFile`` objects.
+    """
+    target = PYDANTIC_V2_LINKML_MODEL
+    return {
+        "actions": [
+            f"mkdir -p {GEN_DIR}",
+            uv([
+                'gen-pydantic',
+                f'{TOP_LEVEL}',
+               '--include-range-class-descendants',
+                f'> {target}',
+            ]),
+        ],
+        'title': title_with_actions,
+        "file_dep": (*SCHEMA_FILES, *TOOL_DEPS),
+        "targets":  [target],
+        "uptodate": non_empty_targets(target),
+    }
+
+
 def task_examples() -> TaskDict:
     """Generate JSON examples from Pydantic models → generated/examples/*.json"""
     targets = EXAMPLE_FILES
@@ -541,18 +581,21 @@ def task_validate_json_schema() -> Iterator[TaskDict]:
 def _pydantic_subtasks(
     model_file: Path,
     version: Literal["v1", "v2"],
+    generation_task: str = "pydantic",
 ) -> Iterator[TaskDict]:
     """Yield one per-example validation subtask for the given Pydantic model version.
 
-    ``module_name``, ``model_file``, and ``version`` are captured from the enclosing
-    function scope (stable across the loop), so only the per-iteration ``cls`` and
-    ``fp`` need default-argument capture.
+    ``generation_task`` is the doit task that produces ``model_file`` and is listed
+    as a ``task_dep`` so doit runs generation before validation.
     """
-    module_name = f"_doit_pydantic_{version}"
+    module_name = f"_doit_{model_file.stem}"
 
     for example_file in EXAMPLE_FILES:
         class_name = Path(example_file).stem
 
+        # `model_file`, `version`, and `generation_task` are captured from the
+        # enclosing function scope (stable across the loop), so only the per-iteration
+        # `cls` and `fp` need default-argument capture.
         def run(cls: str = class_name, fp: Path = example_file) -> bool:
             import json
             import sys
@@ -580,7 +623,7 @@ def _pydantic_subtasks(
             "name":     class_name,
             "actions":  [run],
             "file_dep": (example_file, model_file, *TOOL_DEPS),
-            "task_dep": ["examples", "pydantic"],
+            "task_dep": ["examples", generation_task],
             "verbosity": 2,
         }
         yield task
@@ -594,6 +637,11 @@ def task_validate_pydantic_v1() -> Iterator[TaskDict]:
 def task_validate_pydantic_v2() -> Iterator[TaskDict]:
     """Validate each generated example against the Pydantic v2 models."""
     yield from _pydantic_subtasks(PYDANTIC_V2_MODEL, "v2")
+
+
+def task_validate_pydantic_v2_linkml() -> Iterator[TaskDict]:
+    """Validate each generated example against the LinkML-native Pydantic v2 models."""
+    yield from _pydantic_subtasks(PYDANTIC_V2_LINKML_MODEL, "v2", generation_task="pydantic_linkml")
 
 
 def task_summary() -> TaskDict:

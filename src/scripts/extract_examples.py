@@ -20,6 +20,7 @@ TOP_LEVEL = 'TopLevel'
 _project_root = Path(abspath(__file__ + '/../../../'))
 schema_v1 = import_from_path('pydantic_v1_model', _project_root / 'generated' / 'pydantic_v1_model.py')
 schema_v2 = import_from_path('pydantic_v2_model', _project_root / 'generated' / 'pydantic_v2_model.py')
+schema_v2_linkml = import_from_path('pydantic_v2_linkml_model', _project_root / 'generated' / 'pydantic_v2_model.py')
 
 
 def _get_reordered_top_level_fields(schema: ModuleType) -> dict[str, ModelField | FieldInfo]:
@@ -92,7 +93,8 @@ if __name__ == "__main__":
 
     examples_v1 = generate_examples(schema_v1, model_names)
     examples_v2 = generate_examples(schema_v2, model_names)
+    examples_v2_linkml = generate_examples(schema_v2_linkml, model_names)
 
-    assert examples_v1 == examples_v2, "Examples generated from pydantic v1 and v2 models do not match"
+    assert examples_v1 == examples_v2 == examples_v2_linkml, "Examples generated from pydantic v1 and v2 models do not match"
 
-    write_example_json_files(examples_v1)
+    write_example_json_files(examples_v2_linkml)
