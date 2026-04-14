@@ -14,7 +14,7 @@ _Internal identifier for the experiment (unique within the metadata deposit). _
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_id](https://w3id.org/fga-wg/schema/top_level/analysis_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_id](https://w3id.org/fga-wg/schema/bundle/analysis_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_id](https://w3id.org/fga
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_id](https://w3id.org/fga
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_id |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_id |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_id |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_id |
 
 
 
@@ -102,7 +102,7 @@ name: analysis_id
 description: 'Internal identifier for the experiment (unique within the metadata deposit). '
 examples:
 - value: analysis:ENCAN718KHT
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

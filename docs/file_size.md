@@ -14,7 +14,7 @@ _The file size in bytes._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_size](https://w3id.org/fga-wg/schema/top_level/file_size)
+URI: [https://w3id.org/fga-wg/schema/bundle/file_size](https://w3id.org/fga-wg/schema/bundle/file_size)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_size](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -82,8 +82,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_size](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_size |
-| native | https://w3id.org/fga-wg/schema/top_level/file_size |
+| self | https://w3id.org/fga-wg/schema/bundle/file_size |
+| native | https://w3id.org/fga-wg/schema/bundle/file_size |
 
 
 
@@ -96,7 +96,7 @@ name: file_size
 description: The file size in bytes.
 examples:
 - value: '5359719'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

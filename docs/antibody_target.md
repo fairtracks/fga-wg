@@ -14,7 +14,7 @@ _The target of the antibody used in the experiment._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/antibody_target](https://w3id.org/fga-wg/schema/top_level/antibody_target)
+URI: [https://w3id.org/fga-wg/schema/bundle/antibody_target](https://w3id.org/fga-wg/schema/bundle/antibody_target)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/antibody_target](https://w3id.org
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/antibody_target](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/antibody_target |
-| native | https://w3id.org/fga-wg/schema/top_level/antibody_target |
+| self | https://w3id.org/fga-wg/schema/bundle/antibody_target |
+| native | https://w3id.org/fga-wg/schema/bundle/antibody_target |
 
 
 
@@ -96,7 +96,7 @@ examples:
 - object:
     id: SO:0001707
     label: H3K9Me3
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

@@ -14,7 +14,7 @@ _Access method used to access the File object (orig: DrsObject)._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/access_method](https://w3id.org/fga-wg/schema/top_level/access_method)
+URI: [https://w3id.org/fga-wg/schema/bundle/access_method](https://w3id.org/fga-wg/schema/bundle/access_method)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/access_method](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/access_method](https://w3id.org/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/access_method |
-| native | https://w3id.org/fga-wg/schema/top_level/access_method |
+| self | https://w3id.org/fga-wg/schema/bundle/access_method |
+| native | https://w3id.org/fga-wg/schema/bundle/access_method |
 
 
 
@@ -95,7 +95,7 @@ name: access_method
 description: 'Access method used to access the File object (orig: DrsObject).'
 examples:
 - value: https
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - AccessMethod

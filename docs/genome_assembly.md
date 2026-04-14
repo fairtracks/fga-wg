@@ -14,7 +14,7 @@ _Information about the genome assembly used to generate the genomic annotation f
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/genome_assembly](https://w3id.org/fga-wg/schema/top_level/genome_assembly)
+URI: [https://w3id.org/fga-wg/schema/bundle/genome_assembly](https://w3id.org/fga-wg/schema/bundle/genome_assembly)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/genome_assembly](https://w3id.org
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/genome_assembly](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/genome_assembly |
-| native | https://w3id.org/fga-wg/schema/top_level/genome_assembly |
+| self | https://w3id.org/fga-wg/schema/bundle/genome_assembly |
+| native | https://w3id.org/fga-wg/schema/bundle/genome_assembly |
 
 
 
@@ -96,7 +96,7 @@ description: Information about the genome assembly used to generate the genomic 
   file, consequently defining the genomic coordinate system for the annotation.
 examples:
 - value: ga4gh:SC.EiFob05aCWgVU_B_Ae0cypnQut3cxUP1
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - GenomicAnnotationFile

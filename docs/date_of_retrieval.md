@@ -14,7 +14,7 @@ _Date of retrieval from the input source, typically used to timestamp downloadin
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/date_of_retrieval](https://w3id.org/fga-wg/schema/top_level/date_of_retrieval)
+URI: [https://w3id.org/fga-wg/schema/bundle/date_of_retrieval](https://w3id.org/fga-wg/schema/bundle/date_of_retrieval)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/date_of_retrieval](https://w3id.o
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/date_of_retrieval](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/date_of_retrieval |
-| native | https://w3id.org/fga-wg/schema/top_level/date_of_retrieval |
+| self | https://w3id.org/fga-wg/schema/bundle/date_of_retrieval |
+| native | https://w3id.org/fga-wg/schema/bundle/date_of_retrieval |
 
 
 
@@ -95,7 +95,7 @@ description: Date of retrieval from the input source, typically used to timestam
   downloading data from a database or URL.
 examples:
 - value: '2016-04-19'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - InputSource

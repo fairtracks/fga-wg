@@ -14,7 +14,7 @@ _Information about the donors or complete organisms from which the samples were 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/donors](https://w3id.org/fga-wg/schema/top_level/donors)
+URI: [https://w3id.org/fga-wg/schema/bundle/donors](https://w3id.org/fga-wg/schema/bundle/donors)
 <!-- no inheritance hierarchy -->
 
 
@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donors](https://w3id.org/fga-wg/s
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TopLevel](TopLevel.md) | A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document. |  no  |
+| [Bundle](Bundle.md) | A bundle representing a set of genome annotation files, organised in sub-collections. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. |  no  |
 
 
 
@@ -39,7 +39,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donors](https://w3id.org/fga-wg/s
 | Property | Value |
 | --- | --- |
 | Range | [Donor](Donor.md) |
-| Domain Of | [TopLevel](TopLevel.md) |
+| Domain Of | [Bundle](Bundle.md) |
 
 ### Cardinality and Requirements
 
@@ -65,7 +65,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donors](https://w3id.org/fga-wg/s
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -74,8 +74,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donors](https://w3id.org/fga-wg/s
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/donors |
-| native | https://w3id.org/fga-wg/schema/top_level/donors |
+| self | https://w3id.org/fga-wg/schema/bundle/donors |
+| native | https://w3id.org/fga-wg/schema/bundle/donors |
 
 
 
@@ -87,10 +87,10 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donors](https://w3id.org/fga-wg/s
 name: donors
 description: Information about the donors or complete organisms from which the samples
   were taken.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
-- TopLevel
+- Bundle
 range: Donor
 multivalued: true
 inlined: true

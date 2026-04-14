@@ -14,7 +14,7 @@ _The type of values associated with the edges._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/edge_weight_type](https://w3id.org/fga-wg/schema/top_level/edge_weight_type)
+URI: [https://w3id.org/fga-wg/schema/bundle/edge_weight_type](https://w3id.org/fga-wg/schema/bundle/edge_weight_type)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edge_weight_type](https://w3id.or
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edge_weight_type](https://w3id.or
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/edge_weight_type |
-| native | https://w3id.org/fga-wg/schema/top_level/edge_weight_type |
+| self | https://w3id.org/fga-wg/schema/bundle/edge_weight_type |
+| native | https://w3id.org/fga-wg/schema/bundle/edge_weight_type |
 
 
 
@@ -85,7 +85,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edge_weight_type](https://w3id.or
 ```yaml
 name: edge_weight_type
 description: The type of values associated with the edges.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

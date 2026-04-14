@@ -12,7 +12,7 @@ _Vocabulary from the ENCODE model describing the purpose or content of a file (s
 
 <div data-search-exclude markdown="1">
 
-URI: [https://w3id.org/fga-wg/schema/top_level/OutputType](https://w3id.org/fga-wg/schema/top_level/OutputType)
+URI: [https://w3id.org/fga-wg/schema/bundle/OutputType](https://w3id.org/fga-wg/schema/bundle/OutputType)
 
 ## Permissible Values
 | Value | Meaning | Description |
@@ -314,7 +314,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/OutputType](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -328,7 +328,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/OutputType](https://w3id.org/fga-
 name: OutputType
 description: Vocabulary from the ENCODE model describing the purpose or content of
   a file (see "Properties->output_type" in https://www.encodeproject.org/profiles/file).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 permissible_values:
   3D structure:

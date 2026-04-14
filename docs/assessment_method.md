@@ -14,7 +14,7 @@ _Quality assessment method that has been carried out (e.g. BUSCO, OMArk, peak ca
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/assessment_method](https://w3id.org/fga-wg/schema/top_level/assessment_method)
+URI: [https://w3id.org/fga-wg/schema/bundle/assessment_method](https://w3id.org/fga-wg/schema/bundle/assessment_method)
 <!-- no inheritance hierarchy -->
 
 
@@ -82,7 +82,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -91,8 +91,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/assessment_method |
-| native | https://w3id.org/fga-wg/schema/top_level/assessment_method |
+| self | https://w3id.org/fga-wg/schema/bundle/assessment_method |
+| native | https://w3id.org/fga-wg/schema/bundle/assessment_method |
 
 
 
@@ -106,7 +106,7 @@ description: Quality assessment method that has been carried out (e.g. BUSCO, OM
   peak calling statistics, etc.)
 examples:
 - value: histone-chipseq-quality-metrics
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - QualityAssessment

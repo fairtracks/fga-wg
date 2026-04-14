@@ -14,7 +14,7 @@ _Name of the person or organisation._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/name](https://w3id.org/fga-wg/schema/top_level/name)
+URI: [https://w3id.org/fga-wg/schema/bundle/name](https://w3id.org/fga-wg/schema/bundle/name)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/name](https://w3id.org/fga-wg/sch
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/name](https://w3id.org/fga-wg/sch
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/name |
-| native | https://w3id.org/fga-wg/schema/top_level/name |
+| self | https://w3id.org/fga-wg/schema/bundle/name |
+| native | https://w3id.org/fga-wg/schema/bundle/name |
 
 
 
@@ -95,7 +95,7 @@ name: name
 description: Name of the person or organisation.
 examples:
 - value: John Doe
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Contact

@@ -14,7 +14,7 @@ _Protocol detailing the collection and treatment of the biospecimen/sample._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/sampling_protocol](https://w3id.org/fga-wg/schema/top_level/sampling_protocol)
+URI: [https://w3id.org/fga-wg/schema/bundle/sampling_protocol](https://w3id.org/fga-wg/schema/bundle/sampling_protocol)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sampling_protocol](https://w3id.o
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sampling_protocol](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/sampling_protocol |
-| native | https://w3id.org/fga-wg/schema/top_level/sampling_protocol |
+| self | https://w3id.org/fga-wg/schema/bundle/sampling_protocol |
+| native | https://w3id.org/fga-wg/schema/bundle/sampling_protocol |
 
 
 
@@ -94,7 +94,7 @@ name: sampling_protocol
 description: Protocol detailing the collection and treatment of the biospecimen/sample.
 examples:
 - value: https://www.encodeproject.org/documents/3ed29dac-da67-47be-91b0-c9cad6a1b791/@@download/attachment/AG04450_Stam_protocol.pdf
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

@@ -14,7 +14,7 @@ _The digest method used to create the checksum. The value (e.g. `sha-256`) SHOUL
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/checksum_type](https://w3id.org/fga-wg/schema/top_level/checksum_type)
+URI: [https://w3id.org/fga-wg/schema/bundle/checksum_type](https://w3id.org/fga-wg/schema/bundle/checksum_type)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/checksum_type](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/checksum_type](https://w3id.org/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/checksum_type |
-| native | https://w3id.org/fga-wg/schema/top_level/checksum_type |
+| self | https://w3id.org/fga-wg/schema/bundle/checksum_type |
+| native | https://w3id.org/fga-wg/schema/bundle/checksum_type |
 
 
 
@@ -102,7 +102,7 @@ description: The digest method used to create the checksum. The value (e.g. `sha
   standard `type` value such as `md5`, `etag`, `crc32c`, `trunc512`, or `sha1`.
 examples:
 - value: md5
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Checksum

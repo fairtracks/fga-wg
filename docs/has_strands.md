@@ -14,7 +14,7 @@ _Whether the sequence features are stranded (at least one feature has strand inf
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/has_strands](https://w3id.org/fga-wg/schema/top_level/has_strands)
+URI: [https://w3id.org/fga-wg/schema/bundle/has_strands](https://w3id.org/fga-wg/schema/bundle/has_strands)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_strands](https://w3id.org/fga
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_strands](https://w3id.org/fga
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/has_strands |
-| native | https://w3id.org/fga-wg/schema/top_level/has_strands |
+| self | https://w3id.org/fga-wg/schema/bundle/has_strands |
+| native | https://w3id.org/fga-wg/schema/bundle/has_strands |
 
 
 
@@ -96,7 +96,7 @@ description: Whether the sequence features are stranded (at least one feature ha
   strand information).
 examples:
 - value: 'False'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

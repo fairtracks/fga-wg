@@ -14,7 +14,7 @@ _Main phenotype (e.g. disease) connected to the biospecimen/sample._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/phenotype](https://w3id.org/fga-wg/schema/top_level/phenotype)
+URI: [https://w3id.org/fga-wg/schema/bundle/phenotype](https://w3id.org/fga-wg/schema/bundle/phenotype)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/phenotype](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/phenotype](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/phenotype |
-| native | https://w3id.org/fga-wg/schema/top_level/phenotype |
+| self | https://w3id.org/fga-wg/schema/bundle/phenotype |
+| native | https://w3id.org/fga-wg/schema/bundle/phenotype |
 
 
 
@@ -96,7 +96,7 @@ examples:
 - object:
     id: PATO:0000461
     label: normal
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

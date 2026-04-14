@@ -14,7 +14,7 @@ _Internal references to the FileCollection objects (within the deposit) that con
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_refs](https://w3id.org/fga-wg/schema/top_level/filecollection_refs)
+URI: [https://w3id.org/fga-wg/schema/bundle/filecollection_refs](https://w3id.org/fga-wg/schema/bundle/filecollection_refs)
 <!-- no inheritance hierarchy -->
 
 
@@ -74,7 +74,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_refs](https://w3id
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -83,8 +83,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_refs](https://w3id
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/filecollection_refs |
-| native | https://w3id.org/fga-wg/schema/top_level/filecollection_refs |
+| self | https://w3id.org/fga-wg/schema/bundle/filecollection_refs |
+| native | https://w3id.org/fga-wg/schema/bundle/filecollection_refs |
 
 
 
@@ -98,7 +98,7 @@ description: Internal references to the FileCollection objects (within the depos
   that contains the data file, if any.
 examples:
 - value: collection:ihec_encode
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

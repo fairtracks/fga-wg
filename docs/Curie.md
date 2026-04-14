@@ -47,7 +47,7 @@ URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -57,7 +57,7 @@ URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:string |
-| native | https://w3id.org/fga-wg/schema/top_level/curie |
+| native | https://w3id.org/fga-wg/schema/bundle/curie |
 
 
 

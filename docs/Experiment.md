@@ -14,7 +14,7 @@ _Represents a sequencing experiment that has been carried out within a study, ba
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/Experiment](https://w3id.org/fga-wg/schema/top_level/Experiment)
+URI: [https://w3id.org/fga-wg/schema/bundle/Experiment](https://w3id.org/fga-wg/schema/bundle/Experiment)
 
 
 
@@ -204,7 +204,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Experiment](https://w3id.org/fga-
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [TopLevel](TopLevel.md) | [experiments](experiments.md) | range | [Experiment](Experiment.md) |
+| [Bundle](Bundle.md) | [experiments](experiments.md) | range | [Experiment](Experiment.md) |
 
 
 
@@ -226,7 +226,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Experiment](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -235,8 +235,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Experiment](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/Experiment |
-| native | https://w3id.org/fga-wg/schema/top_level/Experiment |
+| self | https://w3id.org/fga-wg/schema/bundle/Experiment |
+| native | https://w3id.org/fga-wg/schema/bundle/Experiment |
 
 
 
@@ -255,7 +255,7 @@ name: Experiment
 description: Represents a sequencing experiment that has been carried out within a
   study, based on biological samples, and providing data files as output. Subsequent
   analysis of output data is described by the Analysis entity.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - experiment_external_id
 - experiment_id
@@ -282,14 +282,14 @@ name: Experiment
 description: Represents a sequencing experiment that has been carried out within a
   study, based on biological samples, and providing data files as output. Subsequent
   analysis of output data is described by the Analysis entity.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   experiment_external_id:
     name: experiment_external_id
     description: External, globally unique identifier for the experiment.
     examples:
     - value: encode:ENCSR000DPJ
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -301,7 +301,7 @@ attributes:
       deposit).
     examples:
     - value: experiment:ENCSR000DPJ
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: Experiment
@@ -316,7 +316,7 @@ attributes:
       etc.
     examples:
     - value: H3K9me3 ChIP-seq on human AG04450
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -330,7 +330,7 @@ attributes:
       carried out.
     examples:
     - value: study:E-GEOD-35583
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -351,7 +351,7 @@ attributes:
         technical_replicate_labels:
         - '1_1'
         - '2_1'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -366,7 +366,7 @@ attributes:
     - object:
         id: SO:0000991
         label: genomic_DNA
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -380,7 +380,7 @@ attributes:
     - object:
         id: obi:OBI_0000716
         label: ChIP-seq assay
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -392,7 +392,7 @@ attributes:
     description: The high-level experiment design including layout, protocol.
     examples:
     - value: https://www.encodeproject.org/documents/92cd1386-ccad-450a-b5a6-ad49983e7e3f/@@download/attachment/wgEncodeUwHistone.release5.html.pdf
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -405,7 +405,7 @@ attributes:
     - object:
         id: obi:OBI_0000736
         label: single fragment library
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -422,7 +422,7 @@ attributes:
     - object:
         id: obi:OBI_0002128
         label: Illumina Genome Analyzer
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -433,7 +433,7 @@ attributes:
     description: Set of rules which guides how the sequencing protocol was followed.
       Change-tracking services such as Protocol.io or GitHub are encouraged instead
       of dumping free text in this field.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -446,7 +446,7 @@ attributes:
     - object:
         id: SO:0001707
         label: H3K9Me3
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:
@@ -459,7 +459,7 @@ attributes:
     - object:
         id: GO:0140999
         label: histone H3K4 trimethyltransferase activity
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Experiment
     domain_of:

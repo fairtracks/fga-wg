@@ -41,7 +41,7 @@ URI: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -51,7 +51,7 @@ URI: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:float |
-| native | https://w3id.org/fga-wg/schema/top_level/float |
+| native | https://w3id.org/fga-wg/schema/bundle/float |
 | exact | schema:Float |
 
 

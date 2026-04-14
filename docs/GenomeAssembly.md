@@ -14,7 +14,7 @@ _Information about of the exact genome assembly used to generate the annotation 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/GenomeAssembly](https://w3id.org/fga-wg/schema/top_level/GenomeAssembly)
+URI: [https://w3id.org/fga-wg/schema/bundle/GenomeAssembly](https://w3id.org/fga-wg/schema/bundle/GenomeAssembly)
 
 
 
@@ -105,7 +105,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/GenomeAssembly](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -114,8 +114,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/GenomeAssembly](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/GenomeAssembly |
-| native | https://w3id.org/fga-wg/schema/top_level/GenomeAssembly |
+| self | https://w3id.org/fga-wg/schema/bundle/GenomeAssembly |
+| native | https://w3id.org/fga-wg/schema/bundle/GenomeAssembly |
 
 
 
@@ -133,7 +133,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/GenomeAssembly](https://w3id.org/
 name: GenomeAssembly
 description: Information about of the exact genome assembly used to generate the annotation
   file, defining the genomic coordinate system for the sequence features.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - seqcol_digest
 - seqcol_ordered_coord_system
@@ -151,7 +151,7 @@ slots:
 name: GenomeAssembly
 description: Information about of the exact genome assembly used to generate the annotation
   file, defining the genomic coordinate system for the sequence features.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   seqcol_digest:
     name: seqcol_digest
@@ -162,7 +162,7 @@ attributes:
       comparisons across genome assembly variants (say, variants of the GRCh38 assembly).
     examples:
     - value: ga4gh:SC.EiFob05aCWgVU_B_Ae0cypnQut3cxUP1
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: GenomeAssembly
@@ -182,7 +182,7 @@ attributes:
       from the genome assembly.
     examples:
     - value: ga4gh:SC.name_length_pairs.Yyz0Expaluj09xdDYg2Y6VOApvjg05Hf
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomeAssembly
     domain_of:
@@ -202,7 +202,7 @@ attributes:
       generated from the genome assembly.
     examples:
     - value: ga4gh:SC.sorted_name_length_pairs._dMQ5dPUNVx4OGQnDAPmGMkVRWWcYV99
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomeAssembly
     domain_of:
@@ -216,7 +216,7 @@ attributes:
       been made to the assembly after retrieval, such as removing the alternate sequences.
     examples:
     - value: encode:ENCSR425FOI
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomeAssembly
     domain_of:
@@ -231,7 +231,7 @@ attributes:
     - value: GRCh38_no_alt_analysis_set_GCA_000001405.15
     - value: GRCh38
     - value: hg38
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomeAssembly
     domain_of:

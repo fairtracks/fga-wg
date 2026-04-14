@@ -14,7 +14,7 @@ _A collection of files, according to some selection criteria. In the context of 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/FileCollection](https://w3id.org/fga-wg/schema/top_level/FileCollection)
+URI: [https://w3id.org/fga-wg/schema/bundle/FileCollection](https://w3id.org/fga-wg/schema/bundle/FileCollection)
 
 
 
@@ -125,7 +125,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/FileCollection](https://w3id.org/
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [TopLevel](TopLevel.md) | [file_collections](file_collections.md) | range | [FileCollection](FileCollection.md) |
+| [Bundle](Bundle.md) | [file_collections](file_collections.md) | range | [FileCollection](FileCollection.md) |
 
 
 
@@ -147,7 +147,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/FileCollection](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -156,8 +156,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/FileCollection](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/FileCollection |
-| native | https://w3id.org/fga-wg/schema/top_level/FileCollection |
+| self | https://w3id.org/fga-wg/schema/bundle/FileCollection |
+| native | https://w3id.org/fga-wg/schema/bundle/FileCollection |
 
 
 
@@ -177,7 +177,7 @@ description: A collection of files, according to some selection criteria. In the
   of the "FAIRification of Genomic Annotations" data model, we are mainly interested
   in "GenomicAnnotationFile" entities, but other types of files can also be contained
   in a collection, e.g. raw data files such as FASTQ files.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - filecollection_external_id
 - filecollection_id
@@ -199,13 +199,13 @@ description: A collection of files, according to some selection criteria. In the
   of the "FAIRification of Genomic Annotations" data model, we are mainly interested
   in "GenomicAnnotationFile" entities, but other types of files can also be contained
   in a collection, e.g. raw data files such as FASTQ files.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   filecollection_external_id:
     name: filecollection_external_id
     description: External, globally unique identifier for the file collection (in
       most cases, this will not exist).
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: FileCollection
     domain_of:
@@ -218,7 +218,7 @@ attributes:
       deposit). '
     examples:
     - value: filecollection:ihec_encode
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: FileCollection
@@ -233,7 +233,7 @@ attributes:
       legends, etc.
     examples:
     - value: 'IHEC data portal: ENCODE dataset'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: FileCollection
     domain_of:
@@ -247,7 +247,7 @@ attributes:
     examples:
     - value: ENCODE dataset in the International Human Epigenome Consortium (IHEC)
         data portal, enhanced with metadata from the ENCODE data portal.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: FileCollection
     domain_of:
@@ -268,7 +268,7 @@ attributes:
     - object:
         inputsource_external_ref: https://www.encodeproject.org
         qualified_relation: prov:hadPrimarySource
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: FileCollection
     domain_of:
@@ -280,7 +280,7 @@ attributes:
     description: Reference to versioned id of deposit containing this file collection.
     examples:
     - value: doi:10.1234/zenodo.12345679
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: FileCollection
     domain_of:
@@ -295,7 +295,7 @@ attributes:
         name: International Human Epigenome Consortium
         contact_id: bioproject:PRJNA234466
         email: info@ihec-epigenomes.org
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: FileCollection
     domain_of:

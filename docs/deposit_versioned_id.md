@@ -14,7 +14,7 @@ _A globally unique, persistent and versioned identifier for the public deposit o
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/deposit_versioned_id](https://w3id.org/fga-wg/schema/top_level/deposit_versioned_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/deposit_versioned_id](https://w3id.org/fga-wg/schema/bundle/deposit_versioned_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_versioned_id](https://w3i
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_versioned_id](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/deposit_versioned_id |
-| native | https://w3id.org/fga-wg/schema/top_level/deposit_versioned_id |
+| self | https://w3id.org/fga-wg/schema/bundle/deposit_versioned_id |
+| native | https://w3id.org/fga-wg/schema/bundle/deposit_versioned_id |
 
 
 
@@ -103,7 +103,7 @@ description: A globally unique, persistent and versioned identifier for the publ
   deposit of the metadata document. A versioned DOI to a deposited document is recommended.
 examples:
 - value: doi:10.1234/zenodo.12345679
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

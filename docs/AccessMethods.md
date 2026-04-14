@@ -12,7 +12,7 @@ _Access methods (i.e. communication protocols), following the vocabulary defined
 
 <div data-search-exclude markdown="1">
 
-URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethods](https://w3id.org/fga-wg/schema/top_level/AccessMethods)
+URI: [https://w3id.org/fga-wg/schema/bundle/AccessMethods](https://w3id.org/fga-wg/schema/bundle/AccessMethods)
 
 ## Permissible Values
 | Value | Meaning | Description |
@@ -53,7 +53,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethods](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -67,7 +67,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethods](https://w3id.org/f
 name: AccessMethods
 description: Access methods (i.e. communication protocols), following the vocabulary
   defined in the GA4GH DRS specification (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel/operation/getAccessMethod).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 permissible_values:
   s3:

@@ -14,7 +14,7 @@ _Database accession numbers for the genome assembly, if available. Should precis
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/accessions](https://w3id.org/fga-wg/schema/top_level/accessions)
+URI: [https://w3id.org/fga-wg/schema/bundle/accessions](https://w3id.org/fga-wg/schema/bundle/accessions)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/accessions](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/accessions](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/accessions |
-| native | https://w3id.org/fga-wg/schema/top_level/accessions |
+| self | https://w3id.org/fga-wg/schema/bundle/accessions |
+| native | https://w3id.org/fga-wg/schema/bundle/accessions |
 
 
 
@@ -97,7 +97,7 @@ description: Database accession numbers for the genome assembly, if available. S
   to the assembly after retrieval, such as removing the alternate sequences.
 examples:
 - value: encode:ENCSR425FOI
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - GenomeAssembly

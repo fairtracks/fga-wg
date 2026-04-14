@@ -14,7 +14,7 @@ _A globally unique and persistent identifier for the public deposit of the metad
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/deposit_id](https://w3id.org/fga-wg/schema/top_level/deposit_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/deposit_id](https://w3id.org/fga-wg/schema/bundle/deposit_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_id](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_id](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/deposit_id |
-| native | https://w3id.org/fga-wg/schema/top_level/deposit_id |
+| self | https://w3id.org/fga-wg/schema/bundle/deposit_id |
+| native | https://w3id.org/fga-wg/schema/bundle/deposit_id |
 
 
 
@@ -95,7 +95,7 @@ description: A globally unique and persistent identifier for the public deposit 
   the metadata document. A DOI or other persistent identifier is recommended.
 examples:
 - value: doi:10.1234/zenodo.12345678
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Deposit

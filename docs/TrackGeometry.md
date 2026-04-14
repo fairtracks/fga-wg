@@ -14,7 +14,7 @@ _Overall geometric properties of the sequence features in the genomic annotation
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/TrackGeometry](https://w3id.org/fga-wg/schema/top_level/TrackGeometry)
+URI: [https://w3id.org/fga-wg/schema/bundle/TrackGeometry](https://w3id.org/fga-wg/schema/bundle/TrackGeometry)
 
 
 
@@ -185,7 +185,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TrackGeometry](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -194,8 +194,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TrackGeometry](https://w3id.org/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/TrackGeometry |
-| native | https://w3id.org/fga-wg/schema/top_level/TrackGeometry |
+| self | https://w3id.org/fga-wg/schema/bundle/TrackGeometry |
+| native | https://w3id.org/fga-wg/schema/bundle/TrackGeometry |
 
 
 
@@ -216,7 +216,7 @@ description: Overall geometric properties of the sequence features in the genomi
   with the track type delineations from Gundersen et. al, 2011. While conceptually
   based on visual characteristics, these properties are also useful to e.g. select
   relevant annotation files for non-visual analyses.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - has_gaps
 - has_lengths
@@ -296,7 +296,7 @@ description: Overall geometric properties of the sequence features in the genomi
   with the track type delineations from Gundersen et. al, 2011. While conceptually
   based on visual characteristics, these properties are also useful to e.g. select
   relevant annotation files for non-visual analyses.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   has_gaps:
     name: has_gaps
@@ -304,7 +304,7 @@ attributes:
       at least one gap between two features on the same sequence).
     examples:
     - value: 'True'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -317,7 +317,7 @@ attributes:
       spans more than 1 base pair).
     examples:
     - value: 'True'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -330,7 +330,7 @@ attributes:
       has strand information).
     examples:
     - value: 'False'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -343,7 +343,7 @@ attributes:
       feature has an associated value).
     examples:
     - value: 'True'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -356,7 +356,7 @@ attributes:
       one edge between features exists).
     examples:
     - value: 'False'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -369,7 +369,7 @@ attributes:
       a name).
     examples:
     - value: 'True'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -382,7 +382,7 @@ attributes:
       pair is simultaneously covered by two sequence features).
     examples:
     - value: 'False'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -395,7 +395,7 @@ attributes:
       one feature that cross a sequence border).
     examples:
     - value: 'False'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -408,7 +408,7 @@ attributes:
       have the same length, excluding features at the very end of a sequence).
     examples:
     - value: 'False'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -419,7 +419,7 @@ attributes:
     description: The type of values associated with the sequence features, if any.
     examples:
     - value: multiple
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -429,7 +429,7 @@ attributes:
     name: edges_have_weights
     description: Whether the edges linking sequence features are weighted (at least
       one edge between sequence features has an associated weight).
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -438,7 +438,7 @@ attributes:
   edge_weight_type:
     name: edge_weight_type
     description: The type of values associated with the edges.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -448,7 +448,7 @@ attributes:
     name: edges_are_directed
     description: Whether the edges linking sequence features are directed (at least
       one edge between sequence features is defined with a direction).
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:
@@ -459,7 +459,7 @@ attributes:
     description: Whether the edges linking sequence features denote a parent-child
       relationship (all edges between sequence features denote parent-child relationships
       such as genes to exons, i.e. where the child is fully covered by the parent).
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: TrackGeometry
     domain_of:

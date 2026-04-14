@@ -14,7 +14,7 @@ _Reference to an internal object as the input source using a local identifier. E
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/inputsource_ref](https://w3id.org/fga-wg/schema/top_level/inputsource_ref)
+URI: [https://w3id.org/fga-wg/schema/bundle/inputsource_ref](https://w3id.org/fga-wg/schema/bundle/inputsource_ref)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/inputsource_ref](https://w3id.org
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/inputsource_ref](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/inputsource_ref |
-| native | https://w3id.org/fga-wg/schema/top_level/inputsource_ref |
+| self | https://w3id.org/fga-wg/schema/bundle/inputsource_ref |
+| native | https://w3id.org/fga-wg/schema/bundle/inputsource_ref |
 
 
 
@@ -89,7 +89,7 @@ description: Reference to an internal object as the input source using a local i
   Experiment, Analysis or File as restricted by the description of the field where
   the input source is used. One of "inputsource_external_ref" or "inputsource_ref"
   must be specified.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - InputSource

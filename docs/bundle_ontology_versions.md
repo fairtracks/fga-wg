@@ -3,7 +3,7 @@ search:
   boost: 5.0
 ---
 
-# Slot: document_ontology_versions 
+# Slot: bundle_ontology_versions 
 
 
 _Map from the version-agnostic URL to a versioned URL (e.g. "versionIRI" in owl) of each ontology used in the current metadata deposit (corresponding to deposit_versioned_id")._
@@ -14,7 +14,7 @@ _Map from the version-agnostic URL to a versioned URL (e.g. "versionIRI" in owl)
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/document_ontology_versions](https://w3id.org/fga-wg/schema/top_level/document_ontology_versions)
+URI: [https://w3id.org/fga-wg/schema/bundle/bundle_ontology_versions](https://w3id.org/fga-wg/schema/bundle/bundle_ontology_versions)
 <!-- no inheritance hierarchy -->
 
 
@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/document_ontology_versions](https
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Document](Document.md) | Information about a document containing metadata about a set of genome annotation files, harmonised according to the "FAIRification of Genomic Annotations" data model.  This includes self-referential identifiers and versioning of public deposits of the document. |  no  |
+| [BundleMetadata](BundleMetadata.md) | Top-level metadata about a bundle representing a set of genome annotation files, harmonised according to the "FAIRification of Genomic Annotations" data model.  This includes self-referential identifiers and versioning of public deposits of the harmonized metadata. |  no  |
 
 
 
@@ -39,7 +39,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/document_ontology_versions](https
 | Property | Value |
 | --- | --- |
 | Range | [OntologyVersions](OntologyVersions.md) |
-| Domain Of | [Document](Document.md) |
+| Domain Of | [BundleMetadata](BundleMetadata.md) |
 
 ### Cardinality and Requirements
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/document_ontology_versions](https
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/document_ontology_versions](https
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/document_ontology_versions |
-| native | https://w3id.org/fga-wg/schema/top_level/document_ontology_versions |
+| self | https://w3id.org/fga-wg/schema/bundle/bundle_ontology_versions |
+| native | https://w3id.org/fga-wg/schema/bundle/bundle_ontology_versions |
 
 
 
@@ -98,7 +98,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/document_ontology_versions](https
 
 <details>
 ```yaml
-name: document_ontology_versions
+name: bundle_ontology_versions
 description: Map from the version-agnostic URL to a versioned URL (e.g. "versionIRI"
   in owl) of each ontology used in the current metadata deposit (corresponding to
   deposit_versioned_id").
@@ -131,10 +131,10 @@ examples:
     namespace: uberon
     ontology_url: http://purl.obolibrary.org/obo/uberon.owl
     versioned_ontology_url: http://purl.obolibrary.org/obo/uberon/releases/2020-06-30/uberon.owl
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
-- Document
+- BundleMetadata
 range: OntologyVersions
 required: true
 multivalued: true

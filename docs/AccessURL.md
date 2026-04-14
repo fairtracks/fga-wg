@@ -14,7 +14,7 @@ _The URL and associated HTTP headers to access the File object (orig: DrsObject)
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/AccessURL](https://w3id.org/fga-wg/schema/top_level/AccessURL)
+URI: [https://w3id.org/fga-wg/schema/bundle/AccessURL](https://w3id.org/fga-wg/schema/bundle/AccessURL)
 
 
 
@@ -86,7 +86,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessURL](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -95,8 +95,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessURL](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/AccessURL |
-| native | https://w3id.org/fga-wg/schema/top_level/AccessURL |
+| self | https://w3id.org/fga-wg/schema/bundle/AccessURL |
+| native | https://w3id.org/fga-wg/schema/bundle/AccessURL |
 
 
 
@@ -114,7 +114,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessURL](https://w3id.org/fga-w
 name: AccessURL
 description: 'The URL and associated HTTP headers to access the File object (orig:
   DrsObject). Exact copy of AccessURL object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessURLModel).'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - url
 - headers
@@ -129,7 +129,7 @@ slots:
 name: AccessURL
 description: 'The URL and associated HTTP headers to access the File object (orig:
   DrsObject). Exact copy of AccessURL object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessURLModel).'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   url:
     name: url
@@ -137,7 +137,7 @@ attributes:
       bytes.
     examples:
     - value: https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: AccessURL
     domain_of:
@@ -149,7 +149,7 @@ attributes:
     description: An optional list of headers to include in the HTTP request to `url`.
       These headers can be used to provide auth tokens required to fetch the object
       bytes.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: AccessURL
     domain_of:

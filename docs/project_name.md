@@ -14,7 +14,7 @@ _Name of the project within which the study was carried out._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/project_name](https://w3id.org/fga-wg/schema/top_level/project_name)
+URI: [https://w3id.org/fga-wg/schema/bundle/project_name](https://w3id.org/fga-wg/schema/bundle/project_name)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/project_name](https://w3id.org/fg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/project_name](https://w3id.org/fg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/project_name |
-| native | https://w3id.org/fga-wg/schema/top_level/project_name |
+| self | https://w3id.org/fga-wg/schema/bundle/project_name |
+| native | https://w3id.org/fga-wg/schema/bundle/project_name |
 
 
 
@@ -85,7 +85,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/project_name](https://w3id.org/fg
 ```yaml
 name: project_name
 description: Name of the project within which the study was carried out.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Study

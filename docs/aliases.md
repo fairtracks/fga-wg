@@ -14,7 +14,7 @@ _Human-readable aliases of the genome assembly. Can be imprecise, as preciseness
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/aliases](https://w3id.org/fga-wg/schema/top_level/aliases)
+URI: [https://w3id.org/fga-wg/schema/bundle/aliases](https://w3id.org/fga-wg/schema/bundle/aliases)
 <!-- no inheritance hierarchy -->
 
 
@@ -75,7 +75,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/aliases](https://w3id.org/fga-wg/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -84,8 +84,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/aliases](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/aliases |
-| native | https://w3id.org/fga-wg/schema/top_level/aliases |
+| self | https://w3id.org/fga-wg/schema/bundle/aliases |
+| native | https://w3id.org/fga-wg/schema/bundle/aliases |
 
 
 
@@ -101,7 +101,7 @@ examples:
 - value: GRCh38_no_alt_analysis_set_GCA_000001405.15
 - value: GRCh38
 - value: hg38
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - GenomeAssembly

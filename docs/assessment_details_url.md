@@ -14,7 +14,7 @@ _URL to a report containing the detailed output from the quality assessment._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/assessment_details_url](https://w3id.org/fga-wg/schema/top_level/assessment_details_url)
+URI: [https://w3id.org/fga-wg/schema/bundle/assessment_details_url](https://w3id.org/fga-wg/schema/bundle/assessment_details_url)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/assessment_details_url](https://w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/assessment_details_url](https://w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/assessment_details_url |
-| native | https://w3id.org/fga-wg/schema/top_level/assessment_details_url |
+| self | https://w3id.org/fga-wg/schema/bundle/assessment_details_url |
+| native | https://w3id.org/fga-wg/schema/bundle/assessment_details_url |
 
 
 
@@ -94,7 +94,7 @@ name: assessment_details_url
 description: URL to a report containing the detailed output from the quality assessment.
 examples:
 - value: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - QualityAssessment

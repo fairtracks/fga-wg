@@ -43,7 +43,7 @@ URI: [xsd:time](http://www.w3.org/2001/XMLSchema#time)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -53,7 +53,7 @@ URI: [xsd:time](http://www.w3.org/2001/XMLSchema#time)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:time |
-| native | https://w3id.org/fga-wg/schema/top_level/time |
+| native | https://w3id.org/fga-wg/schema/bundle/time |
 | exact | schema:Time |
 
 

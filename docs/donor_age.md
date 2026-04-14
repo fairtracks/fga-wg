@@ -14,7 +14,7 @@ _Age of the donor/organism at the time of sampling_
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/donor_age](https://w3id.org/fga-wg/schema/top_level/donor_age)
+URI: [https://w3id.org/fga-wg/schema/bundle/donor_age](https://w3id.org/fga-wg/schema/bundle/donor_age)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_age](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_age](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/donor_age |
-| native | https://w3id.org/fga-wg/schema/top_level/donor_age |
+| self | https://w3id.org/fga-wg/schema/bundle/donor_age |
+| native | https://w3id.org/fga-wg/schema/bundle/donor_age |
 
 
 
@@ -94,7 +94,7 @@ name: donor_age
 description: Age of the donor/organism at the time of sampling
 examples:
 - value: W12
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

@@ -14,7 +14,7 @@ _Information about a genomic annotation / track file. GenomicAnnotationFile is a
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/GenomicAnnotationFile](https://w3id.org/fga-wg/schema/top_level/GenomicAnnotationFile)
+URI: [https://w3id.org/fga-wg/schema/bundle/GenomicAnnotationFile](https://w3id.org/fga-wg/schema/bundle/GenomicAnnotationFile)
 
 
 
@@ -331,7 +331,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/GenomicAnnotationFile](https://w3
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -340,8 +340,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/GenomicAnnotationFile](https://w3
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/GenomicAnnotationFile |
-| native | https://w3id.org/fga-wg/schema/top_level/GenomicAnnotationFile |
+| self | https://w3id.org/fga-wg/schema/bundle/GenomicAnnotationFile |
+| native | https://w3id.org/fga-wg/schema/bundle/GenomicAnnotationFile |
 
 
 
@@ -361,7 +361,7 @@ description: Information about a genomic annotation / track file. GenomicAnnotat
   is a specification of the File entity and inherits all the fields defined in File,
   in addition to the fields that are specific to GenomicAnnotationFile, as detailed
   here.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 is_a: File
 slots:
 - genomic_annotation_digest
@@ -381,7 +381,7 @@ description: Information about a genomic annotation / track file. GenomicAnnotat
   is a specification of the File entity and inherits all the fields defined in File,
   in addition to the fields that are specific to GenomicAnnotationFile, as detailed
   here.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 is_a: File
 attributes:
   genomic_annotation_digest:
@@ -389,7 +389,7 @@ attributes:
     description: Content-derived digest for distributed identification of genomic
       annotation files. (This field is currently a placeholder, as an algorithm for
       generating such a digest is yet to be specified.).
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -402,7 +402,7 @@ attributes:
       annotation.
     examples:
     - value: ga4gh:SC.EiFob05aCWgVU_B_Ae0cypnQut3cxUP1
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -426,7 +426,7 @@ attributes:
         has_values: true
         lengths_constant: false
         value_type: multiple
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -440,7 +440,7 @@ attributes:
     - object:
         id: SO:0001707
         label: H3K9Me3
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -453,7 +453,7 @@ attributes:
     description: External, globally unique identifier for the data file.
     examples:
     - value: encode:ENCFF323LCS
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -465,7 +465,7 @@ attributes:
       deposit). '
     examples:
     - value: file:ENCFF323LCS
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: GenomicAnnotationFile
@@ -481,7 +481,7 @@ attributes:
       [portable filenames].
     examples:
     - value: 87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -494,7 +494,7 @@ attributes:
       etc.
     examples:
     - value: H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -508,7 +508,7 @@ attributes:
     examples:
     - value: H3K9me3 ChIP-seq replicated peaks on human (hg38) AG04450 (Fibroblast
         derived cell line).
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -520,7 +520,7 @@ attributes:
       that contains the data file, if any.
     examples:
     - value: collection:ihec_encode
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -543,7 +543,7 @@ attributes:
         technical_replicate_labels:
         - '1_1'
         - '2_1'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -561,7 +561,7 @@ attributes:
       encoded DRS ID for use in subsequent access endpoint calls.
     examples:
     - value: drs://drs.example.org/ENCFF323LCS
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -591,7 +591,7 @@ attributes:
         access_method: https
         access_url:
           url: https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -606,7 +606,7 @@ attributes:
       software versions, parameter settings, etc.
     examples:
     - value: encode:ENCAN718KHT
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -624,7 +624,7 @@ attributes:
           nreads_in_peaks: 6161851
           frip: 0.2931669095906483
         assessment_details_url: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -638,7 +638,7 @@ attributes:
     - object:
         id: edam:format_3004
         label: bigBed
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -650,7 +650,7 @@ attributes:
     description: A string providing the mime-type of the data file.
     examples:
     - value: application/octet-stream
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -661,7 +661,7 @@ attributes:
     description: Classification describing the file's purpose or contents.
     examples:
     - value: replicated peaks
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -673,7 +673,7 @@ attributes:
     description: The file size in bytes.
     examples:
     - value: '5359719'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -686,7 +686,7 @@ attributes:
       of the underlying content, not of the JSON object.).
     examples:
     - value: '2016-11-13T17:42:04.385801+00:00'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -700,7 +700,7 @@ attributes:
       content, not of the JSON object.).
     examples:
     - value: '2016-11-13T17:42:04.385801+00:00'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -712,7 +712,7 @@ attributes:
       a RFC3339 timestamp, or an incrementing version number.).
     examples:
     - value: efd4e74e-7875-4d13-9630-0085bc834f18
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:
@@ -726,7 +726,7 @@ attributes:
     - object:
         checksum: 535bc9628a1c5e5215226f9996e4eaca
         checksum_type: md5
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: GenomicAnnotationFile
     domain_of:

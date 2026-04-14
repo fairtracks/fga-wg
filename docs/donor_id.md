@@ -14,7 +14,7 @@ _Internal identifier for the donor/organism (unique within the metadata deposit)
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/donor_id](https://w3id.org/fga-wg/schema/top_level/donor_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/donor_id](https://w3id.org/fga-wg/schema/bundle/donor_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_id](https://w3id.org/fga-wg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_id](https://w3id.org/fga-wg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/donor_id |
-| native | https://w3id.org/fga-wg/schema/top_level/donor_id |
+| self | https://w3id.org/fga-wg/schema/bundle/donor_id |
+| native | https://w3id.org/fga-wg/schema/bundle/donor_id |
 
 
 
@@ -103,7 +103,7 @@ description: 'Internal identifier for the donor/organism (unique within the meta
   deposit). '
 examples:
 - value: donor:ENCDO001AAA
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

@@ -14,7 +14,7 @@ _The file format of the data file._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_type](https://w3id.org/fga-wg/schema/top_level/file_type)
+URI: [https://w3id.org/fga-wg/schema/bundle/file_type](https://w3id.org/fga-wg/schema/bundle/file_type)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_type](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -82,8 +82,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_type](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_type |
-| native | https://w3id.org/fga-wg/schema/top_level/file_type |
+| self | https://w3id.org/fga-wg/schema/bundle/file_type |
+| native | https://w3id.org/fga-wg/schema/bundle/file_type |
 
 
 
@@ -98,7 +98,7 @@ examples:
 - object:
     id: edam:format_3004
     label: bigBed
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

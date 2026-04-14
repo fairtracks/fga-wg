@@ -14,7 +14,7 @@ _Date of sample collection._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/sample_collection_date](https://w3id.org/fga-wg/schema/top_level/sample_collection_date)
+URI: [https://w3id.org/fga-wg/schema/bundle/sample_collection_date](https://w3id.org/fga-wg/schema/bundle/sample_collection_date)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_collection_date](https://w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_collection_date](https://w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/sample_collection_date |
-| native | https://w3id.org/fga-wg/schema/top_level/sample_collection_date |
+| self | https://w3id.org/fga-wg/schema/bundle/sample_collection_date |
+| native | https://w3id.org/fga-wg/schema/bundle/sample_collection_date |
 
 
 
@@ -85,7 +85,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_collection_date](https://w
 ```yaml
 name: sample_collection_date
 description: Date of sample collection.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

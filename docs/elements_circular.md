@@ -14,7 +14,7 @@ _Whether the sequence features have circular coordinates (at least one feature t
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/elements_circular](https://w3id.org/fga-wg/schema/top_level/elements_circular)
+URI: [https://w3id.org/fga-wg/schema/bundle/elements_circular](https://w3id.org/fga-wg/schema/bundle/elements_circular)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/elements_circular](https://w3id.o
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/elements_circular](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/elements_circular |
-| native | https://w3id.org/fga-wg/schema/top_level/elements_circular |
+| self | https://w3id.org/fga-wg/schema/bundle/elements_circular |
+| native | https://w3id.org/fga-wg/schema/bundle/elements_circular |
 
 
 
@@ -96,7 +96,7 @@ description: Whether the sequence features have circular coordinates (at least o
   feature that cross a sequence border).
 examples:
 - value: 'False'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

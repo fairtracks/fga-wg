@@ -14,7 +14,7 @@ _Human-readable description of the biospecimen/sample and the sampling process._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/sample_description](https://w3id.org/fga-wg/schema/top_level/sample_description)
+URI: [https://w3id.org/fga-wg/schema/bundle/sample_description](https://w3id.org/fga-wg/schema/bundle/sample_description)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_description](https://w3id.
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_description](https://w3id.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/sample_description |
-| native | https://w3id.org/fga-wg/schema/top_level/sample_description |
+| self | https://w3id.org/fga-wg/schema/bundle/sample_description |
+| native | https://w3id.org/fga-wg/schema/bundle/sample_description |
 
 
 
@@ -95,7 +95,7 @@ description: Human-readable description of the biospecimen/sample and the sampli
   process.
 examples:
 - value: Homo sapiens AG04450 cell line
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

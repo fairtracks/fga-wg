@@ -6,7 +6,7 @@ search:
 # Class: OntologyVersions 
 
 
-_Information about an ontology used in the metadata._
+_Information about an ontology used for the bundle._
 
 
 
@@ -14,7 +14,7 @@ _Information about an ontology used in the metadata._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/OntologyVersions](https://w3id.org/fga-wg/schema/top_level/OntologyVersions)
+URI: [https://w3id.org/fga-wg/schema/bundle/OntologyVersions](https://w3id.org/fga-wg/schema/bundle/OntologyVersions)
 
 
 
@@ -54,7 +54,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/OntologyVersions](https://w3id.or
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Document](Document.md) | [document_ontology_versions](document_ontology_versions.md) | range | [OntologyVersions](OntologyVersions.md) |
+| [BundleMetadata](BundleMetadata.md) | [bundle_ontology_versions](bundle_ontology_versions.md) | range | [OntologyVersions](OntologyVersions.md) |
 
 
 
@@ -76,7 +76,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/OntologyVersions](https://w3id.or
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -85,8 +85,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/OntologyVersions](https://w3id.or
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/OntologyVersions |
-| native | https://w3id.org/fga-wg/schema/top_level/OntologyVersions |
+| self | https://w3id.org/fga-wg/schema/bundle/OntologyVersions |
+| native | https://w3id.org/fga-wg/schema/bundle/OntologyVersions |
 
 
 
@@ -102,8 +102,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/OntologyVersions](https://w3id.or
 <details>
 ```yaml
 name: OntologyVersions
-description: Information about an ontology used in the metadata.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+description: Information about an ontology used for the bundle.
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - namespace
 - ontology_url
@@ -117,15 +117,15 @@ slots:
 <details>
 ```yaml
 name: OntologyVersions
-description: Information about an ontology used in the metadata.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+description: Information about an ontology used for the bundle.
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   namespace:
     name: namespace
     description: The CURIE namespace (prefix) an ontology (e.g. "GO" for Gene Ontology).
     examples:
     - value: edam
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: OntologyVersions
     domain_of:
@@ -138,7 +138,7 @@ attributes:
       in OWL).
     examples:
     - value: http://edamontology.org/EDAM.owl
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: OntologyVersions
     domain_of:
@@ -150,7 +150,7 @@ attributes:
     description: The versioned URL of the ontology (e.g. the "versionIRI" in OWL).
     examples:
     - value: http://edamontology.org/EDAM_1.21.owl
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: OntologyVersions
     domain_of:

@@ -14,7 +14,7 @@ _Information about collections of files contained in this dataset, each collecti
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_collections](https://w3id.org/fga-wg/schema/top_level/file_collections)
+URI: [https://w3id.org/fga-wg/schema/bundle/file_collections](https://w3id.org/fga-wg/schema/bundle/file_collections)
 <!-- no inheritance hierarchy -->
 
 
@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_collections](https://w3id.or
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TopLevel](TopLevel.md) | A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document. |  no  |
+| [Bundle](Bundle.md) | A bundle representing a set of genome annotation files, organised in sub-collections. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. |  no  |
 
 
 
@@ -39,7 +39,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_collections](https://w3id.or
 | Property | Value |
 | --- | --- |
 | Range | [FileCollection](FileCollection.md) |
-| Domain Of | [TopLevel](TopLevel.md) |
+| Domain Of | [Bundle](Bundle.md) |
 
 ### Cardinality and Requirements
 
@@ -65,7 +65,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_collections](https://w3id.or
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -74,8 +74,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_collections](https://w3id.or
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_collections |
-| native | https://w3id.org/fga-wg/schema/top_level/file_collections |
+| self | https://w3id.org/fga-wg/schema/bundle/file_collections |
+| native | https://w3id.org/fga-wg/schema/bundle/file_collections |
 
 
 
@@ -87,10 +87,10 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_collections](https://w3id.or
 name: file_collections
 description: Information about collections of files contained in this dataset, each
   collection defined according to some selection criteria.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
-- TopLevel
+- Bundle
 range: FileCollection
 multivalued: true
 inlined: true

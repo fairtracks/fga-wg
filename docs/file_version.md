@@ -14,7 +14,7 @@ _A string representing a version. (Some systems may use checksum, a RFC3339 time
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_version](https://w3id.org/fga-wg/schema/top_level/file_version)
+URI: [https://w3id.org/fga-wg/schema/bundle/file_version](https://w3id.org/fga-wg/schema/bundle/file_version)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_version](https://w3id.org/fg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_version](https://w3id.org/fg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_version |
-| native | https://w3id.org/fga-wg/schema/top_level/file_version |
+| self | https://w3id.org/fga-wg/schema/bundle/file_version |
+| native | https://w3id.org/fga-wg/schema/bundle/file_version |
 
 
 
@@ -96,7 +96,7 @@ description: A string representing a version. (Some systems may use checksum, a 
   timestamp, or an incrementing version number.).
 examples:
 - value: efd4e74e-7875-4d13-9630-0085bc834f18
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

@@ -14,7 +14,7 @@ _Version information for the retrieval from the input source._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/version](https://w3id.org/fga-wg/schema/top_level/version)
+URI: [https://w3id.org/fga-wg/schema/bundle/version](https://w3id.org/fga-wg/schema/bundle/version)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/version](https://w3id.org/fga-wg/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/version](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/version |
-| native | https://w3id.org/fga-wg/schema/top_level/version |
+| self | https://w3id.org/fga-wg/schema/bundle/version |
+| native | https://w3id.org/fga-wg/schema/bundle/version |
 
 
 
@@ -85,7 +85,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/version](https://w3id.org/fga-wg/
 ```yaml
 name: version
 description: Version information for the retrieval from the input source.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - InputSource

@@ -14,7 +14,7 @@ _Content-derived digest for distributed identification of genomic annotation fil
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/genomic_annotation_digest](https://w3id.org/fga-wg/schema/top_level/genomic_annotation_digest)
+URI: [https://w3id.org/fga-wg/schema/bundle/genomic_annotation_digest](https://w3id.org/fga-wg/schema/bundle/genomic_annotation_digest)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/genomic_annotation_digest](https:
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/genomic_annotation_digest](https:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/genomic_annotation_digest |
-| native | https://w3id.org/fga-wg/schema/top_level/genomic_annotation_digest |
+| self | https://w3id.org/fga-wg/schema/bundle/genomic_annotation_digest |
+| native | https://w3id.org/fga-wg/schema/bundle/genomic_annotation_digest |
 
 
 
@@ -87,7 +87,7 @@ name: genomic_annotation_digest
 description: Content-derived digest for distributed identification of genomic annotation
   files. (This field is currently a placeholder, as an algorithm for generating such
   a digest is yet to be specified.).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - GenomicAnnotationFile

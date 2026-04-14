@@ -14,7 +14,7 @@ _Internal identifier for the study (unique within the metadata deposit). Namespa
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/study_id](https://w3id.org/fga-wg/schema/top_level/study_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/study_id](https://w3id.org/fga-wg/schema/bundle/study_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/study_id](https://w3id.org/fga-wg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/study_id](https://w3id.org/fga-wg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/study_id |
-| native | https://w3id.org/fga-wg/schema/top_level/study_id |
+| self | https://w3id.org/fga-wg/schema/bundle/study_id |
+| native | https://w3id.org/fga-wg/schema/bundle/study_id |
 
 
 
@@ -103,7 +103,7 @@ description: 'Internal identifier for the study (unique within the metadata depo
   Namespace: "study".'
 examples:
 - value: study:S-EPMC7391744
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

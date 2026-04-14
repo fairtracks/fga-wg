@@ -14,7 +14,7 @@ _Internal reference to the study within which the experiment has been carried ou
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/experiment_study_ref](https://w3id.org/fga-wg/schema/top_level/experiment_study_ref)
+URI: [https://w3id.org/fga-wg/schema/bundle/experiment_study_ref](https://w3id.org/fga-wg/schema/bundle/experiment_study_ref)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/experiment_study_ref](https://w3i
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/experiment_study_ref](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/experiment_study_ref |
-| native | https://w3id.org/fga-wg/schema/top_level/experiment_study_ref |
+| self | https://w3id.org/fga-wg/schema/bundle/experiment_study_ref |
+| native | https://w3id.org/fga-wg/schema/bundle/experiment_study_ref |
 
 
 
@@ -96,7 +96,7 @@ description: Internal reference to the study within which the experiment has bee
   carried out.
 examples:
 - value: study:E-GEOD-35583
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

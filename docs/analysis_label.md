@@ -14,7 +14,7 @@ _A human-readable description of the analysis, short enough to be used for listi
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_label](https://w3id.org/fga-wg/schema/top_level/analysis_label)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_label](https://w3id.org/fga-wg/schema/bundle/analysis_label)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_label](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_label](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_label |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_label |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_label |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_label |
 
 
 
@@ -103,7 +103,7 @@ description: A human-readable description of the analysis, short enough to be us
   for listings within software user interfaces, tables, illustration legends, etc.
 examples:
 - value: ENCODE3 ChIP-seq pipeline, GRCH38, replicated peak calling
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Analysis

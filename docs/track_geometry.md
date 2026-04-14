@@ -14,7 +14,7 @@ _Geometric properties of the sequence features in the genomic annotation file if
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/track_geometry](https://w3id.org/fga-wg/schema/top_level/track_geometry)
+URI: [https://w3id.org/fga-wg/schema/bundle/track_geometry](https://w3id.org/fga-wg/schema/bundle/track_geometry)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/track_geometry](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/track_geometry](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/track_geometry |
-| native | https://w3id.org/fga-wg/schema/top_level/track_geometry |
+| self | https://w3id.org/fga-wg/schema/bundle/track_geometry |
+| native | https://w3id.org/fga-wg/schema/bundle/track_geometry |
 
 
 
@@ -107,7 +107,7 @@ examples:
     has_values: true
     lengths_constant: false
     value_type: multiple
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - GenomicAnnotationFile

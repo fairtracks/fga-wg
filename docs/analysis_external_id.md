@@ -14,7 +14,7 @@ _External, globally unique identifier for the experiment._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_external_id](https://w3id.org/fga-wg/schema/top_level/analysis_external_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_external_id](https://w3id.org/fga-wg/schema/bundle/analysis_external_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_external_id](https://w3i
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_external_id](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_external_id |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_external_id |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_external_id |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_external_id |
 
 
 
@@ -94,7 +94,7 @@ name: analysis_external_id
 description: External, globally unique identifier for the experiment.
 examples:
 - value: encode:ENCAN718KHT
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Analysis

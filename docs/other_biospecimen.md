@@ -14,7 +14,7 @@ _Other biospecimen-related terms that can be used to further classify the biospe
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/other_biospecimen](https://w3id.org/fga-wg/schema/top_level/other_biospecimen)
+URI: [https://w3id.org/fga-wg/schema/bundle/other_biospecimen](https://w3id.org/fga-wg/schema/bundle/other_biospecimen)
 <!-- no inheritance hierarchy -->
 
 
@@ -76,7 +76,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/other_biospecimen](https://w3id.o
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -85,8 +85,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/other_biospecimen](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/other_biospecimen |
-| native | https://w3id.org/fga-wg/schema/top_level/other_biospecimen |
+| self | https://w3id.org/fga-wg/schema/bundle/other_biospecimen |
+| native | https://w3id.org/fga-wg/schema/bundle/other_biospecimen |
 
 
 
@@ -114,7 +114,7 @@ examples:
 - object:
     id: UBERON:0001004
     label: respiratory system
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

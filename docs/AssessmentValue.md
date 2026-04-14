@@ -14,7 +14,7 @@ _Key-value pair representing a specific value produced by a quality assessment._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/AssessmentValue](https://w3id.org/fga-wg/schema/top_level/AssessmentValue)
+URI: [https://w3id.org/fga-wg/schema/bundle/AssessmentValue](https://w3id.org/fga-wg/schema/bundle/AssessmentValue)
 
 
 
@@ -82,7 +82,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AssessmentValue](https://w3id.org
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -91,8 +91,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AssessmentValue](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/AssessmentValue |
-| native | https://w3id.org/fga-wg/schema/top_level/AssessmentValue |
+| self | https://w3id.org/fga-wg/schema/bundle/AssessmentValue |
+| native | https://w3id.org/fga-wg/schema/bundle/AssessmentValue |
 
 
 
@@ -109,7 +109,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AssessmentValue](https://w3id.org
 ```yaml
 name: AssessmentValue
 description: Key-value pair representing a specific value produced by a quality assessment.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - key
 - value
@@ -123,12 +123,12 @@ slots:
 ```yaml
 name: AssessmentValue
 description: Key-value pair representing a specific value produced by a quality assessment.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   key:
     name: key
     description: Key/name of the assessment value.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: AssessmentValue
@@ -139,7 +139,7 @@ attributes:
   value:
     name: value
     description: Value corresponding to the assessment key.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: AssessmentValue
     domain_of:

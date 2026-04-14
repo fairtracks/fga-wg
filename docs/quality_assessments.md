@@ -14,7 +14,7 @@ _An array of QualityAssessment objects containing the main quality scores from a
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/quality_assessments](https://w3id.org/fga-wg/schema/top_level/quality_assessments)
+URI: [https://w3id.org/fga-wg/schema/bundle/quality_assessments](https://w3id.org/fga-wg/schema/bundle/quality_assessments)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/quality_assessments](https://w3id
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -82,8 +82,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/quality_assessments](https://w3id
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/quality_assessments |
-| native | https://w3id.org/fga-wg/schema/top_level/quality_assessments |
+| self | https://w3id.org/fga-wg/schema/bundle/quality_assessments |
+| native | https://w3id.org/fga-wg/schema/bundle/quality_assessments |
 
 
 
@@ -103,7 +103,7 @@ examples:
       nreads_in_peaks: 6161851
       frip: 0.2931669095906483
     assessment_details_url: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

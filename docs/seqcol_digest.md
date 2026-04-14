@@ -14,7 +14,7 @@ _Top-level sequence collection digest according to the GA4GH refget, Sequence Co
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_digest](https://w3id.org/fga-wg/schema/top_level/seqcol_digest)
+URI: [https://w3id.org/fga-wg/schema/bundle/seqcol_digest](https://w3id.org/fga-wg/schema/bundle/seqcol_digest)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_digest](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_digest](https://w3id.org/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/seqcol_digest |
-| native | https://w3id.org/fga-wg/schema/top_level/seqcol_digest |
+| self | https://w3id.org/fga-wg/schema/bundle/seqcol_digest |
+| native | https://w3id.org/fga-wg/schema/bundle/seqcol_digest |
 
 
 
@@ -106,7 +106,7 @@ description: Top-level sequence collection digest according to the GA4GH refget,
   assembly variants (say, variants of the GRCh38 assembly).
 examples:
 - value: ga4gh:SC.EiFob05aCWgVU_B_Ae0cypnQut3cxUP1
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

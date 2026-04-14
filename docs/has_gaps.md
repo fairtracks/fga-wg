@@ -14,7 +14,7 @@ _Whether there are gaps between the sequence features (there exists at least one
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/has_gaps](https://w3id.org/fga-wg/schema/top_level/has_gaps)
+URI: [https://w3id.org/fga-wg/schema/bundle/has_gaps](https://w3id.org/fga-wg/schema/bundle/has_gaps)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_gaps](https://w3id.org/fga-wg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_gaps](https://w3id.org/fga-wg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/has_gaps |
-| native | https://w3id.org/fga-wg/schema/top_level/has_gaps |
+| self | https://w3id.org/fga-wg/schema/bundle/has_gaps |
+| native | https://w3id.org/fga-wg/schema/bundle/has_gaps |
 
 
 
@@ -96,7 +96,7 @@ description: Whether there are gaps between the sequence features (there exists 
   least one gap between two features on the same sequence).
 examples:
 - value: 'True'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

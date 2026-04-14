@@ -14,7 +14,7 @@ _Document describing the analysis protocol that was followed._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_protocol](https://w3id.org/fga-wg/schema/top_level/analysis_protocol)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_protocol](https://w3id.org/fga-wg/schema/bundle/analysis_protocol)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_protocol](https://w3id.o
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_protocol](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_protocol |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_protocol |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_protocol |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_protocol |
 
 
 
@@ -94,7 +94,7 @@ name: analysis_protocol
 description: Document describing the analysis protocol that was followed.
 examples:
 - value: https://www.encodeproject.org/documents/7009beb8-340b-4e71-b9db-53bb020c7fe2/@@download/attachment/ChIP-seq_pipeline_overview.pdf
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Analysis

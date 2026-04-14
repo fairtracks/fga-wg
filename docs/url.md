@@ -14,7 +14,7 @@ _A fully resolvable URL that can be used to fetch the actual object bytes._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/url](https://w3id.org/fga-wg/schema/top_level/url)
+URI: [https://w3id.org/fga-wg/schema/bundle/url](https://w3id.org/fga-wg/schema/bundle/url)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/url](https://w3id.org/fga-wg/sche
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/url](https://w3id.org/fga-wg/sche
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/url |
-| native | https://w3id.org/fga-wg/schema/top_level/url |
+| self | https://w3id.org/fga-wg/schema/bundle/url |
+| native | https://w3id.org/fga-wg/schema/bundle/url |
 
 
 
@@ -95,7 +95,7 @@ name: url
 description: A fully resolvable URL that can be used to fetch the actual object bytes.
 examples:
 - value: https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - AccessURL

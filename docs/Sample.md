@@ -14,7 +14,7 @@ _Information about a biospecimen/sample used as raw material for lab experiments
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/Sample](https://w3id.org/fga-wg/schema/top_level/Sample)
+URI: [https://w3id.org/fga-wg/schema/bundle/Sample](https://w3id.org/fga-wg/schema/bundle/Sample)
 
 
 
@@ -218,7 +218,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Sample](https://w3id.org/fga-wg/s
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [TopLevel](TopLevel.md) | [samples](samples.md) | range | [Sample](Sample.md) |
+| [Bundle](Bundle.md) | [samples](samples.md) | range | [Sample](Sample.md) |
 
 
 
@@ -268,7 +268,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Sample](https://w3id.org/fga-wg/s
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -277,8 +277,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Sample](https://w3id.org/fga-wg/s
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/Sample |
-| native | https://w3id.org/fga-wg/schema/top_level/Sample |
+| self | https://w3id.org/fga-wg/schema/bundle/Sample |
+| native | https://w3id.org/fga-wg/schema/bundle/Sample |
 
 
 
@@ -295,7 +295,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Sample](https://w3id.org/fga-wg/s
 ```yaml
 name: Sample
 description: Information about a biospecimen/sample used as raw material for lab experiments.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - sample_external_id
 - sample_id
@@ -365,14 +365,14 @@ rules:
 ```yaml
 name: Sample
 description: Information about a biospecimen/sample used as raw material for lab experiments.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   sample_external_id:
     name: sample_external_id
     description: External, globally unique identifier for the biospecimen/sample.
     examples:
     - value: encode:ENCBS004ENC
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -385,7 +385,7 @@ attributes:
       metadata deposit).
     examples:
     - value: sample:ENCBS004ENC
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: Sample
@@ -400,7 +400,7 @@ attributes:
       etc.
     examples:
     - value: Homo sapiens AG04450 cell line
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -414,7 +414,7 @@ attributes:
       process.
     examples:
     - value: Homo sapiens AG04450 cell line
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -426,7 +426,7 @@ attributes:
       was taken.
     examples:
     - value: donor:ENCDO001AAA
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -439,7 +439,7 @@ attributes:
       biospecimen/sample.
     examples:
     - value: cell line
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -454,7 +454,7 @@ attributes:
     - object:
         id: UBERON:0002048
         label: lung
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -463,7 +463,7 @@ attributes:
   cell_type:
     name: cell_type
     description: Cell type of isolated normal cells in the biospecimen/sample.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -476,7 +476,7 @@ attributes:
     - object:
         id: CLO:0034832
         label: AG04450 cell
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -502,7 +502,7 @@ attributes:
     - object:
         id: UBERON:0001004
         label: respiratory system
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -514,7 +514,7 @@ attributes:
     description: Protocol detailing the collection and treatment of the biospecimen/sample.
     examples:
     - value: https://www.encodeproject.org/documents/3ed29dac-da67-47be-91b0-c9cad6a1b791/@@download/attachment/AG04450_Stam_protocol.pdf
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -523,7 +523,7 @@ attributes:
   sample_collection_location:
     name: sample_collection_location
     description: Geographical location where the sample was collected.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -532,7 +532,7 @@ attributes:
   sample_collection_date:
     name: sample_collection_date
     description: Date of sample collection.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -545,7 +545,7 @@ attributes:
     - object:
         id: PATO:0000461
         label: normal
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -556,7 +556,7 @@ attributes:
     description: Age of the donor/organism at the time of sampling
     examples:
     - value: W12
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -569,7 +569,7 @@ attributes:
     - object:
         id: UBERON:0000323
         label: late embryo
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:
@@ -580,7 +580,7 @@ attributes:
     description: Clinical information of the donor/organism at the time of sampling.
     examples:
     - value: apparently healthy
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Sample
     domain_of:

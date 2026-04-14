@@ -41,7 +41,7 @@ URI: [xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -51,7 +51,7 @@ URI: [xsd:decimal](http://www.w3.org/2001/XMLSchema#decimal)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:decimal |
-| native | https://w3id.org/fga-wg/schema/top_level/decimal |
+| native | https://w3id.org/fga-wg/schema/bundle/decimal |
 | broad | schema:Number |
 
 

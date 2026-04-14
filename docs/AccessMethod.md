@@ -14,7 +14,7 @@ _Description of an access method (i.e. communication protocol) that can be used 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethod](https://w3id.org/fga-wg/schema/top_level/AccessMethod)
+URI: [https://w3id.org/fga-wg/schema/bundle/AccessMethod](https://w3id.org/fga-wg/schema/bundle/AccessMethod)
 
 
 
@@ -111,7 +111,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethod](https://w3id.org/fg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -120,8 +120,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethod](https://w3id.org/fg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/AccessMethod |
-| native | https://w3id.org/fga-wg/schema/top_level/AccessMethod |
+| self | https://w3id.org/fga-wg/schema/bundle/AccessMethod |
+| native | https://w3id.org/fga-wg/schema/bundle/AccessMethod |
 
 
 
@@ -140,7 +140,7 @@ name: AccessMethod
 description: 'Description of an access method (i.e. communication protocol) that can
   be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod
   object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel)'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - access_method
 - access_url
@@ -157,14 +157,14 @@ name: AccessMethod
 description: 'Description of an access method (i.e. communication protocol) that can
   be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod
   object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel)'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   access_method:
     name: access_method
     description: 'Access method used to access the File object (orig: DrsObject).'
     examples:
     - value: https
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: AccessMethod
     domain_of:
@@ -178,7 +178,7 @@ attributes:
     examples:
     - object:
         url: https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: AccessMethod
     domain_of:
@@ -189,7 +189,7 @@ attributes:
     name: region
     description: Name of the region in the cloud service provider that the object
       belongs to.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: AccessMethod
     domain_of:

@@ -14,7 +14,7 @@ _List of sequence features described by the genomic annotation file._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/sequence_features](https://w3id.org/fga-wg/schema/top_level/sequence_features)
+URI: [https://w3id.org/fga-wg/schema/bundle/sequence_features](https://w3id.org/fga-wg/schema/bundle/sequence_features)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sequence_features](https://w3id.o
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -82,8 +82,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sequence_features](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/sequence_features |
-| native | https://w3id.org/fga-wg/schema/top_level/sequence_features |
+| self | https://w3id.org/fga-wg/schema/bundle/sequence_features |
+| native | https://w3id.org/fga-wg/schema/bundle/sequence_features |
 
 
 
@@ -98,7 +98,7 @@ examples:
 - object:
     id: SO:0001707
     label: H3K9Me3
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - GenomicAnnotationFile

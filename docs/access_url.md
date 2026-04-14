@@ -14,7 +14,7 @@ _AccessURL object providing URL and associated HTTP headers to access the File o
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/access_url](https://w3id.org/fga-wg/schema/top_level/access_url)
+URI: [https://w3id.org/fga-wg/schema/bundle/access_url](https://w3id.org/fga-wg/schema/bundle/access_url)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/access_url](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/access_url](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/access_url |
-| native | https://w3id.org/fga-wg/schema/top_level/access_url |
+| self | https://w3id.org/fga-wg/schema/bundle/access_url |
+| native | https://w3id.org/fga-wg/schema/bundle/access_url |
 
 
 
@@ -97,7 +97,7 @@ description: 'AccessURL object providing URL and associated HTTP headers to acce
 examples:
 - object:
     url: https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - AccessMethod

@@ -14,7 +14,7 @@ _External or internal references to samples used in the experiment. Internal ref
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/experiment_samples](https://w3id.org/fga-wg/schema/top_level/experiment_samples)
+URI: [https://w3id.org/fga-wg/schema/bundle/experiment_samples](https://w3id.org/fga-wg/schema/bundle/experiment_samples)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/experiment_samples](https://w3id.
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -82,8 +82,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/experiment_samples](https://w3id.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/experiment_samples |
-| native | https://w3id.org/fga-wg/schema/top_level/experiment_samples |
+| self | https://w3id.org/fga-wg/schema/bundle/experiment_samples |
+| native | https://w3id.org/fga-wg/schema/bundle/experiment_samples |
 
 
 
@@ -105,7 +105,7 @@ examples:
     technical_replicate_labels:
     - '1_1'
     - '2_1'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

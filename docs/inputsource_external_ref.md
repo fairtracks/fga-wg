@@ -14,7 +14,7 @@ _Reference to an external entity as the input source, using a globally unique id
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/inputsource_external_ref](https://w3id.org/fga-wg/schema/top_level/inputsource_external_ref)
+URI: [https://w3id.org/fga-wg/schema/bundle/inputsource_external_ref](https://w3id.org/fga-wg/schema/bundle/inputsource_external_ref)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/inputsource_external_ref](https:/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/inputsource_external_ref](https:/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/inputsource_external_ref |
-| native | https://w3id.org/fga-wg/schema/top_level/inputsource_external_ref |
+| self | https://w3id.org/fga-wg/schema/bundle/inputsource_external_ref |
+| native | https://w3id.org/fga-wg/schema/bundle/inputsource_external_ref |
 
 
 
@@ -97,7 +97,7 @@ description: Reference to an external entity as the input source, using a global
   or "inputsource_ref" must be specified.
 examples:
 - value: https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - InputSource

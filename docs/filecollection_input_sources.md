@@ -14,7 +14,7 @@ _References to other input sources from which this file collection was derived._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_input_sources](https://w3id.org/fga-wg/schema/top_level/filecollection_input_sources)
+URI: [https://w3id.org/fga-wg/schema/bundle/filecollection_input_sources](https://w3id.org/fga-wg/schema/bundle/filecollection_input_sources)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_input_sources](htt
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -82,8 +82,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_input_sources](htt
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/filecollection_input_sources |
-| native | https://w3id.org/fga-wg/schema/top_level/filecollection_input_sources |
+| self | https://w3id.org/fga-wg/schema/bundle/filecollection_input_sources |
+| native | https://w3id.org/fga-wg/schema/bundle/filecollection_input_sources |
 
 
 
@@ -103,7 +103,7 @@ examples:
 - object:
     inputsource_external_ref: https://www.encodeproject.org
     qualified_relation: prov:hadPrimarySource
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - FileCollection

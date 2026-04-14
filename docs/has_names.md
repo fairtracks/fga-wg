@@ -14,7 +14,7 @@ _Whether the sequence features are named (at least one feature has a name)._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/has_names](https://w3id.org/fga-wg/schema/top_level/has_names)
+URI: [https://w3id.org/fga-wg/schema/bundle/has_names](https://w3id.org/fga-wg/schema/bundle/has_names)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_names](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_names](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/has_names |
-| native | https://w3id.org/fga-wg/schema/top_level/has_names |
+| self | https://w3id.org/fga-wg/schema/bundle/has_names |
+| native | https://w3id.org/fga-wg/schema/bundle/has_names |
 
 
 
@@ -95,7 +95,7 @@ name: has_names
 description: Whether the sequence features are named (at least one feature has a name).
 examples:
 - value: 'True'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

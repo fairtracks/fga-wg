@@ -14,7 +14,7 @@ _Key/name of the assessment value._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/key](https://w3id.org/fga-wg/schema/top_level/key)
+URI: [https://w3id.org/fga-wg/schema/bundle/key](https://w3id.org/fga-wg/schema/bundle/key)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/key](https://w3id.org/fga-wg/sche
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/key](https://w3id.org/fga-wg/sche
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/key |
-| native | https://w3id.org/fga-wg/schema/top_level/key |
+| self | https://w3id.org/fga-wg/schema/bundle/key |
+| native | https://w3id.org/fga-wg/schema/bundle/key |
 
 
 
@@ -93,7 +93,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/key](https://w3id.org/fga-wg/sche
 ```yaml
 name: key
 description: Key/name of the assessment value.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

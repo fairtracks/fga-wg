@@ -14,7 +14,7 @@ _Contact point for the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/study_contact](https://w3id.org/fga-wg/schema/top_level/study_contact)
+URI: [https://w3id.org/fga-wg/schema/bundle/study_contact](https://w3id.org/fga-wg/schema/bundle/study_contact)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/study_contact](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/study_contact](https://w3id.org/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/study_contact |
-| native | https://w3id.org/fga-wg/schema/top_level/study_contact |
+| self | https://w3id.org/fga-wg/schema/bundle/study_contact |
+| native | https://w3id.org/fga-wg/schema/bundle/study_contact |
 
 
 
@@ -97,7 +97,7 @@ examples:
     name: Mark Gerstein
     contact_id: orcid:0000-0002-9746-3719
     email: mark@gersteinlab.org
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Study

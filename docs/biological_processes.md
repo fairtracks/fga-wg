@@ -14,7 +14,7 @@ _Biological processes illuminated by the experiment._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/biological_processes](https://w3id.org/fga-wg/schema/top_level/biological_processes)
+URI: [https://w3id.org/fga-wg/schema/bundle/biological_processes](https://w3id.org/fga-wg/schema/bundle/biological_processes)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/biological_processes](https://w3i
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/biological_processes](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/biological_processes |
-| native | https://w3id.org/fga-wg/schema/top_level/biological_processes |
+| self | https://w3id.org/fga-wg/schema/bundle/biological_processes |
+| native | https://w3id.org/fga-wg/schema/bundle/biological_processes |
 
 
 
@@ -97,7 +97,7 @@ examples:
 - object:
     id: GO:0140999
     label: histone H3K4 trimethyltransferase activity
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

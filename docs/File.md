@@ -14,7 +14,7 @@ _General information about a particular data file. Most fields (marked with an a
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/File](https://w3id.org/fga-wg/schema/top_level/File)
+URI: [https://w3id.org/fga-wg/schema/bundle/File](https://w3id.org/fga-wg/schema/bundle/File)
 
 
 
@@ -258,7 +258,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/File](https://w3id.org/fga-wg/sch
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [TopLevel](TopLevel.md) | [files](files.md) | range | [File](File.md) |
+| [Bundle](Bundle.md) | [files](files.md) | range | [File](File.md) |
 
 
 
@@ -280,7 +280,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/File](https://w3id.org/fga-wg/sch
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -289,8 +289,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/File](https://w3id.org/fga-wg/sch
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/File |
-| native | https://w3id.org/fga-wg/schema/top_level/File |
+| self | https://w3id.org/fga-wg/schema/bundle/File |
+| native | https://w3id.org/fga-wg/schema/bundle/File |
 
 
 
@@ -310,7 +310,7 @@ description: General information about a particular data file. Most fields (mark
   with an asterix*) are copied from the GA4GH DRS DrsObject model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/DrsObjectModel),
   which is the top-level object returned from a DRS server in response to a successful
   lookup call (i.e. https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/Objects).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - file_external_id
 - file_id
@@ -344,14 +344,14 @@ description: General information about a particular data file. Most fields (mark
   with an asterix*) are copied from the GA4GH DRS DrsObject model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/DrsObjectModel),
   which is the top-level object returned from a DRS server in response to a successful
   lookup call (i.e. https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/Objects).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   file_external_id:
     name: file_external_id
     description: External, globally unique identifier for the data file.
     examples:
     - value: encode:ENCFF323LCS
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -363,7 +363,7 @@ attributes:
       deposit). '
     examples:
     - value: file:ENCFF323LCS
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: File
@@ -379,7 +379,7 @@ attributes:
       [portable filenames].
     examples:
     - value: 87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -392,7 +392,7 @@ attributes:
       etc.
     examples:
     - value: H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -406,7 +406,7 @@ attributes:
     examples:
     - value: H3K9me3 ChIP-seq replicated peaks on human (hg38) AG04450 (Fibroblast
         derived cell line).
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -418,7 +418,7 @@ attributes:
       that contains the data file, if any.
     examples:
     - value: collection:ihec_encode
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -441,7 +441,7 @@ attributes:
         technical_replicate_labels:
         - '1_1'
         - '2_1'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -459,7 +459,7 @@ attributes:
       encoded DRS ID for use in subsequent access endpoint calls.
     examples:
     - value: drs://drs.example.org/ENCFF323LCS
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -489,7 +489,7 @@ attributes:
         access_method: https
         access_url:
           url: https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -504,7 +504,7 @@ attributes:
       software versions, parameter settings, etc.
     examples:
     - value: encode:ENCAN718KHT
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -522,7 +522,7 @@ attributes:
           nreads_in_peaks: 6161851
           frip: 0.2931669095906483
         assessment_details_url: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -536,7 +536,7 @@ attributes:
     - object:
         id: edam:format_3004
         label: bigBed
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -548,7 +548,7 @@ attributes:
     description: A string providing the mime-type of the data file.
     examples:
     - value: application/octet-stream
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -559,7 +559,7 @@ attributes:
     description: Classification describing the file's purpose or contents.
     examples:
     - value: replicated peaks
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -571,7 +571,7 @@ attributes:
     description: The file size in bytes.
     examples:
     - value: '5359719'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -584,7 +584,7 @@ attributes:
       of the underlying content, not of the JSON object.).
     examples:
     - value: '2016-11-13T17:42:04.385801+00:00'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -598,7 +598,7 @@ attributes:
       content, not of the JSON object.).
     examples:
     - value: '2016-11-13T17:42:04.385801+00:00'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -610,7 +610,7 @@ attributes:
       a RFC3339 timestamp, or an incrementing version number.).
     examples:
     - value: efd4e74e-7875-4d13-9630-0085bc834f18
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:
@@ -624,7 +624,7 @@ attributes:
     - object:
         checksum: 535bc9628a1c5e5215226f9996e4eaca
         checksum_type: md5
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: File
     domain_of:

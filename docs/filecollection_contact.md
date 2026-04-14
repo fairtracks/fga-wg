@@ -14,7 +14,7 @@ _Contact point to the creator and/or maintainer of the file collection._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_contact](https://w3id.org/fga-wg/schema/top_level/filecollection_contact)
+URI: [https://w3id.org/fga-wg/schema/bundle/filecollection_contact](https://w3id.org/fga-wg/schema/bundle/filecollection_contact)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_contact](https://w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_contact](https://w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/filecollection_contact |
-| native | https://w3id.org/fga-wg/schema/top_level/filecollection_contact |
+| self | https://w3id.org/fga-wg/schema/bundle/filecollection_contact |
+| native | https://w3id.org/fga-wg/schema/bundle/filecollection_contact |
 
 
 
@@ -97,7 +97,7 @@ examples:
     name: International Human Epigenome Consortium
     contact_id: bioproject:PRJNA234466
     email: info@ihec-epigenomes.org
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - FileCollection

@@ -14,7 +14,7 @@ _Whether the edges linking sequence features are directed (at least one edge bet
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/edges_are_directed](https://w3id.org/fga-wg/schema/top_level/edges_are_directed)
+URI: [https://w3id.org/fga-wg/schema/bundle/edges_are_directed](https://w3id.org/fga-wg/schema/bundle/edges_are_directed)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edges_are_directed](https://w3id.
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edges_are_directed](https://w3id.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/edges_are_directed |
-| native | https://w3id.org/fga-wg/schema/top_level/edges_are_directed |
+| self | https://w3id.org/fga-wg/schema/bundle/edges_are_directed |
+| native | https://w3id.org/fga-wg/schema/bundle/edges_are_directed |
 
 
 
@@ -86,7 +86,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edges_are_directed](https://w3id.
 name: edges_are_directed
 description: Whether the edges linking sequence features are directed (at least one
   edge between sequence features is defined with a direction).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

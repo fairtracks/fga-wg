@@ -14,7 +14,7 @@ _Internal identifier for the experiment (unique within the metadata deposit)._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/experiment_id](https://w3id.org/fga-wg/schema/top_level/experiment_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/experiment_id](https://w3id.org/fga-wg/schema/bundle/experiment_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/experiment_id](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/experiment_id](https://w3id.org/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/experiment_id |
-| native | https://w3id.org/fga-wg/schema/top_level/experiment_id |
+| self | https://w3id.org/fga-wg/schema/bundle/experiment_id |
+| native | https://w3id.org/fga-wg/schema/bundle/experiment_id |
 
 
 
@@ -102,7 +102,7 @@ name: experiment_id
 description: Internal identifier for the experiment (unique within the metadata deposit).
 examples:
 - value: experiment:ENCSR000DPJ
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

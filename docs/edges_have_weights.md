@@ -14,7 +14,7 @@ _Whether the edges linking sequence features are weighted (at least one edge bet
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/edges_have_weights](https://w3id.org/fga-wg/schema/top_level/edges_have_weights)
+URI: [https://w3id.org/fga-wg/schema/bundle/edges_have_weights](https://w3id.org/fga-wg/schema/bundle/edges_have_weights)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edges_have_weights](https://w3id.
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edges_have_weights](https://w3id.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/edges_have_weights |
-| native | https://w3id.org/fga-wg/schema/top_level/edges_have_weights |
+| self | https://w3id.org/fga-wg/schema/bundle/edges_have_weights |
+| native | https://w3id.org/fga-wg/schema/bundle/edges_have_weights |
 
 
 
@@ -86,7 +86,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edges_have_weights](https://w3id.
 name: edges_have_weights
 description: Whether the edges linking sequence features are weighted (at least one
   edge between sequence features has an associated weight).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

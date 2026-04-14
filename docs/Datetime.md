@@ -42,7 +42,7 @@ URI: [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -52,7 +52,7 @@ URI: [xsd:dateTime](http://www.w3.org/2001/XMLSchema#dateTime)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:dateTime |
-| native | https://w3id.org/fga-wg/schema/top_level/datetime |
+| native | https://w3id.org/fga-wg/schema/bundle/datetime |
 | exact | schema:DateTime |
 
 

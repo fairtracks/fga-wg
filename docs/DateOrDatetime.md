@@ -42,7 +42,7 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -52,7 +52,7 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | linkml:DateOrDatetime |
-| native | https://w3id.org/fga-wg/schema/top_level/date_or_datetime |
+| native | https://w3id.org/fga-wg/schema/bundle/date_or_datetime |
 
 
 

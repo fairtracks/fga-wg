@@ -14,7 +14,7 @@ _Globally unique identifier for a person (e.g. ORCID ID) or organisation (e.g. B
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/contact_id](https://w3id.org/fga-wg/schema/top_level/contact_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/contact_id](https://w3id.org/fga-wg/schema/bundle/contact_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact_id](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact_id](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/contact_id |
-| native | https://w3id.org/fga-wg/schema/top_level/contact_id |
+| self | https://w3id.org/fga-wg/schema/bundle/contact_id |
+| native | https://w3id.org/fga-wg/schema/bundle/contact_id |
 
 
 
@@ -95,7 +95,7 @@ description: Globally unique identifier for a person (e.g. ORCID ID) or organisa
   (e.g. BioProject accession).
 examples:
 - value: orcid:0000-0001-2345-6789
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Contact

@@ -14,7 +14,7 @@ _Internal reference to the donor/organism from which the biospecimen/sample was 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/donor_organism_ref](https://w3id.org/fga-wg/schema/top_level/donor_organism_ref)
+URI: [https://w3id.org/fga-wg/schema/bundle/donor_organism_ref](https://w3id.org/fga-wg/schema/bundle/donor_organism_ref)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_organism_ref](https://w3id.
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_organism_ref](https://w3id.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/donor_organism_ref |
-| native | https://w3id.org/fga-wg/schema/top_level/donor_organism_ref |
+| self | https://w3id.org/fga-wg/schema/bundle/donor_organism_ref |
+| native | https://w3id.org/fga-wg/schema/bundle/donor_organism_ref |
 
 
 
@@ -96,7 +96,7 @@ description: Internal reference to the donor/organism from which the biospecimen
   was taken.
 examples:
 - value: donor:ENCDO001AAA
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

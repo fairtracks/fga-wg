@@ -14,7 +14,7 @@ _Accession numbers for database records used as input source. Used in connection
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/database_accessions](https://w3id.org/fga-wg/schema/top_level/database_accessions)
+URI: [https://w3id.org/fga-wg/schema/bundle/database_accessions](https://w3id.org/fga-wg/schema/bundle/database_accessions)
 <!-- no inheritance hierarchy -->
 
 
@@ -75,7 +75,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -84,8 +84,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/database_accessions |
-| native | https://w3id.org/fga-wg/schema/top_level/database_accessions |
+| self | https://w3id.org/fga-wg/schema/bundle/database_accessions |
+| native | https://w3id.org/fga-wg/schema/bundle/database_accessions |
 
 
 
@@ -97,7 +97,7 @@ Value must satisfy at least one of:
 name: database_accessions
 description: Accession numbers for database records used as input source. Used in
   connection with "inputsource_external_ref".
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - InputSource

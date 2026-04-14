@@ -14,7 +14,7 @@ _A human-readable description of the data file, short enough to be used for list
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_label](https://w3id.org/fga-wg/schema/top_level/file_label)
+URI: [https://w3id.org/fga-wg/schema/bundle/file_label](https://w3id.org/fga-wg/schema/bundle/file_label)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,7 +80,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_label](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -89,8 +89,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_label](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_label |
-| native | https://w3id.org/fga-wg/schema/top_level/file_label |
+| self | https://w3id.org/fga-wg/schema/bundle/file_label |
+| native | https://w3id.org/fga-wg/schema/bundle/file_label |
 
 
 
@@ -104,7 +104,7 @@ description: A human-readable description of the data file, short enough to be u
   for listings within software user interfaces, tables, illustration legends, etc.
 examples:
 - value: H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

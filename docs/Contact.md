@@ -14,7 +14,7 @@ _Contact information for a person or an organisation._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/Contact](https://w3id.org/fga-wg/schema/top_level/Contact)
+URI: [https://w3id.org/fga-wg/schema/bundle/Contact](https://w3id.org/fga-wg/schema/bundle/Contact)
 
 
 
@@ -92,7 +92,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Contact](https://w3id.org/fga-wg/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -101,8 +101,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Contact](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/Contact |
-| native | https://w3id.org/fga-wg/schema/top_level/Contact |
+| self | https://w3id.org/fga-wg/schema/bundle/Contact |
+| native | https://w3id.org/fga-wg/schema/bundle/Contact |
 
 
 
@@ -119,7 +119,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Contact](https://w3id.org/fga-wg/
 ```yaml
 name: Contact
 description: Contact information for a person or an organisation.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - name
 - contact_id
@@ -134,14 +134,14 @@ slots:
 ```yaml
 name: Contact
 description: Contact information for a person or an organisation.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   name:
     name: name
     description: Name of the person or organisation.
     examples:
     - value: John Doe
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Contact
     domain_of:
@@ -154,7 +154,7 @@ attributes:
       (e.g. BioProject accession).
     examples:
     - value: orcid:0000-0001-2345-6789
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Contact
     domain_of:
@@ -165,7 +165,7 @@ attributes:
     description: E-mail address of the person or organisation.
     examples:
     - value: john@doe.com
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Contact
     domain_of:

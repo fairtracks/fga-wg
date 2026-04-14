@@ -14,7 +14,7 @@ _The hex-string encoded checksum for the data._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/checksum](https://w3id.org/fga-wg/schema/top_level/checksum)
+URI: [https://w3id.org/fga-wg/schema/bundle/checksum](https://w3id.org/fga-wg/schema/bundle/checksum)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/checksum](https://w3id.org/fga-wg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/checksum](https://w3id.org/fga-wg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/checksum |
-| native | https://w3id.org/fga-wg/schema/top_level/checksum |
+| self | https://w3id.org/fga-wg/schema/bundle/checksum |
+| native | https://w3id.org/fga-wg/schema/bundle/checksum |
 
 
 
@@ -94,7 +94,7 @@ name: checksum
 description: The hex-string encoded checksum for the data.
 examples:
 - value: 535bc9628a1c5e5215226f9996e4eaca
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Checksum

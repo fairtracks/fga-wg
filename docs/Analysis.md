@@ -14,7 +14,7 @@ _Represents the computational processing applied to data from a sequencing exper
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/Analysis](https://w3id.org/fga-wg/schema/top_level/Analysis)
+URI: [https://w3id.org/fga-wg/schema/bundle/Analysis](https://w3id.org/fga-wg/schema/bundle/Analysis)
 
 
 
@@ -157,7 +157,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Analysis](https://w3id.org/fga-wg
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [TopLevel](TopLevel.md) | [analyses](analyses.md) | range | [Analysis](Analysis.md) |
+| [Bundle](Bundle.md) | [analyses](analyses.md) | range | [Analysis](Analysis.md) |
 
 
 
@@ -179,7 +179,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Analysis](https://w3id.org/fga-wg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -188,8 +188,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Analysis](https://w3id.org/fga-wg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/Analysis |
-| native | https://w3id.org/fga-wg/schema/top_level/Analysis |
+| self | https://w3id.org/fga-wg/schema/bundle/Analysis |
+| native | https://w3id.org/fga-wg/schema/bundle/Analysis |
 
 
 
@@ -209,7 +209,7 @@ description: Represents the computational processing applied to data from a sequ
   experiment, or from another analysis. This can be described at the level of individual
   analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline
   as a whole.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - analysis_external_id
 - analysis_id
@@ -235,14 +235,14 @@ description: Represents the computational processing applied to data from a sequ
   experiment, or from another analysis. This can be described at the level of individual
   analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline
   as a whole.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   analysis_external_id:
     name: analysis_external_id
     description: External, globally unique identifier for the experiment.
     examples:
     - value: encode:ENCAN718KHT
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:
@@ -254,7 +254,7 @@ attributes:
       deposit). '
     examples:
     - value: analysis:ENCAN718KHT
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: Analysis
@@ -269,7 +269,7 @@ attributes:
       etc.
     examples:
     - value: ENCODE3 ChIP-seq pipeline, GRCH38, replicated peak calling
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:
@@ -283,7 +283,7 @@ attributes:
     examples:
     - value: ENCODE3 ChIP-seq pipeline on GRCH38 with replicated peak calling using
         MACS.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:
@@ -295,7 +295,7 @@ attributes:
       carried out.
     examples:
     - value: study:S-EPMC7391744
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:
@@ -326,7 +326,7 @@ attributes:
         - '1_1'
         - '2_1'
         date_of_retrieval: '2016-04-19'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:
@@ -341,7 +341,7 @@ attributes:
     - object:
         id: edam:operation_3222
         label: Peak calling
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:
@@ -353,7 +353,7 @@ attributes:
     description: Main software tool used for the analysis.
     examples:
     - value: biotools:macs
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:
@@ -367,7 +367,7 @@ attributes:
     description: Version of the main software tool used for the analysis.
     examples:
     - value: '2.10'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:
@@ -378,7 +378,7 @@ attributes:
     description: Document describing the analysis protocol that was followed.
     examples:
     - value: https://www.encodeproject.org/documents/7009beb8-340b-4e71-b9db-53bb020c7fe2/@@download/attachment/ChIP-seq_pipeline_overview.pdf
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:
@@ -390,7 +390,7 @@ attributes:
       at least one machine-operable form (e.g. CWL, Nextflow, ...).
     examples:
     - value: encode:ENCPL272XAE
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Analysis
     domain_of:

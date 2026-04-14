@@ -43,7 +43,7 @@ URI: [xsd:date](http://www.w3.org/2001/XMLSchema#date)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -53,7 +53,7 @@ URI: [xsd:date](http://www.w3.org/2001/XMLSchema#date)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:date |
-| native | https://w3id.org/fga-wg/schema/top_level/date |
+| native | https://w3id.org/fga-wg/schema/bundle/date |
 | exact | schema:Date |
 
 

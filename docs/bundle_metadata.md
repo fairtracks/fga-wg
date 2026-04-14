@@ -3,10 +3,10 @@ search:
   boost: 5.0
 ---
 
-# Slot: experiments 
+# Slot: bundle_metadata 
 
 
-_Information about sequencing experiments that have been carried out to generate the files._
+_Top-level metadata about the bundle of genomic annotation files._
 
 
 
@@ -14,7 +14,7 @@ _Information about sequencing experiments that have been carried out to generate
 
 
 
-URI: [https://w3id.org/fga-wg/schema/bundle/experiments](https://w3id.org/fga-wg/schema/bundle/experiments)
+URI: [https://w3id.org/fga-wg/schema/bundle/bundle_metadata](https://w3id.org/fga-wg/schema/bundle/bundle_metadata)
 <!-- no inheritance hierarchy -->
 
 
@@ -38,14 +38,14 @@ URI: [https://w3id.org/fga-wg/schema/bundle/experiments](https://w3id.org/fga-wg
 
 | Property | Value |
 | --- | --- |
-| Range | [Experiment](Experiment.md) |
+| Range | [BundleMetadata](BundleMetadata.md) |
 | Domain Of | [Bundle](Bundle.md) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
-| Multivalued | Yes |
+| Required | Yes |
 
 
 
@@ -74,8 +74,8 @@ URI: [https://w3id.org/fga-wg/schema/bundle/experiments](https://w3id.org/fga-wg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/bundle/experiments |
-| native | https://w3id.org/fga-wg/schema/bundle/experiments |
+| self | https://w3id.org/fga-wg/schema/bundle/bundle_metadata |
+| native | https://w3id.org/fga-wg/schema/bundle/bundle_metadata |
 
 
 
@@ -84,17 +84,15 @@ URI: [https://w3id.org/fga-wg/schema/bundle/experiments](https://w3id.org/fga-wg
 
 <details>
 ```yaml
-name: experiments
-description: Information about sequencing experiments that have been carried out to
-  generate the files.
+name: bundle_metadata
+description: Top-level metadata about the bundle of genomic annotation files.
 from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Bundle
-range: Experiment
-multivalued: true
+range: BundleMetadata
+required: true
 inlined: true
-inlined_as_list: true
 
 ```
 </details></div>

@@ -3,10 +3,10 @@ search:
   boost: 10.0
 ---
 
-# Class: TopLevel 
+# Class: Bundle 
 
 
-_A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document._
+_A bundle representing a set of genome annotation files, organised in sub-collections. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model._
 
 
 
@@ -14,7 +14,7 @@ _A document of harmonised metadata for a set of genome annotation files. Metadat
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/TopLevel](https://w3id.org/fga-wg/schema/top_level/TopLevel)
+URI: [https://w3id.org/fga-wg/schema/bundle/Bundle](https://w3id.org/fga-wg/schema/bundle/Bundle)
 
 
 
@@ -22,92 +22,92 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TopLevel](https://w3id.org/fga-wg
 
 ```mermaid
  classDiagram
-    class TopLevel
-    click TopLevel href "../TopLevel/"
-      TopLevel : analyses
+    class Bundle
+    click Bundle href "../Bundle/"
+      Bundle : analyses
         
           
     
         
         
-        TopLevel --> "*" Analysis : analyses
+        Bundle --> "*" Analysis : analyses
         click Analysis href "../Analysis/"
     
 
         
-      TopLevel : document
+      Bundle : bundle_metadata
         
           
     
         
         
-        TopLevel --> "1" Document : document
-        click Document href "../Document/"
+        Bundle --> "1" BundleMetadata : bundle_metadata
+        click BundleMetadata href "../BundleMetadata/"
     
 
         
-      TopLevel : donors
+      Bundle : donors
         
           
     
         
         
-        TopLevel --> "*" Donor : donors
+        Bundle --> "*" Donor : donors
         click Donor href "../Donor/"
     
 
         
-      TopLevel : experiments
+      Bundle : experiments
         
           
     
         
         
-        TopLevel --> "*" Experiment : experiments
+        Bundle --> "*" Experiment : experiments
         click Experiment href "../Experiment/"
     
 
         
-      TopLevel : file_collections
+      Bundle : file_collections
         
           
     
         
         
-        TopLevel --> "*" FileCollection : file_collections
+        Bundle --> "*" FileCollection : file_collections
         click FileCollection href "../FileCollection/"
     
 
         
-      TopLevel : files
+      Bundle : files
         
           
     
         
         
-        TopLevel --> "*" File : files
+        Bundle --> "*" File : files
         click File href "../File/"
     
 
         
-      TopLevel : samples
+      Bundle : samples
         
           
     
         
         
-        TopLevel --> "*" Sample : samples
+        Bundle --> "*" Sample : samples
         click Sample href "../Sample/"
     
 
         
-      TopLevel : studies
+      Bundle : studies
         
           
     
         
         
-        TopLevel --> "*" Study : studies
+        Bundle --> "*" Study : studies
         click Study href "../Study/"
     
 
@@ -124,22 +124,22 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TopLevel](https://w3id.org/fga-wg
 
 ```json
 {
-  "document": {
-    "document_deposit": {
+  "bundle_metadata": {
+    "bundle_deposit": {
       "deposit_first_created": "2025-07-01T12:36:00Z",
       "deposit_id": "doi:10.1234/zenodo.12345678",
       "deposit_last_changed": "2025-07-01T12:36:00Z",
       "deposit_versioned_id": "doi:10.1234/zenodo.12345679"
     },
-    "document_description": "The metadata contents of the International Human Epigenome Consortium (IHEC) data portal, harmonised to follow the metadata model developed by the \"FAIRification of Genomic Annotations WG\" in the Research Data Alliance (RDA), enhanced with metadata from original sources.",
-    "document_input_sources": [
+    "bundle_description": "The metadata contents of the International Human Epigenome Consortium (IHEC) data portal, harmonised to follow the metadata model developed by the \"FAIRification of Genomic Annotations WG\" in the Research Data Alliance (RDA), enhanced with metadata from original sources.",
+    "bundle_input_sources": [
       {
         "inputsource_external_ref": "https://epigenomesportal.ca/ihec/",
         "qualified_relation": "prov:wasDerivedFrom"
       }
     ],
-    "document_label": "IHEC data portal metadata, harmonised to the FGA-WG model.",
-    "document_ontology_versions": [
+    "bundle_label": "IHEC data portal metadata, harmonised to the FGA-WG model.",
+    "bundle_ontology_versions": [
       {
         "namespace": "edam",
         "ontology_url": "http://edamontology.org/EDAM.owl",
@@ -494,7 +494,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TopLevel](https://w3id.org/fga-wg
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [document](document.md) | 1 <br/> [Document](Document.md) | Information about this document containing harmonised metadata about a set of genome annotation files. This includes self-referential identifiers and versioning of public deposits of the document. | direct |
+| [bundle_metadata](bundle_metadata.md) | 1 <br/> [BundleMetadata](BundleMetadata.md) | Top-level metadata about the bundle of genomic annotation files. | direct |
 | [donors](donors.md) | * <br/> [Donor](Donor.md) | Information about the donors or complete organisms from which the samples were taken. | direct |
 | [experiments](experiments.md) | * <br/> [Experiment](Experiment.md) | Information about sequencing experiments that have been carried out to generate the files. | direct |
 | [files](files.md) | * <br/> [File](File.md) | Information about particular genome annotation (and other relevant) files. | direct |
@@ -526,7 +526,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TopLevel](https://w3id.org/fga-wg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -535,8 +535,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TopLevel](https://w3id.org/fga-wg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/TopLevel |
-| native | https://w3id.org/fga-wg/schema/top_level/TopLevel |
+| self | https://w3id.org/fga-wg/schema/bundle/Bundle |
+| native | https://w3id.org/fga-wg/schema/bundle/Bundle |
 
 
 
@@ -551,13 +551,13 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TopLevel](https://w3id.org/fga-wg
 
 <details>
 ```yaml
-name: TopLevel
-description: A document of harmonised metadata for a set of genome annotation files.
-  Metadata has been harmonised in line with the "FAIRification of Genomic Annotations"
-  data model. This is the top-level class to be used as root for the metadata document.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+name: Bundle
+description: A bundle representing a set of genome annotation files, organised in
+  sub-collections. Metadata has been harmonised in line with the "FAIRification of
+  Genomic Annotations" data model.
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
-- document
+- bundle_metadata
 - donors
 - experiments
 - files
@@ -573,34 +573,32 @@ slots:
 
 <details>
 ```yaml
-name: TopLevel
-description: A document of harmonised metadata for a set of genome annotation files.
-  Metadata has been harmonised in line with the "FAIRification of Genomic Annotations"
-  data model. This is the top-level class to be used as root for the metadata document.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+name: Bundle
+description: A bundle representing a set of genome annotation files, organised in
+  sub-collections. Metadata has been harmonised in line with the "FAIRification of
+  Genomic Annotations" data model.
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
-  document:
-    name: document
-    description: Information about this document containing harmonised metadata about
-      a set of genome annotation files. This includes self-referential identifiers
-      and versioning of public deposits of the document.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+  bundle_metadata:
+    name: bundle_metadata
+    description: Top-level metadata about the bundle of genomic annotation files.
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
-    owner: TopLevel
+    owner: Bundle
     domain_of:
-    - TopLevel
-    range: Document
+    - Bundle
+    range: BundleMetadata
     required: true
     inlined: true
   donors:
     name: donors
     description: Information about the donors or complete organisms from which the
       samples were taken.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
-    owner: TopLevel
+    owner: Bundle
     domain_of:
-    - TopLevel
+    - Bundle
     range: Donor
     multivalued: true
     inlined: true
@@ -609,11 +607,11 @@ attributes:
     name: experiments
     description: Information about sequencing experiments that have been carried out
       to generate the files.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
-    owner: TopLevel
+    owner: Bundle
     domain_of:
-    - TopLevel
+    - Bundle
     range: Experiment
     multivalued: true
     inlined: true
@@ -622,11 +620,11 @@ attributes:
     name: files
     description: Information about particular genome annotation (and other relevant)
       files.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
-    owner: TopLevel
+    owner: Bundle
     domain_of:
-    - TopLevel
+    - Bundle
     range: File
     multivalued: true
     inlined: true
@@ -635,11 +633,11 @@ attributes:
     name: file_collections
     description: Information about collections of files contained in this dataset,
       each collection defined according to some selection criteria.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
-    owner: TopLevel
+    owner: Bundle
     domain_of:
-    - TopLevel
+    - Bundle
     range: FileCollection
     multivalued: true
     inlined: true
@@ -648,11 +646,11 @@ attributes:
     name: analyses
     description: Information about computational processing and analyses that have
       been carried out to generate the files.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
-    owner: TopLevel
+    owner: Bundle
     domain_of:
-    - TopLevel
+    - Bundle
     range: Analysis
     multivalued: true
     inlined: true
@@ -661,11 +659,11 @@ attributes:
     name: samples
     description: Information about the biospecimens/samples used as raw material for
       lab experiments.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
-    owner: TopLevel
+    owner: Bundle
     domain_of:
-    - TopLevel
+    - Bundle
     range: Sample
     multivalued: true
     inlined: true
@@ -674,11 +672,11 @@ attributes:
     name: studies
     description: The scientific studies, i.e. units of research, within which experiments
       and/or analyses have been carried out.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
-    owner: TopLevel
+    owner: Bundle
     domain_of:
-    - TopLevel
+    - Bundle
     range: Study
     multivalued: true
     inlined: true

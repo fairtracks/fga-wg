@@ -14,7 +14,7 @@ _A human readable description of the data file._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_description](https://w3id.org/fga-wg/schema/top_level/file_description)
+URI: [https://w3id.org/fga-wg/schema/bundle/file_description](https://w3id.org/fga-wg/schema/bundle/file_description)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_description](https://w3id.or
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_description](https://w3id.or
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_description |
-| native | https://w3id.org/fga-wg/schema/top_level/file_description |
+| self | https://w3id.org/fga-wg/schema/bundle/file_description |
+| native | https://w3id.org/fga-wg/schema/bundle/file_description |
 
 
 
@@ -96,7 +96,7 @@ description: A human readable description of the data file.
 examples:
 - value: H3K9me3 ChIP-seq replicated peaks on human (hg38) AG04450 (Fibroblast derived
     cell line).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

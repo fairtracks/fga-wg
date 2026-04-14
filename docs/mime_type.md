@@ -14,7 +14,7 @@ _A string providing the mime-type of the data file._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/mime_type](https://w3id.org/fga-wg/schema/top_level/mime_type)
+URI: [https://w3id.org/fga-wg/schema/bundle/mime_type](https://w3id.org/fga-wg/schema/bundle/mime_type)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/mime_type](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/mime_type](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/mime_type |
-| native | https://w3id.org/fga-wg/schema/top_level/mime_type |
+| self | https://w3id.org/fga-wg/schema/bundle/mime_type |
+| native | https://w3id.org/fga-wg/schema/bundle/mime_type |
 
 
 
@@ -95,7 +95,7 @@ name: mime_type
 description: A string providing the mime-type of the data file.
 examples:
 - value: application/octet-stream
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

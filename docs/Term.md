@@ -14,7 +14,7 @@ _Helper entity to represent an ontology term as a data value. _
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/Term](https://w3id.org/fga-wg/schema/top_level/Term)
+URI: [https://w3id.org/fga-wg/schema/bundle/Term](https://w3id.org/fga-wg/schema/bundle/Term)
 
 
 
@@ -105,7 +105,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Term](https://w3id.org/fga-wg/sch
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -114,8 +114,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Term](https://w3id.org/fga-wg/sch
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/Term |
-| native | https://w3id.org/fga-wg/schema/top_level/Term |
+| self | https://w3id.org/fga-wg/schema/bundle/Term |
+| native | https://w3id.org/fga-wg/schema/bundle/Term |
 
 
 
@@ -132,7 +132,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Term](https://w3id.org/fga-wg/sch
 ```yaml
 name: Term
 description: 'Helper entity to represent an ontology term as a data value. '
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - id
 - label
@@ -146,7 +146,7 @@ slots:
 ```yaml
 name: Term
 description: 'Helper entity to represent an ontology term as a data value. '
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   id:
     name: id
@@ -154,7 +154,7 @@ attributes:
       form).
     examples:
     - value: obi:OBI_0000716
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Term
     domain_of:
@@ -167,7 +167,7 @@ attributes:
       of the ontology (as listed in the "ontology_versions" field of the Deposit object).
     examples:
     - value: ChIP-seq assay
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Term
     domain_of:

@@ -14,7 +14,7 @@ _Represents the results of a quality assessment that has been carried out on a d
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/QualityAssessment](https://w3id.org/fga-wg/schema/top_level/QualityAssessment)
+URI: [https://w3id.org/fga-wg/schema/bundle/QualityAssessment](https://w3id.org/fga-wg/schema/bundle/QualityAssessment)
 
 
 
@@ -114,7 +114,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/QualityAssessment](https://w3id.o
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -123,8 +123,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/QualityAssessment](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/QualityAssessment |
-| native | https://w3id.org/fga-wg/schema/top_level/QualityAssessment |
+| self | https://w3id.org/fga-wg/schema/bundle/QualityAssessment |
+| native | https://w3id.org/fga-wg/schema/bundle/QualityAssessment |
 
 
 
@@ -142,7 +142,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/QualityAssessment](https://w3id.o
 name: QualityAssessment
 description: Represents the results of a quality assessment that has been carried
   out on a data file resulting from an experiment or analysis.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - assessment_method
 - assessment_values
@@ -158,7 +158,7 @@ slots:
 name: QualityAssessment
 description: Represents the results of a quality assessment that has been carried
   out on a data file resulting from an experiment or analysis.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   assessment_method:
     name: assessment_method
@@ -166,7 +166,7 @@ attributes:
       OMArk, peak calling statistics, etc.)
     examples:
     - value: histone-chipseq-quality-metrics
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: QualityAssessment
     domain_of:
@@ -184,7 +184,7 @@ attributes:
         nreads: 21018235
         nreads_in_peaks: 6161851
         frip: 0.2931669095906483
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: QualityAssessment
     domain_of:
@@ -202,7 +202,7 @@ attributes:
     description: URL to a report containing the detailed output from the quality assessment.
     examples:
     - value: https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: QualityAssessment
     domain_of:

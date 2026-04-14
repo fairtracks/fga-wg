@@ -14,7 +14,7 @@ _Internal reference to the study within which the analysis has been carried out.
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_study_ref](https://w3id.org/fga-wg/schema/top_level/analysis_study_ref)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_study_ref](https://w3id.org/fga-wg/schema/bundle/analysis_study_ref)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_study_ref](https://w3id.
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_study_ref](https://w3id.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_study_ref |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_study_ref |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_study_ref |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_study_ref |
 
 
 
@@ -95,7 +95,7 @@ description: Internal reference to the study within which the analysis has been 
   out.
 examples:
 - value: study:S-EPMC7391744
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Analysis

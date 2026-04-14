@@ -14,7 +14,7 @@ _Clinical information of the donor/organism at the time of sampling._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/donor_clinical_information](https://w3id.org/fga-wg/schema/top_level/donor_clinical_information)
+URI: [https://w3id.org/fga-wg/schema/bundle/donor_clinical_information](https://w3id.org/fga-wg/schema/bundle/donor_clinical_information)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_clinical_information](https
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_clinical_information](https
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/donor_clinical_information |
-| native | https://w3id.org/fga-wg/schema/top_level/donor_clinical_information |
+| self | https://w3id.org/fga-wg/schema/bundle/donor_clinical_information |
+| native | https://w3id.org/fga-wg/schema/bundle/donor_clinical_information |
 
 
 
@@ -94,7 +94,7 @@ name: donor_clinical_information
 description: Clinical information of the donor/organism at the time of sampling.
 examples:
 - value: apparently healthy
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

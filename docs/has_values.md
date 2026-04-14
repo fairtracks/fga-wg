@@ -14,7 +14,7 @@ _Whether the sequence features have associated values (at least one feature has 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/has_values](https://w3id.org/fga-wg/schema/top_level/has_values)
+URI: [https://w3id.org/fga-wg/schema/bundle/has_values](https://w3id.org/fga-wg/schema/bundle/has_values)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_values](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_values](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/has_values |
-| native | https://w3id.org/fga-wg/schema/top_level/has_values |
+| self | https://w3id.org/fga-wg/schema/bundle/has_values |
+| native | https://w3id.org/fga-wg/schema/bundle/has_values |
 
 
 
@@ -96,7 +96,7 @@ description: Whether the sequence features have associated values (at least one 
   has an associated value).
 examples:
 - value: 'True'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

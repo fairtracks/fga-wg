@@ -14,7 +14,7 @@ _Taxonomical classification of the species of the donor/organism._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/species_taxon](https://w3id.org/fga-wg/schema/top_level/species_taxon)
+URI: [https://w3id.org/fga-wg/schema/bundle/species_taxon](https://w3id.org/fga-wg/schema/bundle/species_taxon)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/species_taxon](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/species_taxon](https://w3id.org/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/species_taxon |
-| native | https://w3id.org/fga-wg/schema/top_level/species_taxon |
+| self | https://w3id.org/fga-wg/schema/bundle/species_taxon |
+| native | https://w3id.org/fga-wg/schema/bundle/species_taxon |
 
 
 
@@ -97,7 +97,7 @@ examples:
 - object:
     id: NCBITaxon:9606
     label: Homo sapiens
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Donor

@@ -14,7 +14,7 @@ _A human-readable description of the sample, short enough to be used for listing
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/sample_label](https://w3id.org/fga-wg/schema/top_level/sample_label)
+URI: [https://w3id.org/fga-wg/schema/bundle/sample_label](https://w3id.org/fga-wg/schema/bundle/sample_label)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_label](https://w3id.org/fg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_label](https://w3id.org/fg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/sample_label |
-| native | https://w3id.org/fga-wg/schema/top_level/sample_label |
+| self | https://w3id.org/fga-wg/schema/bundle/sample_label |
+| native | https://w3id.org/fga-wg/schema/bundle/sample_label |
 
 
 
@@ -103,7 +103,7 @@ description: A human-readable description of the sample, short enough to be used
   listings within software user interfaces, tables, illustration legends, etc.
 examples:
 - value: Homo sapiens AG04450 cell line
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

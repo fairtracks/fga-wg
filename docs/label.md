@@ -14,7 +14,7 @@ _Human-readable label associated to the term id in the current version of the on
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/label](https://w3id.org/fga-wg/schema/top_level/label)
+URI: [https://w3id.org/fga-wg/schema/bundle/label](https://w3id.org/fga-wg/schema/bundle/label)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/label](https://w3id.org/fga-wg/sc
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/label](https://w3id.org/fga-wg/sc
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/label |
-| native | https://w3id.org/fga-wg/schema/top_level/label |
+| self | https://w3id.org/fga-wg/schema/bundle/label |
+| native | https://w3id.org/fga-wg/schema/bundle/label |
 
 
 
@@ -95,7 +95,7 @@ description: Human-readable label associated to the term id in the current versi
   of the ontology (as listed in the "ontology_versions" field of the Deposit object).
 examples:
 - value: ChIP-seq assay
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Term

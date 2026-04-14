@@ -14,7 +14,7 @@ _Abstract of the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/study_abstract](https://w3id.org/fga-wg/schema/top_level/study_abstract)
+URI: [https://w3id.org/fga-wg/schema/bundle/study_abstract](https://w3id.org/fga-wg/schema/bundle/study_abstract)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/study_abstract](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/study_abstract](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/study_abstract |
-| native | https://w3id.org/fga-wg/schema/top_level/study_abstract |
+| self | https://w3id.org/fga-wg/schema/bundle/study_abstract |
+| native | https://w3id.org/fga-wg/schema/bundle/study_abstract |
 
 
 
@@ -114,7 +114,7 @@ examples:
     to somatic burdening, cancer differential expression and GWAS. Targeted validations
     of the prioritized regulators, elements and variants using siRNA knockdowns, CRISPR-based
     editing, and luciferase assays demonstrate the value of the ENCODE resource.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Study

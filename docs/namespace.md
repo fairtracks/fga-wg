@@ -14,7 +14,7 @@ _The CURIE namespace (prefix) an ontology (e.g. "GO" for Gene Ontology)._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/namespace](https://w3id.org/fga-wg/schema/top_level/namespace)
+URI: [https://w3id.org/fga-wg/schema/bundle/namespace](https://w3id.org/fga-wg/schema/bundle/namespace)
 <!-- no inheritance hierarchy -->
 
 
@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/namespace](https://w3id.org/fga-w
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [OntologyVersions](OntologyVersions.md) | Information about an ontology used in the metadata. |  no  |
+| [OntologyVersions](OntologyVersions.md) | Information about an ontology used for the bundle. |  no  |
 
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/namespace](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/namespace](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/namespace |
-| native | https://w3id.org/fga-wg/schema/top_level/namespace |
+| self | https://w3id.org/fga-wg/schema/bundle/namespace |
+| native | https://w3id.org/fga-wg/schema/bundle/namespace |
 
 
 
@@ -95,7 +95,7 @@ name: namespace
 description: The CURIE namespace (prefix) an ontology (e.g. "GO" for Gene Ontology).
 examples:
 - value: edam
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - OntologyVersions

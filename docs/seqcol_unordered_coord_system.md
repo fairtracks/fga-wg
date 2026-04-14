@@ -14,7 +14,7 @@ _Content-derived digest that uniquely identifies the order-invariant coordinate 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_unordered_coord_system](https://w3id.org/fga-wg/schema/top_level/seqcol_unordered_coord_system)
+URI: [https://w3id.org/fga-wg/schema/bundle/seqcol_unordered_coord_system](https://w3id.org/fga-wg/schema/bundle/seqcol_unordered_coord_system)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_unordered_coord_system](ht
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_unordered_coord_system](ht
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/seqcol_unordered_coord_system |
-| native | https://w3id.org/fga-wg/schema/top_level/seqcol_unordered_coord_system |
+| self | https://w3id.org/fga-wg/schema/bundle/seqcol_unordered_coord_system |
+| native | https://w3id.org/fga-wg/schema/bundle/seqcol_unordered_coord_system |
 
 
 
@@ -102,7 +102,7 @@ description: Content-derived digest that uniquely identifies the order-invariant
   attribute of the sequence collection generated from the genome assembly.
 examples:
 - value: ga4gh:SC.sorted_name_length_pairs._dMQ5dPUNVx4OGQnDAPmGMkVRWWcYV99
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - GenomeAssembly

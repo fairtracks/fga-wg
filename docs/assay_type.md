@@ -14,7 +14,7 @@ _Sequencing technique intended for this library._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/assay_type](https://w3id.org/fga-wg/schema/top_level/assay_type)
+URI: [https://w3id.org/fga-wg/schema/bundle/assay_type](https://w3id.org/fga-wg/schema/bundle/assay_type)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/assay_type](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/assay_type](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/assay_type |
-| native | https://w3id.org/fga-wg/schema/top_level/assay_type |
+| self | https://w3id.org/fga-wg/schema/bundle/assay_type |
+| native | https://w3id.org/fga-wg/schema/bundle/assay_type |
 
 
 
@@ -97,7 +97,7 @@ examples:
 - object:
     id: obi:OBI_0000716
     label: ChIP-seq assay
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

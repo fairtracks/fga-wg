@@ -14,7 +14,7 @@ _List of (relevant) publications containing the results of the study (in the for
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/publications](https://w3id.org/fga-wg/schema/top_level/publications)
+URI: [https://w3id.org/fga-wg/schema/bundle/publications](https://w3id.org/fga-wg/schema/bundle/publications)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/publications](https://w3id.org/fg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/publications](https://w3id.org/fg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/publications |
-| native | https://w3id.org/fga-wg/schema/top_level/publications |
+| self | https://w3id.org/fga-wg/schema/bundle/publications |
+| native | https://w3id.org/fga-wg/schema/bundle/publications |
 
 
 
@@ -96,7 +96,7 @@ description: List of (relevant) publications containing the results of the study
   the form of DOI CURIEs).
 examples:
 - value: https://doi.org/10.1038/s41467-020-14743-w
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Study

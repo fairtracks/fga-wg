@@ -14,7 +14,7 @@ _The list of access methods that can be used to fetch the data file. _
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/access_methods](https://w3id.org/fga-wg/schema/top_level/access_methods)
+URI: [https://w3id.org/fga-wg/schema/bundle/access_methods](https://w3id.org/fga-wg/schema/bundle/access_methods)
 <!-- no inheritance hierarchy -->
 
 
@@ -78,7 +78,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/access_methods](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -87,8 +87,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/access_methods](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/access_methods |
-| native | https://w3id.org/fga-wg/schema/top_level/access_methods |
+| self | https://w3id.org/fga-wg/schema/bundle/access_methods |
+| native | https://w3id.org/fga-wg/schema/bundle/access_methods |
 
 
 
@@ -120,7 +120,7 @@ examples:
     access_method: https
     access_url:
       url: https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

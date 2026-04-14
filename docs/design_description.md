@@ -14,7 +14,7 @@ _The high-level experiment design including layout, protocol._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/design_description](https://w3id.org/fga-wg/schema/top_level/design_description)
+URI: [https://w3id.org/fga-wg/schema/bundle/design_description](https://w3id.org/fga-wg/schema/bundle/design_description)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/design_description](https://w3id.
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/design_description](https://w3id.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/design_description |
-| native | https://w3id.org/fga-wg/schema/top_level/design_description |
+| self | https://w3id.org/fga-wg/schema/bundle/design_description |
+| native | https://w3id.org/fga-wg/schema/bundle/design_description |
 
 
 
@@ -94,7 +94,7 @@ name: design_description
 description: The high-level experiment design including layout, protocol.
 examples:
 - value: https://www.encodeproject.org/documents/92cd1386-ccad-450a-b5a6-ad49983e7e3f/@@download/attachment/wgEncodeUwHistone.release5.html.pdf
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

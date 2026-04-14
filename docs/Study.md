@@ -14,7 +14,7 @@ _A scientific study, i.e. a unit of research, within which experiments and/or an
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/Study](https://w3id.org/fga-wg/schema/top_level/Study)
+URI: [https://w3id.org/fga-wg/schema/bundle/Study](https://w3id.org/fga-wg/schema/bundle/Study)
 
 
 
@@ -103,7 +103,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Study](https://w3id.org/fga-wg/sc
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [TopLevel](TopLevel.md) | [studies](studies.md) | range | [Study](Study.md) |
+| [Bundle](Bundle.md) | [studies](studies.md) | range | [Study](Study.md) |
 
 
 
@@ -125,7 +125,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Study](https://w3id.org/fga-wg/sc
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -134,8 +134,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Study](https://w3id.org/fga-wg/sc
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/Study |
-| native | https://w3id.org/fga-wg/schema/top_level/Study |
+| self | https://w3id.org/fga-wg/schema/bundle/Study |
+| native | https://w3id.org/fga-wg/schema/bundle/Study |
 
 
 
@@ -153,7 +153,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Study](https://w3id.org/fga-wg/sc
 name: Study
 description: A scientific study, i.e. a unit of research, within which experiments
   and/or analyses have been carried out.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - study_external_id
 - study_id
@@ -174,7 +174,7 @@ slots:
 name: Study
 description: A scientific study, i.e. a unit of research, within which experiments
   and/or analyses have been carried out.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   study_external_id:
     name: study_external_id
@@ -182,7 +182,7 @@ attributes:
       BioStudies CURIE).
     examples:
     - value: biostudies:S-EPMC7391744
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Study
     domain_of:
@@ -194,7 +194,7 @@ attributes:
       Namespace: "study".'
     examples:
     - value: study:S-EPMC7391744
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: Study
@@ -207,7 +207,7 @@ attributes:
     description: Title of the study.
     examples:
     - value: An integrative ENCODE resource for cancer genomics
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Study
     domain_of:
@@ -240,7 +240,7 @@ attributes:
         expression and GWAS. Targeted validations of the prioritized regulators, elements
         and variants using siRNA knockdowns, CRISPR-based editing, and luciferase
         assays demonstrate the value of the ENCODE resource.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Study
     domain_of:
@@ -252,7 +252,7 @@ attributes:
       a BioProject CURIE).
     examples:
     - value: bioproject:PRJNA63441
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Study
     domain_of:
@@ -261,7 +261,7 @@ attributes:
   project_name:
     name: project_name
     description: Name of the project within which the study was carried out.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Study
     domain_of:
@@ -273,7 +273,7 @@ attributes:
       (in the form of DOI CURIEs).
     examples:
     - value: https://doi.org/10.1038/s41467-020-14743-w
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Study
     domain_of:
@@ -288,7 +288,7 @@ attributes:
         name: Mark Gerstein
         contact_id: orcid:0000-0002-9746-3719
         email: mark@gersteinlab.org
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Study
     domain_of:

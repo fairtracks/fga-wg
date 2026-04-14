@@ -14,7 +14,7 @@ _External reference to the analysis workflow, with availability in at least one 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_workflow](https://w3id.org/fga-wg/schema/top_level/analysis_workflow)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_workflow](https://w3id.org/fga-wg/schema/bundle/analysis_workflow)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_workflow](https://w3id.o
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_workflow](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_workflow |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_workflow |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_workflow |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_workflow |
 
 
 
@@ -95,7 +95,7 @@ description: External reference to the analysis workflow, with availability in a
   least one machine-operable form (e.g. CWL, Nextflow, ...).
 examples:
 - value: encode:ENCPL272XAE
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Analysis

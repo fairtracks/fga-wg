@@ -14,7 +14,7 @@ _Internal identifier for the data file (unique within the metadata deposit). _
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_id](https://w3id.org/fga-wg/schema/top_level/file_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/file_id](https://w3id.org/fga-wg/schema/bundle/file_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -80,7 +80,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_id](https://w3id.org/fga-wg/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -89,8 +89,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_id](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_id |
-| native | https://w3id.org/fga-wg/schema/top_level/file_id |
+| self | https://w3id.org/fga-wg/schema/bundle/file_id |
+| native | https://w3id.org/fga-wg/schema/bundle/file_id |
 
 
 
@@ -103,7 +103,7 @@ name: file_id
 description: 'Internal identifier for the data file (unique within the metadata deposit). '
 examples:
 - value: file:ENCFF323LCS
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

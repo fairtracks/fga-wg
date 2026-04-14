@@ -14,7 +14,7 @@ _Internal identifier for the file collection (unique within the metadata deposit
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_id](https://w3id.org/fga-wg/schema/top_level/filecollection_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/filecollection_id](https://w3id.org/fga-wg/schema/bundle/filecollection_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_id](https://w3id.o
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_id](https://w3id.o
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/filecollection_id |
-| native | https://w3id.org/fga-wg/schema/top_level/filecollection_id |
+| self | https://w3id.org/fga-wg/schema/bundle/filecollection_id |
+| native | https://w3id.org/fga-wg/schema/bundle/filecollection_id |
 
 
 
@@ -103,7 +103,7 @@ description: 'Internal identifier for the file collection (unique within the met
   deposit). '
 examples:
 - value: filecollection:ihec_encode
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

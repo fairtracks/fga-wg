@@ -14,7 +14,7 @@ _Set of rules which guides how the sequencing protocol was followed. Change-trac
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/sequencing_protocol](https://w3id.org/fga-wg/schema/top_level/sequencing_protocol)
+URI: [https://w3id.org/fga-wg/schema/bundle/sequencing_protocol](https://w3id.org/fga-wg/schema/bundle/sequencing_protocol)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sequencing_protocol](https://w3id
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sequencing_protocol](https://w3id
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/sequencing_protocol |
-| native | https://w3id.org/fga-wg/schema/top_level/sequencing_protocol |
+| self | https://w3id.org/fga-wg/schema/bundle/sequencing_protocol |
+| native | https://w3id.org/fga-wg/schema/bundle/sequencing_protocol |
 
 
 
@@ -87,7 +87,7 @@ name: sequencing_protocol
 description: Set of rules which guides how the sequencing protocol was followed. Change-tracking
   services such as Protocol.io or GitHub are encouraged instead of dumping free text
   in this field.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

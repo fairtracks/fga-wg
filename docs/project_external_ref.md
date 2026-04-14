@@ -14,7 +14,7 @@ _Reference to a project within which the study was carried out (preferably a Bio
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/project_external_ref](https://w3id.org/fga-wg/schema/top_level/project_external_ref)
+URI: [https://w3id.org/fga-wg/schema/bundle/project_external_ref](https://w3id.org/fga-wg/schema/bundle/project_external_ref)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/project_external_ref](https://w3i
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/project_external_ref](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/project_external_ref |
-| native | https://w3id.org/fga-wg/schema/top_level/project_external_ref |
+| self | https://w3id.org/fga-wg/schema/bundle/project_external_ref |
+| native | https://w3id.org/fga-wg/schema/bundle/project_external_ref |
 
 
 
@@ -95,7 +95,7 @@ description: Reference to a project within which the study was carried out (pref
   a BioProject CURIE).
 examples:
 - value: bioproject:PRJNA63441
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Study

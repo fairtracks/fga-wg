@@ -14,7 +14,7 @@ _A drs:// hostname-based URI, as defined in the DRS documentation, that tells cl
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/drs_uri](https://w3id.org/fga-wg/schema/top_level/drs_uri)
+URI: [https://w3id.org/fga-wg/schema/bundle/drs_uri](https://w3id.org/fga-wg/schema/bundle/drs_uri)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/drs_uri](https://w3id.org/fga-wg/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/drs_uri](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/drs_uri |
-| native | https://w3id.org/fga-wg/schema/top_level/drs_uri |
+| self | https://w3id.org/fga-wg/schema/bundle/drs_uri |
+| native | https://w3id.org/fga-wg/schema/bundle/drs_uri |
 
 
 
@@ -100,7 +100,7 @@ description: A drs:// hostname-based URI, as defined in the DRS documentation, t
   use in subsequent access endpoint calls.
 examples:
 - value: drs://drs.example.org/ENCFF323LCS
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

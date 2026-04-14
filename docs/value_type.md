@@ -14,7 +14,7 @@ _The type of values associated with the sequence features, if any._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/value_type](https://w3id.org/fga-wg/schema/top_level/value_type)
+URI: [https://w3id.org/fga-wg/schema/bundle/value_type](https://w3id.org/fga-wg/schema/bundle/value_type)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/value_type](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/value_type](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/value_type |
-| native | https://w3id.org/fga-wg/schema/top_level/value_type |
+| self | https://w3id.org/fga-wg/schema/bundle/value_type |
+| native | https://w3id.org/fga-wg/schema/bundle/value_type |
 
 
 
@@ -94,7 +94,7 @@ name: value_type
 description: The type of values associated with the sequence features, if any.
 examples:
 - value: multiple
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

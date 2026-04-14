@@ -14,7 +14,7 @@ _The version-agnostic URL of the ontology (e.g. the IRI of the ontology in OWL).
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/ontology_url](https://w3id.org/fga-wg/schema/top_level/ontology_url)
+URI: [https://w3id.org/fga-wg/schema/bundle/ontology_url](https://w3id.org/fga-wg/schema/bundle/ontology_url)
 <!-- no inheritance hierarchy -->
 
 
@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/ontology_url](https://w3id.org/fg
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [OntologyVersions](OntologyVersions.md) | Information about an ontology used in the metadata. |  no  |
+| [OntologyVersions](OntologyVersions.md) | Information about an ontology used for the bundle. |  no  |
 
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/ontology_url](https://w3id.org/fg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/ontology_url](https://w3id.org/fg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/ontology_url |
-| native | https://w3id.org/fga-wg/schema/top_level/ontology_url |
+| self | https://w3id.org/fga-wg/schema/bundle/ontology_url |
+| native | https://w3id.org/fga-wg/schema/bundle/ontology_url |
 
 
 
@@ -96,7 +96,7 @@ description: The version-agnostic URL of the ontology (e.g. the IRI of the ontol
   in OWL).
 examples:
 - value: http://edamontology.org/EDAM.owl
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - OntologyVersions

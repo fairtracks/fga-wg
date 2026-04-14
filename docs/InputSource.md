@@ -14,7 +14,7 @@ _General object representing the source of data files, samples, or other entitie
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/InputSource](https://w3id.org/fga-wg/schema/top_level/InputSource)
+URI: [https://w3id.org/fga-wg/schema/bundle/InputSource](https://w3id.org/fga-wg/schema/bundle/InputSource)
 
 
 
@@ -101,8 +101,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/InputSource](https://w3id.org/fga
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
+| [BundleMetadata](BundleMetadata.md) | [bundle_input_sources](bundle_input_sources.md) | range | [InputSource](InputSource.md) |
 | [Analysis](Analysis.md) | [analysis_input_sources](analysis_input_sources.md) | range | [InputSource](InputSource.md) |
-| [Document](Document.md) | [document_input_sources](document_input_sources.md) | range | [InputSource](InputSource.md) |
 | [Experiment](Experiment.md) | [experiment_samples](experiment_samples.md) | range | [InputSource](InputSource.md) |
 | [File](File.md) | [file_input_sources](file_input_sources.md) | range | [InputSource](InputSource.md) |
 | [FileCollection](FileCollection.md) | [filecollection_input_sources](filecollection_input_sources.md) | range | [InputSource](InputSource.md) |
@@ -140,7 +140,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/InputSource](https://w3id.org/fga
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -149,8 +149,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/InputSource](https://w3id.org/fga
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/InputSource |
-| native | https://w3id.org/fga-wg/schema/top_level/InputSource |
+| self | https://w3id.org/fga-wg/schema/bundle/InputSource |
+| native | https://w3id.org/fga-wg/schema/bundle/InputSource |
 
 
 
@@ -172,7 +172,7 @@ description: General object representing the source of data files, samples, or o
   to a container or process may represent a number of disctinct input items. InputSource
   also contains information about the type of relationship, replication labelling,
   versioning and retrieval date.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - inputsource_external_ref
 - inputsource_ref
@@ -213,7 +213,7 @@ description: General object representing the source of data files, samples, or o
   to a container or process may represent a number of disctinct input items. InputSource
   also contains information about the type of relationship, replication labelling,
   versioning and retrieval date.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   inputsource_external_ref:
     name: inputsource_external_ref
@@ -223,7 +223,7 @@ attributes:
       or "inputsource_ref" must be specified.
     examples:
     - value: https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: InputSource
     domain_of:
@@ -236,7 +236,7 @@ attributes:
       Sample, Experiment, Analysis or File as restricted by the description of the
       field where the input source is used. One of "inputsource_external_ref" or "inputsource_ref"
       must be specified.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: InputSource
     domain_of:
@@ -246,7 +246,7 @@ attributes:
     name: database_accessions
     description: Accession numbers for database records used as input source. Used
       in connection with "inputsource_external_ref".
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: InputSource
     domain_of:
@@ -261,7 +261,7 @@ attributes:
     description: A description of the relationship with the input source.
     examples:
     - value: bioschemas:FormalParameter
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: InputSource
     domain_of:
@@ -275,7 +275,7 @@ attributes:
     examples:
     - value: '1'
     - value: '2'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: InputSource
     domain_of:
@@ -289,7 +289,7 @@ attributes:
     examples:
     - value: '1_1'
     - value: '1_2'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: InputSource
     domain_of:
@@ -299,7 +299,7 @@ attributes:
   version:
     name: version
     description: Version information for the retrieval from the input source.
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: InputSource
     domain_of:
@@ -311,7 +311,7 @@ attributes:
       downloading data from a database or URL.
     examples:
     - value: '2016-04-19'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: InputSource
     domain_of:

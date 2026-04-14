@@ -14,7 +14,7 @@ _Internal identifier for the biospecimen/sample (unique within the metadata depo
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/sample_id](https://w3id.org/fga-wg/schema/top_level/sample_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/sample_id](https://w3id.org/fga-wg/schema/bundle/sample_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_id](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_id](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/sample_id |
-| native | https://w3id.org/fga-wg/schema/top_level/sample_id |
+| self | https://w3id.org/fga-wg/schema/bundle/sample_id |
+| native | https://w3id.org/fga-wg/schema/bundle/sample_id |
 
 
 
@@ -103,7 +103,7 @@ description: Internal identifier for the biospecimen/sample (unique within the m
   deposit).
 examples:
 - value: sample:ENCBS004ENC
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 identifier: true
 domain_of:

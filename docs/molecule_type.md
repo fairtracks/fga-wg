@@ -14,7 +14,7 @@ _Specifies the type of source material that is being sequenced._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/molecule_type](https://w3id.org/fga-wg/schema/top_level/molecule_type)
+URI: [https://w3id.org/fga-wg/schema/bundle/molecule_type](https://w3id.org/fga-wg/schema/bundle/molecule_type)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/molecule_type](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/molecule_type](https://w3id.org/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/molecule_type |
-| native | https://w3id.org/fga-wg/schema/top_level/molecule_type |
+| self | https://w3id.org/fga-wg/schema/bundle/molecule_type |
+| native | https://w3id.org/fga-wg/schema/bundle/molecule_type |
 
 
 
@@ -97,7 +97,7 @@ examples:
 - object:
     id: SO:0000991
     label: genomic_DNA
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

@@ -14,7 +14,7 @@ _External or internal references to sources for the input data analyzed. Interna
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_input_sources](https://w3id.org/fga-wg/schema/top_level/analysis_input_sources)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_input_sources](https://w3id.org/fga-wg/schema/bundle/analysis_input_sources)
 <!-- no inheritance hierarchy -->
 
 
@@ -74,7 +74,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_input_sources](https://w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -83,8 +83,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_input_sources](https://w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_input_sources |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_input_sources |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_input_sources |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_input_sources |
 
 
 
@@ -117,7 +117,7 @@ examples:
     - '1_1'
     - '2_1'
     date_of_retrieval: '2016-04-19'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Analysis

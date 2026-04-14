@@ -12,7 +12,7 @@ _Vocabulary from the ENCODE model describing the general category of boispecimen
 
 <div data-search-exclude markdown="1">
 
-URI: [https://w3id.org/fga-wg/schema/top_level/BiospecimenClassification](https://w3id.org/fga-wg/schema/top_level/BiospecimenClassification)
+URI: [https://w3id.org/fga-wg/schema/bundle/BiospecimenClassification](https://w3id.org/fga-wg/schema/bundle/BiospecimenClassification)
 
 ## Permissible Values
 | Value | Meaning | Description |
@@ -54,7 +54,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/BiospecimenClassification](https:
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -68,7 +68,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/BiospecimenClassification](https:
 name: BiospecimenClassification
 description: Vocabulary from the ENCODE model describing the general category of boispecimen
   (see "Properties->classification" in https://www.encodeproject.org/profiles/biosample_type).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 permissible_values:
   cell line:

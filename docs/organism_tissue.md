@@ -14,7 +14,7 @@ _Part of organism (typically tissue or organ) from which the biospecimen/sample 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/organism_tissue](https://w3id.org/fga-wg/schema/top_level/organism_tissue)
+URI: [https://w3id.org/fga-wg/schema/bundle/organism_tissue](https://w3id.org/fga-wg/schema/bundle/organism_tissue)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/organism_tissue](https://w3id.org
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/organism_tissue](https://w3id.org
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/organism_tissue |
-| native | https://w3id.org/fga-wg/schema/top_level/organism_tissue |
+| self | https://w3id.org/fga-wg/schema/bundle/organism_tissue |
+| native | https://w3id.org/fga-wg/schema/bundle/organism_tissue |
 
 
 
@@ -97,7 +97,7 @@ examples:
 - object:
     id: UBERON:0002048
     label: lung
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

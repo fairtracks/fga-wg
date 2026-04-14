@@ -14,7 +14,7 @@ _Cultured cell line used in the biospecimen/sample._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/cell_line](https://w3id.org/fga-wg/schema/top_level/cell_line)
+URI: [https://w3id.org/fga-wg/schema/bundle/cell_line](https://w3id.org/fga-wg/schema/bundle/cell_line)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/cell_line](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/cell_line](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/cell_line |
-| native | https://w3id.org/fga-wg/schema/top_level/cell_line |
+| self | https://w3id.org/fga-wg/schema/bundle/cell_line |
+| native | https://w3id.org/fga-wg/schema/bundle/cell_line |
 
 
 
@@ -96,7 +96,7 @@ examples:
 - object:
     id: CLO:0034832
     label: AG04450 cell
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

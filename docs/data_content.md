@@ -14,7 +14,7 @@ _Classification describing the file's purpose or contents._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/data_content](https://w3id.org/fga-wg/schema/top_level/data_content)
+URI: [https://w3id.org/fga-wg/schema/bundle/data_content](https://w3id.org/fga-wg/schema/bundle/data_content)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/data_content](https://w3id.org/fg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -82,8 +82,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/data_content](https://w3id.org/fg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/data_content |
-| native | https://w3id.org/fga-wg/schema/top_level/data_content |
+| self | https://w3id.org/fga-wg/schema/bundle/data_content |
+| native | https://w3id.org/fga-wg/schema/bundle/data_content |
 
 
 
@@ -96,7 +96,7 @@ name: data_content
 description: Classification describing the file's purpose or contents.
 examples:
 - value: replicated peaks
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

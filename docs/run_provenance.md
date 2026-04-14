@@ -14,7 +14,7 @@ _Document detailing the provenance of the experiment or analysis run which produ
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/run_provenance](https://w3id.org/fga-wg/schema/top_level/run_provenance)
+URI: [https://w3id.org/fga-wg/schema/bundle/run_provenance](https://w3id.org/fga-wg/schema/bundle/run_provenance)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/run_provenance](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/run_provenance](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/run_provenance |
-| native | https://w3id.org/fga-wg/schema/top_level/run_provenance |
+| self | https://w3id.org/fga-wg/schema/bundle/run_provenance |
+| native | https://w3id.org/fga-wg/schema/bundle/run_provenance |
 
 
 
@@ -97,7 +97,7 @@ description: Document detailing the provenance of the experiment or analysis run
   versions, parameter settings, etc.
 examples:
 - value: encode:ENCAN718KHT
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

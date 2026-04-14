@@ -14,7 +14,7 @@ _Biological sex of the donor/organism._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/sex](https://w3id.org/fga-wg/schema/top_level/sex)
+URI: [https://w3id.org/fga-wg/schema/bundle/sex](https://w3id.org/fga-wg/schema/bundle/sex)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sex](https://w3id.org/fga-wg/sche
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sex](https://w3id.org/fga-wg/sche
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/sex |
-| native | https://w3id.org/fga-wg/schema/top_level/sex |
+| self | https://w3id.org/fga-wg/schema/bundle/sex |
+| native | https://w3id.org/fga-wg/schema/bundle/sex |
 
 
 
@@ -96,7 +96,7 @@ examples:
 - object:
     id: CARO:0000027
     label: male organism
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Donor

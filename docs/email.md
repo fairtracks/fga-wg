@@ -14,7 +14,7 @@ _E-mail address of the person or organisation._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/email](https://w3id.org/fga-wg/schema/top_level/email)
+URI: [https://w3id.org/fga-wg/schema/bundle/email](https://w3id.org/fga-wg/schema/bundle/email)
 <!-- no inheritance hierarchy -->
 
 
@@ -78,7 +78,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/email](https://w3id.org/fga-wg/sc
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -87,8 +87,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/email](https://w3id.org/fga-wg/sc
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/email |
-| native | https://w3id.org/fga-wg/schema/top_level/email |
+| self | https://w3id.org/fga-wg/schema/bundle/email |
+| native | https://w3id.org/fga-wg/schema/bundle/email |
 
 
 
@@ -101,7 +101,7 @@ name: email
 description: E-mail address of the person or organisation.
 examples:
 - value: john@doe.com
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Contact

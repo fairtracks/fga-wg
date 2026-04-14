@@ -14,7 +14,7 @@ _Whether the library was built as paired-end, or single-end._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/library_layout](https://w3id.org/fga-wg/schema/top_level/library_layout)
+URI: [https://w3id.org/fga-wg/schema/bundle/library_layout](https://w3id.org/fga-wg/schema/bundle/library_layout)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/library_layout](https://w3id.org/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/library_layout](https://w3id.org/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/library_layout |
-| native | https://w3id.org/fga-wg/schema/top_level/library_layout |
+| self | https://w3id.org/fga-wg/schema/bundle/library_layout |
+| native | https://w3id.org/fga-wg/schema/bundle/library_layout |
 
 
 
@@ -96,7 +96,7 @@ examples:
 - object:
     id: obi:OBI_0000736
     label: single fragment library
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

@@ -14,7 +14,7 @@ _Timestamp of content update in RFC3339, identical to created_time in systems th
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/updated_time](https://w3id.org/fga-wg/schema/top_level/updated_time)
+URI: [https://w3id.org/fga-wg/schema/bundle/updated_time](https://w3id.org/fga-wg/schema/bundle/updated_time)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/updated_time](https://w3id.org/fg
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/updated_time](https://w3id.org/fg
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/updated_time |
-| native | https://w3id.org/fga-wg/schema/top_level/updated_time |
+| self | https://w3id.org/fga-wg/schema/bundle/updated_time |
+| native | https://w3id.org/fga-wg/schema/bundle/updated_time |
 
 
 
@@ -97,7 +97,7 @@ description: Timestamp of content update in RFC3339, identical to created_time i
   content, not of the JSON object.).
 examples:
 - value: '2016-11-13T17:42:04.385801+00:00'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

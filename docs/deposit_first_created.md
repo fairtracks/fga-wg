@@ -14,7 +14,7 @@ _The date and time of the creation of the first deposited version of the metadat
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/deposit_first_created](https://w3id.org/fga-wg/schema/top_level/deposit_first_created)
+URI: [https://w3id.org/fga-wg/schema/bundle/deposit_first_created](https://w3id.org/fga-wg/schema/bundle/deposit_first_created)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_first_created](https://w3
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_first_created](https://w3
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/deposit_first_created |
-| native | https://w3id.org/fga-wg/schema/top_level/deposit_first_created |
+| self | https://w3id.org/fga-wg/schema/bundle/deposit_first_created |
+| native | https://w3id.org/fga-wg/schema/bundle/deposit_first_created |
 
 
 
@@ -96,7 +96,7 @@ description: The date and time of the creation of the first deposited version of
   metadata document.
 examples:
 - value: '2025-07-01T12:36:00Z'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Deposit

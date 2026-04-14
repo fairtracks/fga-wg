@@ -30,6 +30,12 @@ Any {
 AssessmentValue {
     string key  
 }
+Bundle {
+
+}
+BundleMetadata {
+    string bundle_label  
+}
 Checksum {
     string checksum  
     string checksum_type  
@@ -44,9 +50,6 @@ Deposit {
     curie deposit_id  
     datetime deposit_last_changed  
     curie deposit_versioned_id  
-}
-Document {
-    string document_label  
 }
 Donor {
     curie donor_external_id  
@@ -149,9 +152,6 @@ Term {
     curie id  
     string label  
 }
-TopLevel {
-
-}
 TrackGeometry {
     DataTypes edge_weight_type  
     boolean edges_are_directed  
@@ -174,10 +174,18 @@ Analysis ||--|o Any : "analysis_main_tool"
 Analysis ||--|| Term : "analysis_type"
 Analysis ||--}| InputSource : "analysis_input_sources"
 AssessmentValue ||--|| Any : "value"
-Document ||--|o Any : "document_description"
-Document ||--|o Deposit : "document_deposit"
-Document ||--}o InputSource : "document_input_sources"
-Document ||--}| OntologyVersions : "document_ontology_versions"
+Bundle ||--|| BundleMetadata : "bundle_metadata"
+Bundle ||--}o Analysis : "analyses"
+Bundle ||--}o Donor : "donors"
+Bundle ||--}o Experiment : "experiments"
+Bundle ||--}o File : "files"
+Bundle ||--}o FileCollection : "file_collections"
+Bundle ||--}o Sample : "samples"
+Bundle ||--}o Study : "studies"
+BundleMetadata ||--|o Any : "bundle_description"
+BundleMetadata ||--|o Deposit : "bundle_deposit"
+BundleMetadata ||--}o InputSource : "bundle_input_sources"
+BundleMetadata ||--}| OntologyVersions : "bundle_ontology_versions"
 Donor ||--|o Term : "sex"
 Donor ||--|| Term : "species_taxon"
 Experiment ||--|o Term : "antibody_target, instrument, library_layout"
@@ -205,14 +213,6 @@ QualityAssessment ||--|| Any : "assessment_method, assessment_values"
 Sample ||--|o Term : "cell_line, cell_type, donor_development_stage, organism_tissue, phenotype"
 Sample ||--}o Term : "other_biospecimen"
 Study ||--|o Contact : "study_contact"
-TopLevel ||--|| Document : "document"
-TopLevel ||--}o Analysis : "analyses"
-TopLevel ||--}o Donor : "donors"
-TopLevel ||--}o Experiment : "experiments"
-TopLevel ||--}o File : "files"
-TopLevel ||--}o FileCollection : "file_collections"
-TopLevel ||--}o Sample : "samples"
-TopLevel ||--}o Study : "studies"
 
 ```
 
@@ -259,17 +259,27 @@ class "TrackGeometry" [[{Overall geometric properties of the sequence features i
     {field} edges_denote_parents : boolean  
 }
 "GenomicAnnotationFile" *--> "1" "TrackGeometry" : "track_geometry"
-class "TopLevel" [[{A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document.}]] {
-
+class "Analysis" [[{Represents the computational processing applied to data from a sequencing experiment, or from another analysis. This can be described at the level of individual analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline as a whole.}]] {
+    {field} analysis_external_id : curie  
+    {field} analysis_id : curie  
+    {field} analysis_label : string  
+    {field} analysis_description : string  
+    {field} analysis_study_ref : curie  
+    {field} analysis_main_tool_version : string  
+    {field} analysis_protocol : uriorcurie  
+    {field} analysis_workflow : uriorcurie  
 }
-class "Study" [[{A scientific study, i.e. a unit of research, within which experiments and/or analyses have been carried out.}]] {
-    {field} study_external_id : curie  
-    {field} study_id : curie  
-    {field} study_title : string  
-    {field} study_abstract : string  
-    {field} project_external_ref : uriorcurie  
-    {field} project_name : string  
-    {field} publications : curie  [0..*]
+class "Term" [[{Helper entity to represent an ontology term as a data value. }]] {
+    {field} id : curie  
+    {field} label : string  
+}
+class "Experiment" [[{Represents a sequencing experiment that has been carried out within a study, based on biological samples, and providing data files as output. Subsequent analysis of output data is described by the Analysis entity.}]] {
+    {field} experiment_external_id : curie  
+    {field} experiment_id : curie  
+    {field} experiment_label : string  
+    {field} experiment_study_ref : curie  
+    {field} design_description : string  
+    {field} sequencing_protocol : uriorcurie  
 }
 class "Sample" [[{Information about a biospecimen/sample used as raw material for lab experiments.}]] {
     {field} sample_external_id : curie  
@@ -283,22 +293,6 @@ class "Sample" [[{Information about a biospecimen/sample used as raw material fo
     {field} sample_collection_date : datetime  
     {field} donor_age : string  
     {field} donor_clinical_information : string  
-}
-class "Analysis" [[{Represents the computational processing applied to data from a sequencing experiment, or from another analysis. This can be described at the level of individual analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline as a whole.}]] {
-    {field} analysis_external_id : curie  
-    {field} analysis_id : curie  
-    {field} analysis_label : string  
-    {field} analysis_description : string  
-    {field} analysis_study_ref : curie  
-    {field} analysis_main_tool_version : string  
-    {field} analysis_protocol : uriorcurie  
-    {field} analysis_workflow : uriorcurie  
-}
-class "FileCollection" [[{A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files.}]] {
-    {field} filecollection_external_id : curie  
-    {field} filecollection_id : curie  
-    {field} filecollection_label : string  
-    {field} deposit_versioned_ref : curie  
 }
 class "File" [[{General information about a particular data file. Most fields (marked with an asterix*) are copied from the GA4GH DRS DrsObject model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/DrsObjectModel), which is the top-level object returned from a DRS server in response to a successful lookup call (i.e. https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/Objects).}]] {
     {field} file_external_id : curie  
@@ -316,32 +310,9 @@ class "File" [[{General information about a particular data file. Most fields (m
     {field} updated_time : datetime  
     {field} file_version : string  
 }
-class "Experiment" [[{Represents a sequencing experiment that has been carried out within a study, based on biological samples, and providing data files as output. Subsequent analysis of output data is described by the Analysis entity.}]] {
-    {field} experiment_external_id : curie  
-    {field} experiment_id : curie  
-    {field} experiment_label : string  
-    {field} experiment_study_ref : curie  
-    {field} design_description : string  
-    {field} sequencing_protocol : uriorcurie  
-}
 class "Donor" [[{Information about the donor or complete organism from which the sample was taken.}]] {
     {field} donor_external_id : curie  
     {field} donor_id : curie  
-}
-class "Document" [[{Information about a document containing metadata about a set of genome annotation files, harmonised according to the "FAIRification of Genomic Annotations" data model.  This includes self-referential identifiers and versioning of public deposits of the document.}]] {
-    {field} document_label : string  
-}
-"TopLevel" *--> "0..*" "Study" : "studies"
-"TopLevel" *--> "0..*" "Sample" : "samples"
-"TopLevel" *--> "0..*" "Analysis" : "analyses"
-"TopLevel" *--> "0..*" "FileCollection" : "file_collections"
-"TopLevel" *--> "0..*" "File" : "files"
-"TopLevel" *--> "0..*" "Experiment" : "experiments"
-"TopLevel" *--> "0..*" "Donor" : "donors"
-"TopLevel" *--> "1" "Document" : "document"
-class "Term" [[{Helper entity to represent an ontology term as a data value. }]] {
-    {field} id : curie  
-    {field} label : string  
 }
 "Analysis" *--> "1" "Term" : "analysis_type"
 "Experiment" *--> "0..1" "Term" : "antibody_target"
@@ -360,12 +331,26 @@ class "Term" [[{Helper entity to represent an ontology term as a data value. }]]
 "GenomicAnnotationFile" *--> "1..*" "Term" : "sequence_features"
 "Donor" *--> "0..1" "Term" : "sex"
 "Donor" *--> "1" "Term" : "species_taxon"
+class "Study" [[{A scientific study, i.e. a unit of research, within which experiments and/or analyses have been carried out.}]] {
+    {field} study_external_id : curie  
+    {field} study_id : curie  
+    {field} study_title : string  
+    {field} study_abstract : string  
+    {field} project_external_ref : uriorcurie  
+    {field} project_name : string  
+    {field} publications : curie  [0..*]
+}
 class "Contact" [[{Contact information for a person or an organisation.}]] {
     {field} name : string  
     {field} contact_id : curie  
     {field} email : string  
 }
+class "Bundle" [[{A bundle representing a set of genome annotation files, organised in sub-collections. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model.}]] {
+
+}
 "Study" *--> "0..1" "Contact" : "study_contact"
+"Bundle" *--> "0..*" "Study" : "studies"
+"Bundle" *--> "0..*" "Sample" : "samples"
 class "QualityAssessment" [[{Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis.}]] {
     {field} assessment_details_url : uri  
 }
@@ -375,12 +360,15 @@ class "Any" [[{The Any allows the range of a slot to be any object (see https://
 "QualityAssessment" *--> "1" "Any" : "assessment_values"
 "QualityAssessment" *--> "1" "Any" : "assessment_method"
 "File" *--> "0..*" "QualityAssessment" : "quality_assessments"
-class "OntologyVersions" [[{Information about an ontology used in the metadata.}]] {
+class "BundleMetadata" [[{Top-level metadata about a bundle representing a set of genome annotation files, harmonised according to the "FAIRification of Genomic Annotations" data model.  This includes self-referential identifiers and versioning of public deposits of the harmonized metadata.}]] {
+    {field} bundle_label : string  
+}
+class "OntologyVersions" [[{Information about an ontology used for the bundle.}]] {
     {field} namespace : string  
     {field} ontology_url : uri  
     {field} versioned_ontology_url : uri  
 }
-"Document" *--> "1..*" "OntologyVersions" : "document_ontology_versions"
+"BundleMetadata" *--> "1..*" "OntologyVersions" : "bundle_ontology_versions"
 class "InputSource" [[{General object representing the source of data files, samples, or other entities used as input to a process or a result. An input source refering to a single file or sample object will represent that item only, while an input source referring to a container or process may represent a number of disctinct input items. InputSource also contains information about the type of relationship, replication labelling, versioning and retrieval date.}]] {
     {field} inputsource_external_ref : uriorcurie  
     {field} inputsource_ref : curie  
@@ -390,9 +378,15 @@ class "InputSource" [[{General object representing the source of data files, sam
     {field} version : string  
     {field} date_of_retrieval : date  
 }
+class "FileCollection" [[{A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files.}]] {
+    {field} filecollection_external_id : curie  
+    {field} filecollection_id : curie  
+    {field} filecollection_label : string  
+    {field} deposit_versioned_ref : curie  
+}
 "InputSource" *--> "0..*" "Any" : "database_accessions"
 "Analysis" *--> "1..*" "InputSource" : "analysis_input_sources"
-"Document" *--> "0..*" "InputSource" : "document_input_sources"
+"BundleMetadata" *--> "0..*" "InputSource" : "bundle_input_sources"
 "Experiment" *--> "1..*" "InputSource" : "experiment_samples"
 "File" *--> "1..*" "InputSource" : "file_input_sources"
 "FileCollection" *--> "0..*" "InputSource" : "filecollection_input_sources"
@@ -407,6 +401,7 @@ class "GenomeAssembly" [[{Information about of the exact genome assembly used to
 "File" ^-- "GenomicAnnotationFile"
 "FileCollection" *--> "0..1" "Contact" : "filecollection_contact"
 "FileCollection" *--> "0..1" "Any" : "filecollection_description"
+"Bundle" *--> "0..*" "FileCollection" : "file_collections"
 class "Checksum" [[{A checksum of a File object (orig: DrsObject). Exact copy of the Checksum object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/ChecksumModel).}]] {
     {field} checksum : string  
     {field} checksum_type : string  
@@ -417,14 +412,19 @@ class "AccessMethod" [[{Description of an access method (i.e. communication prot
 }
 "File" *--> "1..*" "Checksum" : "checksums"
 "File" *--> "1..*" "AccessMethod" : "access_methods"
+"Bundle" *--> "0..*" "File" : "files"
+"Bundle" *--> "0..*" "Experiment" : "experiments"
+"Bundle" *--> "0..*" "Donor" : "donors"
 class "Deposit" [[{Information about a public deposit of a document containing metadata about a set of genome annotation files.}]] {
     {field} deposit_id : curie  
     {field} deposit_versioned_id : curie  
     {field} deposit_first_created : datetime  
     {field} deposit_last_changed : datetime  
 }
-"Document" *--> "0..1" "Deposit" : "document_deposit"
-"Document" *--> "0..1" "Any" : "document_description"
+"BundleMetadata" *--> "0..1" "Deposit" : "bundle_deposit"
+"BundleMetadata" *--> "0..1" "Any" : "bundle_description"
+"Bundle" *--> "1" "BundleMetadata" : "bundle_metadata"
+"Bundle" *--> "0..*" "Analysis" : "analyses"
 class "AssessmentValue" [[{Key-value pair representing a specific value produced by a quality assessment.}]] {
     {field} key : string  
 }

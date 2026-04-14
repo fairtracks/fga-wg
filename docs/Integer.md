@@ -41,7 +41,7 @@ URI: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -51,7 +51,7 @@ URI: [xsd:integer](http://www.w3.org/2001/XMLSchema#integer)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:integer |
-| native | https://w3id.org/fga-wg/schema/top_level/integer |
+| native | https://w3id.org/fga-wg/schema/bundle/integer |
 | exact | schema:Integer |
 
 

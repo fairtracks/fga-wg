@@ -14,7 +14,7 @@ _Whether the sequence features are linked across positions (at least one edge be
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/has_edges](https://w3id.org/fga-wg/schema/top_level/has_edges)
+URI: [https://w3id.org/fga-wg/schema/bundle/has_edges](https://w3id.org/fga-wg/schema/bundle/has_edges)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_edges](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_edges](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/has_edges |
-| native | https://w3id.org/fga-wg/schema/top_level/has_edges |
+| self | https://w3id.org/fga-wg/schema/bundle/has_edges |
+| native | https://w3id.org/fga-wg/schema/bundle/has_edges |
 
 
 
@@ -96,7 +96,7 @@ description: Whether the sequence features are linked across positions (at least
   edge between features exists).
 examples:
 - value: 'False'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

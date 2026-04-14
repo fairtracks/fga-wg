@@ -14,7 +14,7 @@ _External, globally unique identifier for the data file._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_external_id](https://w3id.org/fga-wg/schema/top_level/file_external_id)
+URI: [https://w3id.org/fga-wg/schema/bundle/file_external_id](https://w3id.org/fga-wg/schema/bundle/file_external_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_external_id](https://w3id.or
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_external_id](https://w3id.or
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_external_id |
-| native | https://w3id.org/fga-wg/schema/top_level/file_external_id |
+| self | https://w3id.org/fga-wg/schema/bundle/file_external_id |
+| native | https://w3id.org/fga-wg/schema/bundle/file_external_id |
 
 
 
@@ -95,7 +95,7 @@ name: file_external_id
 description: External, globally unique identifier for the data file.
 examples:
 - value: encode:ENCFF323LCS
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

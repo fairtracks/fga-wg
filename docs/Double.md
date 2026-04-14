@@ -41,7 +41,7 @@ URI: [xsd:double](http://www.w3.org/2001/XMLSchema#double)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -51,7 +51,7 @@ URI: [xsd:double](http://www.w3.org/2001/XMLSchema#double)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:double |
-| native | https://w3id.org/fga-wg/schema/top_level/double |
+| native | https://w3id.org/fga-wg/schema/bundle/double |
 | close | schema:Float |
 
 

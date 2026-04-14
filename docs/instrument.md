@@ -14,7 +14,7 @@ _Technology platform used to perform nucleic acid sequencing, including name and
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/instrument](https://w3id.org/fga-wg/schema/top_level/instrument)
+URI: [https://w3id.org/fga-wg/schema/bundle/instrument](https://w3id.org/fga-wg/schema/bundle/instrument)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/instrument](https://w3id.org/fga-
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/instrument](https://w3id.org/fga-
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/instrument |
-| native | https://w3id.org/fga-wg/schema/top_level/instrument |
+| self | https://w3id.org/fga-wg/schema/bundle/instrument |
+| native | https://w3id.org/fga-wg/schema/bundle/instrument |
 
 
 
@@ -99,7 +99,7 @@ examples:
 - object:
     id: obi:OBI_0002128
     label: Illumina Genome Analyzer
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

@@ -14,7 +14,7 @@ _A human-readable description of the file collection, short enough to be used fo
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_label](https://w3id.org/fga-wg/schema/top_level/filecollection_label)
+URI: [https://w3id.org/fga-wg/schema/bundle/filecollection_label](https://w3id.org/fga-wg/schema/bundle/filecollection_label)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_label](https://w3i
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_label](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/filecollection_label |
-| native | https://w3id.org/fga-wg/schema/top_level/filecollection_label |
+| self | https://w3id.org/fga-wg/schema/bundle/filecollection_label |
+| native | https://w3id.org/fga-wg/schema/bundle/filecollection_label |
 
 
 
@@ -104,7 +104,7 @@ description: A human-readable description of the file collection, short enough t
   etc.
 examples:
 - value: 'IHEC data portal: ENCODE dataset'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - FileCollection

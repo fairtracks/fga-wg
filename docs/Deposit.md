@@ -14,7 +14,7 @@ _Information about a public deposit of a document containing metadata about a se
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/Deposit](https://w3id.org/fga-wg/schema/top_level/Deposit)
+URI: [https://w3id.org/fga-wg/schema/bundle/Deposit](https://w3id.org/fga-wg/schema/bundle/Deposit)
 
 
 
@@ -73,7 +73,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Deposit](https://w3id.org/fga-wg/
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Document](Document.md) | [document_deposit](document_deposit.md) | range | [Deposit](Deposit.md) |
+| [BundleMetadata](BundleMetadata.md) | [bundle_deposit](bundle_deposit.md) | range | [Deposit](Deposit.md) |
 
 
 
@@ -95,7 +95,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Deposit](https://w3id.org/fga-wg/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -104,8 +104,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Deposit](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/Deposit |
-| native | https://w3id.org/fga-wg/schema/top_level/Deposit |
+| self | https://w3id.org/fga-wg/schema/bundle/Deposit |
+| native | https://w3id.org/fga-wg/schema/bundle/Deposit |
 
 
 
@@ -123,7 +123,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Deposit](https://w3id.org/fga-wg/
 name: Deposit
 description: Information about a public deposit of a document containing metadata
   about a set of genome annotation files.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - deposit_id
 - deposit_versioned_id
@@ -140,7 +140,7 @@ slots:
 name: Deposit
 description: Information about a public deposit of a document containing metadata
   about a set of genome annotation files.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   deposit_id:
     name: deposit_id
@@ -148,7 +148,7 @@ attributes:
       of the metadata document. A DOI or other persistent identifier is recommended.
     examples:
     - value: doi:10.1234/zenodo.12345678
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Deposit
     domain_of:
@@ -161,7 +161,7 @@ attributes:
       recommended.
     examples:
     - value: doi:10.1234/zenodo.12345679
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: Deposit
@@ -175,7 +175,7 @@ attributes:
       of the metadata document.
     examples:
     - value: '2025-07-01T12:36:00Z'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Deposit
     domain_of:
@@ -188,7 +188,7 @@ attributes:
       document (corresponding to "deposit_versioned_id").
     examples:
     - value: '2025-07-01T12:36:00Z'
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Deposit
     domain_of:

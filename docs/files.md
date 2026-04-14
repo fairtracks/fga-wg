@@ -14,7 +14,7 @@ _Information about particular genome annotation (and other relevant) files._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/files](https://w3id.org/fga-wg/schema/top_level/files)
+URI: [https://w3id.org/fga-wg/schema/bundle/files](https://w3id.org/fga-wg/schema/bundle/files)
 <!-- no inheritance hierarchy -->
 
 
@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/files](https://w3id.org/fga-wg/sc
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TopLevel](TopLevel.md) | A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document. |  no  |
+| [Bundle](Bundle.md) | A bundle representing a set of genome annotation files, organised in sub-collections. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. |  no  |
 
 
 
@@ -39,7 +39,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/files](https://w3id.org/fga-wg/sc
 | Property | Value |
 | --- | --- |
 | Range | [File](File.md) |
-| Domain Of | [TopLevel](TopLevel.md) |
+| Domain Of | [Bundle](Bundle.md) |
 
 ### Cardinality and Requirements
 
@@ -65,7 +65,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/files](https://w3id.org/fga-wg/sc
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -74,8 +74,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/files](https://w3id.org/fga-wg/sc
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/files |
-| native | https://w3id.org/fga-wg/schema/top_level/files |
+| self | https://w3id.org/fga-wg/schema/bundle/files |
+| native | https://w3id.org/fga-wg/schema/bundle/files |
 
 
 
@@ -86,10 +86,10 @@ URI: [https://w3id.org/fga-wg/schema/top_level/files](https://w3id.org/fga-wg/sc
 ```yaml
 name: files
 description: Information about particular genome annotation (and other relevant) files.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
-- TopLevel
+- Bundle
 range: File
 multivalued: true
 inlined: true

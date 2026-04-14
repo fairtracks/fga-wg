@@ -14,7 +14,7 @@ _Geographical location where the sample was collected._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/sample_collection_location](https://w3id.org/fga-wg/schema/top_level/sample_collection_location)
+URI: [https://w3id.org/fga-wg/schema/bundle/sample_collection_location](https://w3id.org/fga-wg/schema/bundle/sample_collection_location)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_collection_location](https
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_collection_location](https
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/sample_collection_location |
-| native | https://w3id.org/fga-wg/schema/top_level/sample_collection_location |
+| self | https://w3id.org/fga-wg/schema/bundle/sample_collection_location |
+| native | https://w3id.org/fga-wg/schema/bundle/sample_collection_location |
 
 
 
@@ -85,7 +85,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sample_collection_location](https
 ```yaml
 name: sample_collection_location
 description: Geographical location where the sample was collected.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

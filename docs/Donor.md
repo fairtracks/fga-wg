@@ -14,7 +14,7 @@ _Information about the donor or complete organism from which the sample was take
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/Donor](https://w3id.org/fga-wg/schema/top_level/Donor)
+URI: [https://w3id.org/fga-wg/schema/bundle/Donor](https://w3id.org/fga-wg/schema/bundle/Donor)
 
 
 
@@ -97,7 +97,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Donor](https://w3id.org/fga-wg/sc
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [TopLevel](TopLevel.md) | [donors](donors.md) | range | [Donor](Donor.md) |
+| [Bundle](Bundle.md) | [donors](donors.md) | range | [Donor](Donor.md) |
 
 
 
@@ -119,7 +119,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Donor](https://w3id.org/fga-wg/sc
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -128,8 +128,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Donor](https://w3id.org/fga-wg/sc
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/Donor |
-| native | https://w3id.org/fga-wg/schema/top_level/Donor |
+| self | https://w3id.org/fga-wg/schema/bundle/Donor |
+| native | https://w3id.org/fga-wg/schema/bundle/Donor |
 
 
 
@@ -147,7 +147,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Donor](https://w3id.org/fga-wg/sc
 name: Donor
 description: Information about the donor or complete organism from which the sample
   was taken.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 slots:
 - donor_external_id
 - donor_id
@@ -164,14 +164,14 @@ slots:
 name: Donor
 description: Information about the donor or complete organism from which the sample
   was taken.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 attributes:
   donor_external_id:
     name: donor_external_id
     description: External, globally unique identifier for the donor/organism.
     examples:
     - value: biosamples:SAMN04284578
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Donor
     domain_of:
@@ -183,7 +183,7 @@ attributes:
       deposit). '
     examples:
     - value: donor:ENCDO001AAA
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     identifier: true
     owner: Donor
@@ -198,7 +198,7 @@ attributes:
     - object:
         id: NCBITaxon:9606
         label: Homo sapiens
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Donor
     domain_of:
@@ -212,7 +212,7 @@ attributes:
     - object:
         id: CARO:0000027
         label: male organism
-    from_schema: https://w3id.org/fga-wg/schema/top_level
+    from_schema: https://w3id.org/fga-wg/schema/bundle
     rank: 1000
     owner: Donor
     domain_of:

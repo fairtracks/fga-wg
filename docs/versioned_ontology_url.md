@@ -14,7 +14,7 @@ _The versioned URL of the ontology (e.g. the "versionIRI" in OWL)._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url](https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url)
+URI: [https://w3id.org/fga-wg/schema/bundle/versioned_ontology_url](https://w3id.org/fga-wg/schema/bundle/versioned_ontology_url)
 <!-- no inheritance hierarchy -->
 
 
@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url](https://w
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [OntologyVersions](OntologyVersions.md) | Information about an ontology used in the metadata. |  no  |
+| [OntologyVersions](OntologyVersions.md) | Information about an ontology used for the bundle. |  no  |
 
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url](https://w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url](https://w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url |
-| native | https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url |
+| self | https://w3id.org/fga-wg/schema/bundle/versioned_ontology_url |
+| native | https://w3id.org/fga-wg/schema/bundle/versioned_ontology_url |
 
 
 
@@ -95,7 +95,7 @@ name: versioned_ontology_url
 description: The versioned URL of the ontology (e.g. the "versionIRI" in OWL).
 examples:
 - value: http://edamontology.org/EDAM_1.21.owl
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - OntologyVersions

@@ -14,7 +14,7 @@ _Main values produced by the quality assessment._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/assessment_values](https://w3id.org/fga-wg/schema/top_level/assessment_values)
+URI: [https://w3id.org/fga-wg/schema/bundle/assessment_values](https://w3id.org/fga-wg/schema/bundle/assessment_values)
 <!-- no inheritance hierarchy -->
 
 
@@ -87,7 +87,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -96,8 +96,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/assessment_values |
-| native | https://w3id.org/fga-wg/schema/top_level/assessment_values |
+| self | https://w3id.org/fga-wg/schema/bundle/assessment_values |
+| native | https://w3id.org/fga-wg/schema/bundle/assessment_values |
 
 
 
@@ -113,7 +113,7 @@ examples:
     nreads: 21018235
     nreads_in_peaks: 6161851
     frip: 0.2931669095906483
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - QualityAssessment

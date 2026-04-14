@@ -14,7 +14,7 @@ _Whether the sequence lengths are constant (all sequence features have the same 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/lengths_constant](https://w3id.org/fga-wg/schema/top_level/lengths_constant)
+URI: [https://w3id.org/fga-wg/schema/bundle/lengths_constant](https://w3id.org/fga-wg/schema/bundle/lengths_constant)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/lengths_constant](https://w3id.or
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/lengths_constant](https://w3id.or
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/lengths_constant |
-| native | https://w3id.org/fga-wg/schema/top_level/lengths_constant |
+| self | https://w3id.org/fga-wg/schema/bundle/lengths_constant |
+| native | https://w3id.org/fga-wg/schema/bundle/lengths_constant |
 
 
 
@@ -95,7 +95,7 @@ description: Whether the sequence lengths are constant (all sequence features ha
   the same length, excluding features at the very end of a sequence).
 examples:
 - value: 'False'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

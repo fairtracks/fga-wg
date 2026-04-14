@@ -14,7 +14,7 @@ _Whether the sequence features are overlapping (at least one base pair is simult
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/elements_overlapping](https://w3id.org/fga-wg/schema/top_level/elements_overlapping)
+URI: [https://w3id.org/fga-wg/schema/bundle/elements_overlapping](https://w3id.org/fga-wg/schema/bundle/elements_overlapping)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/elements_overlapping](https://w3i
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/elements_overlapping](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/elements_overlapping |
-| native | https://w3id.org/fga-wg/schema/top_level/elements_overlapping |
+| self | https://w3id.org/fga-wg/schema/bundle/elements_overlapping |
+| native | https://w3id.org/fga-wg/schema/bundle/elements_overlapping |
 
 
 
@@ -96,7 +96,7 @@ description: Whether the sequence features are overlapping (at least one base pa
   is simultaneously covered by two sequence features).
 examples:
 - value: 'False'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

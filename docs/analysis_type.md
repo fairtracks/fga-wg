@@ -14,7 +14,7 @@ _The type of analysis carried out._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_type](https://w3id.org/fga-wg/schema/top_level/analysis_type)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_type](https://w3id.org/fga-wg/schema/bundle/analysis_type)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_type](https://w3id.org/f
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_type](https://w3id.org/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_type |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_type |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_type |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_type |
 
 
 
@@ -97,7 +97,7 @@ examples:
 - object:
     id: edam:operation_3222
     label: Peak calling
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Analysis

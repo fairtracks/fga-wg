@@ -14,7 +14,7 @@ _A list of checksums of the data file. At least one checksum must be provided. F
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/checksums](https://w3id.org/fga-wg/schema/top_level/checksums)
+URI: [https://w3id.org/fga-wg/schema/bundle/checksums](https://w3id.org/fga-wg/schema/bundle/checksums)
 <!-- no inheritance hierarchy -->
 
 
@@ -74,7 +74,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/checksums](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -83,8 +83,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/checksums](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/checksums |
-| native | https://w3id.org/fga-wg/schema/top_level/checksums |
+| self | https://w3id.org/fga-wg/schema/bundle/checksums |
+| native | https://w3id.org/fga-wg/schema/bundle/checksums |
 
 
 
@@ -100,7 +100,7 @@ examples:
 - object:
     checksum: 535bc9628a1c5e5215226f9996e4eaca
     checksum_type: md5
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

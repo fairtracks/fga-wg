@@ -14,7 +14,7 @@ _Version of the main software tool used for the analysis._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_main_tool_version](https://w3id.org/fga-wg/schema/top_level/analysis_main_tool_version)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_main_tool_version](https://w3id.org/fga-wg/schema/bundle/analysis_main_tool_version)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_main_tool_version](https
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_main_tool_version](https
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_main_tool_version |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_main_tool_version |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_main_tool_version |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_main_tool_version |
 
 
 
@@ -94,7 +94,7 @@ name: analysis_main_tool_version
 description: Version of the main software tool used for the analysis.
 examples:
 - value: '2.10'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Analysis

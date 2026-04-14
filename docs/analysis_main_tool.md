@@ -14,7 +14,7 @@ _Main software tool used for the analysis._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/analysis_main_tool](https://w3id.org/fga-wg/schema/top_level/analysis_main_tool)
+URI: [https://w3id.org/fga-wg/schema/bundle/analysis_main_tool](https://w3id.org/fga-wg/schema/bundle/analysis_main_tool)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,7 +81,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -90,8 +90,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/analysis_main_tool |
-| native | https://w3id.org/fga-wg/schema/top_level/analysis_main_tool |
+| self | https://w3id.org/fga-wg/schema/bundle/analysis_main_tool |
+| native | https://w3id.org/fga-wg/schema/bundle/analysis_main_tool |
 
 
 
@@ -104,7 +104,7 @@ name: analysis_main_tool
 description: Main software tool used for the analysis.
 examples:
 - value: biotools:macs
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Analysis

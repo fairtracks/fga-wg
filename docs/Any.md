@@ -53,8 +53,8 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [InputSource](InputSource.md) | [database_accessions](database_accessions.md) | range | [Any](Any.md) |
+| [BundleMetadata](BundleMetadata.md) | [bundle_description](bundle_description.md) | range | [Any](Any.md) |
 | [Analysis](Analysis.md) | [analysis_main_tool](analysis_main_tool.md) | range | [Any](Any.md) |
-| [Document](Document.md) | [document_description](document_description.md) | range | [Any](Any.md) |
 | [FileCollection](FileCollection.md) | [filecollection_description](filecollection_description.md) | range | [Any](Any.md) |
 | [QualityAssessment](QualityAssessment.md) | [assessment_method](assessment_method.md) | range | [Any](Any.md) |
 | [QualityAssessment](QualityAssessment.md) | [assessment_values](assessment_values.md) | range | [Any](Any.md) |
@@ -80,7 +80,7 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -90,7 +90,7 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | linkml:Any |
-| native | https://w3id.org/fga-wg/schema/top_level/Any |
+| native | https://w3id.org/fga-wg/schema/bundle/Any |
 
 
 
@@ -107,7 +107,7 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 ```yaml
 name: Any
 description: The Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 class_uri: linkml:Any
 
 ```
@@ -119,7 +119,7 @@ class_uri: linkml:Any
 ```yaml
 name: Any
 description: The Any allows the range of a slot to be any object (see https://linkml.io/linkml/schemas/advanced.html#linkml-any-type).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 class_uri: linkml:Any
 
 ```

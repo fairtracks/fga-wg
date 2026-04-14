@@ -14,7 +14,7 @@ _External, globally unique identifier for the ontology term (in CURIE form)._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/id](https://w3id.org/fga-wg/schema/top_level/id)
+URI: [https://w3id.org/fga-wg/schema/bundle/id](https://w3id.org/fga-wg/schema/bundle/id)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/id](https://w3id.org/fga-wg/schem
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/id](https://w3id.org/fga-wg/schem
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/id |
-| native | https://w3id.org/fga-wg/schema/top_level/id |
+| self | https://w3id.org/fga-wg/schema/bundle/id |
+| native | https://w3id.org/fga-wg/schema/bundle/id |
 
 
 
@@ -96,7 +96,7 @@ description: External, globally unique identifier for the ontology term (in CURI
   form).
 examples:
 - value: obi:OBI_0000716
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Term

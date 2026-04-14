@@ -14,7 +14,7 @@ _A string that can be used to name a data file. This string is made up of upperc
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/file_name](https://w3id.org/fga-wg/schema/top_level/file_name)
+URI: [https://w3id.org/fga-wg/schema/bundle/file_name](https://w3id.org/fga-wg/schema/bundle/file_name)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_name](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/file_name](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/file_name |
-| native | https://w3id.org/fga-wg/schema/top_level/file_name |
+| self | https://w3id.org/fga-wg/schema/bundle/file_name |
+| native | https://w3id.org/fga-wg/schema/bundle/file_name |
 
 
 
@@ -98,7 +98,7 @@ description: A string that can be used to name a data file. This string is made 
   [portable filenames].
 examples:
 - value: 87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - File

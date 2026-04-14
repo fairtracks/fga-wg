@@ -46,7 +46,7 @@ URI: [shex:iri](http://www.w3.org/ns/shex#iri)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -56,7 +56,7 @@ URI: [shex:iri](http://www.w3.org/ns/shex#iri)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | shex:iri |
-| native | https://w3id.org/fga-wg/schema/top_level/objectidentifier |
+| native | https://w3id.org/fga-wg/schema/bundle/objectidentifier |
 
 
 

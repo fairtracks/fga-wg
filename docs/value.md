@@ -14,7 +14,7 @@ _Value corresponding to the assessment key._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/value](https://w3id.org/fga-wg/schema/top_level/value)
+URI: [https://w3id.org/fga-wg/schema/bundle/value](https://w3id.org/fga-wg/schema/bundle/value)
 <!-- no inheritance hierarchy -->
 
 
@@ -77,7 +77,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -86,8 +86,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/value |
-| native | https://w3id.org/fga-wg/schema/top_level/value |
+| self | https://w3id.org/fga-wg/schema/bundle/value |
+| native | https://w3id.org/fga-wg/schema/bundle/value |
 
 
 
@@ -98,7 +98,7 @@ Value must satisfy at least one of:
 ```yaml
 name: value
 description: Value corresponding to the assessment key.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - AssessmentValue

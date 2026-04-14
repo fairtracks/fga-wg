@@ -42,7 +42,7 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -52,7 +52,7 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:anyURI |
-| native | https://w3id.org/fga-wg/schema/top_level/uriorcurie |
+| native | https://w3id.org/fga-wg/schema/bundle/uriorcurie |
 
 
 

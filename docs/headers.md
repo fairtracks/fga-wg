@@ -14,7 +14,7 @@ _An optional list of headers to include in the HTTP request to `url`. These head
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/headers](https://w3id.org/fga-wg/schema/top_level/headers)
+URI: [https://w3id.org/fga-wg/schema/bundle/headers](https://w3id.org/fga-wg/schema/bundle/headers)
 <!-- no inheritance hierarchy -->
 
 
@@ -65,7 +65,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/headers](https://w3id.org/fga-wg/
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -74,8 +74,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/headers](https://w3id.org/fga-wg/
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/headers |
-| native | https://w3id.org/fga-wg/schema/top_level/headers |
+| self | https://w3id.org/fga-wg/schema/bundle/headers |
+| native | https://w3id.org/fga-wg/schema/bundle/headers |
 
 
 
@@ -87,7 +87,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/headers](https://w3id.org/fga-wg/
 name: headers
 description: An optional list of headers to include in the HTTP request to `url`.
   These headers can be used to provide auth tokens required to fetch the object bytes.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - AccessURL

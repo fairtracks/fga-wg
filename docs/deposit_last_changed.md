@@ -14,7 +14,7 @@ _The date and time of the last deposited change of the current metadata document
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/deposit_last_changed](https://w3id.org/fga-wg/schema/top_level/deposit_last_changed)
+URI: [https://w3id.org/fga-wg/schema/bundle/deposit_last_changed](https://w3id.org/fga-wg/schema/bundle/deposit_last_changed)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_last_changed](https://w3i
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_last_changed](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/deposit_last_changed |
-| native | https://w3id.org/fga-wg/schema/top_level/deposit_last_changed |
+| self | https://w3id.org/fga-wg/schema/bundle/deposit_last_changed |
+| native | https://w3id.org/fga-wg/schema/bundle/deposit_last_changed |
 
 
 
@@ -96,7 +96,7 @@ description: The date and time of the last deposited change of the current metad
   document (corresponding to "deposit_versioned_id").
 examples:
 - value: '2025-07-01T12:36:00Z'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Deposit

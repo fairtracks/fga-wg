@@ -14,7 +14,7 @@ _Reference to versioned id of deposit containing this file collection._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/deposit_versioned_ref](https://w3id.org/fga-wg/schema/top_level/deposit_versioned_ref)
+URI: [https://w3id.org/fga-wg/schema/bundle/deposit_versioned_ref](https://w3id.org/fga-wg/schema/bundle/deposit_versioned_ref)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_versioned_ref](https://w3
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_versioned_ref](https://w3
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/deposit_versioned_ref |
-| native | https://w3id.org/fga-wg/schema/top_level/deposit_versioned_ref |
+| self | https://w3id.org/fga-wg/schema/bundle/deposit_versioned_ref |
+| native | https://w3id.org/fga-wg/schema/bundle/deposit_versioned_ref |
 
 
 
@@ -95,7 +95,7 @@ name: deposit_versioned_ref
 description: Reference to versioned id of deposit containing this file collection.
 examples:
 - value: doi:10.1234/zenodo.12345679
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - FileCollection

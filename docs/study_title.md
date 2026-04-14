@@ -14,7 +14,7 @@ _Title of the study._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/study_title](https://w3id.org/fga-wg/schema/top_level/study_title)
+URI: [https://w3id.org/fga-wg/schema/bundle/study_title](https://w3id.org/fga-wg/schema/bundle/study_title)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/study_title](https://w3id.org/fga
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/study_title](https://w3id.org/fga
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/study_title |
-| native | https://w3id.org/fga-wg/schema/top_level/study_title |
+| self | https://w3id.org/fga-wg/schema/bundle/study_title |
+| native | https://w3id.org/fga-wg/schema/bundle/study_title |
 
 
 
@@ -95,7 +95,7 @@ name: study_title
 description: Title of the study.
 examples:
 - value: An integrative ENCODE resource for cancer genomics
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Study

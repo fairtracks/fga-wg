@@ -42,7 +42,7 @@ URI: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -52,7 +52,7 @@ URI: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
 | Mapping Type | Mapped Value |
 | ---  | ---  |
 | self | xsd:boolean |
-| native | https://w3id.org/fga-wg/schema/top_level/boolean |
+| native | https://w3id.org/fga-wg/schema/bundle/boolean |
 | exact | schema:Boolean |
 
 

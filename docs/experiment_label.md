@@ -14,7 +14,7 @@ _A human-readable description of the experiment, short enough to be used for lis
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/experiment_label](https://w3id.org/fga-wg/schema/top_level/experiment_label)
+URI: [https://w3id.org/fga-wg/schema/bundle/experiment_label](https://w3id.org/fga-wg/schema/bundle/experiment_label)
 <!-- no inheritance hierarchy -->
 
 
@@ -79,7 +79,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/experiment_label](https://w3id.or
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -88,8 +88,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/experiment_label](https://w3id.or
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/experiment_label |
-| native | https://w3id.org/fga-wg/schema/top_level/experiment_label |
+| self | https://w3id.org/fga-wg/schema/bundle/experiment_label |
+| native | https://w3id.org/fga-wg/schema/bundle/experiment_label |
 
 
 
@@ -103,7 +103,7 @@ description: A human-readable description of the experiment, short enough to be 
   for listings within software user interfaces, tables, illustration legends, etc.
 examples:
 - value: H3K9me3 ChIP-seq on human AG04450
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Experiment

@@ -14,7 +14,7 @@ _Name of the region in the cloud service provider that the object belongs to._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/region](https://w3id.org/fga-wg/schema/top_level/region)
+URI: [https://w3id.org/fga-wg/schema/bundle/region](https://w3id.org/fga-wg/schema/bundle/region)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/region](https://w3id.org/fga-wg/s
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/region](https://w3id.org/fga-wg/s
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/region |
-| native | https://w3id.org/fga-wg/schema/top_level/region |
+| self | https://w3id.org/fga-wg/schema/bundle/region |
+| native | https://w3id.org/fga-wg/schema/bundle/region |
 
 
 
@@ -86,7 +86,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/region](https://w3id.org/fga-wg/s
 name: region
 description: Name of the region in the cloud service provider that the object belongs
   to.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - AccessMethod

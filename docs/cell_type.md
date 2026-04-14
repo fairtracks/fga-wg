@@ -14,7 +14,7 @@ _Cell type of isolated normal cells in the biospecimen/sample._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/cell_type](https://w3id.org/fga-wg/schema/top_level/cell_type)
+URI: [https://w3id.org/fga-wg/schema/bundle/cell_type](https://w3id.org/fga-wg/schema/bundle/cell_type)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/cell_type](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/cell_type](https://w3id.org/fga-w
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/cell_type |
-| native | https://w3id.org/fga-wg/schema/top_level/cell_type |
+| self | https://w3id.org/fga-wg/schema/bundle/cell_type |
+| native | https://w3id.org/fga-wg/schema/bundle/cell_type |
 
 
 
@@ -85,7 +85,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/cell_type](https://w3id.org/fga-w
 ```yaml
 name: cell_type
 description: Cell type of isolated normal cells in the biospecimen/sample.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

@@ -14,7 +14,7 @@ _Main type of structural unit to be used for classification of the biospecimen/s
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/biospecimen_classification](https://w3id.org/fga-wg/schema/top_level/biospecimen_classification)
+URI: [https://w3id.org/fga-wg/schema/bundle/biospecimen_classification](https://w3id.org/fga-wg/schema/bundle/biospecimen_classification)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/biospecimen_classification](https
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/biospecimen_classification](https
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/biospecimen_classification |
-| native | https://w3id.org/fga-wg/schema/top_level/biospecimen_classification |
+| self | https://w3id.org/fga-wg/schema/bundle/biospecimen_classification |
+| native | https://w3id.org/fga-wg/schema/bundle/biospecimen_classification |
 
 
 
@@ -95,7 +95,7 @@ name: biospecimen_classification
 description: Main type of structural unit to be used for classification of the biospecimen/sample.
 examples:
 - value: cell line
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

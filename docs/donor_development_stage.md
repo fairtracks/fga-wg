@@ -14,7 +14,7 @@ _Development stage of the donor at the time of sampling._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/donor_development_stage](https://w3id.org/fga-wg/schema/top_level/donor_development_stage)
+URI: [https://w3id.org/fga-wg/schema/bundle/donor_development_stage](https://w3id.org/fga-wg/schema/bundle/donor_development_stage)
 <!-- no inheritance hierarchy -->
 
 
@@ -71,7 +71,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_development_stage](https://
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -80,8 +80,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/donor_development_stage](https://
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/donor_development_stage |
-| native | https://w3id.org/fga-wg/schema/top_level/donor_development_stage |
+| self | https://w3id.org/fga-wg/schema/bundle/donor_development_stage |
+| native | https://w3id.org/fga-wg/schema/bundle/donor_development_stage |
 
 
 
@@ -96,7 +96,7 @@ examples:
 - object:
     id: UBERON:0000323
     label: late embryo
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - Sample

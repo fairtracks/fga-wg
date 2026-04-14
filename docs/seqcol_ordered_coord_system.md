@@ -14,7 +14,7 @@ _Content-derived digest that uniquely identifies the ordered coordinate system o
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_ordered_coord_system](https://w3id.org/fga-wg/schema/top_level/seqcol_ordered_coord_system)
+URI: [https://w3id.org/fga-wg/schema/bundle/seqcol_ordered_coord_system](https://w3id.org/fga-wg/schema/bundle/seqcol_ordered_coord_system)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_ordered_coord_system](http
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_ordered_coord_system](http
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/seqcol_ordered_coord_system |
-| native | https://w3id.org/fga-wg/schema/top_level/seqcol_ordered_coord_system |
+| self | https://w3id.org/fga-wg/schema/bundle/seqcol_ordered_coord_system |
+| native | https://w3id.org/fga-wg/schema/bundle/seqcol_ordered_coord_system |
 
 
 
@@ -102,7 +102,7 @@ description: Content-derived digest that uniquely identifies the ordered coordin
   assembly.
 examples:
 - value: ga4gh:SC.name_length_pairs.Yyz0Expaluj09xdDYg2Y6VOApvjg05Hf
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - GenomeAssembly

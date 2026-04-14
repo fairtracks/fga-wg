@@ -14,7 +14,7 @@ _Labels denoting the biological replicates within which the relation is defined,
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/biological_replicate_labels](https://w3id.org/fga-wg/schema/top_level/biological_replicate_labels)
+URI: [https://w3id.org/fga-wg/schema/bundle/biological_replicate_labels](https://w3id.org/fga-wg/schema/bundle/biological_replicate_labels)
 <!-- no inheritance hierarchy -->
 
 
@@ -73,7 +73,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/biological_replicate_labels](http
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -82,8 +82,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/biological_replicate_labels](http
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/biological_replicate_labels |
-| native | https://w3id.org/fga-wg/schema/top_level/biological_replicate_labels |
+| self | https://w3id.org/fga-wg/schema/bundle/biological_replicate_labels |
+| native | https://w3id.org/fga-wg/schema/bundle/biological_replicate_labels |
 
 
 
@@ -98,7 +98,7 @@ description: Labels denoting the biological replicates within which the relation
 examples:
 - value: '1'
 - value: '2'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - InputSource

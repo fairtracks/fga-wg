@@ -14,7 +14,7 @@ _Human-readable description of the file collection._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/filecollection_description](https://w3id.org/fga-wg/schema/top_level/filecollection_description)
+URI: [https://w3id.org/fga-wg/schema/bundle/filecollection_description](https://w3id.org/fga-wg/schema/bundle/filecollection_description)
 <!-- no inheritance hierarchy -->
 
 
@@ -81,7 +81,7 @@ Value must satisfy at least one of:
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -90,8 +90,8 @@ Value must satisfy at least one of:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/filecollection_description |
-| native | https://w3id.org/fga-wg/schema/top_level/filecollection_description |
+| self | https://w3id.org/fga-wg/schema/bundle/filecollection_description |
+| native | https://w3id.org/fga-wg/schema/bundle/filecollection_description |
 
 
 
@@ -105,7 +105,7 @@ description: Human-readable description of the file collection.
 examples:
 - value: ENCODE dataset in the International Human Epigenome Consortium (IHEC) data
     portal, enhanced with metadata from the ENCODE data portal.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - FileCollection

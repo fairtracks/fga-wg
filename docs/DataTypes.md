@@ -12,7 +12,7 @@ _Types of data values associated with sequence features or edges._
 
 <div data-search-exclude markdown="1">
 
-URI: [https://w3id.org/fga-wg/schema/top_level/DataTypes](https://w3id.org/fga-wg/schema/top_level/DataTypes)
+URI: [https://w3id.org/fga-wg/schema/bundle/DataTypes](https://w3id.org/fga-wg/schema/bundle/DataTypes)
 
 ## Permissible Values
 | Value | Meaning | Description |
@@ -51,7 +51,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/DataTypes](https://w3id.org/fga-w
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/DataTypes](https://w3id.org/fga-w
 ```yaml
 name: DataTypes
 description: Types of data values associated with sequence features or edges.
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 permissible_values:
   integer:

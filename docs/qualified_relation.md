@@ -14,7 +14,7 @@ _A description of the relationship with the input source._
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/qualified_relation](https://w3id.org/fga-wg/schema/top_level/qualified_relation)
+URI: [https://w3id.org/fga-wg/schema/bundle/qualified_relation](https://w3id.org/fga-wg/schema/bundle/qualified_relation)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/qualified_relation](https://w3id.
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/qualified_relation](https://w3id.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/qualified_relation |
-| native | https://w3id.org/fga-wg/schema/top_level/qualified_relation |
+| self | https://w3id.org/fga-wg/schema/bundle/qualified_relation |
+| native | https://w3id.org/fga-wg/schema/bundle/qualified_relation |
 
 
 
@@ -95,7 +95,7 @@ name: qualified_relation
 description: A description of the relationship with the input source.
 examples:
 - value: bioschemas:FormalParameter
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - InputSource

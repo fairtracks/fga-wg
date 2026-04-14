@@ -14,7 +14,7 @@ _Whether the sequence features have lengths (at least one feature spans more tha
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/has_lengths](https://w3id.org/fga-wg/schema/top_level/has_lengths)
+URI: [https://w3id.org/fga-wg/schema/bundle/has_lengths](https://w3id.org/fga-wg/schema/bundle/has_lengths)
 <!-- no inheritance hierarchy -->
 
 
@@ -72,7 +72,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_lengths](https://w3id.org/fga
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -81,8 +81,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/has_lengths](https://w3id.org/fga
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/has_lengths |
-| native | https://w3id.org/fga-wg/schema/top_level/has_lengths |
+| self | https://w3id.org/fga-wg/schema/bundle/has_lengths |
+| native | https://w3id.org/fga-wg/schema/bundle/has_lengths |
 
 
 
@@ -96,7 +96,7 @@ description: Whether the sequence features have lengths (at least one feature sp
   more than 1 base pair).
 examples:
 - value: 'True'
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry

@@ -14,7 +14,7 @@ _Whether the edges linking sequence features denote a parent-child relationship 
 
 
 
-URI: [https://w3id.org/fga-wg/schema/top_level/edges_denote_parents](https://w3id.org/fga-wg/schema/top_level/edges_denote_parents)
+URI: [https://w3id.org/fga-wg/schema/bundle/edges_denote_parents](https://w3id.org/fga-wg/schema/bundle/edges_denote_parents)
 <!-- no inheritance hierarchy -->
 
 
@@ -64,7 +64,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edges_denote_parents](https://w3i
 ### Schema Source
 
 
-* from schema: https://w3id.org/fga-wg/schema/top_level
+* from schema: https://w3id.org/fga-wg/schema/bundle
 
 
 
@@ -73,8 +73,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/edges_denote_parents](https://w3i
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://w3id.org/fga-wg/schema/top_level/edges_denote_parents |
-| native | https://w3id.org/fga-wg/schema/top_level/edges_denote_parents |
+| self | https://w3id.org/fga-wg/schema/bundle/edges_denote_parents |
+| native | https://w3id.org/fga-wg/schema/bundle/edges_denote_parents |
 
 
 
@@ -87,7 +87,7 @@ name: edges_denote_parents
 description: Whether the edges linking sequence features denote a parent-child relationship
   (all edges between sequence features denote parent-child relationships such as genes
   to exons, i.e. where the child is fully covered by the parent).
-from_schema: https://w3id.org/fga-wg/schema/top_level
+from_schema: https://w3id.org/fga-wg/schema/bundle
 rank: 1000
 domain_of:
 - TrackGeometry
