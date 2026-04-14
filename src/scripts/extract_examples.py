@@ -15,7 +15,7 @@ from .pydantic_helpers import get_fields_from_model, extract_examples_from_field
     extract_model_from_field_info, field_is_list
 from .helpers import import_from_path
 
-TOP_LEVEL = 'TopLevel'
+TOP_LEVEL = 'Bundle'
 
 _project_root = Path(abspath(__file__ + '/../../../'))
 schema_v1 = import_from_path('pydantic_v1_model', _project_root / 'generated' / 'pydantic_v1_model.py')
@@ -24,8 +24,8 @@ schema_v2_linkml = import_from_path('pydantic_v2_linkml_model', _project_root / 
 
 
 def _get_reordered_top_level_fields(schema: ModuleType) -> dict[str, ModelField | FieldInfo]:
-    top_level_fields = get_fields_from_model(schema.TopLevel).copy()
-    ordered_fields = {'document': top_level_fields.pop('document')}
+    top_level_fields = get_fields_from_model(schema.Bundle).copy()
+    ordered_fields = {'bundle_metadata': top_level_fields.pop('bundle_metadata')}
     ordered_fields.update(top_level_fields)
     return ordered_fields
 

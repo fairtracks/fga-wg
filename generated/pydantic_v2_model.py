@@ -803,13 +803,13 @@ class Analysis(BaseModel):
     )
 
 
-class Document(BaseModel):
+class BundleMetadata(BaseModel):
     model_config = ConfigDict(
         extra="forbid",
     )
-    document_deposit: Deposit | None = Field(
+    bundle_deposit: Deposit | None = Field(
         None,
-        description="Information about the public deposit of the metadata document.",
+        description="Information about the public deposit of the bundle.",
         examples=[
             {
                 "deposit_first_created": "2025-07-01T12:36:00Z",
@@ -819,16 +819,16 @@ class Document(BaseModel):
             }
         ],
     )
-    document_description: str | None = Field(
+    bundle_description: str | None = Field(
         None,
-        description="Human-readable description of the metadata document.",
+        description="Human-readable description of the bundle.",
         examples=[
             'The metadata contents of the International Human Epigenome Consortium (IHEC) data portal, harmonised to follow the metadata model developed by the "FAIRification of Genomic Annotations WG" in the Research Data Alliance (RDA), enhanced with metadata from original sources.'
         ],
     )
-    document_input_sources: list[InputSource] | None = Field(
+    bundle_input_sources: list[InputSource] | None = Field(
         None,
-        description="References to other input sources from which this entire metadata document was derived, or possibly including DOIs of other metadata documents used as source.",
+        description="References to other input sources from which this entire bundle was derived, or possibly including DOIs of other bundles used as source.",
         examples=[
             [
                 {
@@ -838,12 +838,12 @@ class Document(BaseModel):
             ]
         ],
     )
-    document_label: constr(pattern=r"^.{1,60}$") = Field(
+    bundle_label: constr(pattern=r"^.{1,60}$") = Field(
         ...,
-        description="A human-readable description of the metadata document, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.",
+        description="A human-readable description of the bundle, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.",
         examples=["IHEC data portal metadata, harmonised to the FGA-WG model."],
     )
-    document_ontology_versions: list[OntologyVersions] = Field(
+    bundle_ontology_versions: list[OntologyVersions] = Field(
         ...,
         description='Map from the version-agnostic URL to a versioned URL (e.g. "versionIRI" in owl) of each ontology used in the current metadata deposit (corresponding to deposit_versioned_id").',
         examples=[
@@ -1531,17 +1531,17 @@ class GenomicAnnotationFile(BaseModel):
     )
 
 
-class TopLevel1(BaseModel):
+class Bundle(BaseModel):
     model_config = ConfigDict(
-        extra="forbid",
+        extra="allow",
     )
     analyses: list[Analysis] | None = Field(
         None,
         description="Information about computational processing and analyses that have been carried out to generate the files.",
     )
-    document: Document = Field(
+    bundle_metadata: BundleMetadata = Field(
         ...,
-        description="Information about this document containing harmonised metadata about a set of genome annotation files. This includes self-referential identifiers and versioning of public deposits of the document.",
+        description="Top-level metadata about the bundle of genomic annotation files.",
     )
     donors: list[Donor] | None = Field(
         None,
@@ -1569,17 +1569,17 @@ class TopLevel1(BaseModel):
     )
 
 
-class TopLevel(BaseModel):
+class Bundle1(BaseModel):
     model_config = ConfigDict(
-        extra="allow",
+        extra="forbid",
     )
     analyses: list[Analysis] | None = Field(
         None,
         description="Information about computational processing and analyses that have been carried out to generate the files.",
     )
-    document: Document = Field(
+    bundle_metadata: BundleMetadata = Field(
         ...,
-        description="Information about this document containing harmonised metadata about a set of genome annotation files. This includes self-referential identifiers and versioning of public deposits of the document.",
+        description="Top-level metadata about the bundle of genomic annotation files.",
     )
     donors: list[Donor] | None = Field(
         None,

@@ -66,11 +66,11 @@ class LinkMLMeta(RootModel):
         return key in self.root
 
 
-linkml_meta = LinkMLMeta({'default_prefix': 'https://w3id.org/fga-wg/schema/top_level/',
-     'id': 'https://w3id.org/fga-wg/schema/top_level',
+linkml_meta = LinkMLMeta({'default_prefix': 'https://w3id.org/fga-wg/schema/bundle/',
+     'id': 'https://w3id.org/fga-wg/schema/bundle',
      'imports': ['linkml:types',
+                 'BundleMetadata',
                  'Analysis',
-                 'Document',
                  'Donor',
                  'Experiment',
                  'File',
@@ -78,10 +78,10 @@ linkml_meta = LinkMLMeta({'default_prefix': 'https://w3id.org/fga-wg/schema/top_
                  'GenomicAnnotationFile',
                  'Sample',
                  'Study'],
-     'name': 'TopLevel',
+     'name': 'Bundle',
      'prefixes': {'linkml': {'prefix_prefix': 'linkml',
                              'prefix_reference': 'https://w3id.org/linkml/'}},
-     'source_file': 'src/schema/TopLevel.yaml'} )
+     'source_file': 'src/schema/Bundle.yaml'} )
 
 class OutputType(str, Enum):
     """
@@ -438,6 +438,20 @@ class BiospecimenClassification(str, Enum):
 
 
 
+class Deposit(ConfiguredBaseModel):
+    """
+    Information about a public deposit of a document containing metadata about a set of genome annotation files.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/fga-wg/schema/deposit'})
+
+    deposit_id: Optional[str] = Field(default=None, description="""A globally unique and persistent identifier for the public deposit of the metadata document. A DOI or other persistent identifier is recommended.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Deposit'],
+         'examples': [{'value': 'doi:10.1234/zenodo.12345678'}]} })
+    deposit_versioned_id: str = Field(default=..., description="""A globally unique, persistent and versioned identifier for the public deposit of the metadata document. A versioned DOI to a deposited document is recommended.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Deposit'],
+         'examples': [{'value': 'doi:10.1234/zenodo.12345679'}]} })
+    deposit_first_created: datetime  = Field(default=..., description="""The date and time of the creation of the first deposited version of the metadata document.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Deposit'], 'examples': [{'value': '2025-07-01T12:36:00Z'}]} })
+    deposit_last_changed: datetime  = Field(default=..., description="""The date and time of the last deposited change of the current metadata document (corresponding to \"deposit_versioned_id\").""", json_schema_extra = { "linkml_meta": {'domain_of': ['Deposit'], 'examples': [{'value': '2025-07-01T12:36:00Z'}]} })
+
+
 class InputSource(ConfiguredBaseModel):
     """
     General object representing the source of data files, samples, or other entities used as input to a process or a result. An input source refering to a single file or sample object will represent that item only, while an input source referring to a container or process may represent a number of disctinct input items. InputSource also contains information about the type of relationship, replication labelling, versioning and retrieval date.
@@ -461,6 +475,81 @@ class InputSource(ConfiguredBaseModel):
     technical_replicate_labels: Optional[list[str]] = Field(default=None, description="""Labels denoting the technical replicates within which the relation is defined, if any.""", json_schema_extra = { "linkml_meta": {'domain_of': ['InputSource'], 'examples': [{'value': '1_1'}, {'value': '1_2'}]} })
     version: Optional[str] = Field(default=None, description="""Version information for the retrieval from the input source.""", json_schema_extra = { "linkml_meta": {'domain_of': ['InputSource']} })
     date_of_retrieval: Optional[date] = Field(default=None, description="""Date of retrieval from the input source, typically used to timestamp downloading data from a database or URL.""", json_schema_extra = { "linkml_meta": {'domain_of': ['InputSource'], 'examples': [{'value': '2016-04-19'}]} })
+
+
+class BundleMetadata(ConfiguredBaseModel):
+    """
+    Top-level metadata about a bundle representing a set of genome annotation files, harmonised according to the \"FAIRification of Genomic Annotations\" data model.  This includes self-referential identifiers and versioning of public deposits of the harmonized metadata.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/fga-wg/schema/bundle_metadata'})
+
+    bundle_label: str = Field(default=..., description="""A human-readable description of the bundle, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BundleMetadata'],
+         'examples': [{'value': 'IHEC data portal metadata, harmonised to the FGA-WG '
+                                'model.'}]} })
+    bundle_description: Optional[str] = Field(default=None, description="""Human-readable description of the bundle.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'string'}, {'range': 'uri'}],
+         'domain_of': ['BundleMetadata'],
+         'examples': [{'value': 'The metadata contents of the International Human '
+                                'Epigenome Consortium (IHEC) data portal, harmonised '
+                                'to follow the metadata model developed by the '
+                                '"FAIRification of Genomic Annotations WG" in the '
+                                'Research Data Alliance (RDA), enhanced with metadata '
+                                'from original sources.'}]} })
+    bundle_deposit: Optional[Deposit] = Field(default=None, description="""Information about the public deposit of the bundle.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BundleMetadata'],
+         'examples': [{'object': {'deposit_first_created': '2025-07-01T12:36:00Z',
+                                  'deposit_id': 'doi:10.1234/zenodo.12345678',
+                                  'deposit_last_changed': '2025-07-01T12:36:00Z',
+                                  'deposit_versioned_id': 'doi:10.1234/zenodo.12345679'}}]} })
+    bundle_input_sources: Optional[list[InputSource]] = Field(default=None, description="""References to other input sources from which this entire bundle was derived, or possibly including DOIs of other bundles used as source.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BundleMetadata'],
+         'examples': [{'object': {'inputsource_external_ref': 'https://epigenomesportal.ca/ihec/',
+                                  'qualified_relation': 'prov:wasDerivedFrom'}}]} })
+    bundle_ontology_versions: list[OntologyVersions] = Field(default=..., description="""Map from the version-agnostic URL to a versioned URL (e.g. \"versionIRI\" in owl) of each ontology used in the current metadata deposit (corresponding to deposit_versioned_id\").""", json_schema_extra = { "linkml_meta": {'domain_of': ['BundleMetadata'],
+         'examples': [{'object': {'namespace': 'edam',
+                                  'ontology_url': 'http://edamontology.org/EDAM.owl',
+                                  'versioned_ontology_url': 'http://edamontology.org/EDAM_1.21.owl'}},
+                      {'object': {'namespace': 'cl',
+                                  'ontology_url': 'http://purl.obolibrary.org/obo/cl.owl',
+                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/cl/releases/2020-05-21/cl.owl'}},
+                      {'object': {'namespace': 'efo',
+                                  'ontology_url': 'http://www.ebi.ac.uk/efo/efo.owl',
+                                  'versioned_ontology_url': 'http://www.ebi.ac.uk/efo/releases/v3.21.0/efo.owl'}},
+                      {'object': {'namespace': 'ncit',
+                                  'ontology_url': 'http://purl.obolibrary.org/obo/ncit.owl',
+                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/ncit/releases/2020-07-17/ncit.owl'}},
+                      {'object': {'namespace': 'obi',
+                                  'ontology_url': 'http://purl.obolibrary.org/obo/obi.owl',
+                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/obi/2020-04-23/obi.owl'}},
+                      {'object': {'namespace': 'so',
+                                  'ontology_url': 'http://purl.obolibrary.org/obo/so.owl',
+                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/so/2020-08-20/so.owl'}},
+                      {'object': {'namespace': 'uberon',
+                                  'ontology_url': 'http://purl.obolibrary.org/obo/uberon.owl',
+                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/uberon/releases/2020-06-30/uberon.owl'}}]} })
+
+    @field_validator('bundle_label')
+    def pattern_bundle_label(cls, v):
+        pattern=re.compile(r"^.{1,60}$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid bundle_label format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid bundle_label format: {v}"
+            raise ValueError(err_msg)
+        return v
+
+
+class OntologyVersions(ConfiguredBaseModel):
+    """
+    Information about an ontology used for the bundle.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/fga-wg/schema/bundle_metadata'})
+
+    namespace: str = Field(default=..., description="""The CURIE namespace (prefix) an ontology (e.g. \"GO\" for Gene Ontology).""", json_schema_extra = { "linkml_meta": {'domain_of': ['OntologyVersions'], 'examples': [{'value': 'edam'}]} })
+    ontology_url: str = Field(default=..., description="""The version-agnostic URL of the ontology (e.g. the IRI of the ontology in OWL).""", json_schema_extra = { "linkml_meta": {'domain_of': ['OntologyVersions'],
+         'examples': [{'value': 'http://edamontology.org/EDAM.owl'}]} })
+    versioned_ontology_url: str = Field(default=..., description="""The versioned URL of the ontology (e.g. the \"versionIRI\" in OWL).""", json_schema_extra = { "linkml_meta": {'domain_of': ['OntologyVersions'],
+         'examples': [{'value': 'http://edamontology.org/EDAM_1.21.owl'}]} })
 
 
 class Term(ConfiguredBaseModel):
@@ -521,95 +610,6 @@ class Analysis(ConfiguredBaseModel):
             err_msg = f"Invalid analysis_label format: {v}"
             raise ValueError(err_msg)
         return v
-
-
-class Deposit(ConfiguredBaseModel):
-    """
-    Information about a public deposit of a document containing metadata about a set of genome annotation files.
-    """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/fga-wg/schema/deposit'})
-
-    deposit_id: Optional[str] = Field(default=None, description="""A globally unique and persistent identifier for the public deposit of the metadata document. A DOI or other persistent identifier is recommended.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Deposit'],
-         'examples': [{'value': 'doi:10.1234/zenodo.12345678'}]} })
-    deposit_versioned_id: str = Field(default=..., description="""A globally unique, persistent and versioned identifier for the public deposit of the metadata document. A versioned DOI to a deposited document is recommended.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Deposit'],
-         'examples': [{'value': 'doi:10.1234/zenodo.12345679'}]} })
-    deposit_first_created: datetime  = Field(default=..., description="""The date and time of the creation of the first deposited version of the metadata document.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Deposit'], 'examples': [{'value': '2025-07-01T12:36:00Z'}]} })
-    deposit_last_changed: datetime  = Field(default=..., description="""The date and time of the last deposited change of the current metadata document (corresponding to \"deposit_versioned_id\").""", json_schema_extra = { "linkml_meta": {'domain_of': ['Deposit'], 'examples': [{'value': '2025-07-01T12:36:00Z'}]} })
-
-
-class Document(ConfiguredBaseModel):
-    """
-    Information about a document containing metadata about a set of genome annotation files, harmonised according to the \"FAIRification of Genomic Annotations\" data model.  This includes self-referential identifiers and versioning of public deposits of the document.
-    """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/fga-wg/schema/document'})
-
-    document_label: str = Field(default=..., description="""A human-readable description of the metadata document, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Document'],
-         'examples': [{'value': 'IHEC data portal metadata, harmonised to the FGA-WG '
-                                'model.'}]} })
-    document_description: Optional[str] = Field(default=None, description="""Human-readable description of the metadata document.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'string'}, {'range': 'uri'}],
-         'domain_of': ['Document'],
-         'examples': [{'value': 'The metadata contents of the International Human '
-                                'Epigenome Consortium (IHEC) data portal, harmonised '
-                                'to follow the metadata model developed by the '
-                                '"FAIRification of Genomic Annotations WG" in the '
-                                'Research Data Alliance (RDA), enhanced with metadata '
-                                'from original sources.'}]} })
-    document_deposit: Optional[Deposit] = Field(default=None, description="""Information about the public deposit of the metadata document.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Document'],
-         'examples': [{'object': {'deposit_first_created': '2025-07-01T12:36:00Z',
-                                  'deposit_id': 'doi:10.1234/zenodo.12345678',
-                                  'deposit_last_changed': '2025-07-01T12:36:00Z',
-                                  'deposit_versioned_id': 'doi:10.1234/zenodo.12345679'}}]} })
-    document_input_sources: Optional[list[InputSource]] = Field(default=None, description="""References to other input sources from which this entire metadata document was derived, or possibly including DOIs of other metadata documents used as source.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Document'],
-         'examples': [{'object': {'inputsource_external_ref': 'https://epigenomesportal.ca/ihec/',
-                                  'qualified_relation': 'prov:wasDerivedFrom'}}]} })
-    document_ontology_versions: list[OntologyVersions] = Field(default=..., description="""Map from the version-agnostic URL to a versioned URL (e.g. \"versionIRI\" in owl) of each ontology used in the current metadata deposit (corresponding to deposit_versioned_id\").""", json_schema_extra = { "linkml_meta": {'domain_of': ['Document'],
-         'examples': [{'object': {'namespace': 'edam',
-                                  'ontology_url': 'http://edamontology.org/EDAM.owl',
-                                  'versioned_ontology_url': 'http://edamontology.org/EDAM_1.21.owl'}},
-                      {'object': {'namespace': 'cl',
-                                  'ontology_url': 'http://purl.obolibrary.org/obo/cl.owl',
-                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/cl/releases/2020-05-21/cl.owl'}},
-                      {'object': {'namespace': 'efo',
-                                  'ontology_url': 'http://www.ebi.ac.uk/efo/efo.owl',
-                                  'versioned_ontology_url': 'http://www.ebi.ac.uk/efo/releases/v3.21.0/efo.owl'}},
-                      {'object': {'namespace': 'ncit',
-                                  'ontology_url': 'http://purl.obolibrary.org/obo/ncit.owl',
-                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/ncit/releases/2020-07-17/ncit.owl'}},
-                      {'object': {'namespace': 'obi',
-                                  'ontology_url': 'http://purl.obolibrary.org/obo/obi.owl',
-                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/obi/2020-04-23/obi.owl'}},
-                      {'object': {'namespace': 'so',
-                                  'ontology_url': 'http://purl.obolibrary.org/obo/so.owl',
-                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/so/2020-08-20/so.owl'}},
-                      {'object': {'namespace': 'uberon',
-                                  'ontology_url': 'http://purl.obolibrary.org/obo/uberon.owl',
-                                  'versioned_ontology_url': 'http://purl.obolibrary.org/obo/uberon/releases/2020-06-30/uberon.owl'}}]} })
-
-    @field_validator('document_label')
-    def pattern_document_label(cls, v):
-        pattern=re.compile(r"^.{1,60}$")
-        if isinstance(v, list):
-            for element in v:
-                if isinstance(element, str) and not pattern.match(element):
-                    err_msg = f"Invalid document_label format: {element}"
-                    raise ValueError(err_msg)
-        elif isinstance(v, str) and not pattern.match(v):
-            err_msg = f"Invalid document_label format: {v}"
-            raise ValueError(err_msg)
-        return v
-
-
-class OntologyVersions(ConfiguredBaseModel):
-    """
-    Information about an ontology used in the metadata.
-    """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/fga-wg/schema/document'})
-
-    namespace: str = Field(default=..., description="""The CURIE namespace (prefix) an ontology (e.g. \"GO\" for Gene Ontology).""", json_schema_extra = { "linkml_meta": {'domain_of': ['OntologyVersions'], 'examples': [{'value': 'edam'}]} })
-    ontology_url: str = Field(default=..., description="""The version-agnostic URL of the ontology (e.g. the IRI of the ontology in OWL).""", json_schema_extra = { "linkml_meta": {'domain_of': ['OntologyVersions'],
-         'examples': [{'value': 'http://edamontology.org/EDAM.owl'}]} })
-    versioned_ontology_url: str = Field(default=..., description="""The versioned URL of the ontology (e.g. the \"versionIRI\" in OWL).""", json_schema_extra = { "linkml_meta": {'domain_of': ['OntologyVersions'],
-         'examples': [{'value': 'http://edamontology.org/EDAM_1.21.owl'}]} })
 
 
 class Donor(ConfiguredBaseModel):
@@ -1159,30 +1159,30 @@ class Study(ConfiguredBaseModel):
                                   'name': 'Mark Gerstein'}}]} })
 
 
-class TopLevel(ConfiguredBaseModel):
+class Bundle(ConfiguredBaseModel):
     """
-    A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the \"FAIRification of Genomic Annotations\" data model. This is the top-level class to be used as root for the metadata document.
+    A bundle representing a set of genome annotation files, organised in sub-collections. Metadata has been harmonised in line with the \"FAIRification of Genomic Annotations\" data model.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/fga-wg/schema/top_level'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/fga-wg/schema/bundle'})
 
-    document: Document = Field(default=..., description="""Information about this document containing harmonised metadata about a set of genome annotation files. This includes self-referential identifiers and versioning of public deposits of the document.""", json_schema_extra = { "linkml_meta": {'domain_of': ['TopLevel']} })
-    donors: Optional[list[Donor]] = Field(default=None, description="""Information about the donors or complete organisms from which the samples were taken.""", json_schema_extra = { "linkml_meta": {'domain_of': ['TopLevel']} })
-    experiments: Optional[list[Experiment]] = Field(default=None, description="""Information about sequencing experiments that have been carried out to generate the files.""", json_schema_extra = { "linkml_meta": {'domain_of': ['TopLevel']} })
-    files: Optional[list[Union[File,GenomicAnnotationFile]]] = Field(default=None, description="""Information about particular genome annotation (and other relevant) files.""", json_schema_extra = { "linkml_meta": {'domain_of': ['TopLevel']} })
-    file_collections: Optional[list[FileCollection]] = Field(default=None, description="""Information about collections of files contained in this dataset, each collection defined according to some selection criteria.""", json_schema_extra = { "linkml_meta": {'domain_of': ['TopLevel']} })
-    analyses: Optional[list[Analysis]] = Field(default=None, description="""Information about computational processing and analyses that have been carried out to generate the files.""", json_schema_extra = { "linkml_meta": {'domain_of': ['TopLevel']} })
-    samples: Optional[list[Sample]] = Field(default=None, description="""Information about the biospecimens/samples used as raw material for lab experiments.""", json_schema_extra = { "linkml_meta": {'domain_of': ['TopLevel']} })
-    studies: Optional[list[Study]] = Field(default=None, description="""The scientific studies, i.e. units of research, within which experiments and/or analyses have been carried out.""", json_schema_extra = { "linkml_meta": {'domain_of': ['TopLevel']} })
+    bundle_metadata: BundleMetadata = Field(default=..., description="""Top-level metadata about the bundle of genomic annotation files.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Bundle']} })
+    donors: Optional[list[Donor]] = Field(default=None, description="""Information about the donors or complete organisms from which the samples were taken.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Bundle']} })
+    experiments: Optional[list[Experiment]] = Field(default=None, description="""Information about sequencing experiments that have been carried out to generate the files.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Bundle']} })
+    files: Optional[list[Union[File,GenomicAnnotationFile]]] = Field(default=None, description="""Information about particular genome annotation (and other relevant) files.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Bundle']} })
+    file_collections: Optional[list[FileCollection]] = Field(default=None, description="""Information about collections of files contained in this dataset, each collection defined according to some selection criteria.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Bundle']} })
+    analyses: Optional[list[Analysis]] = Field(default=None, description="""Information about computational processing and analyses that have been carried out to generate the files.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Bundle']} })
+    samples: Optional[list[Sample]] = Field(default=None, description="""Information about the biospecimens/samples used as raw material for lab experiments.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Bundle']} })
+    studies: Optional[list[Study]] = Field(default=None, description="""The scientific studies, i.e. units of research, within which experiments and/or analyses have been carried out.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Bundle']} })
 
 
 # Model rebuild
 # see https://pydantic-docs.helpmanual.io/usage/models/#rebuilding-a-model
+Deposit.model_rebuild()
 InputSource.model_rebuild()
+BundleMetadata.model_rebuild()
+OntologyVersions.model_rebuild()
 Term.model_rebuild()
 Analysis.model_rebuild()
-Deposit.model_rebuild()
-Document.model_rebuild()
-OntologyVersions.model_rebuild()
 Donor.model_rebuild()
 Experiment.model_rebuild()
 File.model_rebuild()
@@ -1198,4 +1198,4 @@ TrackGeometry.model_rebuild()
 GenomicAnnotationFile.model_rebuild()
 Sample.model_rebuild()
 Study.model_rebuild()
-TopLevel.model_rebuild()
+Bundle.model_rebuild()

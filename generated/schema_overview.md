@@ -24,6 +24,12 @@ Any {
 AssessmentValue {
     string key  
 }
+Bundle {
+
+}
+BundleMetadata {
+    string bundle_label  
+}
 Checksum {
     string checksum  
     string checksum_type  
@@ -38,9 +44,6 @@ Deposit {
     curie deposit_id  
     datetime deposit_last_changed  
     curie deposit_versioned_id  
-}
-Document {
-    string document_label  
 }
 Donor {
     curie donor_external_id  
@@ -143,9 +146,6 @@ Term {
     curie id  
     string label  
 }
-TopLevel {
-
-}
 TrackGeometry {
     DataTypes edge_weight_type  
     boolean edges_are_directed  
@@ -168,10 +168,18 @@ Analysis ||--|o Any : "analysis_main_tool"
 Analysis ||--|| Term : "analysis_type"
 Analysis ||--}| InputSource : "analysis_input_sources"
 AssessmentValue ||--|| Any : "value"
-Document ||--|o Any : "document_description"
-Document ||--|o Deposit : "document_deposit"
-Document ||--}o InputSource : "document_input_sources"
-Document ||--}| OntologyVersions : "document_ontology_versions"
+Bundle ||--|| BundleMetadata : "bundle_metadata"
+Bundle ||--}o Analysis : "analyses"
+Bundle ||--}o Donor : "donors"
+Bundle ||--}o Experiment : "experiments"
+Bundle ||--}o File : "files"
+Bundle ||--}o FileCollection : "file_collections"
+Bundle ||--}o Sample : "samples"
+Bundle ||--}o Study : "studies"
+BundleMetadata ||--|o Any : "bundle_description"
+BundleMetadata ||--|o Deposit : "bundle_deposit"
+BundleMetadata ||--}o InputSource : "bundle_input_sources"
+BundleMetadata ||--}| OntologyVersions : "bundle_ontology_versions"
 Donor ||--|o Term : "sex"
 Donor ||--|| Term : "species_taxon"
 Experiment ||--|o Term : "antibody_target, instrument, library_layout"
@@ -199,14 +207,6 @@ QualityAssessment ||--|| Any : "assessment_method, assessment_values"
 Sample ||--|o Term : "cell_line, cell_type, donor_development_stage, organism_tissue, phenotype"
 Sample ||--}o Term : "other_biospecimen"
 Study ||--|o Contact : "study_contact"
-TopLevel ||--|| Document : "document"
-TopLevel ||--}o Analysis : "analyses"
-TopLevel ||--}o Donor : "donors"
-TopLevel ||--}o Experiment : "experiments"
-TopLevel ||--}o File : "files"
-TopLevel ||--}o FileCollection : "file_collections"
-TopLevel ||--}o Sample : "samples"
-TopLevel ||--}o Study : "studies"
 
 ```
 

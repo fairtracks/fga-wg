@@ -135,8 +135,8 @@ class KnownIssue(TypedDict):
 # ── Constants ──────────────────────────────────────────────────────────────────
 
 SCHEMA_DIR = Path("src/schema")
-TOP_LEVEL = SCHEMA_DIR / "TopLevel.yaml"
-TOP_LEVEL_CLASS = 'TopLevel'
+TOP_LEVEL = SCHEMA_DIR / "Bundle.yaml"
+TOP_LEVEL_CLASS = 'Bundle'
 LINT_CFG = Path("src/linkml_lint_config.yaml")
 GEN_DIR = Path("generated")
 JSON_SCHEMA = GEN_DIR / "schema.json"
@@ -693,8 +693,8 @@ def task_plantuml() -> TaskDict:
 
 def task_docs() -> TaskDict:
     """Generate per-class Markdown documentation → docs/"""
-    # TopLevel.md is used as the representative target for up-to-date checks
-    target = DOCS_DIR / "TopLevel.md"
+    # Bundle.md is used as the representative target for up-to-date checks
+    target = DOCS_DIR / "Bundle.md"
 
     def inject_examples_after_generation():
         from src.docs.inject_examples import inject_examples
