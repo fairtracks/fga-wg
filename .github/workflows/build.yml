@@ -68,7 +68,7 @@ jobs:
       # ── Deploy to GitHub Pages (push to main only) ────────────────────────
 
       - name: Deploy to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/gh-pages'
         run: uv run mkdocs gh-deploy --force
 
       # ── Upload artifacts for PR review ────────────────────────────────────
