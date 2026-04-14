@@ -53,8 +53,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessURL](https://w3id.org/fga-w
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [url](url.md) | 1 <br/> [Uri](Uri.md) | A fully resolvable URL that can be used to fetch the actual object bytes | direct |
-| [headers](headers.md) | * <br/> [String](String.md) | An optional list of headers to include in the HTTP request to `url` | direct |
+| [url](url.md) | 1 <br/> [Uri](Uri.md) | A fully resolvable URL that can be used to fetch the actual object bytes. | direct |
+| [headers](headers.md) | * <br/> [String](String.md) | An optional list of headers to include in the HTTP request to `url`. These headers can be used to provide auth tokens required to fetch the object bytes. | direct |
 
 
 

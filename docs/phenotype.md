@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/phenotype](https://w3id.org/fga-w
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Sample](Sample.md) | Information about a biospecimen/sample used as raw material for lab experimen... |  no  |
+| [Sample](Sample.md) | Information about a biospecimen/sample used as raw material for lab experiments. |  no  |
 
 
 

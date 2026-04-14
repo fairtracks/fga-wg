@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/sequencing_protocol](https://w3id
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Experiment](Experiment.md) | Represents a sequencing experiment that has been carried out within a study, ... |  no  |
+| [Experiment](Experiment.md) | Represents a sequencing experiment that has been carried out within a study, based on biological samples, and providing data files as output. Subsequent analysis of output data is described by the Analysis entity. |  no  |
 
 
 

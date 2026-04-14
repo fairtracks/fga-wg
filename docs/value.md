@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/value](https://w3id.org/fga-wg/sc
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AssessmentValue](AssessmentValue.md) | Key-value pair representing a specific value produced by a quality assessment |  no  |
+| [AssessmentValue](AssessmentValue.md) | Key-value pair representing a specific value produced by a quality assessment. |  no  |
 
 
 

@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/value_type](https://w3id.org/fga-
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TrackGeometry](TrackGeometry.md) | Overall geometric properties of the sequence features in the genomic annotati... |  no  |
+| [TrackGeometry](TrackGeometry.md) | Overall geometric properties of the sequence features in the genomic annotation file if considered as an one-dimensional genome browser track, in line with the track type delineations from Gundersen et. al, 2011. While conceptually based on visual characteristics, these properties are also useful to e.g. select relevant annotation files for non-visual analyses. |  no  |
 
 
 

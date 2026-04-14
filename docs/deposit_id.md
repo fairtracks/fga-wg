@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_id](https://w3id.org/fga-
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Deposit](Deposit.md) | Information about a public deposit of a document containing metadata about a ... |  no  |
+| [Deposit](Deposit.md) | Information about a public deposit of a document containing metadata about a set of genome annotation files. |  no  |
 
 
 

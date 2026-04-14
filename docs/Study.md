@@ -86,14 +86,14 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Study](https://w3id.org/fga-wg/sc
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [study_external_id](study_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the study (preferably a BioStudies C... | direct |
-| [study_id](study_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the study (unique within the metadata deposit) | direct |
-| [study_title](study_title.md) | 1 <br/> [String](String.md) | Title of the study | direct |
-| [study_abstract](study_abstract.md) | 0..1 <br/> [String](String.md) | Abstract of the study | direct |
-| [project_external_ref](project_external_ref.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Reference to a project within which the study was carried out (preferably a B... | direct |
-| [project_name](project_name.md) | 0..1 <br/> [String](String.md) | Name of the project within which the study was carried out | direct |
-| [publications](publications.md) | * <br/> [Curie](Curie.md) | List of (relevant) publications containing the results of the study (in the f... | direct |
-| [study_contact](study_contact.md) | 0..1 <br/> [Contact](Contact.md) | Contact point for the study | direct |
+| [study_external_id](study_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the study (preferably a BioStudies CURIE). | direct |
+| [study_id](study_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the study (unique within the metadata deposit). Namespace: "study". | direct |
+| [study_title](study_title.md) | 1 <br/> [String](String.md) | Title of the study. | direct |
+| [study_abstract](study_abstract.md) | 0..1 <br/> [String](String.md) | Abstract of the study. | direct |
+| [project_external_ref](project_external_ref.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Reference to a project within which the study was carried out (preferably a BioProject CURIE). | direct |
+| [project_name](project_name.md) | 0..1 <br/> [String](String.md) | Name of the project within which the study was carried out. | direct |
+| [publications](publications.md) | * <br/> [Curie](Curie.md) | List of (relevant) publications containing the results of the study (in the form of DOI CURIEs). | direct |
+| [study_contact](study_contact.md) | 0..1 <br/> [Contact](Contact.md) | Contact point for the study. | direct |
 
 
 

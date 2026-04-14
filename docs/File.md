@@ -230,25 +230,25 @@ URI: [https://w3id.org/fga-wg/schema/top_level/File](https://w3id.org/fga-wg/sch
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [file_external_id](file_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the data file | direct |
-| [file_id](file_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the data file (unique within the metadata deposit) | direct |
-| [file_name](file_name.md) | 0..1 <br/> [String](String.md) | A string that can be used to name a data file | direct |
-| [file_label](file_label.md) | 1 <br/> [String](String.md) | A human-readable description of the data file, short enough to be used for li... | direct |
-| [file_description](file_description.md) | 0..1 <br/> [String](String.md) | A human readable description of the data file | direct |
-| [filecollection_refs](filecollection_refs.md) | 1..* <br/> [Curie](Curie.md) | Internal references to the FileCollection objects (within the deposit) that c... | direct |
-| [file_input_sources](file_input_sources.md) | 1..* <br/> [InputSource](InputSource.md) | External or internal references to data sources for the file, typically a dat... | direct |
-| [drs_uri](drs_uri.md) | 0..1 <br/> [Uri](Uri.md) | A drs:// hostname-based URI, as defined in the DRS documentation, that tells ... | direct |
-| [access_methods](access_methods.md) | 1..* <br/> [AccessMethod](AccessMethod.md) | The list of access methods that can be used to fetch the data file | direct |
-| [run_provenance](run_provenance.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Document detailing the provenance of the experiment or analysis run which pro... | direct |
-| [quality_assessments](quality_assessments.md) | * <br/> [QualityAssessment](QualityAssessment.md) | An array of QualityAssessment objects containing the main quality scores from... | direct |
-| [file_type](file_type.md) | 1 <br/> [Term](Term.md) | The file format of the data file | direct |
-| [mime_type](mime_type.md) | 0..1 <br/> [String](String.md) | A string providing the mime-type of the data file | direct |
-| [data_content](data_content.md) | 1 <br/> [OutputType](OutputType.md) | Classification describing the file's purpose or contents | direct |
-| [file_size](file_size.md) | 1 <br/> [Integer](Integer.md) | The file size in bytes | direct |
-| [created_time](created_time.md) | 1 <br/> [Datetime](Datetime.md) | Timestamp of content creation in RFC3339 | direct |
-| [updated_time](updated_time.md) | 0..1 <br/> [Datetime](Datetime.md) | Timestamp of content update in RFC3339, identical to created_time in systems ... | direct |
-| [file_version](file_version.md) | 0..1 <br/> [String](String.md) | A string representing a version | direct |
-| [checksums](checksums.md) | 1..* <br/> [Checksum](Checksum.md) | A list of checksums of the data file | direct |
+| [file_external_id](file_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the data file. | direct |
+| [file_id](file_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the data file (unique within the metadata deposit). | direct |
+| [file_name](file_name.md) | 0..1 <br/> [String](String.md) | A string that can be used to name a data file. This string is made up of uppercase and lowercase letters, decimal digits, hypen, period, and underscore [A-Za-z0-9.-_]. See http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_282 [portable filenames]. | direct |
+| [file_label](file_label.md) | 1 <br/> [String](String.md) | A human-readable description of the data file, short enough to be used for listings within software user interfaces, tables, illustration legends, etc. | direct |
+| [file_description](file_description.md) | 0..1 <br/> [String](String.md) | A human readable description of the data file. | direct |
+| [filecollection_refs](filecollection_refs.md) | 1..* <br/> [Curie](Curie.md) | Internal references to the FileCollection objects (within the deposit) that contains the data file, if any. | direct |
+| [file_input_sources](file_input_sources.md) | 1..* <br/> [InputSource](InputSource.md) | External or internal references to data sources for the file, typically a data collection or a process that has generated the file. Internal references should lead to FileCollection, File, Experiment, or Analysis objects. | direct |
+| [drs_uri](drs_uri.md) | 0..1 <br/> [Uri](Uri.md) | A drs:// hostname-based URI, as defined in the DRS documentation, that tells clients how to access this object. The intent of this field is to make DRS objects self-contained, and therefore easier for clients to store and pass around. For example, if you arrive at this DRS JSON by resolving a compact identifier-based DRS URI, the self_uri presents you with a hostname and properly encoded DRS ID for use in subsequent access endpoint calls. | direct |
+| [access_methods](access_methods.md) | 1..* <br/> [AccessMethod](AccessMethod.md) | The list of access methods that can be used to fetch the data file. | direct |
+| [run_provenance](run_provenance.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Document detailing the provenance of the experiment or analysis run which produced the file as one of its outputs. The provenance info should include software versions, parameter settings, etc. | direct |
+| [quality_assessments](quality_assessments.md) | * <br/> [QualityAssessment](QualityAssessment.md) | An array of QualityAssessment objects containing the main quality scores from assessment techniques applied to the data file. | direct |
+| [file_type](file_type.md) | 1 <br/> [Term](Term.md) | The file format of the data file. | direct |
+| [mime_type](mime_type.md) | 0..1 <br/> [String](String.md) | A string providing the mime-type of the data file. | direct |
+| [data_content](data_content.md) | 1 <br/> [OutputType](OutputType.md) | Classification describing the file's purpose or contents. | direct |
+| [file_size](file_size.md) | 1 <br/> [Integer](Integer.md) | The file size in bytes. | direct |
+| [created_time](created_time.md) | 1 <br/> [Datetime](Datetime.md) | Timestamp of content creation in RFC3339. (This is the creation time of the underlying content, not of the JSON object.). | direct |
+| [updated_time](updated_time.md) | 0..1 <br/> [Datetime](Datetime.md) | Timestamp of content update in RFC3339, identical to created_time in systems that do not support updates. (This is the update time of the underlying content, not of the JSON object.). | direct |
+| [file_version](file_version.md) | 0..1 <br/> [String](String.md) | A string representing a version. (Some systems may use checksum, a RFC3339 timestamp, or an incrementing version number.). | direct |
+| [checksums](checksums.md) | 1..* <br/> [Checksum](Checksum.md) | A list of checksums of the data file. At least one checksum must be provided. For blobs, the checksum is computed over the bytes in the blob. | direct |
 
 
 

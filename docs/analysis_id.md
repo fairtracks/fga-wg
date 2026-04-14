@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/analysis_id](https://w3id.org/fga
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Analysis](Analysis.md) | Represents the computational processing applied to data from a sequencing exp... |  no  |
+| [Analysis](Analysis.md) | Represents the computational processing applied to data from a sequencing experiment, or from another analysis. This can be described at the level of individual analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline as a whole. |  no  |
 
 
 

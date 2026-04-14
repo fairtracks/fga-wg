@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/checksum_type](https://w3id.org/f
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Checksum](Checksum.md) | A checksum of a File object (orig: DrsObject) |  no  |
+| [Checksum](Checksum.md) | A checksum of a File object (orig: DrsObject). Exact copy of the Checksum object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/ChecksumModel). |  no  |
 
 
 

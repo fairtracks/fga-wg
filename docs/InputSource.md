@@ -84,14 +84,14 @@ URI: [https://w3id.org/fga-wg/schema/top_level/InputSource](https://w3id.org/fga
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [inputsource_external_ref](inputsource_external_ref.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Reference to an external entity as the input source, using a globally unique ... | direct |
-| [inputsource_ref](inputsource_ref.md) | 0..1 <br/> [Curie](Curie.md) | Reference to an internal object as the input source using a local identifier | direct |
-| [database_accessions](database_accessions.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) | Accession numbers for database records used as input source | direct |
-| [qualified_relation](qualified_relation.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A description of the relationship with the input source | direct |
-| [biological_replicate_labels](biological_replicate_labels.md) | * <br/> [String](String.md) | Labels denoting the biological replicates within which the relation is define... | direct |
-| [technical_replicate_labels](technical_replicate_labels.md) | * <br/> [String](String.md) | Labels denoting the technical replicates within which the relation is defined... | direct |
-| [version](version.md) | 0..1 <br/> [String](String.md) | Version information for the retrieval from the input source | direct |
-| [date_of_retrieval](date_of_retrieval.md) | 0..1 <br/> [Date](Date.md) | Date of retrieval from the input source, typically used to timestamp download... | direct |
+| [inputsource_external_ref](inputsource_external_ref.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Reference to an external entity as the input source, using a globally unique identifier or an URL. External references will in most cases refer to a database, data record, data file, website or other data source. One of "inputsource_external_ref" or "inputsource_ref" must be specified. | direct |
+| [inputsource_ref](inputsource_ref.md) | 0..1 <br/> [Curie](Curie.md) | Reference to an internal object as the input source using a local identifier. Entities to be used as an internal input source includes FileCollection, Sample, Experiment, Analysis or File as restricted by the description of the field where the input source is used. One of "inputsource_external_ref" or "inputsource_ref" must be specified. | direct |
+| [database_accessions](database_accessions.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) | Accession numbers for database records used as input source. Used in connection with "inputsource_external_ref". | direct |
+| [qualified_relation](qualified_relation.md) | 1 <br/> [Uriorcurie](Uriorcurie.md) | A description of the relationship with the input source. | direct |
+| [biological_replicate_labels](biological_replicate_labels.md) | * <br/> [String](String.md) | Labels denoting the biological replicates within which the relation is defined, if any. | direct |
+| [technical_replicate_labels](technical_replicate_labels.md) | * <br/> [String](String.md) | Labels denoting the technical replicates within which the relation is defined, if any. | direct |
+| [version](version.md) | 0..1 <br/> [String](String.md) | Version information for the retrieval from the input source. | direct |
+| [date_of_retrieval](date_of_retrieval.md) | 0..1 <br/> [Date](Date.md) | Date of retrieval from the input source, typically used to timestamp downloading data from a database or URL. | direct |
 
 
 

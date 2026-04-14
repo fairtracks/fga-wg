@@ -104,20 +104,20 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TrackGeometry](https://w3id.org/f
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [has_gaps](has_gaps.md) | 1 <br/> [Boolean](Boolean.md) | Whether there are gaps between the sequence features (there exists at least o... | direct |
-| [has_lengths](has_lengths.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features have lengths (at least one feature spans more t... | direct |
-| [has_strands](has_strands.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features are stranded (at least one feature has strand i... | direct |
-| [has_values](has_values.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features have associated values (at least one feature ha... | direct |
-| [has_edges](has_edges.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features are linked across positions (at least one edge ... | direct |
-| [has_names](has_names.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features are named (at least one feature has a name) | direct |
-| [elements_overlapping](elements_overlapping.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features are overlapping (at least one base pair is simu... | direct |
-| [elements_circular](elements_circular.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features have circular coordinates (at least one feature... | direct |
-| [lengths_constant](lengths_constant.md) | 0..1 <br/> [Boolean](Boolean.md) | Whether the sequence lengths are constant (all sequence features have the sam... | direct |
-| [value_type](value_type.md) | 0..1 <br/> [DataTypes](DataTypes.md) | The type of values associated with the sequence features, if any | direct |
-| [edges_have_weights](edges_have_weights.md) | 0..1 <br/> [Boolean](Boolean.md) | Whether the edges linking sequence features are weighted (at least one edge b... | direct |
-| [edge_weight_type](edge_weight_type.md) | 0..1 <br/> [DataTypes](DataTypes.md) | The type of values associated with the edges | direct |
-| [edges_are_directed](edges_are_directed.md) | 0..1 <br/> [Boolean](Boolean.md) | Whether the edges linking sequence features are directed (at least one edge b... | direct |
-| [edges_denote_parents](edges_denote_parents.md) | 0..1 <br/> [Boolean](Boolean.md) | Whether the edges linking sequence features denote a parent-child relationshi... | direct |
+| [has_gaps](has_gaps.md) | 1 <br/> [Boolean](Boolean.md) | Whether there are gaps between the sequence features (there exists at least one gap between two features on the same sequence). | direct |
+| [has_lengths](has_lengths.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features have lengths (at least one feature spans more than 1 base pair). | direct |
+| [has_strands](has_strands.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features are stranded (at least one feature has strand information). | direct |
+| [has_values](has_values.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features have associated values (at least one feature has an associated value). | direct |
+| [has_edges](has_edges.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features are linked across positions (at least one edge between features exists). | direct |
+| [has_names](has_names.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features are named (at least one feature has a name). | direct |
+| [elements_overlapping](elements_overlapping.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features are overlapping (at least one base pair is simultaneously covered by two sequence features). | direct |
+| [elements_circular](elements_circular.md) | 1 <br/> [Boolean](Boolean.md) | Whether the sequence features have circular coordinates (at least one feature that cross a sequence border). | direct |
+| [lengths_constant](lengths_constant.md) | 0..1 <br/> [Boolean](Boolean.md) | Whether the sequence lengths are constant (all sequence features have the same length, excluding features at the very end of a sequence). | direct |
+| [value_type](value_type.md) | 0..1 <br/> [DataTypes](DataTypes.md) | The type of values associated with the sequence features, if any. | direct |
+| [edges_have_weights](edges_have_weights.md) | 0..1 <br/> [Boolean](Boolean.md) | Whether the edges linking sequence features are weighted (at least one edge between sequence features has an associated weight). | direct |
+| [edge_weight_type](edge_weight_type.md) | 0..1 <br/> [DataTypes](DataTypes.md) | The type of values associated with the edges. | direct |
+| [edges_are_directed](edges_are_directed.md) | 0..1 <br/> [Boolean](Boolean.md) | Whether the edges linking sequence features are directed (at least one edge between sequence features is defined with a direction). | direct |
+| [edges_denote_parents](edges_denote_parents.md) | 0..1 <br/> [Boolean](Boolean.md) | Whether the edges linking sequence features denote a parent-child relationship (all edges between sequence features denote parent-child relationships such as genes to exons, i.e. where the child is fully covered by the parent). | direct |
 
 
 

@@ -54,8 +54,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Term](https://w3id.org/fga-wg/sch
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [Curie](Curie.md) | External, globally unique identifier for the ontology term (in CURIE form) | direct |
-| [label](label.md) | 0..1 <br/> [String](String.md) | Human-readable label associated to the term id in the current version of the ... | direct |
+| [id](id.md) | 1 <br/> [Curie](Curie.md) | External, globally unique identifier for the ontology term (in CURIE form). | direct |
+| [label](label.md) | 0..1 <br/> [String](String.md) | Human-readable label associated to the term id in the current version of the ontology (as listed in the "ontology_versions" field of the Deposit object). | direct |
 
 
 

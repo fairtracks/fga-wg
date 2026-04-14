@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/assessment_method](https://w3id.o
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [QualityAssessment](QualityAssessment.md) | Represents the results of a quality assessment that has been carried out on a... |  no  |
+| [QualityAssessment](QualityAssessment.md) | Represents the results of a quality assessment that has been carried out on a data file resulting from an experiment or analysis. |  no  |
 
 
 

@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/document_ontology_versions](https
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Document](Document.md) | Information about a document containing metadata about a set of genome annota... |  no  |
+| [Document](Document.md) | Information about a document containing metadata about a set of genome annotation files, harmonised according to the "FAIRification of Genomic Annotations" data model.  This includes self-referential identifiers and versioning of public deposits of the document. |  no  |
 
 
 

@@ -294,7 +294,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/OutputType](https://w3id.org/fga-
 
 | Name | Description |
 | ---  | --- |
-| [data_content](data_content.md) | Classification describing the file's purpose or contents |
+| [data_content](data_content.md) | Classification describing the file's purpose or contents. |
 
 
 

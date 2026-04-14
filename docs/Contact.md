@@ -57,9 +57,9 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Contact](https://w3id.org/fga-wg/
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [name](name.md) | 1 <br/> [String](String.md) | Name of the person or organisation | direct |
-| [contact_id](contact_id.md) | 0..1 <br/> [Curie](Curie.md) | Globally unique identifier for a person (e | direct |
-| [email](email.md) | 0..1 <br/> [String](String.md) | E-mail address of the person or organisation | direct |
+| [name](name.md) | 1 <br/> [String](String.md) | Name of the person or organisation. | direct |
+| [contact_id](contact_id.md) | 0..1 <br/> [Curie](Curie.md) | Globally unique identifier for a person (e.g. ORCID ID) or organisation (e.g. BioProject accession). | direct |
+| [email](email.md) | 0..1 <br/> [String](String.md) | E-mail address of the person or organisation. | direct |
 
 
 

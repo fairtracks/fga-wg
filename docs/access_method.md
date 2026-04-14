@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/access_method](https://w3id.org/f
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AccessMethod](AccessMethod.md) | Description of an access method (i |  no  |
+| [AccessMethod](AccessMethod.md) | Description of an access method (i.e. communication protocol) that can be used to fetch a File object (orig: DrsObject). Exact copy of the AccessMethod object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessMethodModel) |  no  |
 
 
 

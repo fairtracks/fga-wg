@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/id](https://w3id.org/fga-wg/schem
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Term](Term.md) | Helper entity to represent an ontology term as a data value |  no  |
+| [Term](Term.md) | Helper entity to represent an ontology term as a data value. |  no  |
 
 
 

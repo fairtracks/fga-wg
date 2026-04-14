@@ -76,9 +76,9 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethod](https://w3id.org/fg
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [access_method](access_method.md) | 1 <br/> [AccessMethods](AccessMethods.md) | Access method used to access the File object (orig: DrsObject) | direct |
-| [access_url](access_url.md) | 1 <br/> [AccessURL](AccessURL.md) | AccessURL object providing URL and associated HTTP headers to access the File... | direct |
-| [region](region.md) | 0..1 <br/> [String](String.md) | Name of the region in the cloud service provider that the object belongs to | direct |
+| [access_method](access_method.md) | 1 <br/> [AccessMethods](AccessMethods.md) | Access method used to access the File object (orig: DrsObject). | direct |
+| [access_url](access_url.md) | 1 <br/> [AccessURL](AccessURL.md) | AccessURL object providing URL and associated HTTP headers to access the File object (orig: DrsObject). | direct |
+| [region](region.md) | 0..1 <br/> [String](String.md) | Name of the region in the cloud service provider that the object belongs to. | direct |
 
 
 

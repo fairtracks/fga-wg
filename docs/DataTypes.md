@@ -17,11 +17,11 @@ URI: [https://w3id.org/fga-wg/schema/top_level/DataTypes](https://w3id.org/fga-w
 ## Permissible Values
 | Value | Meaning | Description |
 | --- | --- | --- |
-| integer | None | Integer numeric values |
-| decimal | None | Decimal numeric values |
-| boolean | None | Boolean values (true/false) |
-| string | None | Text string values |
-| multiple | None | Multiple types of values are associated (e |
+| integer | None | Integer numeric values. |
+| decimal | None | Decimal numeric values. |
+| boolean | None | Boolean values (true/false). |
+| string | None | Text string values. |
+| multiple | None | Multiple types of values are associated (e.g. both integer and string). |
 
 
 
@@ -30,8 +30,8 @@ URI: [https://w3id.org/fga-wg/schema/top_level/DataTypes](https://w3id.org/fga-w
 
 | Name | Description |
 | ---  | --- |
-| [value_type](value_type.md) | The type of values associated with the sequence features, if any |
-| [edge_weight_type](edge_weight_type.md) | The type of values associated with the edges |
+| [value_type](value_type.md) | The type of values associated with the sequence features, if any. |
+| [edge_weight_type](edge_weight_type.md) | The type of values associated with the edges. |
 
 
 

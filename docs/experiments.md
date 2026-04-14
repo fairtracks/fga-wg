@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/experiments](https://w3id.org/fga
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [TopLevel](TopLevel.md) | A document of harmonised metadata for a set of genome annotation files |  no  |
+| [TopLevel](TopLevel.md) | A document of harmonised metadata for a set of genome annotation files. Metadata has been harmonised in line with the "FAIRification of Genomic Annotations" data model. This is the top-level class to be used as root for the metadata document. |  no  |
 
 
 

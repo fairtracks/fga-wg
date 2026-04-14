@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/contact_id](https://w3id.org/fga-
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Contact](Contact.md) | Contact information for a person or an organisation |  no  |
+| [Contact](Contact.md) | Contact information for a person or an organisation. |  no  |
 
 
 

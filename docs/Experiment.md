@@ -182,19 +182,19 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Experiment](https://w3id.org/fga-
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [experiment_external_id](experiment_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the experiment | direct |
-| [experiment_id](experiment_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the experiment (unique within the metadata deposit) | direct |
-| [experiment_label](experiment_label.md) | 1 <br/> [String](String.md) | A human-readable description of the experiment, short enough to be used for l... | direct |
-| [experiment_study_ref](experiment_study_ref.md) | 1 <br/> [Curie](Curie.md) | Internal reference to the study within which the experiment has been carried ... | direct |
-| [experiment_samples](experiment_samples.md) | 1..* <br/> [InputSource](InputSource.md) | External or internal references to samples used in the experiment | direct |
-| [molecule_type](molecule_type.md) | 1 <br/> [Term](Term.md) | Specifies the type of source material that is being sequenced | direct |
-| [assay_type](assay_type.md) | 1 <br/> [Term](Term.md) | Sequencing technique intended for this library | direct |
-| [design_description](design_description.md) | 0..1 <br/> [String](String.md) | The high-level experiment design including layout, protocol | direct |
-| [library_layout](library_layout.md) | 0..1 <br/> [Term](Term.md) | Whether the library was built as paired-end, or single-end | direct |
-| [instrument](instrument.md) | 0..1 <br/> [Term](Term.md) | Technology platform used to perform nucleic acid sequencing, including name a... | direct |
-| [sequencing_protocol](sequencing_protocol.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Set of rules which guides how the sequencing protocol was followed | direct |
-| [antibody_target](antibody_target.md) | 0..1 <br/> [Term](Term.md) | The target of the antibody used in the experiment | direct |
-| [biological_processes](biological_processes.md) | * <br/> [Term](Term.md) | Biological processes illuminated by the experiment | direct |
+| [experiment_external_id](experiment_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the experiment. | direct |
+| [experiment_id](experiment_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the experiment (unique within the metadata deposit). | direct |
+| [experiment_label](experiment_label.md) | 1 <br/> [String](String.md) | A human-readable description of the experiment, short enough to be used for listings within software user interfaces, tables, illustration legends, etc. | direct |
+| [experiment_study_ref](experiment_study_ref.md) | 1 <br/> [Curie](Curie.md) | Internal reference to the study within which the experiment has been carried out. | direct |
+| [experiment_samples](experiment_samples.md) | 1..* <br/> [InputSource](InputSource.md) | External or internal references to samples used in the experiment. Internal references should refer to Sample objects. | direct |
+| [molecule_type](molecule_type.md) | 1 <br/> [Term](Term.md) | Specifies the type of source material that is being sequenced. | direct |
+| [assay_type](assay_type.md) | 1 <br/> [Term](Term.md) | Sequencing technique intended for this library. | direct |
+| [design_description](design_description.md) | 0..1 <br/> [String](String.md) | The high-level experiment design including layout, protocol. | direct |
+| [library_layout](library_layout.md) | 0..1 <br/> [Term](Term.md) | Whether the library was built as paired-end, or single-end. | direct |
+| [instrument](instrument.md) | 0..1 <br/> [Term](Term.md) | Technology platform used to perform nucleic acid sequencing, including name and/or number associated with a specific sequencing instrument model. It is recommended to be as specific as possible for this property (e.g. if the model/revision are available, providing that instead of just the instrument maker). | direct |
+| [sequencing_protocol](sequencing_protocol.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Set of rules which guides how the sequencing protocol was followed. Change-tracking services such as Protocol.io or GitHub are encouraged instead of dumping free text in this field. | direct |
+| [antibody_target](antibody_target.md) | 0..1 <br/> [Term](Term.md) | The target of the antibody used in the experiment. | direct |
+| [biological_processes](biological_processes.md) | * <br/> [Term](Term.md) | Biological processes illuminated by the experiment. | direct |
 
 
 

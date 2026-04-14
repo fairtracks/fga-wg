@@ -17,14 +17,14 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethods](https://w3id.org/f
 ## Permissible Values
 | Value | Meaning | Description |
 | --- | --- | --- |
-| s3 | None | Amazon S3 and other S3-compatible bucket |
-| gs | None | Google Cloud Storage (and compatible) bucket |
-| ftp | None | File Transfer Protocol |
-| gsiftp | None | GridFTP protocol (an extension of the File Transfer Protocol (FTP) for grid c... |
-| globus | None | Data transfer via the Globus research cyberinfrastructure (https://www |
-| htsget | None | GA4GH HTSget standard for retrieving subsections of genomic data (https://www |
-| https | None | Hypertext Transfer Protocol Secure, the standard encrypted protocol used on t... |
-| file | None | For local files accessible via a file URI (e |
+| s3 | None | Amazon S3 and other S3-compatible bucket. |
+| gs | None | Google Cloud Storage (and compatible) bucket. |
+| ftp | None | File Transfer Protocol. |
+| gsiftp | None | GridFTP protocol (an extension of the File Transfer Protocol (FTP) for grid computing). |
+| globus | None | Data transfer via the Globus research cyberinfrastructure (https://www.globus.org/.) |
+| htsget | None | GA4GH HTSget standard for retrieving subsections of genomic data (https://www.ga4gh.org/product/htsget/). |
+| https | None | Hypertext Transfer Protocol Secure, the standard encrypted protocol used on the web. |
+| file | None | For local files accessible via a file URI (e.g., file://path/to/file). |
 
 
 
@@ -33,7 +33,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessMethods](https://w3id.org/f
 
 | Name | Description |
 | ---  | --- |
-| [access_method](access_method.md) | Access method used to access the File object (orig: DrsObject) |
+| [access_method](access_method.md) | Access method used to access the File object (orig: DrsObject). |
 
 
 

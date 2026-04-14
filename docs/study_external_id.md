@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/study_external_id](https://w3id.o
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Study](Study.md) | A scientific study, i |  no  |
+| [Study](Study.md) | A scientific study, i.e. a unit of research, within which experiments and/or analyses have been carried out. |  no  |
 
 
 

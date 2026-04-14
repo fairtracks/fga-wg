@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/seqcol_unordered_coord_system](ht
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomeAssembly](GenomeAssembly.md) | Information about of the exact genome assembly used to generate the annotatio... |  no  |
+| [GenomeAssembly](GenomeAssembly.md) | Information about of the exact genome assembly used to generate the annotation file, defining the genomic coordinate system for the sequence features. |  no  |
 
 
 

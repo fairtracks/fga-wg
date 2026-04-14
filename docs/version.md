@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/version](https://w3id.org/fga-wg/
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [InputSource](InputSource.md) | General object representing the source of data files, samples, or other entit... |  no  |
+| [InputSource](InputSource.md) | General object representing the source of data files, samples, or other entities used as input to a process or a result. An input source refering to a single file or sample object will represent that item only, while an input source referring to a container or process may represent a number of disctinct input items. InputSource also contains information about the type of relationship, replication labelling, versioning and retrieval date. |  no  |
 
 
 

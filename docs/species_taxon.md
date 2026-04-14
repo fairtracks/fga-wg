@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/species_taxon](https://w3id.org/f
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Donor](Donor.md) | Information about the donor or complete organism from which the sample was ta... |  no  |
+| [Donor](Donor.md) | Information about the donor or complete organism from which the sample was taken. |  no  |
 
 
 

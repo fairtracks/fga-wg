@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/deposit_versioned_ref](https://w3
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [FileCollection](FileCollection.md) | A collection of files, according to some selection criteria |  no  |
+| [FileCollection](FileCollection.md) | A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files. |  no  |
 
 
 

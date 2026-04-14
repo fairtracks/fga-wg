@@ -69,11 +69,11 @@ URI: [https://w3id.org/fga-wg/schema/top_level/GenomeAssembly](https://w3id.org/
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [seqcol_digest](seqcol_digest.md) | 1 <br/> [Curie](Curie.md) | Top-level sequence collection digest according to the GA4GH refget, Sequence ... | direct |
-| [seqcol_ordered_coord_system](seqcol_ordered_coord_system.md) | 1 <br/> [Curie](Curie.md) | Content-derived digest that uniquely identifies the ordered coordinate system... | direct |
-| [seqcol_unordered_coord_system](seqcol_unordered_coord_system.md) | 1 <br/> [Curie](Curie.md) | Content-derived digest that uniquely identifies the order-invariant coordinat... | direct |
-| [accessions](accessions.md) | * <br/> [String](String.md) | Database accession numbers for the genome assembly, if available | direct |
-| [aliases](aliases.md) | 1..* <br/> [Curie](Curie.md) | Human-readable aliases of the genome assembly | direct |
+| [seqcol_digest](seqcol_digest.md) | 1 <br/> [Curie](Curie.md) | Top-level sequence collection digest according to the GA4GH refget, Sequence Collections standard (v1.0). This a globally unique identifier for the genome assembly, algorithmically derivable from the genome assembly content. Usage is to uniquely identify the exact genome assembly used and allow detailed comparisons across genome assembly variants (say, variants of the GRCh38 assembly). | direct |
+| [seqcol_ordered_coord_system](seqcol_ordered_coord_system.md) | 1 <br/> [Curie](Curie.md) | Content-derived digest that uniquely identifies the ordered coordinate system of the genome assembly. (Coordinate systems with the same sequence names and lengths, but where the sequences are ordered differently, will have different ordered digests.). Usage is the ordered coordinate system digest can be used to uniquely generate a chromSizes file, useful in a number of analysis tools. Definition is the ordered coordinate system digest is defined as the level 1 digest of the name_length_pairs attribute of the sequence collection generated from the genome assembly. | direct |
+| [seqcol_unordered_coord_system](seqcol_unordered_coord_system.md) | 1 <br/> [Curie](Curie.md) | Content-derived digest that uniquely identifies the order-invariant coordinate system of the genome assembly. This digest will be shared across all coordinate systems with the same sequence names and lenghts, regardless of the order of the sequences. Usage is the order-invariant coordinate system digest can be used to uniquely describe the coordinate system of a particular genome browser instance and the annotation files that are compatible with it. Definition is the order-invariant coordinate system digest is defined as the level 1 digest of the sorted_name_length_pairs attribute of the sequence collection generated from the genome assembly. | direct |
+| [accessions](accessions.md) | * <br/> [String](String.md) | Database accession numbers for the genome assembly, if available. Should precisely identify the genome assembly and be omitted if changes have been made to the assembly after retrieval, such as removing the alternate sequences. | direct |
+| [aliases](aliases.md) | 1..* <br/> [Curie](Curie.md) | Human-readable aliases of the genome assembly. Can be imprecise, as preciseness is enforced in the other fields. | direct |
 
 
 

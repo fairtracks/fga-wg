@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/track_geometry](https://w3id.org/
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file |  no  |
+| [GenomicAnnotationFile](GenomicAnnotationFile.md) | Information about a genomic annotation / track file. GenomicAnnotationFile is a specification of the File entity and inherits all the fields defined in File, in addition to the fields that are specific to GenomicAnnotationFile, as detailed here. |  no  |
 
 
 

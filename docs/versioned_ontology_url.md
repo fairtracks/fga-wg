@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/versioned_ontology_url](https://w
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [OntologyVersions](OntologyVersions.md) | Information about an ontology used in the metadata |  no  |
+| [OntologyVersions](OntologyVersions.md) | Information about an ontology used in the metadata. |  no  |
 
 
 

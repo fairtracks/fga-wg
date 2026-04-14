@@ -60,10 +60,10 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Deposit](https://w3id.org/fga-wg/
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [deposit_id](deposit_id.md) | 0..1 <br/> [Curie](Curie.md) | A globally unique and persistent identifier for the public deposit of the met... | direct |
-| [deposit_versioned_id](deposit_versioned_id.md) | 1 <br/> [Curie](Curie.md) | A globally unique, persistent and versioned identifier for the public deposit... | direct |
-| [deposit_first_created](deposit_first_created.md) | 1 <br/> [Datetime](Datetime.md) | The date and time of the creation of the first deposited version of the metad... | direct |
-| [deposit_last_changed](deposit_last_changed.md) | 1 <br/> [Datetime](Datetime.md) | The date and time of the last deposited change of the current metadata docume... | direct |
+| [deposit_id](deposit_id.md) | 0..1 <br/> [Curie](Curie.md) | A globally unique and persistent identifier for the public deposit of the metadata document. A DOI or other persistent identifier is recommended. | direct |
+| [deposit_versioned_id](deposit_versioned_id.md) | 1 <br/> [Curie](Curie.md) | A globally unique, persistent and versioned identifier for the public deposit of the metadata document. A versioned DOI to a deposited document is recommended. | direct |
+| [deposit_first_created](deposit_first_created.md) | 1 <br/> [Datetime](Datetime.md) | The date and time of the creation of the first deposited version of the metadata document. | direct |
+| [deposit_last_changed](deposit_last_changed.md) | 1 <br/> [Datetime](Datetime.md) | The date and time of the last deposited change of the current metadata document (corresponding to "deposit_versioned_id"). | direct |
 
 
 

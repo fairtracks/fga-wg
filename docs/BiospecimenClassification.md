@@ -34,7 +34,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/BiospecimenClassification](https:
 
 | Name | Description |
 | ---  | --- |
-| [biospecimen_classification](biospecimen_classification.md) | Main type of structural unit to be used for classification of the biospecimen... |
+| [biospecimen_classification](biospecimen_classification.md) | Main type of structural unit to be used for classification of the biospecimen/sample. |
 
 
 

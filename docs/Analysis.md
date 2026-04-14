@@ -137,17 +137,17 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Analysis](https://w3id.org/fga-wg
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [analysis_external_id](analysis_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the experiment | direct |
-| [analysis_id](analysis_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the experiment (unique within the metadata deposit) | direct |
-| [analysis_label](analysis_label.md) | 1 <br/> [String](String.md) | A human-readable description of the analysis, short enough to be used for lis... | direct |
-| [analysis_description](analysis_description.md) | 0..1 <br/> [String](String.md) | Human-readable description of the analysis | direct |
-| [analysis_study_ref](analysis_study_ref.md) | 0..1 <br/> [Curie](Curie.md) | Internal reference to the study within which the analysis has been carried ou... | direct |
-| [analysis_input_sources](analysis_input_sources.md) | 1..* <br/> [InputSource](InputSource.md) | External or internal references to sources for the input data analyzed | direct |
-| [analysis_type](analysis_type.md) | 1 <br/> [Term](Term.md) | The type of analysis carried out | direct |
-| [analysis_main_tool](analysis_main_tool.md) | 0..1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) | Main software tool used for the analysis | direct |
-| [analysis_main_tool_version](analysis_main_tool_version.md) | 0..1 <br/> [String](String.md) | Version of the main software tool used for the analysis | direct |
-| [analysis_protocol](analysis_protocol.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Document describing the analysis protocol that was followed | direct |
-| [analysis_workflow](analysis_workflow.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | External reference to the analysis workflow, with availability in at least on... | direct |
+| [analysis_external_id](analysis_external_id.md) | 0..1 <br/> [Curie](Curie.md) | External, globally unique identifier for the experiment. | direct |
+| [analysis_id](analysis_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the experiment (unique within the metadata deposit). | direct |
+| [analysis_label](analysis_label.md) | 1 <br/> [String](String.md) | A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc. | direct |
+| [analysis_description](analysis_description.md) | 0..1 <br/> [String](String.md) | Human-readable description of the analysis. | direct |
+| [analysis_study_ref](analysis_study_ref.md) | 0..1 <br/> [Curie](Curie.md) | Internal reference to the study within which the analysis has been carried out. | direct |
+| [analysis_input_sources](analysis_input_sources.md) | 1..* <br/> [InputSource](InputSource.md) | External or internal references to sources for the input data analyzed. Internal references should lead to FileCollection, File, Experiment, or Analysis objects. | direct |
+| [analysis_type](analysis_type.md) | 1 <br/> [Term](Term.md) | The type of analysis carried out. | direct |
+| [analysis_main_tool](analysis_main_tool.md) | 0..1 <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[String](String.md)&nbsp;or&nbsp;<br />[Curie](Curie.md) | Main software tool used for the analysis. | direct |
+| [analysis_main_tool_version](analysis_main_tool_version.md) | 0..1 <br/> [String](String.md) | Version of the main software tool used for the analysis. | direct |
+| [analysis_protocol](analysis_protocol.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | Document describing the analysis protocol that was followed. | direct |
+| [analysis_workflow](analysis_workflow.md) | 0..1 <br/> [Uriorcurie](Uriorcurie.md) | External reference to the analysis workflow, with availability in at least one machine-operable form (e.g. CWL, Nextflow, ...). | direct |
 
 
 

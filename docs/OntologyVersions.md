@@ -42,9 +42,9 @@ URI: [https://w3id.org/fga-wg/schema/top_level/OntologyVersions](https://w3id.or
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [namespace](namespace.md) | 1 <br/> [String](String.md) | The CURIE namespace (prefix) an ontology (e | direct |
-| [ontology_url](ontology_url.md) | 1 <br/> [Uri](Uri.md) | The version-agnostic URL of the ontology (e | direct |
-| [versioned_ontology_url](versioned_ontology_url.md) | 1 <br/> [Uri](Uri.md) | The versioned URL of the ontology (e | direct |
+| [namespace](namespace.md) | 1 <br/> [String](String.md) | The CURIE namespace (prefix) an ontology (e.g. "GO" for Gene Ontology). | direct |
+| [ontology_url](ontology_url.md) | 1 <br/> [Uri](Uri.md) | The version-agnostic URL of the ontology (e.g. the IRI of the ontology in OWL). | direct |
+| [versioned_ontology_url](versioned_ontology_url.md) | 1 <br/> [Uri](Uri.md) | The versioned URL of the ontology (e.g. the "versionIRI" in OWL). | direct |
 
 
 

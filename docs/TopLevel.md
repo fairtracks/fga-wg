@@ -494,14 +494,14 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TopLevel](https://w3id.org/fga-wg
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [document](document.md) | 1 <br/> [Document](Document.md) | Information about this document containing harmonised metadata about a set of... | direct |
-| [donors](donors.md) | * <br/> [Donor](Donor.md) | Information about the donors or complete organisms from which the samples wer... | direct |
-| [experiments](experiments.md) | * <br/> [Experiment](Experiment.md) | Information about sequencing experiments that have been carried out to genera... | direct |
-| [files](files.md) | * <br/> [File](File.md) | Information about particular genome annotation (and other relevant) files | direct |
-| [file_collections](file_collections.md) | * <br/> [FileCollection](FileCollection.md) | Information about collections of files contained in this dataset, each collec... | direct |
-| [analyses](analyses.md) | * <br/> [Analysis](Analysis.md) | Information about computational processing and analyses that have been carrie... | direct |
-| [samples](samples.md) | * <br/> [Sample](Sample.md) | Information about the biospecimens/samples used as raw material for lab exper... | direct |
-| [studies](studies.md) | * <br/> [Study](Study.md) | The scientific studies, i | direct |
+| [document](document.md) | 1 <br/> [Document](Document.md) | Information about this document containing harmonised metadata about a set of genome annotation files. This includes self-referential identifiers and versioning of public deposits of the document. | direct |
+| [donors](donors.md) | * <br/> [Donor](Donor.md) | Information about the donors or complete organisms from which the samples were taken. | direct |
+| [experiments](experiments.md) | * <br/> [Experiment](Experiment.md) | Information about sequencing experiments that have been carried out to generate the files. | direct |
+| [files](files.md) | * <br/> [File](File.md) | Information about particular genome annotation (and other relevant) files. | direct |
+| [file_collections](file_collections.md) | * <br/> [FileCollection](FileCollection.md) | Information about collections of files contained in this dataset, each collection defined according to some selection criteria. | direct |
+| [analyses](analyses.md) | * <br/> [Analysis](Analysis.md) | Information about computational processing and analyses that have been carried out to generate the files. | direct |
+| [samples](samples.md) | * <br/> [Sample](Sample.md) | Information about the biospecimens/samples used as raw material for lab experiments. | direct |
+| [studies](studies.md) | * <br/> [Study](Study.md) | The scientific studies, i.e. units of research, within which experiments and/or analyses have been carried out. | direct |
 
 
 

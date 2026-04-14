@@ -192,23 +192,23 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Sample](https://w3id.org/fga-wg/s
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [sample_external_id](sample_external_id.md) | 1 <br/> [Curie](Curie.md) | External, globally unique identifier for the biospecimen/sample | direct |
-| [sample_id](sample_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the biospecimen/sample (unique within the metadata de... | direct |
-| [sample_label](sample_label.md) | 1 <br/> [String](String.md) | A human-readable description of the sample, short enough to be used for listi... | direct |
-| [sample_description](sample_description.md) | 0..1 <br/> [String](String.md) | Human-readable description of the biospecimen/sample and the sampling process | direct |
-| [donor_organism_ref](donor_organism_ref.md) | 1 <br/> [Curie](Curie.md) | Internal reference to the donor/organism from which the biospecimen/sample wa... | direct |
-| [biospecimen_classification](biospecimen_classification.md) | 1 <br/> [BiospecimenClassification](BiospecimenClassification.md) | Main type of structural unit to be used for classification of the biospecimen... | direct |
-| [organism_tissue](organism_tissue.md) | 0..1 <br/> [Term](Term.md) | Part of organism (typically tissue or organ) from which the biospecimen/sampl... | direct |
-| [cell_type](cell_type.md) | 0..1 <br/> [Term](Term.md) | Cell type of isolated normal cells in the biospecimen/sample | direct |
-| [cell_line](cell_line.md) | 0..1 <br/> [Term](Term.md) | Cultured cell line used in the biospecimen/sample | direct |
-| [other_biospecimen](other_biospecimen.md) | * <br/> [Term](Term.md) | Other biospecimen-related terms that can be used to further classify the bios... | direct |
-| [sampling_protocol](sampling_protocol.md) | 0..1 <br/> [Uri](Uri.md) | Protocol detailing the collection and treatment of the biospecimen/sample | direct |
-| [sample_collection_location](sample_collection_location.md) | 0..1 <br/> [String](String.md) | Geographical location where the sample was collected | direct |
-| [sample_collection_date](sample_collection_date.md) | 0..1 <br/> [Datetime](Datetime.md) | Date of sample collection | direct |
-| [phenotype](phenotype.md) | 0..1 <br/> [Term](Term.md) | Main phenotype (e | direct |
+| [sample_external_id](sample_external_id.md) | 1 <br/> [Curie](Curie.md) | External, globally unique identifier for the biospecimen/sample. | direct |
+| [sample_id](sample_id.md) | 1 <br/> [Curie](Curie.md) | Internal identifier for the biospecimen/sample (unique within the metadata deposit). | direct |
+| [sample_label](sample_label.md) | 1 <br/> [String](String.md) | A human-readable description of the sample, short enough to be used for listings within software user interfaces, tables, illustration legends, etc. | direct |
+| [sample_description](sample_description.md) | 0..1 <br/> [String](String.md) | Human-readable description of the biospecimen/sample and the sampling process. | direct |
+| [donor_organism_ref](donor_organism_ref.md) | 1 <br/> [Curie](Curie.md) | Internal reference to the donor/organism from which the biospecimen/sample was taken. | direct |
+| [biospecimen_classification](biospecimen_classification.md) | 1 <br/> [BiospecimenClassification](BiospecimenClassification.md) | Main type of structural unit to be used for classification of the biospecimen/sample. | direct |
+| [organism_tissue](organism_tissue.md) | 0..1 <br/> [Term](Term.md) | Part of organism (typically tissue or organ) from which the biospecimen/sample was taken, or cell line was derived from. | direct |
+| [cell_type](cell_type.md) | 0..1 <br/> [Term](Term.md) | Cell type of isolated normal cells in the biospecimen/sample. | direct |
+| [cell_line](cell_line.md) | 0..1 <br/> [Term](Term.md) | Cultured cell line used in the biospecimen/sample. | direct |
+| [other_biospecimen](other_biospecimen.md) | * <br/> [Term](Term.md) | Other biospecimen-related terms that can be used to further classify the biospecimen/sample. | direct |
+| [sampling_protocol](sampling_protocol.md) | 0..1 <br/> [Uri](Uri.md) | Protocol detailing the collection and treatment of the biospecimen/sample. | direct |
+| [sample_collection_location](sample_collection_location.md) | 0..1 <br/> [String](String.md) | Geographical location where the sample was collected. | direct |
+| [sample_collection_date](sample_collection_date.md) | 0..1 <br/> [Datetime](Datetime.md) | Date of sample collection. | direct |
+| [phenotype](phenotype.md) | 0..1 <br/> [Term](Term.md) | Main phenotype (e.g. disease) connected to the biospecimen/sample. | direct |
 | [donor_age](donor_age.md) | 0..1 <br/> [String](String.md) | Age of the donor/organism at the time of sampling | direct |
-| [donor_development_stage](donor_development_stage.md) | 0..1 <br/> [Term](Term.md) | Development stage of the donor at the time of sampling | direct |
-| [donor_clinical_information](donor_clinical_information.md) | 0..1 <br/> [String](String.md) | Clinical information of the donor/organism at the time of sampling | direct |
+| [donor_development_stage](donor_development_stage.md) | 0..1 <br/> [Term](Term.md) | Development stage of the donor at the time of sampling. | direct |
+| [donor_clinical_information](donor_clinical_information.md) | 0..1 <br/> [String](String.md) | Clinical information of the donor/organism at the time of sampling. | direct |
 
 
 

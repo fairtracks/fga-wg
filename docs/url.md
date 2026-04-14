@@ -25,7 +25,7 @@ URI: [https://w3id.org/fga-wg/schema/top_level/url](https://w3id.org/fga-wg/sche
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [AccessURL](AccessURL.md) | The URL and associated HTTP headers to access the File object (orig: DrsObjec... |  no  |
+| [AccessURL](AccessURL.md) | The URL and associated HTTP headers to access the File object (orig: DrsObject). Exact copy of AccessURL object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/AccessURLModel). |  no  |
 
 
 
