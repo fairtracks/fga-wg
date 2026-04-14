@@ -70,6 +70,38 @@ URI: [https://w3id.org/fga-wg/schema/top_level/FileCollection](https://w3id.org/
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "deposit_versioned_ref": "doi:10.1234/zenodo.12345679",
+  "filecollection_contact": {
+    "contact_id": "bioproject:PRJNA234466",
+    "email": "info@ihec-epigenomes.org",
+    "name": "International Human Epigenome Consortium"
+  },
+  "filecollection_description": "ENCODE dataset in the International Human Epigenome Consortium (IHEC) data portal, enhanced with metadata from the ENCODE data portal.",
+  "filecollection_id": "filecollection:ihec_encode",
+  "filecollection_input_sources": [
+    {
+      "inputsource_external_ref": "https://epigenomesportal.ca/ihec/grid.html?build=2020-10&assembly=4&institutions=4",
+      "qualified_relation": "prov:wasDerivedFrom",
+      "version": "2020-10"
+    },
+    {
+      "inputsource_external_ref": "https://www.encodeproject.org",
+      "qualified_relation": "prov:hadPrimarySource"
+    }
+  ],
+  "filecollection_label": "IHEC data portal: ENCODE dataset"
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

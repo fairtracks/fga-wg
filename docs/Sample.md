@@ -126,6 +126,65 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Sample](https://w3id.org/fga-wg/s
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "biospecimen_classification": "cell line",
+  "cell_line": {
+    "id": "CLO:0034832",
+    "label": "AG04450 cell"
+  },
+  "donor_age": "W12",
+  "donor_clinical_information": "apparently healthy",
+  "donor_development_stage": {
+    "id": "UBERON:0000323",
+    "label": "late embryo"
+  },
+  "donor_organism_ref": "donor:ENCDO001AAA",
+  "organism_tissue": {
+    "id": "UBERON:0002048",
+    "label": "lung"
+  },
+  "other_biospecimen": [
+    {
+      "id": "UBERON:0002384",
+      "label": "connective tissue"
+    },
+    {
+      "id": "CL:0002320",
+      "label": "connective tissue cell"
+    },
+    {
+      "id": "CL:0000057",
+      "label": "fibroblast"
+    },
+    {
+      "id": "UBERON:0000925",
+      "label": "endoterm"
+    },
+    {
+      "id": "UBERON:0001004",
+      "label": "respiratory system"
+    }
+  ],
+  "phenotype": {
+    "id": "PATO:0000461",
+    "label": "normal"
+  },
+  "sample_description": "Homo sapiens AG04450 cell line",
+  "sample_external_id": "encode:ENCBS004ENC",
+  "sample_id": "sample:ENCBS004ENC",
+  "sample_label": "Homo sapiens AG04450 cell line",
+  "sampling_protocol": "https://www.encodeproject.org/documents/3ed29dac-da67-47be-91b0-c9cad6a1b791/@@download/attachment/AG04450_Stam_protocol.pdf"
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

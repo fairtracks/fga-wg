@@ -696,10 +696,15 @@ def task_docs() -> TaskDict:
     # TopLevel.md is used as the representative target for up-to-date checks
     target = DOCS_DIR / "TopLevel.md"
 
+    def inject_examples_after_generation():
+        from src.docs.inject_examples import inject_examples
+        inject_examples(DOCS_DIR, EXAMPLES_DIR)
+
     return {
         "actions": [
             f"mkdir -p {DOCS_DIR}",
             uv(f"gen-doc -d {DOCS_DIR} {TOP_LEVEL}"),
+            inject_examples_after_generation,
         ],
         "title":    title_with_actions,
         "file_dep": SCHEMA_FILES + TOOL_DEPS,

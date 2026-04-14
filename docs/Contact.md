@@ -35,6 +35,21 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Contact](https://w3id.org/fga-wg/
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "contact_id": "orcid:0000-0001-2345-6789",
+  "email": "john@doe.com",
+  "name": "John Doe"
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

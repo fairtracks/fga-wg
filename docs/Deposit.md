@@ -37,6 +37,22 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Deposit](https://w3id.org/fga-wg/
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "deposit_first_created": "2025-07-01T12:36:00Z",
+  "deposit_id": "doi:10.1234/zenodo.12345678",
+  "deposit_last_changed": "2025-07-01T12:36:00Z",
+  "deposit_versioned_id": "doi:10.1234/zenodo.12345679"
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

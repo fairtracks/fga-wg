@@ -53,6 +53,25 @@ URI: [https://w3id.org/fga-wg/schema/top_level/QualityAssessment](https://w3id.o
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "assessment_details_url": "https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/",
+  "assessment_method": "histone-chipseq-quality-metrics",
+  "assessment_values": {
+    "frip": 0.2931669095906483,
+    "nreads": 21018235,
+    "nreads_in_peaks": 6161851
+  }
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

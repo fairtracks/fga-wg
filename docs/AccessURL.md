@@ -33,6 +33,19 @@ URI: [https://w3id.org/fga-wg/schema/top_level/AccessURL](https://w3id.org/fga-w
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "url": "https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed"
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

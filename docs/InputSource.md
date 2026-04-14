@@ -54,6 +54,29 @@ URI: [https://w3id.org/fga-wg/schema/top_level/InputSource](https://w3id.org/fga
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "biological_replicate_labels": [
+    "1",
+    "2"
+  ],
+  "date_of_retrieval": "2016-04-19",
+  "inputsource_external_ref": "https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15",
+  "qualified_relation": "bioschemas:FormalParameter",
+  "technical_replicate_labels": [
+    "1_1",
+    "1_2"
+  ]
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

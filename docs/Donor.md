@@ -55,6 +55,28 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Donor](https://w3id.org/fga-wg/sc
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "donor_external_id": "biosamples:SAMN04284578",
+  "donor_id": "donor:ENCDO001AAA",
+  "sex": {
+    "id": "CARO:0000027",
+    "label": "male organism"
+  },
+  "species_taxon": {
+    "id": "NCBITaxon:9606",
+    "label": "Homo sapiens"
+  }
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

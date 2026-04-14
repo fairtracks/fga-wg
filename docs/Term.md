@@ -33,6 +33,20 @@ URI: [https://w3id.org/fga-wg/schema/top_level/Term](https://w3id.org/fga-wg/sch
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "id": "obi:OBI_0000716",
+  "label": "ChIP-seq assay"
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

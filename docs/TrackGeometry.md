@@ -75,6 +75,28 @@ URI: [https://w3id.org/fga-wg/schema/top_level/TrackGeometry](https://w3id.org/f
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "elements_circular": false,
+  "elements_overlapping": false,
+  "has_edges": false,
+  "has_gaps": true,
+  "has_lengths": true,
+  "has_names": true,
+  "has_strands": false,
+  "has_values": true,
+  "lengths_constant": false,
+  "value_type": "multiple"
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 

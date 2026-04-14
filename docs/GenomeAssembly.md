@@ -39,6 +39,29 @@ URI: [https://w3id.org/fga-wg/schema/top_level/GenomeAssembly](https://w3id.org/
 
 
 
+## Example
+
+<details>
+<summary>Example JSON</summary>
+
+```json
+{
+  "accessions": [
+    "encode:ENCSR425FOI"
+  ],
+  "aliases": [
+    "GRCh38_no_alt_analysis_set_GCA_000001405.15",
+    "GRCh38",
+    "hg38"
+  ],
+  "seqcol_digest": "ga4gh:SC.EiFob05aCWgVU_B_Ae0cypnQut3cxUP1",
+  "seqcol_ordered_coord_system": "ga4gh:SC.name_length_pairs.Yyz0Expaluj09xdDYg2Y6VOApvjg05Hf",
+  "seqcol_unordered_coord_system": "ga4gh:SC.sorted_name_length_pairs._dMQ5dPUNVx4OGQnDAPmGMkVRWWcYV99"
+}
+```
+</details>
+
+
 
 <!-- no inheritance hierarchy -->
 
