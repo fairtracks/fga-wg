@@ -10,7 +10,7 @@ from pathlib import Path
 
 # Pages that have fixed positions at the top of the nav — excluded from the
 # category scan below.
-_FIXED_PAGES = {"index.md", "overview.md", "nav.md"}
+_FIXED_PAGES = {"index.md", "schema-details.md", "overview.md", "nav.md"}
 
 
 def generate_nav(schema_path: Path, docs_dir: Path, target: Path) -> None:
@@ -54,6 +54,7 @@ def generate_nav(schema_path: Path, docs_dir: Path, target: Path) -> None:
     lines = [
         "* Introduction",
         "    * [Home](index.md)",
+        "    * [Schema Details](schema-details.md)",
         "    * [Schema Overview](overview.md)",
         "* Classes",
         *[entry(n) for n in classes],

@@ -703,7 +703,14 @@ def task_docs() -> TaskDict:
     return {
         "actions": [
             f"mkdir -p {DOCS_DIR}",
-            uv(f"gen-doc --truncate-descriptions false -d {DOCS_DIR} {TOP_LEVEL}"),
+            uv([
+                'gen-doc',
+                '--truncate-descriptions false',
+                '--index-name schema-details',
+                f'--example-directory {EXAMPLES_DIR}',
+                f'-d {DOCS_DIR}',
+                f'{TOP_LEVEL}'
+            ]),
             inject_examples_after_generation,
         ],
         "title":    title_with_actions,

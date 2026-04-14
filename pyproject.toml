@@ -16,6 +16,7 @@ dependencies = [
     "datamodel-code-generator[ruff]<0.55",
     "basedpyright>=1.39.0",
     "jsonschema>=4.26.0",
+    "mkdocs-glightbox>=0.5.2",
 ]
 
 [tool.uv]
