@@ -52,23 +52,23 @@ jobs:
         run: uv run mkdocs build
 
       # ── Commit generated files back to main (push to main only) ───────────
-
-      - name: Commit generated files
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add generated/ docs/
-          # Only commit if there are actual changes; [skip ci] prevents re-triggering
-          git diff --cached --quiet || (
-            git commit -m "chore: regenerate schema artifacts and docs [skip ci]" &&
-            git push
-          )
+#
+#      - name: Commit generated files
+#        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+#        run: |
+#          git config user.name "github-actions[bot]"
+#          git config user.email "github-actions[bot]@users.noreply.github.com"
+#          git add generated/ docs/
+#          # Only commit if there are actual changes; [skip ci] prevents re-triggering
+#          git diff --cached --quiet || (
+#            git commit -m "chore: regenerate schema artifacts and docs [skip ci]" &&
+#            git push
+#          )
 
       # ── Deploy to GitHub Pages (push to main only) ────────────────────────
 
       - name: Deploy to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/gh-pages'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: uv run mkdocs gh-deploy --force
 
       # ── Upload artifacts for PR review ────────────────────────────────────
