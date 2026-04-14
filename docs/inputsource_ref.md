@@ -1,0 +1,99 @@
+---
+search:
+  boost: 5.0
+---
+
+# Slot: inputsource_ref 
+
+
+_Reference to an internal object as the input source using a local identifier. Entities to be used as an internal input source includes FileCollection, Sample, Experiment, Analysis or File as restricted by the description of the field where the input source is used. One of "inputsource_external_ref" or "inputsource_ref" must be specified._
+
+
+
+<div data-search-exclude markdown="1">
+
+
+
+URI: [https://w3id.org/fga-wg/schema/bundle/inputsource_ref](https://w3id.org/fga-wg/schema/bundle/inputsource_ref)
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [InputSource](InputSource.md) | General object representing the source of data files, samples, or other entities used as input to a process or a result. An input source refering to a single file or sample object will represent that item only, while an input source referring to a container or process may represent a number of disctinct input items. InputSource also contains information about the type of relationship, replication labelling, versioning and retrieval date. |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Curie](Curie.md) |
+| Domain Of | [InputSource](InputSource.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/bundle
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/bundle/inputsource_ref |
+| native | https://w3id.org/fga-wg/schema/bundle/inputsource_ref |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: inputsource_ref
+description: Reference to an internal object as the input source using a local identifier.
+  Entities to be used as an internal input source includes FileCollection, Sample,
+  Experiment, Analysis or File as restricted by the description of the field where
+  the input source is used. One of "inputsource_external_ref" or "inputsource_ref"
+  must be specified.
+from_schema: https://w3id.org/fga-wg/schema/bundle
+rank: 1000
+domain_of:
+- InputSource
+range: curie
+
+```
+</details></div>

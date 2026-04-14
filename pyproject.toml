@@ -1,0 +1,32 @@
+[project]
+name = "fga-wg-schema"
+version = "0.1.0"
+description = "FAIRification of Genomic Annotations WG — LinkML Schema"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    # Schema tooling
+    "linkml>=1.10.0",
+    # Documentation
+    "mkdocs-material>=9",
+    "mkdocs-literate-nav>=0.6",
+    "mkdocs-kroki-plugin>=0.6",
+    # Task runner
+    "doit>=0.36",
+    "datamodel-code-generator[ruff]<0.55",
+    "basedpyright>=1.39.0",
+    "jsonschema>=4.26.0",
+    "mkdocs-glightbox>=0.5.2",
+]
+
+[tool.uv]
+# This is a tooling project, not an installable Python package
+package = false
+
+[tool.uv.sources]
+ linkml = { git = "https://github.com/sveinugu/linkml.git", branch = "all-fixes", subdirectory = "packages/linkml" }
+
+
+[tool.basedpyright]
+typeCheckingMode = 'standard'
+reportMissingTypeStubs = false

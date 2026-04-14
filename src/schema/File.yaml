@@ -1,0 +1,459 @@
+id: https://w3id.org/fga-wg/schema/file
+name: File
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+  - AccessMethod
+  - Checksum
+  - InputSource
+  - QualityAssessment
+  - Term
+
+classes:
+  File:
+    description: 'General information about a particular data file. Most fields (marked with an asterix*) are copied from the GA4GH DRS DrsObject model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/DrsObjectModel), which is the top-level object returned from a DRS server in response to a successful lookup call (i.e. https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/Objects).'
+    slots: 
+      - file_external_id
+      - file_id
+      - file_name
+      - file_label
+      - file_description
+      - filecollection_refs
+      - file_input_sources
+      - drs_uri
+      - access_methods
+      - run_provenance
+      - quality_assessments
+      - file_type
+      - mime_type
+      - data_content
+      - file_size
+      - created_time
+      - updated_time
+      - file_version
+      - checksums
+
+enums:
+  OutputType:
+    description: 'Vocabulary from the ENCODE model describing the purpose or content of a file (see "Properties->output_type" in https://www.encodeproject.org/profiles/file).'
+    permissible_values:
+      '3D structure':
+      'alignments':
+      'alignments with modifications':
+      'allele-specific contact matrix':
+      'allele-specific variants':
+      'archr project':
+      'bias models':
+      'bias-corrected predicted signal profile':
+      'bidirectional peaks':
+      'candidate Cis-Regulatory Elements':
+      'candidate enhancers':
+      'candidate promoters':
+      'capture targets':
+      'cell coordinates':
+      'cell topic participation':
+      'cell type data':
+      'cell type annotations':
+      'chromatin stripes':
+      'chromosomes reference':
+      'chromosome sizes':
+      'contact domains':
+      'contact matrix':
+      'consensus DNase hypersensitivity sites':
+      'curated binding sites':
+      'curated SNVs':
+      'mapping quality thresholded contact matrix':
+      'conservative IDR thresholded peaks':
+      'control normalized signal':
+      'counts sequence contribution scores':
+      'CpG sites coverage':
+      'depth normalized signals matrix':
+      'fold over change matrix':
+      'DHS peaks':
+      'DHS regions reference':
+      'nuclease cleavage frequency':
+      'differential expression quantifications':
+      'differential splicing quantifications':
+      'diploid personal genome alignments':
+      'divergent peaks':
+      'DNN-MPRA contribution scores':
+      'DNN-MPRA predicted signal':
+      'dsQTLs':
+      'element barcode mapping':
+      'elements reference':
+      'element gene interactions p-value':
+      'element gene interactions signal':
+      'element gene links':
+      'enhancer-gene links':
+      'thresholded links':
+      'element quantifications':
+      'enhancer prediction model':
+      'enhancer validation':
+      'enrichment':
+      'enhancers reference':
+      'eQTLs':
+      'exon quantifications':
+      'exclusion list regions':
+      'FDR cut rate':
+      'female genome index':
+      'female genome reference':
+      'filtered indels':
+      'filtered peaks':
+      'filtered reads':
+      'filtered regions':
+      'filtered SNPs':
+      'fine-mapped variants':
+      'fold change over control':
+      'footprints':
+      'functional conservation mapping':
+      'functional conservation quantifications':
+      'fragments':
+      'gene alignments':
+      'gene quantifications':
+      'gene stabilities':
+      'genic features quantifications':
+      'genic regions quantifications':
+      'genome compartments':
+      'genome index':
+      'genome reference':
+      'genome subcompartments':
+      'gRNAs':
+      'guide locations':
+      'guide quantifications':
+      'haplotype-specific alignments':
+      'haplotype-specific contact matrix':
+      'haplotype-specific nuclease cleavage frequency':
+      'haplotype-specific nuclease cleavage corrected frequency':
+      'hotspots':
+      'hotspots1 reference':
+      'hotspots2 reference':
+      'idat green channel':
+      'idat red channel':
+      'inclusion list':
+      'index reads':
+      'intensity values':
+      'IDR ranked peaks':
+      'IDR thresholded peaks':
+      'kmer weights':
+      'library fraction':
+      'loops':
+      'male genome index':
+      'male genome reference':
+      'maternal haplotype mapping':
+      'maternal variant calls':
+      'merged transcription segment quantifications':
+      'methylated reads':
+      'methylation state at CHG':
+      'methylation state at CHH':
+      'methylation state at CpG':
+      'microRNA quantifications':
+      'miRNA annotations':
+      'minus strand end position signal':
+      'minus strand inosine methylation state':
+      'minus strand m5C methylation state':
+      'minus strand m6A methylation state':
+      'minus strand methylation state at CpG':
+      'minus strand Nm methylation state':
+      'minus strand normalized end position signal':
+      'minus strand pseudouridine methylation state':
+      'minus strand signal of all reads':
+      'minus strand signal of unique reads':
+      'mitochondrial exclusion list regions':
+      'mitochondrial genome index':
+      'mitochondrial genome reference':
+      'model performance metrics':
+      'models':
+      'motif clusters reference':
+      'motif model':
+      'mRNA stabilities':
+      'nanopore signal':
+      'negative control regions':
+      'nested contact domains':
+      'non-targeting gRNAs':
+      'normalized bias-corrected predicted signal profile':
+      'normalized signal of all reads':
+      'normalized observed signal profile':
+      'normalized observed signal profile (minus strand)':
+      'normalized observed signal profile (plus strand)':
+      'normalized predicted bias profile':
+      'normalized predicted signal profile':
+      'normalized predicted signal profile (minus strand)':
+      'normalized predicted signal profile (plus strand)':
+      'novel peptides':
+      'observed bias profile':
+      'observed control profile (minus strand)':
+      'observed control profile (plus strand)':
+      'observed signal profile':
+      'observed signal profile (minus strand)':
+      'observed signal profile (plus strand)':
+      'open chromatin regions':
+      'optimal IDR thresholded peaks':
+      'pairs':
+      'paternal haplotype mapping':
+      'paternal variant calls':
+      'peaks':
+      'peaks and background as input for IDR':
+      'peptide quantifications':
+      'personalized genome assembly':
+      'perturbation signal':
+      'phastcons score reference':
+      'phased mapping':
+      'phased variant calls':
+      'plus strand end position signal':
+      'plus strand inosine methylation state':
+      'plus strand m5C methylation state':
+      'plus strand m6A methylation state':
+      'plus strand methylation state at CpG':
+      'plus strand Nm methylation state':
+      'plus strand normalized end position signal':
+      'plus strand pseudouridine methylation state':
+      'plus strand signal of all reads':
+      'plus strand signal of unique reads':
+      'polyA sites':
+      'positive control regions':
+      'predicted bias profile':
+      'predicted enhancers':
+      'predicted signal profile':
+      'predicted signal profile (minus strand)':
+      'predicted signal profile (plus strand)':
+      'predicted 3D structural ensembles':
+      'preprocessed alignments':
+      'profile sequence contribution scores':
+      'promoter prediction model':
+      'promoters reference':
+      'protein expression quantifications':
+      'pseudoreplicated peaks':
+      'pseudoreplicated IDR thresholded peaks':
+      'PWMs':
+      'R2C2 subreads':
+      'raw imaging signal':
+      'raw minus strand signal':
+      'raw normalized signal':
+      'raw plus strand signal':
+      'raw signal':
+      'ranked gRNAs':
+      'read-depth normalized signal':
+      'read annotations':
+      'reads':
+      'repeat elements annotation':
+      'repeats reference':
+      'reference variants':
+      'regulatory elements':
+      'relative replication signal':
+      'replicated peaks':
+      'replication timing profile':
+      'reporter code counts':
+      'representative DNase hypersensitivity sites':
+      'representative IDR thresholded peaks':
+      'restriction enzyme site locations':
+      'RNA-binding protein associated mRNAs':
+      'rRNA reference':
+      'safe-targeting gRNAs':
+      'scaled RNA stability':
+      'selected regions for bias-corrected predicted signal profile':
+      'selected regions for count sequence contribution scores':
+      'selected regions for predicted bias profile':
+      'selected regions for predicted signal and sequence contribution scores':
+      'selected regions for predicted signal profile':
+      'selected regions for predicted signal profile (minus strand)':
+      'selected regions for predicted signal profile (plus strand)':
+      'selected regions for profile sequence contribution scores':
+      'semi-automated genome annotation':
+      'sequence adapters':
+      'sequence barcodes':
+      'sequence motifs report':
+      'sequence motifs':
+      'sequence motifs instances':
+      'signal of all reads':
+      'signal of unique reads':
+      'signal p-value':
+      'spike-ins':
+      'smoothed methylation state at CpG':
+      'sparse gene count matrix':
+      'sparse gene count matrix of all reads':
+      'sparse gene count matrix of unique reads':
+      'sparse gRNA count matrix':
+      'sparse peak count matrix':
+      'sparse transcript count matrix':
+      'splice junctions':
+      'subreads':
+      'TF binding prediction model':
+      'TF peaks matrix':
+      'thresholded element gene links':
+      'topic gene weights':
+      'training and test regions':
+      'training set':
+      'transcribed region quantifications':
+      'transcript quantifications':
+      'transcription start sites':
+      'transcription segment quantifications':
+      'transcriptome alignments':
+      'transcriptome annotations':
+      'transcriptome index':
+      'transcriptome reference':
+      'transposable element TF ancestral origin percent by motif':
+      'transposable element TF ancestral origin percent by subfamily':
+      'TSS reference':
+      'unfiltered alignments':
+      'unfiltered sparse gene count matrix of all reads':
+      'unfiltered sparse gene count matrix of unique reads':
+      'unfiltered sparse splice junction count matrix of unique reads':
+      'unidirectional peaks':
+      'UV enriched segment quantifications':
+      'variant calls':
+      'variant effect quantifications':
+      'variant reference':
+      'variants contact matrix':
+      'variant functional prediction':
+      'z scores matrix':
+
+slots:
+  file_external_id:
+    description: 'External, globally unique identifier for the data file.'
+    range: curie
+    examples:
+      - value: 'encode:ENCFF323LCS'
+  file_id:
+    description: 'Internal identifier for the data file (unique within the metadata deposit). '
+    required: true
+    identifier: true
+    range: curie
+    examples:
+      - value: 'file:ENCFF323LCS'
+  file_name:
+    description: 'A string that can be used to name a data file. This string is made up of uppercase and lowercase letters, decimal digits, hypen, period, and underscore [A-Za-z0-9.-_]. See http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_282 [portable filenames].'
+    range: string
+    examples:
+      - value: '87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed'
+  file_label:
+    description: 'A human-readable description of the data file, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
+    required: true
+    range: string
+    pattern: "^.{1,60}$"
+    examples:
+      - value: 'H3K9me3 ChIP-seq replicated peaks, GRCh38, AG04450'
+  file_description:
+    description: 'A human readable description of the data file.'
+    range: string
+    examples:
+      - value: 'H3K9me3 ChIP-seq replicated peaks on human (hg38) AG04450 (Fibroblast derived cell line).'
+  filecollection_refs:
+    description: 'Internal references to the FileCollection objects (within the deposit) that contains the data file, if any.'
+    required: true
+    range: curie
+    multivalued: true
+    examples:
+      - value: 'collection:ihec_encode'
+  file_input_sources:
+    description: 'External or internal references to data sources for the file, typically a data collection or a process that has generated the file. Internal references should lead to FileCollection, File, Experiment, or Analysis objects.'
+    required: true
+    range: InputSource
+    multivalued: true
+    examples:
+      - object:
+          inputsource_ref: 'analysis:ENCAN718KHT'
+          qualified_relation: 'prov:wasGeneratedBy'
+          biological_replicate_labels: [ "1", "2" ]
+          technical_replicate_labels: [ "1_1", "2_1" ]
+  drs_uri:
+    description: 'A drs:// hostname-based URI, as defined in the DRS documentation, that tells clients how to access this object. The intent of this field is to make DRS objects self-contained, and therefore easier for clients to store and pass around. For example, if you arrive at this DRS JSON by resolving a compact identifier-based DRS URI, the self_uri presents you with a hostname and properly encoded DRS ID for use in subsequent access endpoint calls.'
+    range: uri
+    examples:
+      - value: 'drs://drs.example.org/ENCFF323LCS'
+  access_methods: 
+    description: 'The list of access methods that can be used to fetch the data file. '
+    required: true
+    range: AccessMethod
+    multivalued: true
+    examples:
+      - object:
+          access_method: https
+          access_url:
+            url: 'https://epigenomesportal.ca/tracks/ENCODE/hg38/87234.ENCODE.ENCBS004ENC.H3K9me3.peak_calls.bigBed'
+      - object:
+          access_method: https
+          access_url:
+            url: 'https://www.encodeproject.org/files/ENCFF323LCS/@@download/ENCFF323LCS.bigBed'
+      - object:
+          access_method: s3
+          access_url:
+            url: 's3://encode-public/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed'
+      - object:
+          access_method: https
+          access_url:
+            url: 'https://encode-public.s3.amazonaws.com/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed'
+      - object:
+          access_method: https
+          access_url:
+            url: 'https://datasetencode.blob.core.windows.net/dataset/2016/11/13/efd4e74e-7875-4d13-9630-0085bc834f18/ENCFF323LCS.bigBed?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D'
+
+  run_provenance:
+    description: 'Document detailing the provenance of the experiment or analysis run which produced the file as one of its outputs. The provenance info should include software versions, parameter settings, etc.'
+    range: uriorcurie
+    examples:
+      - value: 'encode:ENCAN718KHT'
+  quality_assessments:
+    description: 'An array of QualityAssessment objects containing the main quality scores from assessment techniques applied to the data file.'
+    range: QualityAssessment
+    multivalued: true
+    examples:
+      - object:
+          assessment_method: 'histone-chipseq-quality-metrics'
+          assessment_values:
+            nreads: 21018235
+            nreads_in_peaks: 6161851
+            frip: 0.2931669095906483
+          assessment_details_url: 'https://www.encodeproject.org/histone-chipseq-quality-metrics/70ae08dc-3edc-437f-a0a5-378c72e6269b/'
+  file_type:
+    description: 'The file format of the data file.'
+    required: true
+    range: Term
+    examples:
+      - object:
+          id: 'edam:format_3004'
+          label: 'bigBed'
+  mime_type:
+    description: 'A string providing the mime-type of the data file.'
+    range: string
+    examples:
+      - value: 'application/octet-stream'
+  data_content:
+    description: "Classification describing the file's purpose or contents."
+    required: true
+    range: OutputType
+    examples:
+      - value: 'replicated peaks'
+  file_size:
+    description: 'The file size in bytes.'
+    required: true
+    range: integer
+    examples:
+      - value: 5359719
+  created_time:
+    description: 'Timestamp of content creation in RFC3339. (This is the creation time of the underlying content, not of the JSON object.).'
+    required: true
+    range: datetime
+    examples:
+      - value: '2016-11-13T17:42:04.385801+00:00'
+  updated_time:
+    description: 'Timestamp of content update in RFC3339, identical to created_time in systems that do not support updates. (This is the update time of the underlying content, not of the JSON object.).'
+    range: datetime
+    examples:
+      - value: '2016-11-13T17:42:04.385801+00:00'
+  file_version:
+    description: 'A string representing a version. (Some systems may use checksum, a RFC3339 timestamp, or an incrementing version number.).'
+    range: string
+    examples:
+      - value: 'efd4e74e-7875-4d13-9630-0085bc834f18'
+  checksums:
+    description: 'A list of checksums of the data file. At least one checksum must be provided. For blobs, the checksum is computed over the bytes in the blob.'
+    required: true
+    range: Checksum
+    multivalued: true
+    examples:
+      - object:
+          checksum: '535bc9628a1c5e5215226f9996e4eaca'
+          checksum_type: md5

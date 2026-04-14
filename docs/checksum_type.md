@@ -1,0 +1,113 @@
+---
+search:
+  boost: 5.0
+---
+
+# Slot: checksum_type 
+
+
+_The digest method used to create the checksum. The value (e.g. `sha-256`) SHOULD be listed as `Hash Name String` in the https://www.iana.org/assignments/named-information/named-information.xhtml#hash-alg [IANA Named Information Hash Algorithm Registry]. Other values MAY be used, as long as implementors are aware of the issues discussed in https://tools.ietf.org/html/rfc6920#section-9.4 [RFC6920]. GA4GH may provide more explicit guidance for use of non-IANA-registered algorithms in the future. Until then, if implementors do choose such an algorithm (e.g. because it's implemented by their storage provider), they SHOULD use an existing standard `type` value such as `md5`, `etag`, `crc32c`, `trunc512`, or `sha1`._
+
+
+
+<div data-search-exclude markdown="1">
+
+
+
+URI: [https://w3id.org/fga-wg/schema/bundle/checksum_type](https://w3id.org/fga-wg/schema/bundle/checksum_type)
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Checksum](Checksum.md) | A checksum of a File object (orig: DrsObject). Exact copy of the Checksum object of the GA4GH DRS data model (https://ga4gh.github.io/data-repository-service-schemas/preview/release/drs-1.4.0/docs/#tag/ChecksumModel). |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](String.md) |
+| Domain Of | [Checksum](Checksum.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| md5 |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/bundle
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/bundle/checksum_type |
+| native | https://w3id.org/fga-wg/schema/bundle/checksum_type |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: checksum_type
+description: The digest method used to create the checksum. The value (e.g. `sha-256`)
+  SHOULD be listed as `Hash Name String` in the https://www.iana.org/assignments/named-information/named-information.xhtml#hash-alg
+  [IANA Named Information Hash Algorithm Registry]. Other values MAY be used, as long
+  as implementors are aware of the issues discussed in https://tools.ietf.org/html/rfc6920#section-9.4
+  [RFC6920]. GA4GH may provide more explicit guidance for use of non-IANA-registered
+  algorithms in the future. Until then, if implementors do choose such an algorithm
+  (e.g. because it's implemented by their storage provider), they SHOULD use an existing
+  standard `type` value such as `md5`, `etag`, `crc32c`, `trunc512`, or `sha1`.
+examples:
+- value: md5
+from_schema: https://w3id.org/fga-wg/schema/bundle
+rank: 1000
+domain_of:
+- Checksum
+range: string
+required: true
+
+```
+</details></div>

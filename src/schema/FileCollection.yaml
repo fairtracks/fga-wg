@@ -1,0 +1,76 @@
+id: https://w3id.org/fga-wg/schema/file-collection
+name: FileCollection
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+  - Contact
+  - InputSource
+
+classes:
+  FileCollection:
+    description: 'A collection of files, according to some selection criteria. In the context of the "FAIRification of Genomic Annotations" data model, we are mainly interested in "GenomicAnnotationFile" entities, but other types of files can also be contained in a collection, e.g. raw data files such as FASTQ files.'
+    slots:
+      - filecollection_external_id
+      - filecollection_id
+      - filecollection_label
+      - filecollection_description
+      - filecollection_input_sources
+      - deposit_versioned_ref
+      - filecollection_contact
+
+slots:
+  filecollection_external_id:
+    description: 'External, globally unique identifier for the file collection (in most cases, this will not exist).'
+    required: false
+    range: curie
+  filecollection_id:
+    description: 'Internal identifier for the file collection (unique within the metadata deposit). '
+    required: true
+    identifier: true
+    range: curie
+    examples:
+      - value: 'filecollection:ihec_encode'
+  filecollection_label:
+    description: 'A human-readable description of the file collection, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
+    required: true
+    range: string
+    pattern: "^.{1,60}$"
+    examples:
+      - value: 'IHEC data portal: ENCODE dataset'
+  filecollection_description:
+    description: 'Human-readable description of the file collection.'
+    range: Any
+    any_of:
+      - range: string
+      - range: uri
+    examples:
+      - value: 'ENCODE dataset in the International Human Epigenome Consortium (IHEC) data portal, enhanced with metadata from the ENCODE data portal.'
+  filecollection_input_sources:
+    description: 'References to other input sources from which this file collection was derived.'
+    range: InputSource
+    multivalued: true
+    examples:
+      - object:
+          inputsource_external_ref: 'https://epigenomesportal.ca/ihec/grid.html?build=2020-10&assembly=4&institutions=4'
+          qualified_relation: 'prov:wasDerivedFrom'
+          version: "2020-10"
+      - object:
+          inputsource_external_ref: 'https://www.encodeproject.org'
+          qualified_relation: 'prov:hadPrimarySource'
+  deposit_versioned_ref:
+    description: 'Reference to versioned id of deposit containing this file collection.'
+    required: true
+    range: curie
+    examples:
+      - value: 'doi:10.1234/zenodo.12345679'
+  filecollection_contact:
+    description: 'Contact point to the creator and/or maintainer of the file collection.'
+    range: Contact
+    examples:
+      - object:
+          name: 'International Human Epigenome Consortium'
+          contact_id: 'bioproject:PRJNA234466'
+          email: 'info@ihec-epigenomes.org'

@@ -1,0 +1,69 @@
+id: https://w3id.org/fga-wg/schema/study
+name: Study
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+  - Contact
+
+classes:
+  Study:
+    description: 'A scientific study, i.e. a unit of research, within which experiments and/or analyses have been carried out.'
+    slots:
+      - study_external_id
+      - study_id
+      - study_title
+      - study_abstract
+      - project_external_ref
+      - project_name
+      - publications
+      - study_contact
+
+slots:
+  study_external_id:
+    description: 'External, globally unique identifier for the study (preferably a BioStudies CURIE).'
+    range: curie
+    examples:
+      - value: 'biostudies:S-EPMC7391744'
+  study_id:
+    description: 'Internal identifier for the study (unique within the metadata deposit). Namespace: "study".'
+    required: true
+    identifier: true 
+    range: curie
+    examples:
+      - value: 'study:S-EPMC7391744'
+  study_title:
+    description: 'Title of the study.'
+    required: true
+    range: string
+    examples:
+      - value: 'An integrative ENCODE resource for cancer genomics'
+  study_abstract:
+    description: 'Abstract of the study.'
+    range: string
+    examples:
+      - value: 'ENCODE comprises thousands of functional genomics datasets, and the encyclopedia covers hundreds of cell types, providing a universal annotation for genome interpretation. However, for particular applications, it may be advantageous to use a customized annotation. Here, we develop such a custom annotation by leveraging advanced assays, such as eCLIP, Hi-C, and whole-genome STARR-seq on a number of data-rich ENCODE cell types. A key aspect of this annotation is comprehensive and experimentally derived networks of both transcription factors and RNA-binding proteins (TFs and RBPs). Cancer, a disease of system-wide dysregulation, is an ideal application for such a network-based annotation. Specifically, for cancer-associated cell types, we put regulators into hierarchies and measure their network change (rewiring) during oncogenesis. We also extensively survey TF-RBP crosstalk, highlighting how SUB1, a previously uncharacterized RBP, drives aberrant tumor expression and amplifies the effect of MYC, a well-known oncogenic TF. Furthermore, we show how our annotation allows us to place oncogenic transformations in the context of a broad cell space; here, many normal-to-tumor transitions move towards a stem-like state, while oncogene knockdowns show an opposing trend. Finally, we organize the resource into a coherent workflow to prioritize key elements and variants, in addition to regulators. We showcase the application of this prioritization to somatic burdening, cancer differential expression and GWAS. Targeted validations of the prioritized regulators, elements and variants using siRNA knockdowns, CRISPR-based editing, and luciferase assays demonstrate the value of the ENCODE resource.'
+  project_external_ref:
+    description: 'Reference to a project within which the study was carried out (preferably a BioProject CURIE).'
+    range: uriorcurie
+    examples:
+      - value: 'bioproject:PRJNA63441'
+  project_name:
+    description: 'Name of the project within which the study was carried out.'
+    range: string
+  publications:
+    description: 'List of (relevant) publications containing the results of the study (in the form of DOI CURIEs).'
+    range: curie
+    multivalued: true
+    examples:
+      - value: 'https://doi.org/10.1038/s41467-020-14743-w'
+  study_contact:
+    description: 'Contact point for the study.'
+    range: Contact
+    examples:
+      - object:
+          name: 'Mark Gerstein'
+          contact_id: 'orcid:0000-0002-9746-3719'
+          email: 'mark@gersteinlab.org'

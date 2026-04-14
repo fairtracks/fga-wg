@@ -1,0 +1,106 @@
+id: https://w3id.org/fga-wg/schema/analysis
+name: Analysis
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+imports:
+  - linkml:types
+  - InputSource
+  - Term
+  - Any
+
+classes:
+  Analysis:
+    description: 'Represents the computational processing applied to data from a sequencing experiment, or from another analysis. This can be described at the level of individual analysis steps in a workflow/pipeline, or more generally for the workflow/pipeline as a whole.'
+    slots:
+      - analysis_external_id
+      - analysis_id
+      - analysis_label
+      - analysis_description
+      - analysis_study_ref
+      - analysis_input_sources
+      - analysis_type
+      - analysis_main_tool
+      - analysis_main_tool_version
+      - analysis_protocol
+      - analysis_workflow
+
+slots:
+  analysis_external_id:
+    description: 'External, globally unique identifier for the experiment.'
+    range: curie
+    examples:
+      - value: 'encode:ENCAN718KHT'
+  analysis_id:  
+    description: 'Internal identifier for the experiment (unique within the metadata deposit). '
+    required: true
+    identifier: true
+    range: curie
+    examples:
+      - value: 'analysis:ENCAN718KHT'
+  analysis_label:
+    description: 'A human-readable description of the analysis, short enough to be used for listings within software user interfaces, tables, illustration legends, etc.'
+    required: true
+    range: string
+    pattern: "^.{1,60}$"
+    examples:
+      - value: 'ENCODE3 ChIP-seq pipeline, GRCH38, replicated peak calling'
+  analysis_description:
+    description: 'Human-readable description of the analysis.'
+    range: string
+    examples:
+      - value: 'ENCODE3 ChIP-seq pipeline on GRCH38 with replicated peak calling using MACS.'
+  analysis_study_ref:
+    description: 'Internal reference to the study within which the analysis has been carried out.'
+    range: curie
+    examples:
+      - value: 'study:S-EPMC7391744'
+  analysis_input_sources:
+    description: 'External or internal references to sources for the input data analyzed. Internal references should lead to FileCollection, File, Experiment, or Analysis objects.'
+    required: true
+    range: InputSource
+    multivalued: true
+    examples:
+      - object:
+          inputsource_ref: 'experiment:ENCSR000DPJ'
+          qualified_relation: 'prov:wasInformedBy'
+          biological_replicate_labels: ['1', '2']
+          technical_replicate_labels: ['1_1', '2_1']
+      - object:
+          inputsource_external_ref: 'https://www.encodeproject.org/files/GRCh38_no_alt_analysis_set_GCA_000001405.15'
+          qualified_relation: 'https://bioschemas.org/FormalParameter'
+          biological_replicate_labels: ['1', '2']
+          technical_replicate_labels: ['1_1', '2_1']
+          date_of_retrieval: '2016-04-19'
+  analysis_type:
+    description: 'The type of analysis carried out.'
+    required: true
+    range: Term
+    examples:
+      - object:
+          id: 'edam:operation_3222'
+          label: 'Peak calling'
+  analysis_main_tool:
+    description: 'Main software tool used for the analysis.'
+    range: Any
+    any_of:
+      - range: string
+      - range: curie
+    examples:
+      - value: 'biotools:macs'
+  analysis_main_tool_version:
+    description: 'Version of the main software tool used for the analysis.'
+    range: string
+    examples:
+      - value: "2.10"
+  analysis_protocol:
+    description: 'Document describing the analysis protocol that was followed.'
+    range: uriorcurie
+    examples:
+      - value: 'https://www.encodeproject.org/documents/7009beb8-340b-4e71-b9db-53bb020c7fe2/@@download/attachment/ChIP-seq_pipeline_overview.pdf'
+  analysis_workflow:
+    description: 'External reference to the analysis workflow, with availability in at least one machine-operable form (e.g. CWL, Nextflow, ...).'
+    range: uriorcurie
+    examples:
+      - value: 'encode:ENCPL272XAE'

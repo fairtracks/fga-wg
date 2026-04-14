@@ -1,0 +1,107 @@
+---
+search:
+  boost: 5.0
+---
+
+# Slot: experiment_study_ref 
+
+
+_Internal reference to the study within which the experiment has been carried out._
+
+
+
+<div data-search-exclude markdown="1">
+
+
+
+URI: [https://w3id.org/fga-wg/schema/bundle/experiment_study_ref](https://w3id.org/fga-wg/schema/bundle/experiment_study_ref)
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+| [Experiment](Experiment.md) | Represents a sequencing experiment that has been carried out within a study, based on biological samples, and providing data files as output. Subsequent analysis of output data is described by the Analysis entity. |  no  |
+
+
+
+
+
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [Curie](Curie.md) |
+| Domain Of | [Experiment](Experiment.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
+
+
+
+
+
+
+
+
+
+## Examples
+
+| Value |
+| --- |
+| study:E-GEOD-35583 |
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/fga-wg/schema/bundle
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://w3id.org/fga-wg/schema/bundle/experiment_study_ref |
+| native | https://w3id.org/fga-wg/schema/bundle/experiment_study_ref |
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: experiment_study_ref
+description: Internal reference to the study within which the experiment has been
+  carried out.
+examples:
+- value: study:E-GEOD-35583
+from_schema: https://w3id.org/fga-wg/schema/bundle
+rank: 1000
+domain_of:
+- Experiment
+range: curie
+required: true
+
+```
+</details></div>

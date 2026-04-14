@@ -1,0 +1,47 @@
+{
+  "antibody_target": {
+    "id": "SO:0001707",
+    "label": "H3K9Me3"
+  },
+  "assay_type": {
+    "id": "obi:OBI_0000716",
+    "label": "ChIP-seq assay"
+  },
+  "biological_processes": [
+    {
+      "id": "GO:0140999",
+      "label": "histone H3K4 trimethyltransferase activity"
+    }
+  ],
+  "design_description": "https://www.encodeproject.org/documents/92cd1386-ccad-450a-b5a6-ad49983e7e3f/@@download/attachment/wgEncodeUwHistone.release5.html.pdf",
+  "experiment_external_id": "encode:ENCSR000DPJ",
+  "experiment_id": "experiment:ENCSR000DPJ",
+  "experiment_label": "H3K9me3 ChIP-seq on human AG04450",
+  "experiment_samples": [
+    {
+      "biological_replicate_labels": [
+        "1",
+        "2"
+      ],
+      "inputsource_ref": "sample:ENCBS004ENC",
+      "qualified_relation": "prov:used",
+      "technical_replicate_labels": [
+        "1_1",
+        "2_1"
+      ]
+    }
+  ],
+  "experiment_study_ref": "study:E-GEOD-35583",
+  "instrument": {
+    "id": "obi:OBI_0002128",
+    "label": "Illumina Genome Analyzer"
+  },
+  "library_layout": {
+    "id": "obi:OBI_0000736",
+    "label": "single fragment library"
+  },
+  "molecule_type": {
+    "id": "SO:0000991",
+    "label": "genomic_DNA"
+  }
+}
