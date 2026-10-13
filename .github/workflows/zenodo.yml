@@ -1,0 +1,21 @@
+name: Upload Release to Zenodo
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Tar files
+        run: tar -czf release.tar.gz *
+
+      - name: Upload to Zenodo
+        uses: zenodo/zenodo-github-action@v1 # Verifiable marketplace action
+        with:
+          zenodo_token: ${{ secrets.ZENODO_TOKEN }}
+          filename: release.tar.gz
